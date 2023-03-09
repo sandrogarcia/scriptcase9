@@ -1,0 +1,114 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro permite que o usuário defina na sua aplicação inicial o que irá ocorrer quando a aplicação perder a sessão.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_apl_default('aplicacao', 'tipo');<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>
+<span>Essa macro tem como objetivo permitir que o desenvolvedor defina o que ocorrerá quando a aplicação perder a sessão.</span>
+<br />
+</p>
+<p>
+    <span>A macro possui os seguintes parâmetros:</span>
+    <p>
+    <span>
+    <strong>Apl:</strong>     
+    Aqui é necessário informar para qual aplicação a macro irá redirecionar após perder a sessão.
+    </span>
+    </p>
+    <p>
+    <span>
+    <strong>Tipo:</strong>
+    Aqui iremos informar o tipo de redirecionamento que irá ocorrer, há dois tipos:
+    <ul>
+        <li>
+            <strong>R</strong>: A aplicação irá apenas redirecionar para a aplicação inicial.
+        </li> 
+        <li>
+            <strong>M</strong>: Será mostrada uma mensagem antes do redirecionamento.
+        </li>
+    </ul>
+    </span>
+    </p>
+    
+    </p>
+</p>
+<p>
+<span>
+Ex: 
+Em uma aplicação de login, definida como aplicação inicial, podemos definir que essa aplicação será para a qual iremos redirecionar.
+<br />
+<strong>sc_apl_default("app_login","R")</strong>
+</span>
+</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onCalendarScriptInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

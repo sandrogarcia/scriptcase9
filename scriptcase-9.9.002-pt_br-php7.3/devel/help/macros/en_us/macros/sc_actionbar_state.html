@@ -1,0 +1,114 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Changes the current state of the button on the action bar.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_state("button_name", "state_name")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 12px; background-color: #ffffff;">This macro allows you to change the current state of the action bar button through.</span></p>
+<blockquote>
+<p><span style="color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif; font-size: 12px;">To use the button's, ajax event, we recommend using this macro together with <code>sc_actionbar_clicked_state();</code> that makes it possible to recover the current state of the button.</span></p>
+</blockquote>
+<h2>Definition of Parameters</h2>
+<table style="border-collapse: collapse; width: 100%; height: 68.1718px;" border="1">
+<thead>
+<tr style="height: 23.3906px;">
+<td style="width: 13.4798%; height: 23.3906px;"><strong>Parameters</strong></td>
+<td style="width: 11.4608%; height: 23.3906px;"><strong>Type</strong></td>
+<td style="width: 41.8052%; height: 23.3906px;"><strong>Values</strong></td>
+<td style="width: 33.3135%; height: 23.3906px;"><strong>Description</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 22.3906px;">
+<td style="width: 13.4798%; height: 22.3906px;"><code><span style="font-size: 12px; box-sizing: border-box; font-weight: bold; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif;">button_name</span></code></td>
+<td style="width: 11.4608%; height: 22.3906px;">string</td>
+<td style="width: 41.8052%; height: 22.3906px;">
+<p><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">The button name must be informed using <strong>double&nbsp;</strong></span><strong>quotes</strong> <span style="background-color: #ffffff; color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">or <strong>single quotes</strong>.</span></p>
+<p><strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Example<br /><br /></span></strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">In bold, you can see the example of how the parameter&nbsp;</span><code>button_name</code> <span style="background-color: #ffffff; color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">must be informed:</span></p>
+<p><code><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">sc_actionbar_state(<span style="color: #000000;"><strong>"ajax_btn"</strong></span>, <span style="color: #95a5a6;">"sent"</span></span><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><strong>This is a mandatory parameter.&nbsp;</strong></p>
+<p>You need inform the name of the button created on the action bar.</p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 13.4798%; height: 22.3906px;"><code><span style="font-size: 12px; box-sizing: border-box; font-weight: bold; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif;">state_name</span></code></td>
+<td style="width: 11.4608%; height: 22.3906px;">string</td>
+<td style="width: 41.8052%; height: 22.3906px;">
+<p><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">The state name&nbsp;</span>must be informed using <strong>double&nbsp;quotes</strong>&nbsp;<span style="font-size: 16px; background-color: #ffffff; color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">or <strong>single quotes.</strong></span></p>
+<p><strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Example<br /><br /></span></strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">In bold, you can see the example of how the parameter&nbsp;</span><code>state_name</code> must be&nbsp;informed:</p>
+<p><code><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">sc_actionbar_state(<span style="color: #95a5a6;">"ajax_btn"</span>, <strong><span style="color: #000000;">"sent"</span></strong></span><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><strong>This is a mandatory parameter.&nbsp;</strong></p>
+<p>You need inform the name of the next state that the button will assume.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Examples</h2>
+<hr />
+<p><strong>Example</strong> - Changing the <em>ajax_btn</em> button state between <strong>pending</strong> and <strong>sent</strong> in the button's onclick event.</p>
+<pre>if (sc_actionbar_clicked_state() == 'pending') {<br />
+        sc_actionbar_state('ajax_btn', 'sent');
+
+} else {
+
+        sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+<hr />
+<p><strong>Example</strong> - Changing the state of the <em>ajax_btn</em> button between <strong>pending </strong>and <strong>sent</strong>, and storing the change in the base in the <em>email_sent</em> field.</p>
+<pre>if (sc_actionbar_clicked_state() == 'pending') {
+
+	$update = "update orders set email_sent = 'S' WHERE orderid =". {orderid};<br />	sc_exec_sql($update);
+        sc_actionbar_state('ajax_btn', 'sent');<br />
+} else {
+
+	$update = "update orders set email_sent = 'N' WHERE orderid =". {orderid};<br />	sc_exec_sql($update);
+        sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+<hr />
+<p><strong>Example</strong> - Display of the state of the <em>ajax_btn </em>button according to the value stored in the <em>email_sent </em>ield in the <em>onRecord </em>event of the Grid application.</p>
+<pre>if ({email_sent} == 'S') {
+
+    sc_actionbar_state('ajax_btn', 'sent');<br />
+} else {
+
+    sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

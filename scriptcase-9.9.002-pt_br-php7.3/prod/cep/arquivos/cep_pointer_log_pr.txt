@@ -1,0 +1,33 @@
+Almirante Tamandaré@nm@0@nm@
+Apucarana@nm@140565@nm@
+Arapongas@nm@333930@nm@
+Araucária@nm@524135@nm@
+Cambé@nm@638481@nm@
+Campo Largo@nm@774794@nm@
+Campo Mourão@nm@906670@nm@
+Cascavel@nm@1144926@nm@
+Castro@nm@1398051@nm@
+Cianorte@nm@1470156@nm@
+Colombo@nm@1643642@nm@
+Curitiba@nm@1813742@nm@
+Fazenda Rio Grande@nm@3102280@nm@
+Foz do Iguaçu@nm@3225889@nm@
+Francisco Beltrão@nm@3544327@nm@
+Guarapuava@nm@3680537@nm@
+Irati@nm@3855367@nm@
+Laranjeiras do Sul@nm@3939385@nm@
+Londrina@nm@3984936@nm@
+Maringá@nm@4591992@nm@
+Paranaguá@nm@5057749@nm@
+Paranavaí@nm@5190604@nm@
+Pato Branco@nm@5312880@nm@
+Pinhais@nm@5432980@nm@
+Piraquara@nm@5521690@nm@
+Ponta Grossa@nm@5630278@nm@
+Rolândia@nm@6030100@nm@
+São José dos Pinhais@nm@6156106@nm@
+Sarandi@nm@6395750@nm@
+Telêmaco Borba@nm@6530236@nm@
+Toledo@nm@6641820@nm@
+Umuarama@nm@6770832@nm@
+União da Vitória@nm@6936208@nm@

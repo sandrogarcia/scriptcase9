@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before the header display</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			This event is frequently used when it is required to display any calculated value on report's header
+
+Ex. In a customer report header it is required to display the customer balance on reports header.
+
+Create a field called fld_customer_balance on fields menu.
+
+ sc_lookup(v_bal," select sum(debits) - sum(credits) from view_debits_credits  where customer ='{field_customer}' ");
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

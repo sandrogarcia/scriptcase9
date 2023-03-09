@@ -1,0 +1,84 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Deshabilita los botones creados en la barra de acciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_disable("boton_nombre")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Deshabilita el bot&oacute;n de la barra de acci&oacute;n, por lo que no est&aacute; disponible para hacer clic.</p>
+<blockquote>
+<p>Esta macro se puede usar para cualquier tipo de bot&oacute;n (enlace o ajax) en la barra de acci&oacute;n.</p>
+</blockquote>
+<h2>Definici&oacute;n de par&aacute;metros</h2>
+<table style="width: 1871px;" border="1">
+<tbody>
+<tr>
+<td style="width: 232.734px;">Par&aacute;metro</td>
+<td style="width: 398.188px;">Sintaxis</td>
+<td style="width: 1197.73px;">Descripci&oacute;n</td>
+</tr>
+<tr>
+<td style="width: 232.734px;">
+<pre>boton_nombre</pre>
+</td>
+<td style="width: 398.188px;">
+<p><strong>No es posible utilizar variables</strong>, el nombre del bot&oacute;n debe informarse mediante <strong>comillas dobles o simples</strong>.</p>
+<p><strong>Ejemplo<br /></strong><code>sc_actionbar_disable<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 1197.73px;">
+<p><strong>Este par&aacute;metro es obligatorio.</strong></p>
+<p>Debemos informar el nombre del bot&oacute;n de la barra de acci&oacute;n que se desactivar&aacute;.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Ejemplos</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Ejemplo </strong><strong>1</strong>: Uso b&aacute;sico de las macros</p>
+<pre>sc_actionbar_disable("boton_nombre");</pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Ejemplo</strong><strong>&nbsp;</strong><strong>2:&nbsp;</strong>Deshabilitar el bot&oacute;n de enlace al detalle del pedido si no hay art&iacute;culos en el pedido.</p>
+<pre><span style="color: #ced4d9;">// Ejemplo creado en el evento onRecord del grid usando la tabla order y orderdetail
+// Si no hay art&iacute;culos en el pedido, el bot&oacute;n estar&aacute; deshabilitado<br /></span><span style="color: #7e8c8d;"><br />$query = "SELECT count(*) FROM OrderDetails WHERE OrderID = ". {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} == 0) {<br /><br />    </span><span style="color: #ced4d9;">//</span><span style="color: #ced4d9;">Ejemplo de uso de la macro sc_actionbar_disable</span>
+    <strong style="color: #000000;">sc_actionbar_disable("</strong>boton_nombre<strong style="color: #000000;">");</strong><span style="color: #7e8c8d;"><br /><br /></span><span style="color: #7e8c8d;">} else { <br /><br /></span><span style="color: #7e8c8d;">    sc_actionbar_enable("boton_nombre");</span><br /><span style="color: #7e8c8d;"> <br />}</span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

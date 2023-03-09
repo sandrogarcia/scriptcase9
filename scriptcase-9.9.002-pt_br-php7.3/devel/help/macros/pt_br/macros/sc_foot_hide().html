@@ -1,0 +1,94 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro inibe a exibição do rodapé.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_foot_hide()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>O objetivo dessa macro &eacute; desabilitar a exibi&ccedil;&atilde;o do rodap&eacute; na aplica&ccedil;&atilde;o.</p>
+<p>No caso espec&iacute;fico da <strong>consulta</strong>, o evento &eacute; executado na <strong>Grid</strong> e no <strong>Resumo</strong>. Para configurar separadamente foi criado um <strong>par&acirc;metro</strong>, conforme os exemplos abaixo:</p>
+<p>&nbsp;</p>
+<table style="width: 50%; border-collapse: collapse;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; text-align: center; height: 18px;">Par&acirc;metro</td>
+<td style="width: 0.929368%; text-align: center; height: 18px;">Valor</td>
+<td style="width: 10.964%; text-align: center; height: 18px;">Descri&ccedil;&atilde;o</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">sc_foot_hide('grid')</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>grid</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Desabilita rodap&eacute; da consulta</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">
+<p>sc_foot_hide('res')</p>
+<p>sc_foot_hide('sum')</p>
+</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>res</strong></li>
+<li><strong>sum</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Desabilita rodap&eacute; do resumo</td>
+</tr>
+</tbody>
+</table>
+<pre><br />1 - <strong>Inibe rodap&eacute; da consulta e do resumo:<br /></strong><br />sc_foot_hide();<br /><br />2 - <strong>Inibe o rodap&eacute; apenas da consulta:<br /></strong><br />sc_foot_hide('grid');<br /><br />3 - <strong>Inibe o rodap&eacute; apenas do resumo:</strong><br /><br />sc_foot_hide('res'); ou sc_foot_hide('sum');</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

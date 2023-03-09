@@ -1,0 +1,366 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro is used to change the label of the buttons.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_btn_label("btn_name", "new_label")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/ECjWaVnM8RI" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /> Watch a tutorial</a></div>
+<p><br />This macro is used to dynamically change the label of the buttons, whether they are created by the developer or Scriptcase's own.</p>
+<p>For this, it is necessary to inform two mandatory parameters, <code>'btn_name'</code> and <code>'new_label'</code>.</p>
+<p>&nbsp;</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 9.55423%; height: 18px;">Par&acirc;metro</th>
+<th style="width: 40.8333%; height: 18px;">Valor</th>
+<th style="width: 49.6124%; height: 18px;">Descri&ccedil;&atilde;o</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 9.55423%; height: 18px; text-align: center;">btn_name</td>
+<td style="width: 40.8333%; height: 18px;">
+<p>The parameter can be entered using variables (Global or Local) or string (Using Double or Single Quotes)</p>
+<p>In bold, here is the example of how the parameter should be entered:</p>
+<p><code>sc_btn_label(<strong>'update'</strong>, <span style="color: #808080;">'Update Record'</span>);</code></p>
+<p>Values accepted in the parameter:</p>
+<ul>
+<li><strong>String</strong>&nbsp;- Protected by single or double quotes. Ex.:&nbsp;<code>'update'</code></li>
+<li><strong><span style="color: #000000;">Variables - Local or global.</span></strong><span style="color: #000000;"> <strong>E.g.:</strong></span>&nbsp;<code><span style="color: #000000;">$btn_update</span></code></li>
+</ul>
+</td>
+<td style="width: 49.6124%; height: 18px;">
+<p>Receives the name of the buttons that will have the label changed.</p>
+<p>Button names, which are automatically created by Scriptcase, are available below, separated by application.</p>
+<ul>
+<li><a href="#tb-btn-01">Grid/Chart</a></li>
+<li><a href="#tb-btn-02">Form/Calendar</a></li>
+<li><a href="#tb-btn-03">Control</a></li>
+</ul>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 9.55423%; height: 18px; text-align: center;">new_label</td>
+<td style="width: 40.8333%; height: 18px;">
+<p>The parameter can be entered using variables (Global or Local) or string (Using Double or Single Quotes)</p>
+<p><code>sc_btn_label(<span style="color: #808080;">'update'</span>,<strong><span style="color: #000000;"> 'Update Record'</span></strong>);</code></p>
+<p><strong>Values accepted in the parameter::</strong></p>
+<ul>
+<li><strong>String</strong>&nbsp;- Protected by single or double quotes. <strong><span style="color: #000000;">E.g.:</span></strong>&nbsp;<code><strong><span style="color: #000000;">'Update Record'</span></strong></code></li>
+<li><strong><span style="color: #000000;">Variables - </span></strong><span style="color: #000000;">Local or global.</span><strong><span style="color: #000000;"> E.g.:&nbsp;</span></strong><code><span style="color: #000000;">$new_label</span></code></li>
+<li><strong><span style="color: #000000;">Lang -</span></strong><span style="color: #000000;">variable lang.</span><strong><span style="color: #000000;"> E.g.:</span></strong><span style="color: #000000;"><code>&nbsp;{lang_btn_label}</code></span></li>
+</ul>
+</td>
+<td style="width: 49.6124%; height: 18px;">
+<p>This parameter receives the new label of the button informed in the previous parameter.</p>
+<p>In addition to string and variable, it is also possible to use a lang to define the label, enabling the translation of your application's internationalization.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<blockquote>
+<p><a href="#exemplos">Click here and see examples of using the macro.</a></p>
+</blockquote>
+<hr />
+<p>&nbsp;</p>
+<p><strong><a id="tb-btn-01"></a>Nombre de los botones de cuadr&iacute;cula</strong></p>
+<table border="0">
+<tbody>
+<tr>
+<th align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name<br /></strong></th>
+<th align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">first</td>
+<td class="corpo1" align="left" valign="top">Goes to the first page of the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">back</td>
+<td class="corpo1" align="left" valign="top">Goes to the previous page of the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">forward</td>
+<td class="corpo1" align="left" valign="top">Goes to the next page of the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">last</td>
+<td class="corpo1" align="left" valign="top">Goes to the last page of the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">filter</td>
+<td class="corpo1" align="left" valign="top">Displays the "Filter" button.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">pdf</td>
+<td class="corpo1" align="left" valign="top">Generates colored PDF.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">det_pdf</td>
+<td class="corpo1" align="left" valign="top">Generates a detailed PDF.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">pdfbw</td>
+<td class="corpo1" align="left" valign="top">Generates black and white PDF.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">xls</td>
+<td class="corpo1" align="left" valign="top">Generates the XLS.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">xml</td>
+<td class="corpo1" align="left" valign="top">Generates the XML.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">csv</td>
+<td class="corpo1" align="left" valign="top">Generates the CVS.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">rtf</td>
+<td class="corpo1" align="left" valign="top">Generates the RTF.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">word</td>
+<td class="corpo1" align="left" valign="top">Generates the Word.</td>
+</tr>
+<tr>
+<td>json</td>
+<td>Generates the JSON.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">print</td>
+<td class="corpo1" align="left" valign="top">Displays the "Print" button in the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">det_print</td>
+<td class="corpo1" align="left" valign="top">Displays the "Print" button in detail.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">summary</td>
+<td class="corpo1" align="left" valign="top">Displays the "Summary" button in the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">new</td>
+<td class="corpo1" align="left" valign="top">Displays the "New" button. (if the application has a link for it, or if the form is running in the grid iframe)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">insert</td>
+<td class="corpo1" align="left" valign="top">Displays the "Include" button of the form. (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">update</td>
+<td class="corpo1" align="left" valign="top">Displays the "Update" button of the form. (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">delete</td>
+<td class="corpo1" align="left" valign="top">Displays the "Delete" button of the form (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">qsearch</td>
+<td class="corpo1" align="left" valign="top">Displays the "Quick Search" button in the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">dynsearch</td>
+<td class="corpo1" align="left" valign="top">Displays the "Dynamic Search" button in the grid.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">gridsave</td>
+<td class="corpo1" align="left" valign="top">Displays the "Save Grid" button in the grid.</td>
+</tr>
+<tr>
+<td>sel_col</td>
+<td>Select columns button</td>
+</tr>
+<tr>
+<td>sort_col</td>
+<td>Sort Button</td>
+</tr>
+</tbody>
+</table>
+<h4 class="corpo1">&nbsp;</h4>
+<h4 id="01" class="corpo1"><a id="tb-btn-02"></a>Name of Form buttons</h4>
+<table border="0">
+<tbody>
+<tr>
+<th align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name</strong><strong class="corpo1"><br /></strong></th>
+<th align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">first</td>
+<td class="corpo1" align="left" valign="top">Goes to the first page of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">back</td>
+<td class="corpo1" align="left" valign="top">Goes to the previous page of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">forward</td>
+<td class="corpo1" align="left" valign="top">Goes to the next page of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">last</td>
+<td class="corpo1" align="left" valign="top">Goes to the last page of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">new</td>
+<td class="corpo1" align="left" valign="top">Displays the "New" button on the form, if it's off the form will starts in insertion mode.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">insert</td>
+<td class="corpo1" align="left" valign="top">Displays the "Include" button of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">update</td>
+<td class="corpo1" align="left" valign="top">Displays the "Update" button of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">delete</td>
+<td class="corpo1" align="left" valign="top">Displays the "Delete" button of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">copy</td>
+<td class="corpo1" align="left" valign="top">Displays the "Copy" button of the form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">pdf</td>
+<td class="corpo1" align="left" valign="top">Generates PDF file from a form.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">print</td>
+<td class="corpo1" align="left" valign="top">Open the form in print mode.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">dynsearch</td>
+<td class="corpo1" align="left" valign="top">Displays the "Dynamic Search" button in the grid.</td>
+</tr>
+</tbody>
+</table>
+<h4 class="corpo1">&nbsp;</h4>
+<h4 id="01" class="corpo1"><a id="tb-btn-03"></a>Name of Control Buttons</h4>
+<table border="0">
+<tbody>
+<tr>
+<th align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name<br /></strong></th>
+<th align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">ok</td>
+<td class="corpo1" align="left" valign="top">Displays the "Ok" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">exit</td>
+<td class="corpo1" align="left" valign="top">Displays the "Exit" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">facebook</td>
+<td class="corpo1" align="left" valign="top">Displays the "Facebook" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">twitter</td>
+<td class="corpo1" align="left" valign="top">Displays the "Twitter" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">google</td>
+<td class="corpo1" align="left" valign="top">Displays the "Google+" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">paypal</td>
+<td class="corpo1" align="left" valign="top">Displays the "PayPal" button on the control.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr />
+<p><strong><a id="exemplos"></a>Exemplo: Parameter with string</strong></p>
+<pre><span style="color: #000000;">sc_btn_label('update', 'Atualizar Registro');</span></pre>
+<p>&nbsp;</p>
+<p><strong>Example:</strong> Par&acirc;metro com lang</p>
+<pre><span style="color: #000000;">sc_btn_label("update", {lang_btn_label});</span></pre>
+<p>&nbsp;</p>
+<p><strong>Example:Parameter with Global variable</strong></p>
+<pre><span style="color: #000000;">[btn_name] =&nbsp;"update";<br />[label] =&nbsp;"update";<strong><br /></strong></span><span style="color: #000000;">sc_btn_label([btn_name], [label]);</span></pre>
+<p>&nbsp;</p>
+<p><strong>Example:</strong> Parameter with local variable</p>
+<pre><span style="color: #000000;">$btn_name =&nbsp;"update";<br />$label=&nbsp;"update";<strong><br /></strong></span><span style="color: #000000;">sc_btn_label($btn_name, $label);</span></pre>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

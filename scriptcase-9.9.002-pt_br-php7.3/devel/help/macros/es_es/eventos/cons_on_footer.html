@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre en la pantalla del pie de página de la aplicación.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después del procesamiento de las líneas de la cuadrícula, durante la visualización de los elementos HTML del pie de página.</p>
+<p>onFooter se usa cuando queremos mostrar alguna información en el pie de página, como un total de ventas o una leyenda para un gráfico de líneas.</p>
+<blockquote>
+<p><br />onFooter solo se ejecuta cuando la opción de mostrar pie de página está habilitada en la configuración de diseño de la aplicación.</p>
+</blockquote>
+<hr />
+<p> </p>
+<p><strong>Ej:</strong> Queremos que en la parte inferior de la Grid se muestre el valor total de los pedidos que se muestran en una factura, con un 10% de descuento:</p>
+<pre><code>sc_lookup (ret, "seleccionar suma (valueitem) de sales_item donde sale_id = {sale_id}");</code><br /><br /><code>[v_footnote] = {ret [0] [0]} * 0.1;</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

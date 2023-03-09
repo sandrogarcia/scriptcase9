@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre después de agregar una fila en las aplicaciones de un formulario.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después de hacer clic en el botón Insertar del formulario. El formulario luego ejecutará los eventos onValidate, onValidateSuccess y onBeforeInsert, y justo después de ejecutar el comando SQL para insertar el registro de la base de datos, ejecutará el evento onAfterInsert.</p>
+<p> </p>
+<hr />
+<p><strong>Ejemplo:</strong> después de la inclusión de un registro en la base de datos, queremos registrar la operación de inclusión en una tabla de registro.</p>
+<p>sc_exec_sql ("insertar en los valores de registro ([glo_user], 'tabla de destino', 'insertar', {key_field})"); // inserte el ID de usuario que se almacenó en una variable de sesión [glo_user] y la clave de registro recién agregada {key_field}.</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

@@ -1,0 +1,204 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro permite que a aplicação exiba mensagens customizáveis. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_message("Mensagem", "Título", "Parâmetro", "Parâmetros_Redir", "String_toast");<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro permite que a aplicação exiba mensagens customizáveis, com seu uso restrito aos <strong>eventos do formulário/controle quando se faz uso no eventos AJAX.</strong></p>
+<p>Esta macro só é valida em aplicações com <strong>suporte a AJAX</strong>.</p>
+<table class="cls_tabela" border="0">
+<tbody>
+<tr>
+<th style="width: 136px;">Parâmetros</th>
+<th style="width: 624px;">Descrição</th>
+</tr>
+<tr>
+<td style="width: 136px;">Mensagem</td>
+<td style="width: 624px;">Texto que será exibido no corpo da mensagem. Este parametro é de preenchimento obrigatório.</td>
+</tr>
+<tr>
+<td style="width: 136px;">Título</td>
+<td style="width: 624px;">Texto que será exibido no título da mensagem. Se não preenchido o título da mensagem não será exibido.</td>
+</tr>
+<tr>
+<td style="width: 136px;">String de parâmetros da mensagem</td>
+<td style="width: 624px;">
+<p>Parâmetro de formatação da mensagem. <br />Ex.: modal=Y&button=Y&button_label=Ok&redir=form_employees.php&redir_target=_blank</p>
+<p>Os detalhes deste parâmetro estão detalhados na tabela2.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 136px;">String de parâmetros do Redirecionamento</td>
+<td style="width: 624px;">
+<p>Nesta propriedade podem ser definidos os valores para a aplicação de redirecionamento.Esta propriedade funciona apenas se a propriedade redir for informada. Os parametros devem ser informados no seguinte formato: parametro=valor;parametro=valor.</p>
+<p>Ex.: customer_id=ALFKI;customer_name=ALBERT FRANCINET</p>
+</td>
+</tr>
+<tr>
+<td style="width: 136px;">String de parâmetros do toast</td>
+<td style="width: 624px;">
+<p>Parâmetro de formatação da mensagem utilizando Toast. <br /><br /></p>
+<div><strong>- toast</strong>: Y ou N</div>
+<div> </div>
+<div><strong>- toast_pos</strong>: 'top', 'top-start', 'top-end', 'center', 'center-start', 'center-end', 'bottom', 'bottom-start', 'bottom-end'</div>
+<div> </div>
+<div><strong>- type</strong>: 'warning', 'error', 'success', 'info', 'question'</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Tabela2: String de Parâmetros da mensagem</strong></p>
+<table class="cls_tabela" style="height: 620px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<th style="height: 18px; width: 96px;">Propriedade</th>
+<th style="height: 18px; width: 636px;">Descrição</th>
+<th style="height: 18px; width: 128px;">Valores</th>
+<th style="height: 18px; width: 420px;">Exemplo</th>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 96px;">modal</td>
+<td style="height: 54px; width: 636px;">Flag para exibição da mensagem em modal</td>
+<td style="height: 54px; width: 128px;">Y ou N</td>
+<td style="height: 54px; width: 420px;">modal=Y</td>
+</tr>
+<tr style="height: 234px;">
+<td style="height: 234px; width: 96px;">timeout</td>
+<td style="height: 234px; width: 636px;">Tempo em segundos para esconder mensagem. Se não informado mensagem será exibida indefinidamente. Esta propriedade só funciona se a propriedade button não estiver habilitada.</td>
+<td style="height: 234px; width: 128px;">Segundos</td>
+<td style="height: 234px; width: 420px;">timeout=5</td>
+</tr>
+<tr style="height: 216px;">
+<td style="height: 216px; width: 96px;">button</td>
+<td style="height: 216px; width: 636px;">Exibe botão dentro da mensagem. O seu funcionamento padrão é fechar a mensagem. Caso seja habilitado o redirecionamento, após fechar a mensagem a aplicação será redirecionada.</td>
+<td style="height: 216px; width: 128px;">Y ou N</td>
+<td style="height: 216px; width: 420px;">button=Y</td>
+</tr>
+<tr style="height: 90px;">
+<td style="height: 90px; width: 96px;">button_label</td>
+<td style="height: 90px; width: 636px;">Label do botão. Esta opção só funciona caso a propriedade button habilidata</td>
+<td style="height: 90px; width: 128px;">String</td>
+<td style="height: 90px; width: 420px;">button=Y&button_label=OK</td>
+</tr>
+<tr style="height: 72px;">
+<td style="height: 72px; width: 96px;">top</td>
+<td style="height: 72px; width: 636px;">Valor para posicionamento da mensagem em pixels</td>
+<td style="height: 72px; width: 128px;">Apenas numeros</td>
+<td style="height: 72px; width: 420px;">top=300</td>
+</tr>
+<tr style="height: 72px;">
+<td style="height: 72px; width: 96px;">left</td>
+<td style="height: 72px; width: 636px;">Valor para posicionamento da mensagem em pixels</td>
+<td style="height: 72px; width: 128px;">Apenas numeros</td>
+<td style="height: 72px; width: 420px;">left=200</td>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 96px;">width</td>
+<td style="height: 54px; width: 636px;">Valor para largura da mensagem em pixels</td>
+<td style="height: 54px; width: 128px;">Apenas numeros</td>
+<td style="height: 54px; width: 420px;">width=320</td>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px; width: 96px;">height</td>
+<td style="height: 54px; width: 636px;">Valor da altura da mensagem em pixels</td>
+<td style="height: 54px; width: 128px;">Apenas numeros</td>
+<td style="height: 54px; width: 420px;">height=30</td>
+</tr>
+<tr style="height: 180px;">
+<td style="height: 180px; width: 96px;">redir</td>
+<td style="height: 180px; width: 636px;">Nome da aplicações ou URL para redirecionamento. Esta propriedade funciona apenas caso a propriedade button esteja habilitada.</td>
+<td style="height: 180px; width: 128px;">String</td>
+<td style="height: 180px; width: 420px;">button=Y&redir=form_employees.php</td>
+</tr>
+<tr style="height: 126px;">
+<td style="height: 126px; width: 96px;">redir_target</td>
+<td style="height: 126px; width: 636px;">Target para url de redicionamento. Esta propriedade funciona apenas quando a propriedade redir está habilitada.</td>
+<td style="height: 126px; width: 128px;">String</td>
+<td style="height: 126px; width: 420px;">redir=form_employees.php&redir_target=_blank</td>
+</tr>
+<tr style="height: 216px;">
+<td style="height: 216px; width: 96px;">show_close</td>
+<td style="height: 216px; width: 636px;">Flag para exibição do botão de fechar mensagem localizado na barra de titulo. Esta propriedade quando ativa força a exibição da barra de titulo mesmo que o parametro titulo esteja vazio.</td>
+<td style="height: 216px; width: 128px;">Y ou N</td>
+<td style="height: 216px; width: 420px;">show_close=Y</td>
+</tr>
+<tr style="height: 234px;">
+<td style="height: 234px; width: 96px;">body_icon</td>
+<td style="height: 234px; width: 636px;">Flag para exibição do icone do corpo da mensagem. Mesmo quando esta propriedade está ativa a exibição do icone depende da configuração do Tema (Esquema de exibição) usado na aplicação.</td>
+<td style="height: 234px; width: 128px;">Y ou N</td>
+<td style="height: 234px; width: 420px;">body_icon=N</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Exemplo 01</strong></p>
+<p><code>sc_ajax_message ("Message", "Title", "timeout=0");</code></p>
+<p> </p>
+<p><strong>Exemplo 02: Utilizando o Toast</strong></p>
+<p><code>sc_ajax_message ("Cliente", "Title", "toast=Y&toasto_pos=center-<wbr />start&type=success");</code></p>
+<p> </p>
+<blockquote>
+<p><strong>Obs</strong></p>
+<p>Para a exibição da mensagem utilizando o Toast é necessário que esta opção esteja habilitada na interface da aplicação.</p>
+</blockquote>
+<p> </p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

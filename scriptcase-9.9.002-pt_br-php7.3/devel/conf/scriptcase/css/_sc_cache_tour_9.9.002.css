@@ -1,0 +1,129 @@
+.tourBaloon
+{
+	z-index:999999; 
+	background-color:#fffada; 
+	position: absolute; 
+	border: 1px dotted #db6036; 
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	border-radius: 4px; 
+	width:510px;
+	color: #565656;
+	cursor: initial;
+}
+.tourBaloonTitle
+{
+	margin: 20px 10px;
+	text-align:left;
+	color: #db6036;
+	font-size:22px;
+}
+.tourBaloonMsg
+{
+	margin: 20px 10px;
+	text-align:left;
+	color: #7d7c78;
+	font-size:16px;
+}
+.tourBaloonButtons
+{
+	border-top: 1px dotted #e9e3c3;
+	width:100%;
+	display:inline-block;
+}
+.tourBaloonButtons div
+{
+	display:inline-block; 
+	width:160px;
+	height: 34px;
+}
+.tourBaloonButtonsLeft
+{
+	float: left;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+.tourBaloonButtonsCenter
+{
+	padding-top: 15px;
+	font-weight:bold;
+}
+.tourBaloonButtonsRight
+{
+	float: right;
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 15px;
+	
+}
+.tourBaloonButtonsLink
+{
+    color: #154278;
+	text-decoration: underline;
+} 
+.tourBaloonArrow
+{
+	position: absolute;
+	margin-left:-100px; 
+	margin-right:-100px; 
+	z-index:9999999;
+}
+.tourBaloonClose
+{
+	cursor: pointer;
+	border: 2px solid #6F6F6F;
+	float:right;
+	padding: 5px 10px;
+	top: -15px;
+	background-color: #373638;
+	right: -10px;
+	border-radius: 20px;
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	margin:-16px;
+}
+.tourBaloonClose a, .tourBaloonClose a:hover
+{
+	font-size: 15px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+}
+.tourBaloonCloseOptions
+{
+	position: absolute;
+	background-color: #373638;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+	margin-top: -2px;
+	display: inline-block;
+	white-space: nowrap;
+	z-index: 99999999;
+}
+.tourBaloonCloseOptions div
+{
+	padding: 5px;
+}
+.tourBaloonCloseOptions div:hover
+{
+	background-color: #717072;
+	border-radius: 4px;
+	-moz-border-radius: 4px; 
+	-webkit-border-radius: 4px; 
+}
+.tourBaloonClose .tourBaloonCloseOptions
+{
+	display:none;
+}
+.tourBaloonClose:hover .tourBaloonCloseOptions
+{
+	display:block;
+}
+
+.tourBaloonBlockInput
+{
+	position:absolute;
+}

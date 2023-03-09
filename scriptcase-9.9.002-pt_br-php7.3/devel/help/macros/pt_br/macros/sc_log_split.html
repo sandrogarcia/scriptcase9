@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro retorna o que foi inserido no campo descrição na tabela de log em forma de array.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_log_split({descricao})<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/x2zxENPL4fs" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a></div>
+<p>Esta macro tem como objetivo possibilitar o acesso as informa&ccedil;&otilde;es gravadas no campo descri&ccedil;&atilde;o da tabela de log, possibilitando a manipula&ccedil;&atilde;o dos dados anteriores e posteriores dos registros envolvidos em forma de array. Estas informa&ccedil;&otilde;es s&atilde;o gravadas no campo "descri&ccedil;&atilde;o" da tabela de log, no formato de uma string com delimitadores.</p>
+<p>&nbsp;</p>
+<p><strong>Ex:</strong></p>
+<p>$arr_description = sc_log_split({description});</p>
+<p>Formato de entrada: -> keys fields Array ( [clienteid] => ANTON ) [fields] => Array ( [old] => Array ( [CEP] => 50710500 [Endereco] => Rua Desembargador Joao Paes 657 [Bairro] => Farol [Estado] => RS ) [new] => Array ( [CEP] => 53230630 [Endereco] => Avenida Presidente Kennedy, 1001 [Bairro] => Peixinhos [Estado] => PE ) ) )</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onLoadAll
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onLoadAll
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

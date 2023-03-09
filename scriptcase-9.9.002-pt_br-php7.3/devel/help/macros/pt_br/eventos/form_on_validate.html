@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre durante a validação dos dados do formulário.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento é executado quando o formulário é submetido ao servidor, através dos botões: "incluir", "alterar" ou "excluir"<br />Nesse evento, é permitido realizar validações antes de que os dados do formulário sejam enviados para o banco de dados.</p>
+<hr />
+<p><span style="font-weight: 400;">No exemplo abaixo, utilizando a aplicação form_orders,  iremos validar o campo freight, onde se o valor atribuído ao campo freight for maior que 30 será disparado uma mensagem de erro para o usuário e o envio do formulário será cancelado.</span></p>
+<p><strong>Exemplo do código:</strong></p>
+<p><strong>if({freight} > 30){</strong></p>
+<p><strong>sc_error_message("Valor do frete é muito alto");</strong></p>
+<p><strong>}</strong></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

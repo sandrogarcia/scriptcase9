@@ -1,0 +1,70 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Variáveis especiais que contêm todos os totais por quebra.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">Variables-Totalling(groupby)Variáveis de Totalizacao (quebras)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1"><span class="corpo1">Durante o processamento das quebras, o Scriptcase disponibiliza todas as variáveis de totalização, a nível geral e a nível da quebra que estiver sendo processada.<br /><br />Supondo uma aplicação que tenha dois níveis de quebra (<strong>estado e cidade</strong>) e que totaliza dois campos (<strong>parcela e saldo</strong>).<br /><br />Considerando que as fórmulas, definidas para serem processadas no evenro "<strong>onGroupBy</strong>" estarão atuando para os vários níveis de quebra, as variáveis especiais de totalização, neste escopo, são referenciadas substituindo-se o nome da quebra pela palavra chave "<strong>quebra</strong>", ou seja:</span></p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Variáveis<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descrição</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_ger}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém a quantidade total dos registros</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_parcela}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém o somatório geral do campo "parcela"</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_saldo}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém o somatório geral do campo "saldo"</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_quebra}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém a quantidade total dos registros, da quebra que estiver sendo processada</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_quebra_parcela}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém o somatório do campo "parcela", da quebra que estiver sendo processada</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_quebra_saldo}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Contém o somatório do campo "saldo", da quebra que estiver sendo processada</span>.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1"><span class="corpo1"> </span></p>
+<p class="corpo1"><span class="corpo1"><strong>Ex. 1: Em uma</strong></span><span class="corpo1"><strong> aplicação que tenha quebras por </strong><strong>estado e </strong><strong>cidade e que totalize um campo de </strong><strong>saldo, e nos totais das quebras, desejamos exibir a média em substituição ao </strong><strong>saldo. <br /></strong><br />{sum_quebra_saldo} = {sum_quebra_saldo} / {count_quebra};</span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+								
+						</tr>
+						<tr>
+								
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

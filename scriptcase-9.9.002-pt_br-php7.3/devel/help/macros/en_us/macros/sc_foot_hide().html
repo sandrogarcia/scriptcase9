@@ -1,0 +1,100 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro disables the footer display.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_foot_hide()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div>
+<div>
+<p>The purpose of this macro is to disable the footer display in the application.</p>
+</div>
+</div>
+<div>
+<p>In the specific case of the <strong>query</strong>, the event is performed in the <strong>Grid</strong> and in the <strong>Summary</strong>. To configure it, a <strong>parameter</strong> was created, as shown in the examples below:</p>
+<table style="width: 50%; border-collapse: collapse;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; text-align: center; height: 18px;">Parameter</td>
+<td style="width: 0.929368%; text-align: center; height: 18px;">Value</td>
+<td style="width: 10.964%; text-align: center; height: 18px;">Description</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">sc_foot_hide('grid')</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>grid</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Disable grid footer</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">
+<p>sc_foot_hide('res')</p>
+<p>sc_foot_hide('sum')</p>
+</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>res</strong></li>
+<li><strong>sum</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Disable summary footer</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+<pre><br />1 -<strong>Inhibits the query and summary footer:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide();<br /><br />2 -<strong>Inhibits the query footer only:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide('grid');<br /><br />3 -<strong>Inhibits the footer of the summary only:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide('res'); or sc_foot_hide('sum');</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

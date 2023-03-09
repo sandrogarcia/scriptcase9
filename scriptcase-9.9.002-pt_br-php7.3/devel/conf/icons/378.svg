@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="-30.8" y="12.3" width="19.3" height="7.4"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="-16.3" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="-16.3" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="#DA8C8C" d="M19.1,31.3H0.8V6.9h18.3V31.3z M2.3,29.8h15.3V8.4H2.3V29.8z"/>
+	</g>
+	<g>
+		<path fill="#DA8C8C" d="M31.3,31.3H17.6V6.9h13.7V31.3z M19.1,29.8h10.7V8.4H19.1V29.8z"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="5.1" y1="13.7" x2="14.3" y2="13.7"/>
+		<rect x="5.1" y="13" fill="#B4A79C" width="9.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="5.1" y1="19.1" x2="14.3" y2="19.1"/>
+		<rect x="5.1" y="18.3" fill="#B4A79C" width="9.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="5.1" y1="24.4" x2="14.3" y2="24.4"/>
+		<rect x="5.1" y="23.6" fill="#B4A79C" width="9.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="22.1" y1="11.5" x2="22.1" y2="13.7"/>
+		<rect x="21.4" y="11.5" fill="#B4A042" width="1.5" height="2.2"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="25.8" y1="11.5" x2="25.8" y2="13.7"/>
+		<rect x="25.1" y="11.5" fill="#B4A042" width="1.5" height="2.2"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="22.1" y1="17.2" x2="22.1" y2="19.4"/>
+		<rect x="21.4" y="17.2" fill="#B4A042" width="1.5" height="2.2"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="25.8" y1="17.2" x2="25.8" y2="19.4"/>
+		<rect x="25.1" y="17.2" fill="#B4A042" width="1.5" height="2.2"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="22.1" y1="23.4" x2="26.7" y2="23.4"/>
+		<rect x="22.1" y="22.7" fill="#B4A042" width="4.5" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="22.1" y1="26.7" x2="26.7" y2="26.7"/>
+		<rect x="22.1" y="25.9" fill="#B4A042" width="4.5" height="1.5"/>
+	</g>
+	<g>
+		<rect x="1.5" y="1.5" fill="#FAC2C3" width="29" height="6.1"/>
+		<path fill="#DA8C8C" d="M31.3,8.4H0.8V0.8h30.5V8.4z M2.3,6.9h27.5V2.3H2.3V6.9z"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="4.2" y1="4.6" x2="5.4" y2="4.6"/>
+		<rect x="4.2" y="3.8" fill="#DA8C8C" width="1.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="6.8" y1="4.6" x2="8" y2="4.6"/>
+		<rect x="6.8" y="3.8" fill="#DA8C8C" width="1.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#FAC2C3" x1="9.5" y1="4.6" x2="10.7" y2="4.6"/>
+		<rect x="9.5" y="3.8" fill="#DA8C8C" width="1.2" height="1.5"/>
+	</g>
+</g>
+</svg>

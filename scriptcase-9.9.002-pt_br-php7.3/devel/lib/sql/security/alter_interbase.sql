@@ -1,0 +1,34 @@
+# Alter table SEC_APPS                                        #
+
+ALTER TABLE SEC_APPS ADD CONSTRAINT PK_SEC_APPS_1 PRIMARY KEY (APP_NAME);
+
+# Alter table SEC_GROUPS                                        #
+
+ALTER TABLE SEC_GROUPS ADD CONSTRAINT PK_SEC_GROUPS_1 PRIMARY KEY (GROUP_ID);
+
+# Alter table SEC_GROUPS_APPS                                        #
+
+ALTER TABLE SEC_GROUPS_APPS ADD CONSTRAINT PK_SEC_GROUPS_APPS_1 PRIMARY KEY (GROUP_ID, APP_NAME);
+
+# Alter table SEC_USERS                                        #
+
+ALTER TABLE SEC_USERS ADD CONSTRAINT PK_SEC_USERS_1 PRIMARY KEY (LOGIN);
+
+# Alter table SEC_USERS_SOCIAL                                        #
+
+ALTER TABLE SEC_USERS_SOCIAL ADD CONSTRAINT PK_SEC_USERS_SOCIAL_1 PRIMARY KEY (LOGIN, RESOURCE, RESOURCE_ID);
+
+# Alter table SEC_USERS_APPS                                        #
+
+ALTER TABLE SEC_USERS_APPS ADD CONSTRAINT PK_SEC_USERS_APPS_1 PRIMARY KEY (LOGIN, APP_NAME);
+
+# Alter table SEC_USERS_GROUPS                                        #
+
+ALTER TABLE SEC_USERS_GROUPS ADD CONSTRAINT PK_SEC_USERS_GROUPS_1 PRIMARY KEY (LOGIN, GROUP_ID);
+
+# Alter table SEC_SETTINGS                                        #
+
+ALTER TABLE SEC_SETTINGS ADD CONSTRAINT PK_SEC_SETTINGS_1 PRIMARY KEY (SET_NAME);
+
+
+

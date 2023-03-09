@@ -1,0 +1,97 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro muestra / oculta dinámicamente los campos de un bloque específico.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_block_display(Nombre del bloque, on/off)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un tutorial" href="https://youtu.be/Jm0pBkftHMQ" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un vídeo tutorial</a>
+</div>
+<p>Determina din&aacute;micamente los campos de visualizaci&oacute;n de un bloque espec&iacute;fico.</p>
+<p>Por defecto, se muestran todos los bloques (condici&oacute;n "activada").</p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Ej. 1:</strong><br />if ({type_customeri} == "personal")<br />{<br />sc_block_display(company, off);<br />}<br />else<br />{<br />sc_block_display(personal, off);<br />}</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Obs: </strong><em>En las grid, esta macro solo funciona con orientaci&oacute;n de "diapositiva".</em></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterInsert<br>onAfterUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

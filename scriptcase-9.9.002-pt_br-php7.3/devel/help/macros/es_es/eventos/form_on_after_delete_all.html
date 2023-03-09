@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando se elimina un registro en formularios de múltiples filas.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después de hacer clic en el botón Eliminar en el formulario de múltiples registros. El formulario luego ejecutará los eventos onValidate, onValidateSuccess y onBeforeDelete, y después de ejecutar todos los comandos SQL para eliminar los registros en la base de datos, ejecutará el evento <strong>onAfterDeleteAll</strong>.</p>
+<p><em>Nota: Este evento solo ocurre una vez, independientemente de cuántos registros se eliminen a la vez.</em></p>
+<hr />
+<p>Ej. En un formulario de artículo de pedido (registros múltiples), queremos eliminar el pedido si se eliminan todos los artículos de la pantalla. Solo en el caso de que OnAfterDeleteAll use un bloque similar al que se muestra a continuación:</p>
+<p>sc_exec_sql ("DELETE FROM orders WHERE order_id = {order_id }");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

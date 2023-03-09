@@ -1,0 +1,102 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro carrega, para serem usadas na aplicação, as imagens passadas como parâmentro. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_image(Imagem01.jpg)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Todas as imagens utilizadas nas aplicações são automáticamente copiadas para cada aplicação. Caso o usúario, através de dos eventos ou Javascript, utilize comandos para carregar imagens, estas terão que ser copiadas para a aplicação. Esta macro executa esta função.</span></p>
+<p class="corpo1"> </p>
+<p class="corpo1"><strong>Ex. 1:</strong><br />sc_image (img1.gif, img2.jpg);</p>
+<p class="corpo1"><strong>OBS:</strong> <em>As imagens deverão existir no diretório de imagens do ambiente de desenvolvimento (../devel/conf/sys/img/img/)</em>.</p>
+<p class="corpo1"> </p>
+<p class="corpo1"><strong>IMPORTANTE</strong></p>
+<p class="corpo1">À partir da versão 3.00.0144, foi implementado em (<strong>Aplicação->Configuração->Imagens Extras da Aplicação</strong>) uma interface para que o usuário possa informar as imagens extras, permitindo, inclusive, o upload de novas imagens. <br />Desta forma, esta macro não será mais necessária.</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit<br>onLoadAll<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRecord<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit<br>onLoadAll<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

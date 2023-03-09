@@ -1,0 +1,233 @@
+.menu {
+{theme_main_borderwidth_menu}
+{theme_main_bordercolor_menu}
+{theme_main_radius_menu}
+border-style: solid;
+
+{theme_main_padding_menu}
+{theme_main_margin_menu}
+{theme_main_boxshadow_menu}
+}
+.menu .menu--horizontal {
+{theme_menu_line_background_image}
+{theme_menu_line_background_color}
+{theme_menu_line_background_repeat}
+{theme_menu_line_background_position}
+{theme_menu_line_boxshadow}
+{theme_menu_line_margin}
+{theme_menu_line_padding}
+}
+#idMenuVertical {
+{theme_menuvertical_line_background_image}
+{theme_menuvertical_line_background_color}
+{theme_menuvertical_line_background_repeat}
+{theme_menuvertical_line_background_position}
+
+{theme_menuvertical_line_boxshadow}
+{theme_menuvertical_line_margin}
+{theme_menuvertical_line_padding}
+}
+
+.menu__toggle span {
+background-color:{main_normal_color_font};
+}
+.menu__list
+{
+{theme_main_background_image}
+{theme_main_background_color}
+{theme_main_background_repeat}
+{theme_main_background_position}
+}
+
+.menu__item, .menu__link {
+{theme_main_font_underline}
+{theme_main_normal_color_font}
+{theme_main_font_family}
+{theme_main_font_size}
+{theme_main_font_bold}
+{theme_main_font_italic}
+{theme_main_font_overunderline}
+}
+
+.menu__list > .menu__item {
+{theme_main_normal_color_back}
+{theme_main_bordercolor_item}
+{theme_main_borderwidth_item}
+border-style:solid;
+{theme_main_radius_item}
+{theme_main_padding_item}
+{theme_main_margin_item}
+}
+
+.menu--horizontal .menu__list > .menu__item:first-child {
+    {theme_main_borderwidth_item_first}
+}
+.menu--horizontal .menu__list > .menu__item:last-child {
+    {theme_main_borderwidth_item_last}
+}
+
+.menu--vertical .menu__list > .menu__item {
+  {theme_main_borderwidth_item_vertical}
+}
+.menu--vertical .menu__list > .menu__item:first-child {
+}
+.menu--vertical .menu__list > .menu__item:last-child {
+}
+
+.menu__list > .menu__item:hover {
+{theme_main_hover_color_back}
+}
+.menu__list > .menu__item:hover > .menu__link{
+{theme_main_hover_color_font}
+}
+.menu__list > .menu__item:hover > .menu__link:after{
+border-left: 4px solid {main_hover_color_font};
+}
+.menu__list > .menu__item:active, .menu__list > .menu__item--active {
+{theme_main_active_color_back}
+}
+.menu__list > .menu__item:active > .menu__link, .menu__list > .menu__item--active > .menu__link {
+{theme_main_active_color_font}
+}
+.menu__list > .menu__link:before {
+{theme_main_bordercolor_item}
+}
+.menu__link:after {
+    border-top: 4px solid {main_normal_color_font};
+    border-left: 4px solid {main_normal_color_font};
+}
+.menu__icon {
+{theme_main_color_icon}
+}
+.menu__badge {
+font-style: normal;
+border-radius: 25px;
+padding: 2px 6px;
+{theme_main_font_size_badge}
+{theme_main_bg_badge}
+{theme_main_color_badge}
+{theme_main_radius_badge}
+font-size: 0.85em;
+}
+.menu__submenu {
+display:none;
+{theme_sub_background_image}
+{theme_sub_bar_color}
+{theme_sub_background_repeat}
+{theme_sub_background_position}
+
+{theme_sub_borderwidth_menu}
+{theme_sub_bordercolor_menu}
+{theme_sub_radius_menu}
+{theme_sub_padding_menu}
+{theme_sub_margin_menu}
+border-style: solid;
+
+{theme_sub_opacity}
+
+{theme_sub_alignment}
+}
+
+.menu__submenu .menu__item {
+{theme_sub_font_family}
+{theme_sub_font_size}
+{theme_sub_font_bold}
+{theme_sub_font_italic}
+
+{theme_sub_font_underline}
+
+{theme_sub_bordercolor_item}
+{theme_sub_borderwidth_item}
+border-style:solid;
+
+{theme_sub_radius_item}
+{theme_sub_normal_color_back}
+{theme_sub_margin_item}
+{theme_sub_padding_item}
+}
+
+.menu__submenu .menu__item:first-child {
+{theme_sub_borderwidth_item_first}
+}
+.menu__submenu .menu__item:last-child {
+{theme_sub_borderwidth_item_last}
+}
+
+.menu__submenu .menu__item {
+{theme_sub_normal_color_font}
+}
+
+.menu__submenu .menu__item:hover {
+{theme_sub_hover_color_back}
+}
+.menu__submenu .menu__item:hover .menu__link {
+{theme_sub_hover_color_font}
+}
+.menu__submenu .menu__item:hover .menu__link:after {
+border-left: 4px solid {sub_hover_color_font}
+}
+.menu__submenu .menu__item:active, .menu__submenu .menu__item--active {
+{theme_sub_active_color_back}
+}
+.menu__submenu .menu__item:active .menu__link, .menu__submenu .menu__item--active .menu__link {
+{theme_sub_active_color_font}
+}
+@media only screen and (max-width: 576px) {
+  .menu {
+    {theme_main_font_family}
+    {theme_main_font_size}
+      border-bottom: 1px solid transparent;
+      padding: 0;
+    }
+    .menu:before {
+    {theme_menu_line_background_color}
+    {theme_main_boxshadow_menu}
+    }
+    .menu:after {
+      background-color:    rgba(0, 0, 0, 0.5);
+    }
+    .menu .menu__container {
+    {theme_menu_line_background_color}
+    }
+    .menu .menu__item,
+    .menu .menu__item:hover {
+    border-bottom: 1px solid {theme_main_bordercolor_item}
+    }
+    .menu .menu__item--active,
+    .menu .menu__item:hover--active {
+    {theme_main_hover_color_back}
+    }
+    .menu .menu__item--active > .menu__link,
+    .menu .menu__item:hover--active > .menu__link {
+    {theme_main_hover_color_font}
+    }
+    .menu .menu__item:hover--active > .menu__link:after {
+    border-left: 4px solid {main_hover_color_font}
+    }
+    .menu .menu__link,
+    .menu .menu__item:hover .menu__link {
+    {theme_main_normal_color_font}
+    }
+    .menu .menu__submenu .menu__item:hover {
+    : transparent;
+      border-bottom: 0;
+    }
+    .menu .menu__submenu .menu__link:before {
+    {theme_main_normal_color_font}
+    }
+    .menu .menu__item--withsubmenu > .menu__link:after {
+    border-left: 4px solid {main_active_color_font}
+    }
+    .menu__list > .menu__item {
+        {theme_main_borderwidth_item_vertical}
+    }
+    #idMenuHeader
+    {
+      display:none;
+    }
+    #idMenuVertical
+    {
+      box-shadow:none;
+      margin:0px;
+    }
+}

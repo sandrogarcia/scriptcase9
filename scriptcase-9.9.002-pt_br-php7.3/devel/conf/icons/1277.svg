@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<pattern  x="-252" y="-294" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_1" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#FEE99B" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<pattern  x="-252" y="-294" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_2" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#E0CB81" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<g>
+	<path fill="#DA8C8C" d="M23.4,31.3H8.6c-0.4,0-0.7-0.3-0.7-0.8v-4.6c0-0.4,0.3-0.8,0.7-0.8h14.9c0.4,0,0.8,0.3,0.8,0.8v4.6
+		C24.2,30.9,23.8,31.3,23.4,31.3z M9.3,29.8h13.4v-3.1H9.3V29.8z"/>
+	<g>
+		<polygon fill="#F0F7F7" points="18.5,7.6 13.5,7.6 14.5,1.5 17.5,1.5 		"/>
+		<path fill="#8F9BA8" d="M19.4,8.3h-6.7l1.2-7.6h4.3L19.4,8.3z M14.4,6.8h3.2l-0.7-4.6h-1.7L14.4,6.8z"/>
+	</g>
+	<path fill="#DA8C8C" d="M23.4,26.6H8.6c-0.2,0-0.4-0.1-0.6-0.3c-0.1-0.2-0.2-0.4-0.2-0.6l2.9-18.3c0.1-0.4,0.4-0.6,0.7-0.6h9
+		c0.4,0,0.7,0.3,0.7,0.6l2.9,18.3c0,0.2,0,0.4-0.2,0.6C23.9,26.5,23.7,26.6,23.4,26.6z M9.4,25.1h13.1L19.9,8.3h-7.7L9.4,25.1z"/>
+	<g>
+		<pattern  id="SVGID_1_" xlink:href="#New_Pattern_Swatch_1" patternTransform="matrix(1 0 0 1 16.5005 -11.8598)">
+		</pattern>
+		<polygon fill="url(#SVGID_1_)" points="10.7,12.8 9.7,19.1 19,19.1 18,12.8 		"/>
+		<pattern  id="SVGID_2_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 16.5005 -11.8598)">
+		</pattern>
+		<path fill="url(#SVGID_2_)" d="M19.9,19.8H8.8l1.2-7.7h8.6L19.9,19.8z M10.5,18.3h7.6l-0.8-4.7h-6L10.5,18.3z"/>
+	</g>
+</g>
+</svg>

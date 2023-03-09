@@ -1,0 +1,93 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Oculta los botones creados en la barra de acciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_hide("boton_nombre")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro displays the action bar button, hidden using the&nbsp;<code>sc_actionbar_hide</code>&nbsp;macro</p>
+<blockquote>
+<p>This macro can be used for any type of button (link or ajax) on the action bar.</p>
+</blockquote>
+<h2>Definici&oacute;n de par&aacute;metros</h2>
+<table style="width: 1117px;" border="1">
+<thead>
+<tr>
+<td style="width: 114.375px;">Parameter</td>
+<td style="width: 481.031px;">Syntax</td>
+<td style="width: 479.25px;">Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 114.375px;">boton_nombre</td>
+<td style="width: 481.031px;">
+<p><strong>No es posible utilizar variables. </strong>El nombre del bot&oacute;n debe informarse mediante <strong>comillas dobles o simples.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Example<br /></strong><code>sc_actionbar_hide<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 479.25px;">
+<p><strong>Este par&aacute;metro es obligatorio.</strong></p>
+<p>Debemos informar el nombre del bot&oacute;n de la barra de acci&oacute;n que se debe ocultar.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Exemplos</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong>&nbsp;Basic macro usage</p>
+<pre><strong>sc_actionbar_hide("</strong>boton_nombre<strong>");</strong></pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 2:&nbsp;</strong>Showing the order detail link button if there are any records to show.</p>
+<pre><span style="color: #ced4d9;">// Ejemplo creado en el evento onRecord de la grid usando la tabla order y orderdetail
+// Si no hay art&iacute;culos en el pedido, el bot&oacute;n de enlace de detalles se ocultar&aacute;.</span></pre>
+<pre style="color: #000000;"><span style="color: #ced4d9;"><span style="color: #7e8c8d;"><span style="color: #7e8c8d;">$query = "SELECT count(*) FROM OrderDetails WHERE OrderID =" . {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} == 0) {
+
+     </span><span style="color: #ced4d9;">//Example of using the macro sc_actionbar_hide</span>
+     <span style="color: #000000;"><strong style="color: #000000;">sc_actionbar_hide("</strong><strong>boton_nombre</strong><strong style="color: #000000;">");</strong></span><span style="color: #7e8c8d;">
+
+} else {
+
+     sc_actionbar_show("boton_nombre");
+
+}</span></span></span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

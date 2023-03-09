@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esse evento ocorre após inclusão de um registro no forumulário multiplo registros.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Inserir do <strong>formulário de múltiplos registros</strong>. O formulário executará então os eventos onValidate, onValidateSuccess e onBeforeInsertAll, e logo após executar todos os comandos SQL para inserir os registros no banco de dados, ele executará o evento <strong>onAfterInsertAll</strong>.</p>
+<p> </p>
+<hr />
+<p>Podemos por exemplo, após inserir os itens de uma nota fiscal, (tb_itens_nf), em um form de múltiplos registros , incluir na tabela "pai" (nota_fiscal), o valor total dos produtos.</p>
+<p>sc_lookup(tot," select sum(valor_item) from tb_itens_nf where num_nf = {num_nf} ");</p>
+<p>{tmp_tot} = {tot[0][0]};</p>
+<p>sc_exec_sql(" update tb_itens_nf set total_itens = {tmp_tot} where num_nf = {num_nf} ");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

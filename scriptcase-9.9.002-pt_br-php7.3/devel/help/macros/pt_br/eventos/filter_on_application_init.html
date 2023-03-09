@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre uma unica vez quando a aplicacao e carregada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			Este evento ocorre uma única vez antes da exibição do formulario do filtro. Podemos utilizar o evento para "setar" alguns defaults para os campos do filtro ex:
+
+{empresa} = [glo_empresa];
+
+Campos no formato data são tratados diferentemente, recebendo um sufixo dia, mes e/ou ano. Por exemplo, o campo {dataNasc} será tratado da seguinte forma:
+
+{dataNasc_dia}=date("d");
+
+{dataNasc_mes}=date("m");
+
+{dataNasc_ano}=date("Y");
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

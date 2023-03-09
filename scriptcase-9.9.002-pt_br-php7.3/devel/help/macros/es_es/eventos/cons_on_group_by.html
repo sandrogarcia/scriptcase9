@@ -1,0 +1,41 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento se ejecuta dentro de la agrupación.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento se ejecuta siempre que ocurren las rupturas, independientemente del nivel de ruptura, y permite la manipulación de los campos de totalización.</p>
+<p>Scriptcase hace que todas las variables de totalización estén disponibles en el alcance del Grid.</p>
+<blockquote>
+<p>onGroupBy solo se ejecuta cuando la aplicación Query tiene uno o más Breaks configurados.</p>
+</blockquote>
+<hr />
+<p><strong>Ej:</strong></p>
+<p>Suponiendo una aplicación que tiene dos niveles de agrupación (estado y ciudad) y que suma dos campos (parcela y saldo), podemos tener acceso a los totales, en el ámbito de "calcular para cada registro", de la siguiente manera:</p>
+<ul>
+<li><code>{count_ger}</code> - contiene el número total de registros;</li>
+<li><code>{sum_parcel}</code> - contiene la suma total del campo "parcela";</li>
+<li><code>{sum_balance}</code> - contiene la suma total del campo "saldo";</li>
+<li><code>{count_state}</code> - contiene el número total de registros de la ruptura del "estado" que se está procesando;</li>
+<li><code>{sum_state_plot}</code> - contiene la suma del campo "plot", de la ruptura del "estado" que se está procesando;</li>
+<li><code>{sum_balance_state}</code> - contiene la suma del campo "saldo", de la ruptura del "estado" que se está procesando;</li>
+<li><code>{count_cidade}</code> - contiene el número total de registros de la pausa de la "ciudad" que se está procesando;</li>
+<li><code>{sum_cidade_parcela}</code> - contiene la suma del campo "parcela", de la ruptura de la "ciudad" que se está procesando;</li>
+<li><code>{sum_city_balance}</code> - contiene la suma del campo "saldo", de la pausa de "ciudad" que se está procesando;</li>
+</ul>
+<p><br />Considerando que as fórmulas, definidas para serem processadas no escopo de "calcular durante as quebras" estarão atuando para os vários níveis de quebra, as variáveis especiais de totalização, neste escopo, são referenciadas substituindo-se o nome da quebra pela palavra chave "quebra ", o sea:</p>
+<ul>
+<li><code>{count_ger}</code> - contiene el número total de registros;</li>
+<li><code>{sum_parcel}</code> - contiene la suma total del campo "parcela";</li>
+<li><code>{sum_balance}</code> - contiene la suma total del campo "saldo";</li>
+<li><code>{count_break}</code> - contiene el número total de registros de la ruptura que se está procesando;</li>
+<li><code>{sum_break_parcel}</code> - contiene la suma del campo "parcela", de la ruptura que se está procesando;</li>
+<li><code>{sum_break_balance}</code> - contiene la suma del campo "saldo", de la ruptura que se está procesando;</li>
+</ul>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

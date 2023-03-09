@@ -1,0 +1,387 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro é utilizada para fazer o upload de arquivos utilizando as APIs de Storage.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_api_upload(profile,  settings, file, parents)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="font-weight: 400;">Essa macro &eacute; utilizada para fazer o upload de arquivos na nuvem utilizando as APIs de Storage do Google, Amazon e DropBox.</span></p>
+<p><span style="font-weight: 400;">Antes de mais nada, &eacute; necess&aacute;rio a cria&ccedil;&atilde;o das chaves de utiliza&ccedil;&atilde;o da API, seja com a macro ou na interface dos campos.</span></p>
+<ul>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-google-drive-no-console-do-google" target="_blank" rel="noopener"><span style="font-weight: 400;">Clique aqui para saber como obter as credenciais do Google Drive</span></a></li>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-dropbox" target="_blank" rel="noopener">Clique aqui para saber&nbsp;como obter as credenciais do DropBox</a></li>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/ativando-a-api-do-amazon-s3" target="_blank" rel="noopener">Clique aqui para saber&nbsp;como obter as credenciais do Amazon S3</a></li>
+</ul>
+<p><span style="font-weight: 400;">Ap&oacute;s obter as credenciais, siga com a configura&ccedil;&atilde;o da macro.&nbsp;<br /></span><span style="font-weight: 400;"><br />Veja abaixo a lista de par&acirc;metros.</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 7.68408%; height: 18px; background-color: #dddddd; text-align: center;"><span style="font-weight: 400;">Param&ecirc;tros</span></td>
+<td style="width: 29.3077%; text-align: center; height: 18px; background-color: #dddddd;"><span style="font-weight: 400;">Valor</span></td>
+<td style="width: 32.5667%; text-align: center; height: 18px; background-color: #dddddd;"><span style="font-weight: 400;">Descri&ccedil;&atilde;o</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.68408%; text-align: center; height: 18px;"><span style="font-weight: 400;">profile</span></td>
+<td style="width: 29.3077%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'profile' => 'minha_api',</span></em></code></p>
+<p><span style="font-weight: 400;">Este par&acirc;metro aceita apenas o nome do perfil criado.</span></p>
+<a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/07-ferramentas/13-api/#id-6" target="_blank" rel="noopener"><span style="font-weight: 400;">Clique aqui</span></a><span style="font-weight: 400;">, para ver como criar um perfil.</span></td>
+<td style="width: 32.5667%; height: 18px;">
+<p><span style="font-weight: 400;">Devemos informar o nome do perfil criando na op&ccedil;&atilde;o APIs no menu Ferramentas.</span></p>
+<p><span style="font-weight: 400;">Quando utilizado, este par&acirc;metro carrega as configura&ccedil;&otilde;es informadas na cria&ccedil;&atilde;o do perfil.</span></p>
+<p><strong>Quando utilizado, o par&acirc;metro settings n&atilde;o precisar ser informado.</strong></p>
+<span style="font-weight: 400;">Para mais detalhes veja </span><strong>Utilizando a macro com profile</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.68408%; text-align: center; height: 18px;"><span style="font-weight: 400;">settings</span></td>
+<td style="width: 29.3077%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'settings' => [<br /></span></em><em><span style="font-weight: 400;">'app_name' => 'scriptcase',<br /></span></em><em><span style="font-weight: 400;">'gateway' => 'dropbox',<br /></span></em><em><span style="font-weight: 400;">'api_key' => '',<br /></span></em><em><span style="font-weight: 400;">'api_secret' => '',<br /></span></em><em><span style="font-weight: 400;">'access_token' => '',<br /></span></em><em><span style="font-weight: 400;">],</span></em></code></p>
+<strong>Obs: </strong><span style="font-weight: 400;">Para mais informa&ccedil;&otilde;es sobre o par&acirc;metro, veja a tabela exclusive do settings abaixo, para cada uma das APIs</span></td>
+<td style="width: 32.5667%; height: 18px;">
+<p><span style="font-weight: 400;">Recebe um array com as credenciais de acesso referentes API que ser&aacute; utilizada.</span></p>
+<br />
+<p><strong>Quando utilizado, o par&acirc;metro profile n&atilde;o precisar ser informado.</strong></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.68408%; text-align: center; height: 18px;"><span style="font-weight: 400;">file</span></td>
+<td style="width: 29.3077%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'file' => {upload_nome_do_arquivo},</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">{upload_nome_do_arquivo}</span></code></li>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">[vari&aacute;vel_global]</span></code></li>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">&lsquo;String do path do arquivo&rsquo;</span></code></li>
+</ul>
+</td>
+<td style="width: 32.5667%; height: 18px;">
+<p><span style="font-weight: 400;">Este par&acirc;metro recebe o caminho completo at&eacute; o arquivo </span><span style="font-weight: 400;">est&aacute; localizado.</span></p>
+<br />
+<p><span style="font-weight: 400;">Ao utilizar um campo, deve ser do tipo upload nome do arquivo.</span></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.68408%; text-align: center; height: 18px;"><span style="font-weight: 400;">parents</span></td>
+<td style="width: 29.3077%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><strong>Utilizando um campo<br /></strong><code><em><span style="font-weight: 400;">'parents' => {nome_campo_texto},</span></em></code></p>
+<p><strong>Informando uma String<br /></strong><code><em><span style="font-weight: 400;">'parents' => &lsquo;nome_da_pasta&rsquo;,</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">{nome_campo_texto}</span></code></li>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">[vari&aacute;vel_global]</span></code></li>
+<li style="font-weight: 400;"><code><span style="font-weight: 400;">&lsquo;Nome da pasta ou caminho local de armazenamento na nuvem&rsquo;</span></code></li>
+</ul>
+</td>
+<td style="width: 32.5667%; height: 18px;">
+<p><span style="font-weight: 400;">Diret&oacute;rio onde o arquivo ser&aacute; armazenado</span></p>
+<br />
+<p><span style="font-weight: 400;">Quando n&atilde;o informado, o arquivo ser&aacute; armazenado na raiz do servidor de armazenamento.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Como visto acima, o par&acirc;metro </span><strong>settings </strong><span style="font-weight: 400;">recebe um o array com as credenciais de acesso referentes API utilizada.</span></p>
+<blockquote>
+<p><span style="font-weight: 400;">Este par&acirc;metro deve ser utilizado apenas quando n&atilde;o definimos um perfil no menu </span><strong>Ferramentas > API</strong><span style="font-weight: 400;"><br /></span></p>
+</blockquote>
+<p><span style="font-weight: 400;">Cada API possui suas pr&oacute;prias configura&ccedil;&otilde;es para o par&acirc;metro settings, veja abaixo como cada uma deve ser configurada.</span></p>
+<p>&nbsp;</p>
+<h2><span style="font-weight: 400;">Utilizando a macro com profile</span></h2>
+<p><span style="font-weight: 400;">A utiliza&ccedil;&atilde;o da macro com um perfil, pede a cria&ccedil;&atilde;o pr&eacute;via do mesmo.<br /></span><a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/07-ferramentas/13-api/#id-6" target="_blank" rel="noopener"><span style="font-weight: 400;">Clique aqui</span></a><span style="font-weight: 400;">, para ver como criar um perfil em cada uma das APIs de armazenamento dispon&iacute;veis.</span></p>
+<p><span style="font-weight: 400;">O perfil ou profile, cont&eacute;m os dados para utiliza&ccedil;&atilde;o da API desejada, desta forma, ao utilizar um perfil na macro n&atilde;o se faz necess&aacute;rio utilizar o par&acirc;metro settings.</span></p>
+<blockquote>
+<p><span style="font-weight: 400;">O par&acirc;metro profile aceita apenas o nome do perfil criado, para a utiliza&ccedil;&atilde;o din&acirc;mica da macro, ser&aacute; necess&aacute;rio utilizar o par&acirc;metros settings.</span></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><strong>Exemplo de uso da macro com o profile.</strong></p>
+<pre><em>sc_api_upload([</em><em><br /></em><em>    'profile' => 'minha_api',</em><em><br /></em><em>    'file' => {arquivo},</em><em><br /></em><em>    'parents' => 'pasta_no_drive',</em><em><br /></em><em>]);</em></pre>
+<h2><span style="font-weight: 400;">Utilizando a macro com par&acirc;metro settings</span></h2>
+<p><span style="font-weight: 400;">O array com as credenciais de acesso que deve ser passado na par&acirc;metro settings varia de acordo com a API utilizada.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Veja abaixo como utilizar este par&acirc;metro de acordo com cada uma das APIs dispon&iacute;veis.</span></p>
+<blockquote>
+<p><span style="font-weight: 400;">Ao utilizar o par&acirc;metro settings na configura&ccedil;&atilde;o na macro, n&atilde;o &eacute; necess&aacute;rio informar um profile.</span></p>
+</blockquote>
+<h3>&nbsp;</h3>
+<h3><span style="font-weight: 400;">Utilizando a macro com settings - API Google Drive</span></h3>
+<p><span style="font-weight: 400;">Primeiramente, devemos ter em m&atilde;os as credenciais para a utiliza&ccedil;&atilde;o da API do Google Drive, </span><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-google-drive-no-console-do-google" target="_blank" rel="noopener"><span style="font-weight: 400;">clique aqui</span></a><span style="font-weight: 400;"> para saber como obt&ecirc;-las.</span></p>
+<p><span style="font-weight: 400;">Ap&oacute;s a configura&ccedil;&atilde;o das credenciais, veja abaixo todos os valores do array que devem ser passados no par&acirc;metro settings utilizando a API do Google Drive.</span></p>
+<p><strong>Todos os valores abaixo s&atilde;o obrigat&oacute;rios ao utilizarmos o par&acirc;metro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 7.15415%; background-color: #dddddd; text-align: center;"><span style="font-weight: 400;">&Iacute;ndice</span></td>
+<td style="width: 13.5511%; background-color: #dddddd; text-align: center;"><span style="font-weight: 400;">Valor</span></td>
+<td style="width: 13.4981%; background-color: #dddddd; text-align: center;"><span style="font-weight: 400;">Descri&ccedil;&atilde;o</span></td>
+</tr>
+<tr>
+<td style="width: 7.15415%; text-align: center;"><span style="font-weight: 400;">app_name</span></td>
+<td style="width: 13.5511%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'app_name' => 'scriptcase',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 13.4981%; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Nome da app informado na cria&ccedil;&atilde;o das credenciais de acesso.</span></td>
+</tr>
+<tr>
+<td style="width: 7.15415%; text-align: center;"><span style="font-weight: 400;">gateway</span></td>
+<td style="width: 13.5511%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'gateway'&nbsp; => 'google_driver',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 13.4981%; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Nome do gateway para identificar a API utilizada.</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 7.15415%; text-align: center;"><span style="font-weight: 400;">json_oauth</span></td>
+<td style="width: 13.5511%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'json_oauth'&nbsp; => 'JSON',</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 13.4981%; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Recebe o conte&uacute;do do arquivo (JSON) de autentica&ccedil;&atilde;o gerado pelo usu&aacute;rio.</span></p>
+<p><span style="font-weight: 400;">Este arquivo deve ser baixado ap&oacute;s a cria&ccedil;&atilde;o das credenciais no site do google.</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 7.15415%; text-align: center;"><span style="font-weight: 400;">auth_code</span></td>
+<td style="width: 13.5511%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'auth_code'&nbsp; => '5/4wHt7TBTY4MtvQ',</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 13.4981%; text-align: left; vertical-align: top;">
+<p>Recebe o c&oacute;digo auth_code, gerado ap&oacute;s a configura&ccedil;&atilde;o da API seguindo os passos descritos no tutorial&nbsp;<a href="https://help.scriptcase.net/portal/pt/kb/articles/como-gerar-o-token-code-e-o-auth-code" target="_blank" rel="noopener">Como gerar o auth_code para utiliza&ccedil;&atilde;o da API do Google Driver</a></p>
+</td>
+</tr>
+<tr>
+<td style="width: 7.15415%; text-align: center;"><span style="font-weight: 400;">token_code</span></td>
+<td style="width: 13.5511%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'token_code'&nbsp; => '4/4wHt7TBTY4MtvQ',</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 13.4981%; text-align: left; vertical-align: top;">&Eacute; poss&iacute;vel gerar o token_code utilizando nossa macro <a href="https://help.scriptcase.net/portal/pt/kb/articles/como-gerar-o-token-code-e-o-auth-code#Gerar_token_code_com_a_macro_sc_api_gc_get_obj" target="_blank" rel="noopener">sc_api_gc_get_obj</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Exemplos de utiliza&ccedil;&atilde;o da macro com o Google Drive, utilizando o par&acirc;metro settings</strong></p>
+<pre><em><span style="font-weight: 400;">sc_api_upload([<br />    'settings' => [<br />        'app_name' => 'scriptcase',<br />        'gateway' => 'google_drive',<br />        'json_oauth' => '',<br />        'auth_code' => '',<br />        'token_code' => '',<br />    ],<br />    'file' => {arquivo},<br />    'parents' => '',<br />]);<br /></span></em></pre>
+<h3><span style="font-weight: 400;">Utilizando a macro com settings - Dropbox</span></h3>
+<p><span style="font-weight: 400;">Primeiramente, devemos ter em m&atilde;os as credenciais para a utiliza&ccedil;&atilde;o da API do Dropbox, </span><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-dropbox" target="_blank" rel="noopener"><span style="font-weight: 400;">clique aqui</span></a><span style="font-weight: 400;"> para saber como obt&ecirc;-las.</span></p>
+<p><span style="font-weight: 400;">Ap&oacute;s a configura&ccedil;&atilde;o das credenciais, veja abaixo todos os valores do array que devem ser passados no par&acirc;metro settings utilizando a API do Dropbox.</span></p>
+<p><strong>Todos os valores abaixo s&atilde;o obrigat&oacute;rios ao utilizarmos o par&acirc;metro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 7.47214%; height: 18px; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">&Iacute;ndice</span></td>
+<td style="width: 31.8349%; height: 18px; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">Valor</span></td>
+<td style="width: 27.4831%; height: 18px; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">Descri&ccedil;&atilde;o</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.47214%; height: 18px; text-align: center;"><span style="font-weight: 400;">app_name</span></td>
+<td style="width: 31.8349%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'app_name' => 'scriptcase',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 27.4831%;"><span style="font-weight: 400;">Nome da app informado na cria&ccedil;&atilde;o das credenciais de acesso.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.47214%; height: 18px; text-align: center;"><span style="font-weight: 400;">gateway</span></td>
+<td style="width: 31.8349%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'gateway'&nbsp; => 'google_driver',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 27.4831%;">
+<p><span style="font-weight: 400;">Nome do gateway para identificar a API utilizada.</span></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.47214%; height: 18px; text-align: center;"><span style="font-weight: 400;">api_key</span></td>
+<td style="width: 31.8349%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'api_key&rsquo;&nbsp; => {nome_campo},</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 27.4831%; height: 18px;"><span style="font-weight: 400;">Recebe o app key, disponibilizado ao configurar as credenciais da API.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.47214%; height: 18px; text-align: center;"><span style="font-weight: 400;">api_secret</span></td>
+<td style="width: 31.8349%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'api_secret&rsquo;&nbsp; => {nome_campo},</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 27.4831%; height: 18px;"><span style="font-weight: 400;">Recebe o app secret, disponibilizado ao configurar as credenciais da API.</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Exemplos de utiliza&ccedil;&atilde;o da macro com o Dropbox, utilizando o par&acirc;metro settings</strong></p>
+<pre><em><span style="font-weight: 400;">sc_api_upload([</span></em><br /><em><span style="font-weight: 400;">    'settings' => [</span></em><br /><em><span style="font-weight: 400;">        'app_name' => 'scriptcase',</span></em><br /><em><span style="font-weight: 400;">        'gateway' => 'dropbox',</span></em><br /><em><span style="font-weight: 400;">        'api_key' => '',</span></em><br /><em><span style="font-weight: 400;">        'api_secret' => '',</span></em><br /><em><span style="font-weight: 400;">        'access_token' => '',</span></em><br /><em><span style="font-weight: 400;">    ],</span></em><br /><em><span style="font-weight: 400;">    'file' => {arquivo},</span></em><br /><em><span style="font-weight: 400;">    'parents' => '',</span></em><br /><em><span style="font-weight: 400;">]);</span></em></pre>
+<p>&nbsp;</p>
+<h3><span style="font-weight: 400;">Utilizando a macro com settings - Amazon S3</span></h3>
+<p><span style="font-weight: 400;">Devemos ter em m&atilde;os as credenciais para a utiliza&ccedil;&atilde;o da API de armazenamento do Amazon S3, </span><a href="https://help.scriptcase.net/portal/pt/kb/articles/ativando-a-api-do-amazon-s3"><span style="font-weight: 400;">clique aqui</span></a><span style="font-weight: 400;"> para saber como obt&ecirc;-las.</span></p>
+<p><span style="font-weight: 400;">Ap&oacute;s a configura&ccedil;&atilde;o das credenciais, veja abaixo todos os valores do array que devem ser passados no par&acirc;metro settings utilizando a API da Amazon S3.</span></p>
+<p><strong>Todos os valores abaixo s&atilde;o obrigat&oacute;rios ao utilizarmos o par&acirc;metro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 7.20709%; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">&Iacute;ndice</span></td>
+<td style="width: 31.7289%; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">Valor</span></td>
+<td style="width: 28.3492%; text-align: center; background-color: #dddddd;"><span style="font-weight: 400;">Descri&ccedil;&atilde;o</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.20709%; height: 18px; text-align: center;"><span style="font-weight: 400;">app_name</span></td>
+<td style="width: 31.7289%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'app_name' => 'scriptcase',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 28.3492%;"><span style="font-weight: 400;">Nome da app informado na cria&ccedil;&atilde;o das credenciais de acesso.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.20709%; height: 18px; text-align: center;"><span style="font-weight: 400;">gateway</span></td>
+<td style="width: 31.7289%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'gateway'&nbsp; => 'google_driver',</span></em></code></p>
+<p><span style="font-weight: 400;">Este &iacute;ndice aceita apenas string</span></p>
+</td>
+<td style="width: 28.3492%;">
+<p><span style="font-weight: 400;">Nome do gateway para identificar a API utilizada.</span></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.20709%; height: 18px; text-align: center;"><span style="font-weight: 400;">api_key</span></td>
+<td style="width: 31.7289%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'api_key&rsquo;&nbsp; => {nome_campo},</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 28.3492%; height: 18px;"><span style="font-weight: 400;">Recebe o app key, disponibilizado ao configurar as credenciais da API.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 7.20709%; height: 18px; text-align: center;"><span style="font-weight: 400;">api_secret</span></td>
+<td style="width: 31.7289%; height: 18px;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'api_secret&rsquo;&nbsp; => {nome_campo},</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 28.3492%; height: 18px;"><span style="font-weight: 400;">Recebe o app secret, disponibilizado ao configurar as credenciais da API.</span></td>
+</tr>
+<tr>
+<td style="width: 7.20709%; text-align: center;"><span style="font-weight: 400;">region</span></td>
+<td style="width: 31.7289%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'region'&nbsp; => 'us-east-1',</span></em></code></p>
+<p><span style="font-weight: 400;">O par&acirc;metro region da macro aceita apenas o c&oacute;digo da regi&atilde;o. </span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Para facilitar, segue link para verifica&ccedil;&atilde;o do c&oacute;digo de cada regi&atilde;o.</span></p>
+<p><a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints"><span style="font-weight: 400;">https://docs.aws.amazon.com/general/latest/gr/rande.html</span></a></p>
+</td>
+<td style="width: 28.3492%;"><span style="font-weight: 400;">Recebe o c&oacute;digo da regi&atilde;o, o mesmo utilizado na cria&ccedil;&atilde;o das credenciais.</span></td>
+</tr>
+<tr>
+<td style="width: 7.20709%; text-align: center;"><span style="font-weight: 400;">bucket</span></td>
+<td style="width: 31.7289%;">
+<p><span style="font-weight: 400;">Exemplo de como o par&acirc;metro deve ser informado.</span></p>
+<p><code><em><span style="font-weight: 400;">'bucket'&nbsp; => 'bucket_name',</span></em></code></p>
+<p><span style="font-weight: 400;">Lista das op&ccedil;&otilde;es aceitas:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">&lsquo;string&rsquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">{nome_campo}</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">$variavel</span></li>
+</ul>
+</td>
+<td style="width: 28.3492%;"><span style="font-weight: 400;">Recebe o nome do bucket criado ao configurar as credenciais da API.</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Exemplos de utiliza&ccedil;&atilde;o da macro com o Amazon S3, utilizando o par&acirc;metro settings</strong></p>
+<pre><em>sc_api_upload([</em><br /><em>    'settings' => [</em><br /><em>        'app_name' => 'scriptcase',</em><br /><em>        'gateway'&nbsp; => 'S3',</em><br /><em>        'api_key' => '',</em><br /><em>        'api_secret' => '',</em><br /><em>        'region' => '',</em><br /><em>        'bucket' => '',</em><br /><em>    ],</em><br /><em>    'file' => {arquivo},</em><br /><em>    'parents' => '',</em><br /><em>]);</em></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onAfterDelete<br>onAfterUpdateAll<br>onBeforeInsertAll<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onValidate
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

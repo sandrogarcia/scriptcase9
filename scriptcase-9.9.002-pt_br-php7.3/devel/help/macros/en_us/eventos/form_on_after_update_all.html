@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when there is an update on a multiple row only on multiple rows forms.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking on the Save button of <strong>the multiple record form</strong>. The Form will execute the onValidate, onValidateSuccess and onBeforeUpdateAll events, and then it will execute the <strong>onAfterUpdateAll</strong> event after execute all the SQL commands to update the records into the database.</p>
+<p> </p>
+<hr />
+<p>Example: We can update the total value of an invoice (tb_invoice) after update its items (tb_invoice_items) in a multiple records form.</p>
+<p>sc_lookup (tot, "select sum(value_item) from tb_invoice_items where num_nf = {num_nf}");</p>
+<p>{tmp_tot} = {tot [0] [0]};</p>
+<p>sc_exec_sql ("UPDATE tb_invoice SET total_items = {tmp_tot} WHERE num_nf = {num_nf}");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

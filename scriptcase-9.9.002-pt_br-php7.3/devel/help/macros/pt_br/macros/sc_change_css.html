@@ -1,0 +1,109 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Altera a propriedade CSS dos campos</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_change_css('nome_atributo', 'valor', 'nome_campo')<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="color: #000000;">Esta macro permite alterar atributos CSS dos campos da aplica&ccedil;&atilde;o.</span></p>
+<p>&nbsp;</p>
+<h2><span style="color: #000000;">Lista de Par&acirc;metros</span></h2>
+<table style="border-collapse: collapse; width: 100%; height: 160.953px;" border="1">
+<tbody>
+<tr style="height: 23.3906px;">
+<td style="width: 14.4411%; height: 23.3906px;"><span style="color: #000000;">par&acirc;metros</span></td>
+<td style="width: 52.1859%; height: 23.3906px;"><span style="color: #000000; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">valores dos par&acirc;metros</span></td>
+<td style="width: 33.3135%; height: 23.3906px;"><span style="color: #000000;">Descri&ccedil;&atilde;o</span></td>
+</tr>
+<tr style="height: 92.7812px;">
+<td style="width: 14.4411%; height: 92.7812px;"><span style="font-family: monospace; color: #000000;"><span style="background-color: #e8e8e8;">nome atributo</span></span></td>
+<td style="width: 52.1859%; height: 92.7812px;">
+<p><span style="color: #000000;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">O nome do bot&atilde;o deve ser informado utilizando&nbsp;<strong>aspas duplas</strong></span>, <strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">aspas simples</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;"> ou vari&aacute;veis.</span></span></p>
+<p><span style="color: #000000;"><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Exemplo<br /></span></strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Neste exemplo estamos utilizando o atributo <strong>color</strong></span></span></p>
+<p><span style="color: #000000;"><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="color: #000000;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>(</span>'<strong>color'</strong>, </span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; color: #7e8c8d;"><span style="font-size: 13px;">'#dcfce7'</span></span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></span></p>
+</td>
+<td style="width: 33.3135%; height: 92.7812px;">
+<p><span style="color: #000000;"><strong>Atributo Obrigat&oacute;rio.</strong></span></p>
+<p><span style="color: #000000;">Define o atributo CSS que ser&aacute; alterado</span></p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 14.4411%; height: 22.3906px;"><span style="color: #000000;"><code>valor</code></span></td>
+<td style="width: 52.1859%; height: 22.3906px;">
+<p><span style="color: #000000;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">O nome do bot&atilde;o deve ser informado utilizando&nbsp;<strong>aspas duplas</strong></span>&nbsp;ou&nbsp;<strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">aspas simples</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">.</span></span></p>
+<p><span style="color: #000000;"><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Exemplo<br /></span></strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Neste par&acirc;metro definimos o valor para o atributo CSS deve receber, no exemplo estamos definindo a cor: </span><code>#dcfce7</code></span></p>
+<p><span style="color: #000000;"><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>(<span style="color: #7e8c8d;">'color', </span></span><strong><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana;"><span style="font-size: 13px;">'#dcfce7'</span></span></strong><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></span></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><span style="color: #000000;"><strong>Atributo Obrigat&oacute;rio.</strong></span></p>
+<p><span style="color: #000000;">Define o valor que o atributo informado ir&aacute; receber</span></p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 14.4411%; height: 22.3906px;"><span style="color: #000000;"><code>nome campo</code></span></td>
+<td style="width: 52.1859%; height: 22.3906px;">
+<p><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">O nome do bot&atilde;o deve ser informado utilizando&nbsp;<strong>aspas duplas</strong></span>,&nbsp;<strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">aspas simples</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">&nbsp;ou vari&aacute;veis.</span></p>
+<p><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Exemplo<br /></span></strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Neste exemplo estamos definindo a mudan&ccedil;a na cor da fonte do campo&nbsp;</span><code style="font-size: 16px; text-align: justify;">fld_status</code><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;"><br /></span></strong></p>
+<p><span style="color: #7e8c8d;"><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="color: #000000;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>(</span>'color',&nbsp;</span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana;"><span style="font-size: 13px;">'#dcfce7', <strong><span style="color: #000000;">'fld_status'</span></strong></span></span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px; color: #000000;">);</span></code></span></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><span style="color: #000000;"><strong>Atributo Opcional.</strong></span></p>
+<p><span style="color: #000000;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Define o campo onde o CSS ser&aacute; aplicado, caso nenhum valor seja informado a altera&ccedil;&atilde;o ser&aacute; realizada em todos os campos da linha.</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2><span style="color: #000000;">Exemplos</span></h2>
+<hr />
+<p><span style="color: #000000;">Exemplo de altera&ccedil;&atilde;o da cor da fonte e utiliza&ccedil;&atilde;o do atributo <code>sc_badge</code></span></p>
+<pre><span style="color: #000000;">switch({taskstatus}) {
+	case 'COMPLETED':
+		sc_change_css('color', '#dcfce7', 'taskstatus');
+		sc_change_css('sc_badge', 'green', 'taskstatus');
+		break;
+		
+	case 'IN-PROGRESS':
+		sc_change_css('color', '#1e40af', 'taskstatus');
+		sc_change_css('sc_badge', 'blue', 'taskstatus');
+		break;
+		
+	case 'NOT-STARTED':
+		sc_change_css('color', '#991b1b', 'taskstatus');
+		sc_change_css('sc_badge', 'red', 'taskstatus');
+		break;
+}</span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

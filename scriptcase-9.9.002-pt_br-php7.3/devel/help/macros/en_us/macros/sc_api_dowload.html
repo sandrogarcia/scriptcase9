@@ -1,0 +1,95 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro is used to download or download files using the Storage APIs.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_api_dowload(profile, settings, file, destination)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="tlid-translation translation" lang="en"><span class="" title="">This macro is used to download files using the Storage APIs for your cloud storage service.</span><br /><br /><span title="">It has the parameters:</span><br /></span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Parameters</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Description</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">profile </span></span></td>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">When informing the "profile" it will load the settings informed in the creation of the API.</span></span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">settings </span></span></td>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">If you do not want to enter the profile value, you need to pass the "settings" parameters following the tools> API configuration.</span></span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">file</span></span></td>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">Name of the file</span></span></td>
+</tr>
+<tr>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">destination</span></span></td>
+<td style="width: 50%;"><span class="tlid-translation translation" lang="en"><span title="">Directory where the file is stored.</span></span></td>
+</tr>
+</tbody>
+</table>
+<h4>When informing the "profile" it will load the settings informed in the creation of the API.</h4>
+<h4>Example:</h4>
+<blockquote>
+<p><code>sc_api_download([<br />'profile' => 'myApi',<br />'file' => {file}, <br />'destination' => {destination},<br />]);</code></p>
+</blockquote>
+<p><code></code></p>
+<h4>If you do not want to enter the value of the profile, it will be necessary to pass the parameters of the "settings" following the configuration in Tools > API. You must enter the credentials for each storage service.</h4>
+<h4>Examples using Google Driver</h4>
+<blockquote>
+<p><code>sc_api_download([</code><br /><code>'settings' => [</code><br /><code>'app_name' => {appname},</code><br /><code>'gateway' => 'google_drive',</code><br /><code>'json_oauth' => {jsonoauth},</code><br /><code>'auth_code' => {authcode},</code><br /><code>'token_code' => {tokencode},</code><br /><code>],</code><br /><code>'file' => {files},</code><br /><code>'destination' => {destination},<br />]); </code></p>
+</blockquote>
+<h4><br />Examples using Dropbox</h4>
+<p><code></code></p>
+<blockquote>
+<p><code>sc_api_download([<br />'settings' => [</code><br /><code>'gateway' => 'dropbox',</code><br /><code>'api_key' => {apikey},</code><br /><code>'api_secret' => {apisecret},</code><br /><code>'access_token' => {accesstoken},</code><br /><code>],</code><br /><code>'file' => {file},</code><br /><code>'destination' => {destination},<br /></code><code>]);</code></p>
+</blockquote>
+<h4>Examples using Amazon S3</h4>
+<blockquote>
+<p><code>sc_api_download([</code><br /><code>'settings' => [</code><br /><code>'app_name' => 'scriptcase',</code><br /><code>'gateway' => 'S3',</code><br /><code>'api_key' => {apikey},</code><br /><code>'api_secret' => {apisecret},</code><br /><code>'region' => {api_region},</code><br /><code>'bucket' => {api_bucket},</code><br /><code>],</code><br /><code>'file' => {file},</code><br /><code>'destination' => {destination},<br />]);</code></p>
+</blockquote>
+<div id="gtx-trans" style="position: absolute; left: -13px; top: 645.047px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onLoadAll<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

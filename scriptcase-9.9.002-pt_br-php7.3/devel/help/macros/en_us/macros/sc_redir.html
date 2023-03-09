@@ -1,0 +1,105 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro is used to redirect to another application or URL.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_redir(Application, Parameter01; Parameter02; Target, Error, height_modal, width_modal)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/7q2GA3GIlcg" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a></div>
+<p>This macro is used to redirect the processing application to other applications or a URL.<br /><br /><br />If the redirect uses parameters, these must be passed in the following format:<br /><strong>1) </strong>After the name of the application, use the comma delimiter (,) then<br /><strong>2)</strong> = (equal sign) .<br /><strong>3)</strong> More than one parameter must be separated by a semicolon (;)<br /><strong>4)</strong> The target determines which application is opened (default=_self): _self, _parent, _blank, or modal.<br /><strong>5)</strong> Optional parameter to set error messages redirection in the application: "F" redirects if there is an error in the application (default value) and "E" does not redirect.</p>
+<p>&nbsp;</p>
+<p><span class="hps">OBS</span>. <span class="hps">If your</span> <span class="hps">connection uses</span> <span class="hps">transaction control</span> <span class="hps">the use of this</span> <span class="hps">macro on the</span> <span class="hps">events</span> <span class="hps">onAfterInsert</span>, <span class="hps">onafterupdate</span>, <span class="hps">onAfterDelete</span>, <span class="hps">onBeforeInsert</span>, <span class="hps">onbeforeupdate or</span> <span class="hps">onBeforeDelete</span> <span class="hps">should</span> <span class="hps">come</span> <span class="hps">after the use of</span> <span class="hps">macro</span> <span class="hps">sc_commit_trans</span> so this way it will save the form changes<span class="hps">.</span></p>
+<p><strong>This macro does not support the use of the Modal parameter when used in a Run button.</strong></p>
+<p><br /><br /><strong>Ex. 1:</strong> <strong>Application without parameters nor target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x);<br />}<br /><br /><strong>Ex. 2:</strong> <strong>Application with parameters and without target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, parm1={var_test}; parm2="xxx");<br />}<br /><br /><strong>Ex. 3: Application without parameters and with target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, "", "_parent");<br />}<br /><br /><strong>Ex. 4: Application with parameter and target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, parm1={var_test}; parm2="xxx", "_blank");<br />}<br /><br /><strong>Ex. 5: URL.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(http://www.my_page.com);<br />}</p>
+<p>&iuml;&iquest;&frac12;</p>
+<p><strong>OBS.</strong> Everything that was passed as parameters to the called application will be available as global variable.</p>
+<p><strong>EX:</strong> sc_redir(employee, parm1={var_test}; parm2="xxx", "_blank");</p>
+<p>In the employee application the parameters will be accessible at [parm1] and [parm2]</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

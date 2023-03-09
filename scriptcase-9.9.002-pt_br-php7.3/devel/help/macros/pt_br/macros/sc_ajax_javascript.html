@@ -1,0 +1,68 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro permite que sejam executados métodos javascript chamados em eventos do formulário,controle e calendário</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_javascript('NomeMetodoJavascript', array("parâmetro"))<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver vídeo tutorial" href="https://youtu.be/RdIM1vt7fI4" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a></div>
+<p>Esta macro permite que métodos javascript chamados em determinados eventos sejam executados nas aplicações de <strong>formulário, controle e calendário</strong></p>
+<blockquote>
+<p><strong>Para utilizar esta macro é necessário criar o método javascript na aplicação na opção de <a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/06-aplicacoes/05-aplicacao-formulario/26-programacao/#id-04" target="_blank" rel="noopener">Programação.</a></strong></p>
+</blockquote>
+<p>A macro recebe dois parâmetros: <br /><br />O primeiro (parâmetro obrigatório) é uma string contendo o nome do método javascript. <br />O segundo (parâmetro opcional) um array com os parâmetros desse método.</p>
+<h4><strong>Exemplos de chamadas de métodos javascript:</strong></h4>
+<hr />
+<p><strong>Ex. 1: Método javascript sem parâmetros:</strong> <br /><code>sc_ajax_javascript('nome_do_metodo'); </code><br /><code>sc_ajax_javascript('soma'); </code><br /><br /><strong>Ex. 2: Método javascript que contem um parâmetro:</strong> <br /><code>sc_ajax_javascript('nome_do_metodo', array("parâmetro"));</code> <br /><br /><strong>Ex. 3: Método javascript que contém dois paramentros:</strong> <br /><code>sc_ajax_javascript('nome_do_metodo', array("param1","param2"));</code> <br /><br /><strong>Exemplo com variáveis globais como parâmetros:</strong> <br /><code>sc_ajax_javascript('soma', array([num1],[num2]));</code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onValidateFailure
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

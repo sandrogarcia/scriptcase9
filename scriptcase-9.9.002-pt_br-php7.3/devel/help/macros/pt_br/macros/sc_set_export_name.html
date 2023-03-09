@@ -1,0 +1,98 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Altera o nome dos arquivos exportados pela consulta</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_set_export_name ("tipo_exportacao", "nome_do_arquivo")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="font-weight: 400;">Os arquivos resultantes das exporta&ccedil;&otilde;es realizadas na consulta, s&atilde;o armazenados no diret&oacute;rio </span><strong>tmp</strong><span style="font-weight: 400;"> (tempor&aacute;rio) especificado nas configura&ccedil;&otilde;es da ferramenta.</span></p>
+<p><span style="font-weight: 400;">Tanto em desenvolvimento quanto em produ&ccedil;&atilde;o, os arquivos s&atilde;o armazenados com o prefixo </span><strong>sc_</strong><span style="font-weight: 400;"> e uma chave &uacute;nica. Ap&oacute;s um tempo, os arquivos com o prefixo </span><strong>sc_ </strong><span style="font-weight: 400;">ser&atilde;o apagados.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Para evitar que os arquivos exportados sejam apagados, &eacute; poss&iacute;vel utilizar esta macro para renome&aacute;-los.<br /></span></p>
+<h3>Lista de Par&acirc;metros</h3>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 6.31302%; height: 18px;"><strong>Par&acirc;metro</strong></td>
+<td style="width: 31.1373%; height: 18px;"><strong>Valor</strong></td>
+<td style="width: 23.9992%; height: 18px;"><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr style="height: 72px;">
+<td style="width: 6.31302%; height: 72px;">"tipo_exportacao"</td>
+<td style="width: 31.1373%; height: 72px;">
+<p>String contendo o tipo da exporta&ccedil;&atilde;o, que deve ser protegida por aspas.<strong><br /><br /></strong>&nbsp; Exemplo de uso na macro.<br /><strong>&nbsp; &nbsp;"csv"</strong></p>
+<p><strong>&nbsp;Lista das valores suportados:</strong></p>
+<ul>
+<li>csv</li>
+<li>json</li>
+<li>pdf</li>
+<li>rtf</li>
+<li>xml</li>
+<li>xls</li>
+<li>word</li>
+</ul>
+</td>
+<td style="width: 23.9992%; height: 72px;">Devemos informar o tipo de arquivo que desejamos renomear.<br /><br /><strong>Esta par&acirc;metro n&atilde;o aceita vari&aacute;veis.</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 6.31302%; height: 18px;">"nome_arquivo"</td>
+<td style="width: 31.1373%; height: 18px;">
+<p>String contendo o nome que o arquivo vai receber.</p>
+<p>Exemplo de uso na macro:</p>
+<p><strong>"Novo nome do arquivo"</strong></p>
+<p><strong>Valores suportados</strong></p>
+<ul>
+<li>String com o nome</li>
+<li>Vari&aacute;vel Global</li>
+</ul>
+</td>
+<td style="width: 23.9992%; height: 18px;">
+<p>Par&acirc;metro obrigat&oacute;rio, onde devemos informar o nome que o arquivo ir&aacute; receber.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3>Confira abaixo alguns exemplos de utiliza&ccedil;&atilde;o da macro:</h3>
+<p><strong>Exemplo 1</strong> -Definindo um nome a um arquivo PDF</p>
+<p><code><strong>sc_set_export_name("pdf", "meu_arquivo_pdf.pdf");</strong></code></p>
+<p><strong>Exemplo 2 -</strong> Definindo um nome de um arquivo passando o valor por uma vari&aacute;vel global.</p>
+<p><code><strong>sc_set_export_name("json", [glo_nome_json]);</strong></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

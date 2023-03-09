@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro muda o nome dos arquivos exportados pela consulta no scriptcase.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_set_pdf_name"sc_meu_arquivo.pdf"<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Os arquivos resultantes das exportações de dados (PDF, XLS, XML, CSV, WORD e RTF) são gravados no diretório "temporário" especificado na configuração do Scriptcase, tanto em desenvolvimento quanto em produção, com o prefixo "sc_" seguido de uma identificação única, de tal maneira que um arquivo de um determinado usuário não subscreva um outro.</p>
+<p>O prefixo "sc_" faz com que o próprio Scriptcase apague os arquivos antigos. Para atribuir nomes diferentes dos padrões Scriptcase, podem ser usadas as seguintes macros:</p>
+<p>- sc_set_csv_name</p>
+<p>- sc_set_pdf_name</p>
+<p>- sc_set_rtf_name</p>
+<p>- sc_set_xml_name</p>
+<p>- sc_set_xls_name</p>
+<p>- sc_set_word_name</p>
+<p> </p>
+<p>Ex1:</p>
+<p>sc_set_xls_name = "meu_arquivo.xls";</p>
+<p> </p>
+<p>Ex2:</p>
+<p>sc_set_csv_name = "sc_meu_arquivo.csv";</p>
+<p> </p>
+<p>OBS:</p>
+<p>1) Estas macros devem ser utilizadas no evento "onApplicationInit".</p>
+<p>2) Mesmo utilizando a macro, se mantido o prefixo "sc_" (conforme Ex2), o Scriptcase apagará o arquivo, quando este atingir o tempo limite configurado (ver a configuração "Tempo de vida dos arquivos" no ambiente de produção).</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

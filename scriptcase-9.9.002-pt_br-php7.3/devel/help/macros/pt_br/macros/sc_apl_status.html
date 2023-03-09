@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro tem por objetivo proteger ou liberar a utilização das aplicações em geral. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_apl_status("Aplicação", "Status")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo proteger ou liberar a utiliza&ccedil;&atilde;o das aplica&ccedil;&otilde;es, quando utilizado o modulo de seguran&ccedil;a. Assim, em fun&ccedil;&atilde;o do "Login" do usu&aacute;rio, podem ser determinadas as aplica&ccedil;&otilde;es que o mesmo pode ou n&atilde;o acessar.</p>
+<p><br /><span class="corpo1"><strong>Aplica&ccedil;&atilde;o</strong>: &Eacute; o nome ou a vari&aacute;vel que contenha o nome da aplica&ccedil;&atilde;o a ser ativada/desativada.<br /><strong>Status</strong>: &Eacute; o valor ou a vari&aacute;vel que contenha o valor a ser atribu&iacute;do &agrave; aplica&ccedil;&atilde;o. Os valores s&atilde;o: "on" para ativar e "off" para desativar.</span></p>
+<p>&nbsp;</p>
+<p class="corpo1"><span class="corpo1"><strong>Ex. 1</strong>:<br />sc_apl_status ('atu_cad', 'off');</span></p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2:</strong><br />sc_apl_status ({var_nome_apl}, {var_status});</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

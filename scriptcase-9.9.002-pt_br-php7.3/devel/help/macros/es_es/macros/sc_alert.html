@@ -1,0 +1,180 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro muestra una pantalla de mensaje Javascript.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_alert("Mensaje", $array)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un vídeo tutorial" href="https://youtu.be/lT48TGT2XWs" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" width="24" height="24" />Ver un vídeo tutorial</a></div>
+<p><span style="font-weight: 400;">Esta macro envía un mensaje en estilo de </span><em><span style="font-weight: 400;">alerta</span></em><span style="font-weight: 400;"> en Javascript o Sweetalert2.</span></p>
+<blockquote>
+<p><strong>Obs</strong></p>
+<p><strong><span style="font-weight: 400;">Para mostrar el mensaje usando la biblioteca sweetalert2, es necesario que la opción </span>”Usar SweetAlert”<span style="font-weight: 400;"> esté habilitada en la aplicación donde se usará la macro.</span></strong></p>
+<p><strong><span style="font-weight: 400;">Esta opción se puede habilitar en el menú de configuración de la aplicación. Para acceder a él, haga clic en: Aplicación> Configuración la opción se encuentra en el bloque de Configuración de las Notificaciones.<br /></span></strong></p>
+</blockquote>
+<p><strong><span style="font-weight: 400;"><br />Verifique a continuación los parámetros admitidos por la macro:</span></strong></p>
+<ul>
+<li><span style="font-weight: 400;"><strong>Mensaje</strong>: Parámetro obligatorio que contiene el mensaje que se mostrará.</span></li>
+<li><span style="font-weight: 400;"><strong>$array</strong>: Este parámetro es opcional cuando se usa la macro, más obligatorio cuando queremos usar <strong>Sweetalert2</strong>.<br />Cuando se usa, espera recibir una matriz con la configuración de Sweetalert2.<br /></span></li>
+</ul>
+<p><span style="font-weight: 400;">Verifique la lista de configuraciones aceptadas por Sweetalert2 en esta macro:</span></p>
+<table style="width: 100%;">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 8.21637%; text-align: center; height: 18px;"><span style="font-weight: 400;">Parámetro</span></td>
+<td style="width: 39.8252%; text-align: center; height: 18px;">Valor</td>
+<td style="width: 51.9583%; text-align: center; height: 18px;"><span style="font-weight: 400;">Descripción</span></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 8.21637%; height: 36px;">title</td>
+<td style="width: 39.8252%; height: 36px;"><strong><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz:</span>'title' => 'Título'</strong></td>
+<td style="width: 51.9583%; height: 36px;"><span style="font-weight: 400;">Texto que se mostrará en el título de la tarjeta, si la opción de brindis es marcado como falso.</span> 'toast' => false</td>
+</tr>
+<tr style="height: 164px;">
+<td style="width: 8.21637%; height: 164px;">type</td>
+<td style="width: 39.8252%; height: 164px;">
+<p><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz:</span> <strong>'type' => 'warning'</strong></p>
+<p><span style="font-weight: 400;">Lista de opciones aceptadas:</span></p>
+<ul>
+<li><strong>success</strong></li>
+<li><strong>error</strong></li>
+<li><strong>warning</strong></li>
+<li><strong>info</strong></li>
+</ul>
+</td>
+<td style="width: 51.9583%; height: 164px;"><span style="font-weight: 400;">Define el tipo de mensaje que se mostrará.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.21637%; height: 18px;">timer</td>
+<td style="width: 39.8252%; height: 18px;"><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz:</span> <strong>'timer' => '2000'</strong></td>
+<td style="width: 51.9583%; height: 18px;"><span style="font-weight: 400;">Define el tiempo en milisegundos que se mostrará el mensaje.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.21637%; height: 18px;">showConfirmButton</td>
+<td style="width: 39.8252%; height: 18px;">
+<p><strong><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz: </span>'showConfirmButton' => false</strong></p>
+<p><span style="font-weight: 400;">Lista de opciones aceptadas:</span></p>
+<ul>
+<li><strong>True:</strong>Mostrar el botón de confirmación.</li>
+<li><strong>false:</strong> No muestra el botón de confirmación.</li>
+</ul>
+</td>
+<td style="width: 51.9583%; height: 18px;"><span style="font-weight: 400;">Define si se muestra un botón de confirmación.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.21637%; height: 18px;">position</td>
+<td style="width: 39.8252%; height: 18px;">
+<p><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz:</span> <strong>'position' => 'bottom-end',<br /><br /></strong><strong><span style="font-weight: 400;">Lista de opciones aceptadas:</span></strong></p>
+<ul>
+<li><strong>top</strong></li>
+<li><strong>top-start</strong></li>
+<li><strong>top-end</strong></li>
+<li><strong>center</strong></li>
+<li><strong>center-start</strong></li>
+<li><strong>center-end</strong></li>
+<li><strong>bottom</strong></li>
+<li><strong>bottom-start</strong></li>
+<li><strong>bottom-end</strong></li>
+</ul>
+</td>
+<td style="width: 51.9583%; height: 18px;"><span style="font-weight: 400;">Define la posición donde se mostrará la ventana emergente.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.21637%; height: 18px;">toast</td>
+<td style="width: 39.8252%; height: 18px;"><span style="font-weight: 400;">Ejemplo de cómo se debe informar dentro de la matriz:</span> <strong>'toast' => true</strong></td>
+<td style="width: 51.9583%; height: 18px;"><span style="font-weight: 400;">Define el uso de toast para la visualización de mensajes. Cuando está habilitada, esta opción no muestra el botón de confirmación.</span></td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;"><br />Verifique a continuación los ejemplos de uso de la macro:</span><br /><br /><strong>Ejemplo 1: Mensaje usando Sweetalert</strong><br /><code>sc_alert("¡Este es un mensaje de alerta!");</code></p>
+<p> </p>
+<p><strong>Ejemplo 2: Mensaje usando Sweetalert2</strong></p>
+<p><code><span class="im">$params = array(<br />'title' => 'Título',<br />'type' => 'success',<br />'timer' => '2000',<br /></span>'showConfirmButton' => false, <br />'position' => 'bottom-end',<br />'toast' => true<br />);<br /><br />sc_alert("Insertado con éxito!", $params);</code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onFooter<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="43.5" y="12.3" width="6.8" height="7.4"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="19.4" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="19.4" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path fill="#79C693" d="M16,27.9c-5.8,0-10.6-4.7-10.6-10.6c0-5.8,4.7-10.6,10.6-10.6c5.8,0,10.6,4.7,10.6,10.6
+			C26.6,23.1,21.8,27.9,16,27.9z M16,8.2c-5,0-9.1,4.1-9.1,9.1s4.1,9.1,9.1,9.1c5,0,9.1-4.1,9.1-9.1S21,8.2,16,8.2z"/>
+	</g>
+	<g>
+		
+			<rect x="20.8" y="26.3" transform="matrix(0.5096 0.8604 -0.8604 0.5096 34.5971 -6.5428)" fill="#79C693" width="4.5" height="1.5"/>
+	</g>
+	<g>
+		
+			<rect x="8.1" y="24.8" transform="matrix(0.8604 0.5096 -0.5096 0.8604 15.0343 -0.7289)" fill="#79C693" width="1.5" height="4.5"/>
+	</g>
+	<g>
+		<path fill="#8F9BA8" d="M29.5,13.8L20,4.4l0.7-0.5c1.1-0.8,2.5-1.2,3.9-1.2c1.8,0,3.4,0.7,4.7,1.9c2.3,2.3,2.6,5.9,0.7,8.6
+			L29.5,13.8z M22.4,4.6l6.9,6.9c0.9-1.9,0.6-4.3-1-5.9c-1-1-2.3-1.5-3.6-1.5C23.8,4.1,23.1,4.3,22.4,4.6z"/>
+	</g>
+	<g>
+		<path fill="#8F9BA8" d="M2.5,13.8L2,13.1c-1.9-2.7-1.6-6.3,0.7-8.6C4,3.3,5.6,2.6,7.4,2.6c1.4,0,2.7,0.4,3.9,1.2L12,4.4L2.5,13.8z
+			 M7.4,4.1C6,4.1,4.7,4.6,3.8,5.6c-1.6,1.6-1.9,3.9-1,5.9l6.9-6.9C8.9,4.3,8.2,4.1,7.4,4.1z"/>
+	</g>
+	<g>
+		<path fill="#79C693" d="M16.7,17.3h-1.5v-6.2c0-0.4,0.3-0.8,0.8-0.8c0.4,0,0.7,0.3,0.7,0.8V17.3z"/>
+	</g>
+	<g>
+		<path fill="#79C693" d="M18.8,21.1c-0.2,0-0.4-0.1-0.5-0.2l-2.8-3c-0.3-0.3-0.3-0.8,0-1.1c0.3-0.3,0.8-0.3,1.1,0l2.8,3
+			c0.3,0.3,0.3,0.8,0,1.1C19.2,21,19,21.1,18.8,21.1z"/>
+	</g>
+</g>
+</svg>

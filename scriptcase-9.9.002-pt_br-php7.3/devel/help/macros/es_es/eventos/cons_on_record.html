@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre inmediatamente antes de imprimir una fila.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre inmediatamente antes de que cada registro se muestre en las consultas. Por ejemplo, en una lista de clientes necesitamos modificar el valor de una columna o incluso crear una columna calculada. {calculado_campo} = {consulta_campo1} * 0.1;</p>
+<p>En el siguiente ejemplo, el estilo del texto en el campo {priceorder} cambiará según el valor.</p>
+<p>Para valores por debajo de 500 dólares, el texto tendrá un color diferente a los valores por encima de 500 dólares,</p>
+<p><strong>Ejemplo:<br /></strong></p>
+<p><code><span style="font-weight: 400;">if ( {priceorder} < 500 ) {</span></code></p>
+<p><code></code><code></code><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#228B22", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">} else {<br /></span></code></p>
+<p><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#006400", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">}</span></code></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

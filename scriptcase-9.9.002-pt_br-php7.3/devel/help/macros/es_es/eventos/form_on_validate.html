@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre durante la validación de datos en una aplicación de formulario.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento se ejecuta cuando el formulario se envía al servidor, usando los botones: "agregar", "cambiar" o "eliminar".<br />En este caso, se permite realizar validaciones antes de que los datos del formulario se envíen a la base de datos.</p>
+<hr />
+<p><br />En el siguiente ejemplo, usando la aplicación form_orders, validaremos el campo de flete, donde si el valor asignado al campo de flete es mayor a 30, se disparará un mensaje de error al usuario y se cancelará el envío del formulario.</p>
+<p><br />Ejemplo de código:<br />if ({flete}> 30) {<br />sc_error_message ("El valor de envío es demasiado alto");<br />}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

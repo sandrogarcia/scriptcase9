@@ -1,0 +1,118 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Changes the name of files exported by the query</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_set_export_name ("export_type", "file_name")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="font-weight: 400;">The files resulting from the exports made in the query are stored in thedirectory </span><strong>tmp</strong><span style="font-weight: 400;"> (temporary)specified in the tool's settings.</span></p>
+<p><span style="font-weight: 400;">Both in development and in production, files are stored with theprefix </span><strong>sc_</strong><span style="font-weight: 400;"> and a unique key. After a while, files with the prefix </span><strong>sc_ </strong><span style="font-weight: 400;">will be deleted.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">To prevent the exported files from being deleted, it is possible to use this macro to rename them.</span></p>
+<h3><strong>Parameter List</strong></h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Parameter</strong></p>
+</td>
+<td>
+<p><strong>Value</strong></p>
+</td>
+<td>
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">"export_type"</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">String containing the export type, which must be protected by quotation marks.</span></p>
+<br />
+<p><span style="font-weight: 400;">&nbsp;&nbsp;Example of use in the macro.</span></p>
+<p><strong>&nbsp;&nbsp;&nbsp;"csv"</strong></p>
+<p><strong>&nbsp;List of supported values:</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">csv</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">json</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">pdf</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">rtf</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">xml</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">xls</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">word</span></li>
+</ul>
+</td>
+<td>
+<p><strong>Mandatory parameter</strong><span style="font-weight: 400;">, where we must inform the type of file we want to rename.</span></p>
+<br />
+<p><strong>This parameter does not accept variables.</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">"filename"</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">String containing the name the file will receive.</span></p>
+<p><span style="font-weight: 400;">Example of use in the macro:</span></p>
+<p><strong>"New file name"</strong></p>
+<p><strong>Supported values</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">String with the name</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Global variable</span></li>
+</ul>
+</td>
+<td>
+<p><span style="font-weight: 400;">Mandatory parameter, where we must inform the name that the file will receive.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<h3><strong>See below some examples of using the macro:</strong></h3>
+<p><strong>Example 1 -</strong><span style="font-weight: 400;"> Defining a name for a PDF file</span></p>
+<p><code><strong>sc_set_export_name ("pdf", "meu_arquivo_pdf.pdf");</strong></code></p>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<p><strong>Example 2 -</strong><span style="font-weight: 400;"> Defining a file name by passing the value through a global variable.</span></p>
+<p><code><strong>sc_set_export_name ("json", [glo_nome_json]);</strong></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

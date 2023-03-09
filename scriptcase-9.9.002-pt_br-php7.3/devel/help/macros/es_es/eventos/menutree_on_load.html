@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando el menú está cargado</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			Este evento ocurre al cargar un menú horizontal / vertical.
+
+En este caso, podemos ejecutar alguna política de seguridad, por ejemplo, si se intenta acceder al menú directamente, sin pasar primero por un formulario de inicio de sesión, podemos probar una variable de sesión definida en el formulario de inicio de sesión, redirigir el flujo a La aplicación inicial.
+
+if( !isset([var_id_user]) or empty([var_id_user]) )
+
+{
+       sc_redirect("login.php");
+}
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

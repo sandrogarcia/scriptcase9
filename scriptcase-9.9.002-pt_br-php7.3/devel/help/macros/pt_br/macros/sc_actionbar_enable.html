@@ -1,0 +1,88 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Habilita os botões criados na barra de ação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_enable("nome_do_botao")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Habilita o bot&atilde;o da barra de a&ccedil;&atilde;o, tornando dispon&iacute;vel para o click.</p>
+<blockquote>
+<p>Esta macro pode ser utilizada para qualquer tipo de bot&atilde;o (link ou ajax) da barra de a&ccedil;&otilde;es.</p>
+</blockquote>
+<h2>Defini&ccedil;&atilde;o do par&acirc;metro</h2>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 13.1829%;">Par&acirc;metro</td>
+<td style="width: 22.0309%;">Sintaxe</td>
+<td style="width: 64.7862%;">Descri&ccedil;&atilde;o</td>
+</tr>
+<tr>
+<td style="width: 13.1829%;">nome_do_botao</td>
+<td style="width: 22.0309%;">
+<p><strong>N&atilde;o &eacute; poss&iacute;vel utilizar vari&aacute;veis</strong>, o nome do bot&atilde;o deve ser informado utilizando <strong>aspas duplas</strong> ou <strong>aspas simples</strong>.</p>
+<p>&nbsp;</p>
+<p><strong>Exemplo<br /></strong><code>sc_actionbar_enable<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 64.7862%;">
+<p><strong>Este par&acirc;metro &eacute; obrigat&oacute;rio. </strong></p>
+<p>Devemos informar o nome do bot&atilde;o da barra de a&ccedil;&atilde;o que ser&aacute; habilitado.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Exemplos</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Exemplo 1:</strong> Utiliza&ccedil;&atilde;o b&aacute;sica da macro</p>
+<pre><span style="color: #7e8c8d;"><span style="color: #000000;">sc_actionbar_enable("link_detalhe");</span></span></pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Exemplo 2: </strong>Habilitando o bot&atilde;o de link para o detalhe do pedido caso haja algum registro para ser exibido.</p>
+<pre><span style="color: #7e8c8d;"><span style="color: #7e8c8d;"><span style="color: #ced4d9;">// Exemplo criado no evento onRecord da consulta utilizando a tabela order e orderdetail</span><br /><span style="color: #ced4d9;">// Caso n&atilde;o exista pedidos itens no medido, o bot&atilde;o ser&aacute; desabilitado</span><br /><br /><span style="color: #7e8c8d;">$query = "SELECT count(*) FROM OrderDetails WHERE OrderID =" . {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} <> 0) {</span>
+
+    <span style="color: #000000;"><span style="color: #ced4d9;">//Exemplo de utiliza&ccedil;&atilde;o da macro <strong>sc_actionbar_enable</strong></span>
+    sc_actionbar_enable("link_detalhe");</span>
+
+} else {
+</span><span style="color: #000000;"><br />    <span style="color: #7e8c8d;">sc_actionbar_disable("link_detalhe");</span><br /></span><span style="color: #7e8c8d;">
+}</span></span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

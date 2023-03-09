@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre antes de uma inclusão.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após a validação do formulário (onValidate e onValidateSuccess), ao clicar no botão Inserir, e antes de executar o comando SQL de inclusão do registro no banco de dados.</p>
+<p> </p>
+<hr />
+<p>Exemplo: Consultamos uma tabela de privilegios de usuário antes de inserir o registro , caso o mesmo não tenha tal privilégio, mandamos uma mensagem de erro.</p>
+<p>sc_lookup(priv_ins ," select priv_ins from tb_privilegios where login = [var_login] ");</p>
+<p>if({priv_ins [0][0]} != 'SIM'){</p>
+<p>  sc_erro_mensagem(" você nao tem privilégios para executar esta operação ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

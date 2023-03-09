@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre após atualização de um registro em um formulário multiplo registro.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Salvar do <strong>formulário de múltiplos registros</strong>. O formulário executará então os eventos onValidate, onValidateSuccess e onBeforeUpdateAll, e logo após executar todos os comandos SQL para atualizar os registros no banco de dados, ele executará o evento <strong>onAfterUpdateAll</strong>.</p>
+<p> </p>
+<hr />
+<p>Podemos por exemplo, após atualizar os itens de uma nota fiscal, (tb_itens_nf), em um form de múltiplos registros , atualizar na tabela "pai" (nota_fiscal), o valor total dos produtos.</p>
+<p>sc_lookup(tot," select sum(valor_item) from tb_itens_nf where num_nf = {num_nf} ");</p>
+<p>{tmp_tot} = {tot[0][0]};</p>
+<p>sc_exec_sql("UPDATE tb_itens_nf SET total_itens = {tmp_tot} WHERE num_nf = {num_nf} ");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

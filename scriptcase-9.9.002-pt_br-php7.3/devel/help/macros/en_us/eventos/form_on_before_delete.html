@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before deleting a record on a form application.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after form validation (onValidate and onValidateSuccess), when clicking the Delete button, and before executing the SQL command to delete the record in the database.</p>
+<p> </p>
+<hr />
+<p>As examples we can see in the example below, we consult a user privileges table before deleting the record, if it does not have such privilege, we send an error message.</p>
+<p>sc_lookup(priv_del," select priv_del from tb_privileges where login = [var_login] ");</p>
+<p>if({priv_del[0][0]} != 'YES'){</p>
+<p>  sc_error_messagem(" you do not have privileges to perform this operation ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

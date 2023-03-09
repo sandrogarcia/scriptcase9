@@ -1,0 +1,232 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p>Permite o envio dinâmico de e-mails integrados com Mandrill e Amazon SES</p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_send_mail_api($arr_settings)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro permite o envio din&acirc;mico de e-mails integrados com as APIs do <strong>Mandrill</strong> e <strong>Amazon SES</strong>. &Eacute; poss&iacute;vel tam&eacute;m o envio de e-mail utilizando o protocolo <strong>SMTP</strong></p>
+<blockquote style="color: #4d4d4d;">Esta macro utliza os mesmos par&acirc;metros do mandrill para envio de e-mail, independente do Gateway(Mandril, Amazon SES ou SMTP) selecionado. <a href="https://mandrillapp.com/api/docs/messages.JSON.html#method=send" target="_blank" rel="noopener">clique aqui</a> e veja a lista dos par&acirc;metros que pode ser utilizados.</blockquote>
+<p>Esta macro contem um &uacute;nico par&acirc;metro "<strong>$arr_settings</strong>", que recebe um array com as informa&ccedil;&otilde;es de envio de e-mail.</p>
+<blockquote style="color: #4d4d4d;">Para mais informa&ccedil;&otilde;es sobre os par&acirc;metros o mandirll <a href="https://mandrillapp.com/api/docs/messages.JSON.html" target="_blank" rel="noopener">clique aqui</a></blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">Par&acirc;metro <br /></strong></td>
+<td align="left"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$arr_settings</td>
+<td class="corpo1" align="left">Array com as informa&ccedil;&otilde;es para a utiliza&ccedil;&atilde;o das APIs.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>&Iacute;ndices do Array</strong></p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">&Iacute;ndices do Array<br /></strong></td>
+<td align="left"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">profile</td>
+<td class="corpo1" align="left">Nome de alguma API j&aacute; configurada em "Ferramentas > API", como pode ser visto no Exemplo 1. Ao informar um profile, o &iacute;ndice <strong>settings</strong> n&atilde;o deve ser informado.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">settings</td>
+<td class="corpo1" align="left">Configura&ccedil;&otilde;es do servidor de envio de e-mail. As informa&ccedil;&otilde;es devem est&aacute; de acordo com a API utilizada. Obs.: Ao informar as configura&ccedil;&otilde;es o indice Profile &eacute; desconsiderado.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">message</td>
+<td class="corpo1" align="left">Mensagem que ser&aacute; enviada por e-mail. Assunto, corpo, destinat&aacute;rio, etc.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Exemplo 1:</strong> <strong>Envio de e-mail utilizando um Profile pr&eacute; configurado em "Ferramentas > API".</strong></p>
+<pre><code>if({api_type} == 'smtp' ){
+	$var_config = array(
+		'profile' => 'yahoo_example',
+
+		'message' => [
+			'html'          => {msg},
+			'text'          => '',
+			'to'            => $arr_merge,
+			//'attachments' => array('/var/www/arquivo.txt','/var/www/arquivo2.txt'),
+			'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</code></pre>
+<p>&nbsp;</p>
+<p><strong>Exemplo 2:</strong> <strong>Envio de e-mail por SMTP</strong></p>
+<pre><code>$smtp_server = "smtp.mail.yahoo.com";
+$smtp_port = "465";
+$smtp_user = "scriptcase.export";
+$smtp_password = "scriptcase.export";
+$from_email = "scriptcase.export@yahoo.com";
+$from_name = "Scriptcase Export";
+
+if ( {api_type} == 'smtp' ){
+	$var_config = array(
+
+		'profile' => '',
+
+		'settings' => [
+				'gateway'       => 'smtp',
+				'smtp_server'   => $smtp_server,
+				'smtp_port'     => $smtp_port,
+				'smtp_user'     => $smtp_user,
+				'smtp_password' => $smtp_password,
+				'from_email'    => $from_email,
+				'from_name'     => $from_name
+		],
+
+		'message' => [
+				   'html'          => {msg},
+				   'text'          => '',
+				   'to'            => $arr_merge,
+				   //'attachments' => array('/var/www/arquivo.txt','/var/www/arquivo2.txt'),
+				   'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</code></pre>
+<p>&nbsp;</p>
+<p><strong>Exemplo 3:</strong> <strong>Envio de e-mail usando o Mandrill</strong></p>
+<pre><code>if({api_type} == 'mandrill' ){
+	$var_config = array(
+		'settings' => [
+				   'gateway'       => 'mandrill',
+				   'api_key'   	   => {api_key},
+				   'from_email'    => {from_email},
+				   'from_name'     => {from_name}
+		],
+
+		'message' => [
+				   'html'          => {msg},
+				   'text'          => '',
+				   'to'            => array($arr_merge),
+				   //'attachments' => array('/var/www/arquivo.txt','/var/www/arquivo2.txt'),
+				   'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</code></pre>
+<p>&nbsp;</p>
+<p><strong>Exemplo 4:</strong> <strong>Envio de e-mail usando o Amazon SES</strong></p>
+<pre><code>if({api_type} == 'ses' ){
+	$var_config = array(
+		'settings' =>  [
+	        'gateway' => 'ses',
+	        'region' => {ses_region},
+	        'api_key' => {api_key},
+	        'api_secret' => {ses_secret},
+	        'from_email'    => {from_email}
+	    ],
+	    'message' => [
+	        'html'          => {msg},
+	        'text'          => '',
+	        'to'            => array($arr_merge),
+	        'subject'       => {subject}
+	    ]
+	);
+}
+
+sc_send_mail_api($var_config);
+</code></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

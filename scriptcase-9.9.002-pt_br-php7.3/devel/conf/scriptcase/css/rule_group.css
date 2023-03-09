@@ -1,0 +1,370 @@
+        .ui-sortable
+        {
+            min-height: 39px;
+        }
+		
+		.groupyComponent *,
+		.groupyComponent *:after,
+		.groupyComponent *:before {
+			box-sizing: border-box;
+		}
+
+		.groupyComponent {
+			background: #F9FAFC;
+			border: 1px solid #D1DDE2;
+			font-size: 13px;
+		}
+
+		.groupyComponent .checkboxes {
+			border-bottom: 1px solid #D1DDE2;
+			background: white;
+			padding: 10px;
+		}
+
+		.groupyComponent .heading {
+			color: #3C4858;
+			margin-top: 0;
+			margin-bottom: 15px;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 14px;
+		}
+
+		.groupyComponent .columns {
+			background: #F9FAFC;
+			padding: 10px;
+		}
+			
+			.groupyComponent .columns .col, .groupyComponent .columns .col2 {
+				width: 23%;
+				float: left;
+				margin-right: 10px;
+			}
+
+			.groupyComponent .columns .col2 {
+				width: 50%;
+			}
+				
+				.groupyComponent .columns .listitems {
+					list-style:none;
+					border: 1px solid #D1DDE2;
+					background: white;
+					padding: 5px;					
+					height: 100px;
+				}
+
+				#sc_group_by_fields_available,#sc_fields_available
+				{
+					overflow-y: auto;
+				}
+					
+					.groupyComponent .columns .item {
+						border: 1px solid #D1DDE2;
+						border-radius: 6px;
+						position: relative;
+						padding: 8px 2px;
+						margin-bottom: 2px;
+						font-weight: bold;
+						height: 27px;
+						color: #3C4858;
+					}
+						
+					.groupyComponent .columns .item-title {
+						width: calc(100% - 28px);
+						overflow-x: hidden;
+						white-space: nowrap;
+						/*
+						
+						text-overflow: ellipsis;
+						
+						*/
+					}
+					
+					.groupyComponent #sc_group_by_fields_selected .item-title, .groupyComponent #sc_fields_selected .item-title {
+						width: calc(100% - 100px);
+						text-overflow: ellipsis;
+					}
+					.groupyComponent #sc_group_by_fields_selected_total .item-title {
+						width: calc(100% - 130px);
+						text-overflow: ellipsis;
+					}
+					.groupyComponent #sc_group_by_fields_selected_resume .item-title {
+						width: calc(100% - 130px);
+						text-overflow: ellipsis;
+					}
+						
+						.groupyComponent .columns .item i {
+							margin-right: 2px;
+							color: #7398a7;
+							float: left;
+						}
+						
+					.groupyComponent .columns .item.item-check i {
+						color: #D1DDE2;
+						opacity: .75;
+					}
+
+					.groupyComponent .columns .item.item-check.active i {
+						color: #41AD49;
+						opacity: 1;
+					}
+
+					.groupyComponent .columns .item:last-child {
+						margin-bottom: 0;
+					}
+					
+					.groupyComponent .columns .item:hover {
+						background: #F9F9F9;
+					}
+
+					.groupyComponent .columns .item .buttons {
+						position: absolute;
+						right: 5px;
+						top: 5px;
+					}
+					
+						.groupyComponent .columns .item .button {
+							margin-right: 4px; 
+							padding: 0px 4px;
+							border: 1px solid #D1DDE2;
+							background: #F9FAFC;
+							color: #7398A7;
+							font-family: "Open Sans";
+							font-weight: normal;
+							float:right;
+							cursor:pointer;
+							min-height: 17px;
+						}
+						
+						#sc_group_by_fields_available .fechar
+						{
+							display: none;
+						}
+						
+						.groupyComponent .columns .item .button a{
+							color: #7398A7;
+							font-family: "Open Sans";
+							font-size: 12px;
+						}
+
+						.groupyComponent .columns .item .button:hover {
+							background: #eff2f8;
+						}
+
+		.groupyComponent .clearfix {
+			clear: both;
+		}
+
+
+
+
+					.legend {
+						display: block;
+						color: #8492A6;
+						padding: 5px 0;
+					}
+
+					.legend img {
+						position: relative;
+						left:-1px;
+						top: -2px;
+					}
+
+					.bullet {
+						border-radius: 50%;
+						width: 8px;
+						height: 8px;
+						display: none;
+						margin-right: 5px;
+					}
+
+					.bullet.blue { background-color:#009EEB; }
+					.bullet.red { background-color:#FF5216; }
+
+					.groupy-footer {
+						background: white;
+						border-top: 1px solid #d1dde2;
+						padding: 10px 20px;
+					}
+
+					.groupyComponent {
+						position: relative;
+						margin: 0;
+						border: none!important;
+						background: white!important;
+						margin:0!important;
+					}
+
+					.groupyComponent .columns {
+						background: white;
+					}
+
+					.groupyComponent .columns .item {
+						border-radius:0;
+						cursor: move;
+						margin:0;
+						padding: 5px;
+						background: white;
+						border: 1px dashed #e1eae9;
+					}
+
+					.groupyComponent .columns .item:hover,
+					#sc_group_by_fields_selected .item,
+					#sc_group_by_fields_selected_total .item,
+					#sc_group_by_fields_selected_resume .item {
+						border-color: #d1dde2;
+					}
+
+					#sc_group_by_fields_selected .item,
+					#sc_group_by_fields_selected_total .item,
+					#sc_group_by_fields_selected_resume .item {
+						margin-bottom:3px;
+					}
+
+					.groupyComponent .columns .item .bullet {
+						position: absolute;
+						top: -4px;
+						left: -4px;
+						z-index: 99;
+					}
+
+					.groupyComponent .columns .item .buttons {
+						right: 1px;
+						top: 3px;
+					}
+
+					.groupyComponent .columns .item .button {
+						border-radius:2px;
+						min-height:18px;
+						font-size: 10px!important;
+						font-family: Tahoma;
+					}
+
+					.groupyComponent .columns .item .button.fechar {
+						padding: 0px 2px;
+					}
+
+					.groupyComponent .columns .item .button.fechar img {
+						opacity: .5;
+					}
+
+					.options-picker > .options-picker-link {
+						font-size: 12px!important;
+						font-family: Arial!important;
+						width:auto;
+					}
+
+					.options-picker > .options-picker-arrow:after {
+						content: "";
+						width: 12px;
+						height: 12px;
+						opacity: .5;
+						/*background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAXklEQVQ4T+2SsQ3AIAwEjwmYi6ECichMWYwBErmzLBMXtNAan6z7Tyy+tLjPBuA6yEBx5L7AAww9m0k8gWYgB3Bb8F8KGlKB7kUexSgQOf2a9SUChD3bAL9IoTj94QOWGgkRj8AoaQAAAABJRU5ErkJggg==) no-repeat center center;*/
+						position:absolute;
+						right:-8px;
+						top:-4px;
+					}
+
+					.options-picker.opened > .options-picker-arrow:after {
+						/*content: "";*/
+						/*-ms-transform: rotate(180deg); !* IE 9 *!*/
+						/*-webkit-transform: rotate(180deg); !* Chrome, Safari, Opera *!*/
+						/*transform: rotate(180deg);*/
+					}
+					
+					.groupyComponent .columns .item i {
+						margin-right: 5px;
+					}
+
+					.columns {
+						display: -webkit-box;
+						display: -webkit-flex;
+						display: -ms-flexbox;
+						display: flex;
+						padding: 64px 48px;
+						-webkit-box-flex: 1;
+						-webkit-flex: 1;
+						-ms-flex: 1;
+						display: flex;
+                        flex-direction: row;
+					}
+
+					.columns .col {
+						border-radius: 4px;
+						float: none;
+						margin-right: 8px;
+						margin-left: 8px;
+						-webkit-box-flex: 1;
+						-webkit-flex: 1;
+						-ms-flex: 1;
+						display: flex;
+                        flex-direction: column;
+					}
+
+					.columns .col > .listitems {
+						min-height: 334px;
+						min-width: 250px;
+					}
+
+					.columns .col > .y-scrollable {
+                        height: 100%;
+                        flex-grow: 1;
+						/*overflow-y: scroll;*/
+						/*overflow-x: scroll;*/
+					}
+
+					.sc-ui-table-no-border {
+						height: 40px!important;
+					}
+
+					.sc-ui-chart-tabs img {
+						width: 24px;
+						height: auto;
+					}
+
+					.sc-ui-chart-tabs p span.sc-ui-chart-tab-info {
+						display: none;
+					}
+
+					.sc-ui-chart-tabs {
+						border-bottom: 1px solid #d1dde2;
+					}
+
+					.sc-ui-chart-tabs.sc-ui-chart-selector-on {
+						border-bottom-color: white;
+					}
+
+					.sc-ui-chart-tabs div {
+						height: auto;
+					}
+
+					.sc-ui-chart-tabs {
+						padding:10px 20px;
+					}
+
+					.sc-ui-chart-tabs-title {
+						font-size: 13px;
+					}
+
+					.listitems-dashed {
+						border-style: dashed!important;
+						border-color: #c1cce2!important;
+					}
+
+					.groupyComponent .columns .item .button.fechar {
+						border:none;
+						border: none;
+						background: none;
+						padding:1px;
+						margin: 0;
+					}
+					.groupyComponent .columns .item .button.fechar.margin {
+						margin: -15px 0px 0px 0px;
+					}
+
+					.groupyComponent .columns .item .button.fechar img {
+						opacity: .7;
+					}
+
+					.groupyComponent > .checkboxes {height:50px;}
+					.groupyComponent > .checkboxes > div {float:left;margin-right:20px;}

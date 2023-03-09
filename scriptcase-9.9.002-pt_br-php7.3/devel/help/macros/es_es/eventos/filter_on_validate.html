@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando se envía el formulario de búsqueda.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			Este evento se produce cuando se envía el formulario de búsqueda.
+
+Ex. para evitar algunas búsquedas o para validar cualquier parámetro de búsqueda
+
+if(strlen({nombre}) <= 0) {
+
+sc_error_message ("Complete el campo de nombre antes de enviar su búsqueda");
+
+}
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

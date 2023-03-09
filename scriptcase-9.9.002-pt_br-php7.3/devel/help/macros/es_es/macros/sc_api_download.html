@@ -1,0 +1,377 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro se usa para descargar archivos usando las API de almacenamiento.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_api_download(profile, settings, file, destination)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div id="undefined" class="block">
+<p>Esta macro se utiliza para descargar los archivos almacenados en los servicios de Storage disponibles en Scriptcase, estos son: Google Drive, DropBox y Amazon S3.</p>
+<p>En primer lugar, es necesario crear las claves para utilizar estas API, ya sea para su uso con la macro o mediante la interfaz de la herramienta.</p>
+<p>Vea a continuación cómo obtener las credenciales para cada uno de ellos.</p>
+<ul>
+<li><em><a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-google-drive-en-google-console" target="_blank" rel="noopener">Haga clic aquí para aprender cómo obtener las credenciales de Google Drive</a></em></li>
+<li><em><a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-dropbox" target="_blank" rel="noopener">Haga clic aquí para aprender cómo obtener las credenciales de DropBox</a>  </em></li>
+<li><em><a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-amazon-s3" target="_blank" rel="noopener">Haga clic aquí para aprender cómo obtener las credenciales de Amazon S3</a></em></li>
+</ul>
+<p>Consulte la lista de parámetros a continuación.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 4.92842%; height: 18px; background-color: #dddddd; text-align: center; vertical-align: middle;">Parameters</th>
+<th style="width: 41.1756%; height: 18px; background-color: #dddddd; text-align: center; vertical-align: middle;">Value</th>
+<th style="width: 33.0162%; height: 18px; background-color: #dddddd; text-align: center; vertical-align: middle;">Description</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.92842%; height: 18px; text-align: center; vertical-align: middle;">profile</td>
+<td style="width: 41.1756%; height: 18px; text-align: left; vertical-align: top;">
+<p>Ejemplo de cómo se debe informar el parámetro.</p>
+<p><code><em>'profile' => 'profile_name',</em></code></p>
+<p>Este parámetro acepta solo el nombre del perfil creado.</p>
+<p><a href="https://www.scriptcase.net/docs/es_es/v9/manual/07-tools/13-api/#id-06" target="_blank" rel="noopener">Haga clic aquí</a>, para ver cómo crear un perfil.</p>
+</td>
+<td style="width: 33.0162%; height: 18px; text-align: left; vertical-align: top;">
+<p>Debemos informar el nombre del perfil que se está creando en la opción APIs del menú Herramientas.</p>
+<p>Cuando se utiliza, este parámetro carga la configuración informada cuando se crea el perfil.</p>
+<p><strong>Cuando se utiliza, el parámetro de configuración no necesita ser informado.</strong></p>
+<p>Para obtener más detalles, consulte <strong>Uso de la macro con perfil</strong></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.92842%; height: 18px; text-align: center; vertical-align: middle;">settings</td>
+<td style="width: 41.1756%; height: 18px; text-align: left; vertical-align: top;">
+<p>Ejemplo de cómo se debe informar el parámetro.</p>
+<p><code><em>'settings' => [<br /></em><em>'app_name' => 'scriptcase',<br /></em><em>'gateway' => 'dropbox',<br /></em><em>'api_key' => '',<br /></em><em>'api_secret' => '',<br /></em><em>'access_token' => '',<br /></em><em>],</em></code></p>
+<p><strong>Nota</strong>: Para obtener más información sobre el parámetro, consulte la tabla de configuración exclusiva a continuación, para cada una de las API<code></code></p>
+</td>
+<td style="width: 33.0162%; height: 18px; text-align: left; vertical-align: top;">
+<p>Recibe una matriz con las credenciales de acceso para la API que se utilizará.</p>
+<p><strong>Cuando se utiliza, no es necesario introducir el parámetro de perfil.</strong></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.92842%; height: 18px; text-align: center; vertical-align: middle;">file</td>
+<td style="width: 41.1756%; height: 18px; text-align: left; vertical-align: top;">
+<p>Ejemplo de cómo se debe informar el parámetro.</p>
+<p><code><em>'file' => {image_file_name},</em></code></p>
+<p>Opciones permitidas:</p>
+<ul>
+<li>{image_file_name}</li>
+<li>[variable global]</li>
+<li>'Ruta de archivo'<code></code></li>
+</ul>
+</td>
+<td style="width: 33.0162%; height: 18px; text-align: left; vertical-align: top;">
+<p>Este parámetro recibe la ruta completa hasta que se localiza el archivo.</p>
+<p>Cuando se utiliza un campo, debe ser del tipo de archivo de nombre de carga.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.92842%; height: 18px; text-align: center; vertical-align: middle;"><span class="tlid-translation translation" lang="en"><span title="">destination</span></span></td>
+<td style="width: 41.1756%; height: 18px; text-align: left; vertical-align: top;">
+<p>Ejemplo de cómo se debe informar el parámetro.</p>
+<p><strong>Usando un campo</strong><br /><code><em>'parents' => {field_name},</em></code></p>
+<p><strong>Ingresando una String<br /></strong><code><em>'parents' => ‘folder_name’,</em></code><strong><br /></strong></p>
+<p>Opciones permitidas:</p>
+<ul>
+<li>{nombre del campo}</li>
+<li>[variable global]</li>
+<li>"Nombre de carpeta o ruta de almacenamiento en la nube local"</li>
+</ul>
+<p><strong><code></code></strong></p>
+</td>
+<td style="width: 33.0162%; height: 18px; text-align: left; vertical-align: top;">
+<p>Directorio donde se almacenará el archivo</p>
+<p>Cuando no se le informa, el archivo se almacenará en la raíz del servidor de almacenamiento.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="">Usando la macro con perfil</h2>
+<p>El uso de la macro con un perfil, requiere la creación previa de la misma.<br /><a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/07-ferramentas/13-api/#id-6">Haga clic aquí</a> para ver cómo crear un perfil en cada una de las API de almacenamiento disponibles. </p>
+<p>El perfil, o perfil, contiene los datos para usar la API deseada, por lo tanto, cuando se usa un perfil en la macro, no es necesario usar el parámetro <em>settings</em>.</p>
+<blockquote>
+<p>El parámetro de perfil acepta solo el nombre del perfil creado, para el uso dinámico de la macro, será necesario utilizar los parámetros <em>settings</em>.</p>
+</blockquote>
+<p><strong>Ejemplo de uso de la macro con el perfil.</strong></p>
+<pre><code>sc_api_upload([<br />  'profile' => 'minha_api',<br />  'file' => {archivo},<br />  'destination' => 'destino',<br />]);<br /></code></pre>
+<p><code></code></p>
+</div>
+<h2 id="">Usando la macro con el parámetro de configuración</h2>
+<p>La matriz con las credenciales de acceso que se deben pasar en el parámetro de configuración varía según la API utilizada. </p>
+<p>Vea a continuación cómo utilizar este parámetro de acuerdo con cada una de las API disponibles. </p>
+<blockquote>
+<p>Cuando se utiliza el parámetro de configuración en la configuración en la macro, no es necesario informar un perfil.</p>
+</blockquote>
+<h3>Uso De La Macro Con La Configuración - API De Google Drive</h3>
+<p>Primero, debemos tener las credenciales para usar la API de Google Drive en la mano, <a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-google-drive-en-google-console" target="_blank" rel="noopener">haga clic aquí</a> para aprender cómo obtenerlas. </p>
+<p>Después de configurar las credenciales, vea a continuación todos los valores de la matriz que deben pasarse en el parámetro de configuración usando la API de Google Drive. </p>
+<p><strong>Todos los valores a continuación son obligatorios cuando se usa el parámetro de configuración </strong></p>
+<table border="1">
+<tbody>
+<tr>
+<td>Índice </td>
+<td>Valor </td>
+<td>Descripción</td>
+</tr>
+<tr>
+<td>app_name</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'app_name' => 'scriptcase',</code> </p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td>
+<p><br />Nombre de la aplicación ingresado al crear las credenciales de acceso.</p>
+</td>
+</tr>
+<tr>
+<td>gateway</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'gateway' => 'google_driver',</code></p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td><br />Nombre de la puerta de enlace para identificar la API utilizada.</td>
+</tr>
+<tr>
+<td>json_oauth</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'json_oauth' => 'JSON',</code> </p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String'</li>
+<li>{nombre del campo} </li>
+<li>$ variable</li>
+</ul>
+</td>
+<td>
+<p>Recibe el contenido del archivo de autenticación generado por el usuario (JSON). </p>
+<p>Este archivo debe descargarse después de crear las credenciales en el sitio web de Google.</p>
+</td>
+</tr>
+<tr>
+<td>auth_code</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'auth_code' => '5/4wHt7TBTY4MtvQ',</code></p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>{nombre del campo} </li>
+<li>$ variable </li>
+</ul>
+</td>
+<td>
+<p>Recibe el código auth_code, generado después de configurar la API siguiendo los pasos descritos en el tutorial </p>
+<p><a href="https://help.scriptcase.net/portal/es/kb/articles/como-gerar-o-auth-code-e-o-token-code#Genere_auth_code_con_la_macro_sc_api_gc_get_url" target="_blank" rel="noopener">Cómo generar el auth_code para usar la API del controlador de Google</a> </p>
+</td>
+</tr>
+<tr>
+<td>token_code</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'token_code' => '',</code></p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String'</li>
+<li>{nombre del campo}</li>
+<li>$ variable</li>
+</ul>
+</td>
+<td>Es posible generar token_code usando nuestra macro <a href="https://help.scriptcase.net/portal/es/kb/articles/como-gerar-o-auth-code-e-o-token-code#Genere_token_code_con_la_macro_sc_api_gc_get_obj" target="_blank" rel="noopener">sc_api_gc_get_obj</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplos de uso de la macro con Google Drive, usando el parámetro de configuración </strong></p>
+<pre><code>sc_api_download([</code><br /><code>  'settings' => [</code><br /><code>    'app_name' => {appname},</code><br /><code>    'gateway' => 'google_drive',</code><br /><code>    'json_oauth' => {jsonoauth},</code><br /><code>    'auth_code' => {authcode},</code><br /><code>    'token_code' => {tokencode},</code><br /><code>  ],</code><br /><code>'file' => {archivo},</code><br /><code>'destination' => {destino},<br />]);</code></pre>
+<h3>Usar La Macro Con La Configuración - Dropbox</h3>
+<p>En primer lugar, debemos tener las credenciales para usar la API de Dropbox a la mano, <a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-dropbox" target="_blank" rel="noopener">haga clic aquí</a> para saber cómo obtenerlas. </p>
+<p>Después de configurar las credenciales, vea a continuación todos los valores de la matriz que se deben pasar en el parámetro de configuración usando la API de Dropbox. </p>
+<p><strong>Todos los valores a continuación son obligatorios cuando se usa el parámetro de configuración</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<th>Índice </th>
+<th>Valor </th>
+<th>Descripción</th>
+</tr>
+<tr>
+<td>app_name</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'gateway' => 'scriptcase',</code></p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td>Nombre de la aplicación ingresado al crear las credenciales de acceso.</td>
+</tr>
+<tr>
+<td>gateway</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'gateway' => 'google_driver',</code> </p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td>Nombre de la puerta de enlace para identificar la API utilizada. </td>
+</tr>
+<tr>
+<td>api_key</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'api_key' => {field_name},</code> </p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String' </li>
+<li>{nombre del campo} </li>
+<li>$ variable</li>
+</ul>
+</td>
+<td>Reciba el api_key, disponible al configurar la API.</td>
+</tr>
+<tr>
+<td>api_secret</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<pre><code>'api_secret’  => {field_name},</code></pre>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String' </li>
+<li>{nombre del campo} </li>
+<li>$variable</li>
+</ul>
+</td>
+<td>Recibe api_secret, disponible al configurar las credenciales de la API.  </td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplos de uso de la macro con Dropbox, usando el parámetro de configuración </strong></p>
+<pre><code>sc_api_download([<br />  'settings' => [</code><br /><code>    'gateway' => 'dropbox',</code><br /><code>    'api_key' => {apikey},</code><br /><code>    'api_secret' => {apisecret},</code><br /><code>    'access_token' => {accesstoken},</code><br /><code>  ],</code><br /><code>'file' => {archivo},</code><br /><code>'destination' => {destino},<br />]);</code></pre>
+<h3>Uso De La Macro Con Configuraciones - Amazon S3 </h3>
+<p>Debemos tener las credenciales para usar la API de almacenamiento de Amazon S3 a mano, <a href="https://help.scriptcase.net/portal/es/kb/articles/habilitacion-de-la-api-de-amazon-s3" target="_blank" rel="noopener">haga clic aquí</a> para aprender cómo obtenerlas. </p>
+<p>Después de configurar las credenciales, consulte a continuación todos los valores de la matriz que se deben pasar en el parámetro de configuración mediante la API de Amazon S3. </p>
+<p><strong>Todos los valores a continuación son obligatorios cuando se usa el parámetro de configuración.</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<th>Indice </th>
+<th>Valor </th>
+<th>Descripción </th>
+</tr>
+<tr>
+<td>app_name</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'app_name' => 'scriptcase',</code></p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td><br />Nombre de la aplicación ingresado al crear las credenciales de acceso. </td>
+</tr>
+<tr>
+<td>gateway</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'gateway' => 'google_driver',</code> </p>
+<p>Este índice acepta solo cadenas</p>
+</td>
+<td><br />Nombre de la puerta de enlace para identificar la API utilizada.</td>
+</tr>
+<tr>
+<td>api_key</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'api_key' => {field_name},</code></p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String' </li>
+<li>{nombre del campo} </li>
+<li>$ variable</li>
+</ul>
+</td>
+<td><br />Reciba el api_key, disponible al configurar la API.</td>
+</tr>
+<tr>
+<td>api_secret</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'api_secret' => {field_name},</code></p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String' </li>
+<li>{nombre del campo} </li>
+<li>$ variable </li>
+</ul>
+</td>
+<td>
+<p>Recibe api_secret, disponible al configurar las credenciales de la API.</p>
+</td>
+</tr>
+<tr>
+<td>region</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'region' => 'us-east-1',</code></p>
+<p>El parámetro de región de la macro acepta solo el código de región. </p>
+<p>Para que sea más fácil, siga un enlace para verificar el código de cada región. </p>
+<p><a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">https://docs.aws.amazon.com/general/latest/gr/rande.html</a> </p>
+</td>
+<td>Recibe el código de región, el mismo utilizado en la creación de credenciales.</td>
+</tr>
+<tr>
+<td>bucket</td>
+<td>
+<p>Ejemplo de cómo se debe informar el parámetro. </p>
+<p><code>'bucket' => 'bucket_name',</code></p>
+<p>Lista de opciones aceptadas: </p>
+<ul>
+<li>'String' </li>
+<li>{nombre del campo} </li>
+<li>$ variable</li>
+</ul>
+</td>
+<td>Recibe el nombre del depósito creado al configurar las credenciales de la API. </td>
+</tr>
+</tbody>
+</table>
+<p>  </p>
+<p><strong>Ejemplos de uso de la macro con Amazon S3, usando el parámetro de configuración</strong> </p>
+<pre><code>sc_api_download([</code><br /><code>  'settings' => [</code><br /><code>    'app_name' => 'scriptcase',</code><br /><code>    'gateway' => 'S3',</code><br /><code>    'api_key' => {apikey},</code><br /><code>    'api_secret' => {apisecret},</code><br /><code>    'region' => {api_region},</code><br /><code>    'bucket' => {api_bucket},</code><br /><code>  ],</code><br /><code>'file' => {archivo},</code><br /><code>'destination' => {destino},<br />]);</code> <code></code></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onLoadAll<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

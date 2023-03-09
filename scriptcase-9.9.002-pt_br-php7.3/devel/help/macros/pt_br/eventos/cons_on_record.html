@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre uma vez para cada registro da consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p><span style="font-weight: 400;">Este evento é executado imediatamente antes da exibição de cada registro exibido na consulta, independente da interação do usuário.<br /></span></p>
+<p><span style="font-weight: 400;">Desta forma, é comumente utilizado para a manipulação e validação dos dados, criação de links com a macro <strong>sc_link</strong> ou alteração de layout com a macro <strong>sc_field_style,</strong> baseada nas informações exibidas.<br /></span></p>
+<p><span style="font-weight: 400;"> </span></p>
+<hr />
+<p>No exemplo abaixo, o estilo do texto no campo <strong>{priceorder}</strong> será alterado de acordo com o valor.</p>
+<p>Para valores abaixo de <strong>500</strong> reais, o texto terá uma cor diferente dos valores acima de <strong>500</strong> reais,</p>
+<h4>Exemplo do Código</h4>
+<p><code><span style="font-weight: 400;">if ( {priceorder} < 500 ) {</span></code></p>
+<p><code></code><code></code><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#228B22", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">} else {<br /></span></code></p>
+<p><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#006400", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">}</span></code></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

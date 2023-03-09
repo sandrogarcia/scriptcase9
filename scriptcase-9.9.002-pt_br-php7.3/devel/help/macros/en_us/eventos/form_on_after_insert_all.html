@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when a record its added on a multiple register form. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking on the Insert button of the <strong>multiple record form</strong>. The Form will execute the onValidate, onValidateSuccess and onBeforeInsertAll events, and then it will execute the <strong>onAfterInsertAll</strong> event after execute all the SQL commands to insert the records into the database.</p>
+<p> </p>
+<hr />
+<p>For example, after entering the items of an invoice, (tb_itens_nf), in a multiple-record form, include in the "parent" table (invoice_file) the total value of the products.</p>
+<p>sc_lookup (tot, "select sum (item_value) from tb_itens_nf where num_nf = {num_nf}");</p>
+<p>{tmp_tot} = {tot [0] [0]};</p>
+<p>sc_exec_sql ("update tb_itens_nf set total_itens = {tmp_tot} where num_nf = {num_nf}");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

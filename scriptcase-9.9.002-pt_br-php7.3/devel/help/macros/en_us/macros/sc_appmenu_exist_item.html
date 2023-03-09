@@ -1,0 +1,75 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro checks if there is a menu item.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_exist_item("Menu_Name", "Id_Item")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/tmU4WwAavAI" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a>
+</div>
+<p>This macro should be used in events of control or not <strong>event onload of the menu.</strong></p>
+<p>&nbsp;</p>
+<p>Ex. 1:<br />sc_appmenu_create ('menu_main');</p>
+<p>Check if a menu item exists and return a true or false value.</p>
+<table style="height: 45px;" border="0">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;"><strong>Parameter</strong></td>
+<td style="height: 15px;"><strong>Description</strong></td>
+</tr>
+<tr style="height: 15px;">
+<td style="height: 15px;">Menu_Name</td>
+<td style="height: 15px;">Menu App Name</td>
+</tr>
+<tr style="height: 15px;">
+<td style="height: 15px;">Id_Item</td>
+<td style="height: 15px;">Menu Item Identifier Code</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Ex. 1:</strong></p>
+<p>if(sc_appmenu_exist_item('menu_main', 'item_2')){</p>
+<p>sc_appmenu_update_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+<p>}<br />else{</p>
+<p>sc_appmenu_add_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+<p>}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

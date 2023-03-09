@@ -1,0 +1,100 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro inibe a exibição do rodapé.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_foot_hide()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/ZjsI7_BDn90" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Veja um tutorial</a></div>
+<p>&nbsp;</p>
+<p>Esta macro tem como objetivo esconder o rodap&eacute; da aplica&ccedil;&atilde;o.</p>
+<p><strong>Sem par&acirc;metro obrigat&oacute;rio</strong> a macro est&aacute; dispon&iacute;vel nas seguintes aplica&ccedil;&otilde;es:</p>
+<ul>
+<li>Formul&aacute;rio</li>
+<li>Controle</li>
+<li>Gr&aacute;fico</li>
+<li>Consulta</li>
+</ul>
+<p><strong>Na&nbsp;Consulta</strong> al&eacute;m de sua utiliza&ccedil;&atilde;o padr&atilde;o (sem par&acirc;metros) &eacute; poss&iacute;vel definir individualmente o m&oacute;dulo onde a exibi&ccedil;&atilde;o do rodap&eacute; ser&aacute; inibida.</p>
+<p>Segue a lista de <strong>par&acirc;metros exclusivos da consulta</strong></p>
+<ul>
+<li><strong>grid</strong> - Esconde apenas o rodap&eacute; do m&oacute;dulo da grid</li>
+<li><strong>res</strong> ou&nbsp;<strong>sum</strong> - Esconde apenas o rodap&eacute; do m&oacute;dulo de resumo</li>
+<li><strong>det</strong> - Esconde o rodap&eacute; do m&oacute;dulo de detalhe</li>
+</ul>
+<blockquote>
+<p>Lembrando que os par&acirc;metros n&atilde;o s&atilde;o obrigat&oacute;rios, no caso da consulta caso nenhum par&acirc;metro seja informado a exibi&ccedil;&atilde;o do rodap&eacute; ser&aacute; inibida em todos os m&oacute;dulos.</p>
+</blockquote>
+<h4>Exemplos</h4>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Ex. sem par&acirc;metro -&nbsp;</strong>Utiliza&ccedil;&atilde;o padr&atilde;o da macro, sem passagem de par&acirc;metro, inibe a exibi&ccedil;&atilde;o do rodap&eacute; no Formul&aacute;rio, Controle, Gr&aacute;fico e em todos os m&oacute;dulos da consulta.</p>
+<p><code>sc_foot_hide();</code></p>
+<p>&nbsp;</p>
+<p>Abaixo seguem os exemplos de utiliza&ccedil;&atilde;o da macro com par&acirc;metro<strong>, exclusivo para utiliza&ccedil;&atilde;o na consulta</strong></p>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Ex. utilizando o par&acirc;metro 'grid'</strong> - Inibe a visualiza&ccedil;&atilde;o do rodap&eacute; apenas no m&oacute;dulo da aplica&ccedil;&atilde;o.</p>
+<p><code>sc_foot_hide('grid');</code></p>
+<p>&nbsp;</p>
+<p><strong>Ex. utilizando o par&acirc;metro 'sum'</strong>&nbsp;- Inibe a visualiza&ccedil;&atilde;o do rodap&eacute; apenas no m&oacute;dulo no resumo da aplica&ccedil;&atilde;o.</p>
+<p><code>sc_foot_hide('res');</code> ou&nbsp;<code>sc_foot_hide('sum');</code></p>
+<p>&nbsp;</p>
+<p><strong>Ex. utilizando o par&acirc;metro 'det'</strong>&nbsp;- Inibe a visualiza&ccedil;&atilde;o do rodap&eacute; apenas no m&oacute;dulo no resumo da aplica&ccedil;&atilde;o.</p>
+<p><code>sc_foot_hide('det');</code></p>
+<p>&nbsp;</p>
+<p><strong>Ex. </strong><strong>utilizando mais de um par&acirc;metro&nbsp;</strong>- Inibe a visualiza&ccedil;&atilde;o do rodap&eacute; nos m&oacute;dulos da grid e detalhe da aplica&ccedil;&atilde;o.</p>
+<p><strong>Neste caso os par&acirc;metros devem ser separados por virgula.</strong></p>
+<p><code>sc_foot_hide('grid,det');</code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

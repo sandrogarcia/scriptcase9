@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs just one time, when the application is loaded.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>It is the first event executed in the application, being fired even before the SQL and HTML assembly.</p>
+<p>It works as a preparation for the application, where it is possible, among other things, to manipulate variables, perform validations and change the connection with the <code>sc_change_connection</code> macro, for example.</p>
+<hr />
+<p>In the example below, access to the edit form (form_orders) linked to the query will be limited, depending on the user who is accessing the application.</p>
+<p>If the variable <code>[usr_login]</code> is equal to <strong>admin</strong>, the user will have access to the form with the possibility of inserting and deleting a record.</p>
+<p>If the variable has some other value, the user will still have access to the form, but only with the possibility of changing a record.</p>
+<p><strong>Samples Code</strong></p>
+<pre><code>if ( [usr_login] == 'admin') {</code><br /><br /><code>  sc_apl_conf("form_orders", "insert", "on");</code><br /><code>  sc_apl_conf("form_orders", "delete", "on");</code><br /><br /><code>} else {</code><br /><br /><code>  sc_apl_conf("form_orders", "insert", "off");</code><br /><code>  sc_apl_conf("form_orders", "delete", "off");</code><br /><br /><code>}</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

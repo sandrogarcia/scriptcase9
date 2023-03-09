@@ -1,0 +1,54 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro Identifica qual item do menu foi clicado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_menu_item<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">Esta vari&aacute;vel &eacute; dispon&iacute;vel apenas nas aplica&ccedil;&otilde;es de MENU e tem por objetivo dar acesso ao &iacute;tem que foi selecionado no menu. Desta forma, o usu&aacute;rio poder&aacute; tomar decis&otilde;es antes que a aplica&ccedil;&atilde;o seja executada.</span></p>
+<p>&nbsp;</p>
+<p><strong><br />Ex. 1: Para limpar vari&aacute;veis globais.</strong><br />if ({sc_menu_item} == "item_1")<br />{<br />sc_reset_global([global1], [global2]);<br />}</p>
+<p>&nbsp;</p>
+<p><strong><br />Ex. 2: Uso do bot&atilde;o da barra de ferramentas do menu.</strong><br />if ({sc_menu_item} == "btn_1")<br />{<br />sc_apl_conf("form_customer", "start", "new");<br />}</p>
+<p>&nbsp;</p>
+<p><strong><br />Ex 3: Se uma determinada aplica&ccedil;&atilde;o necessitar de uma vari&aacute;vel global e esta n&atilde;o estiver preenchida, podemos chamar uma outra aplica&ccedil;&atilde;o para que o usu&aacute;rio preencha a informa&ccedil;&atilde;o necess&aacute;ria.</strong><br />if ({sc_menu_item} == "item_5" && (!isset([glo_empresa]) || empty([glo_empresa])))<br />{<br />sc_redir(apl_inf_emp);<br />}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

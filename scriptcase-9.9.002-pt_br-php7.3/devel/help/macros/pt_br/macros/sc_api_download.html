@@ -1,0 +1,405 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro é utilizada para fazer o download de arquivos utilizando as APIs de armazenamento.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_api_download(profile, settings, file, destination)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Essa macro é utilizada para fazer o download dos arquivos armazenados nos serviços de Storage disponíveis no Scriptcase, são eles: Google Drive, DropBox e Amazon S3.</p>
+<p>Antes de mais nada, é necessário a criação das chaves de utilização destas APIs, seja para utilização com a macro ou através da interface da ferramenta.</p>
+<p>Veja abaixo como obter as credenciais de cada uma delas.</p>
+<ul>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-google-drive-no-console-do-google" target="_blank" rel="noopener">Clique aqui para saber como obter as credenciais do Google Drive</a></li>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-dropbox" target="_blank" rel="noopener">Clique aqui para saber como obter as credenciais do DropBox</a></li>
+<li><a href="https://help.scriptcase.net/portal/pt/kb/articles/ativando-a-api-do-amazon-s3" target="_blank" rel="noopener">Clique aqui para saber como obter as credenciais do Amazon S3</a></li>
+</ul>
+<p>Veja a baixo os parâmetros em detalhes.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 4.23045%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;"><strong>Parâmetro </strong></th>
+<th style="width: 21.5176%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;">Valor</th>
+<th style="width: 16.3823%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;">Descrição</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.23045%; height: 18px; text-align: center; vertical-align: middle;">profile</td>
+<td style="width: 21.5176%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'profile' => 'minha_api',</em></code></p>
+<p>Este parâmetro aceita apenas o nome do perfil criado.</p>
+<a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/07-ferramentas/13-api/#id-6" target="_blank" rel="noopener">Clique aqui</a>, para ver como criar um perfil.</td>
+<td style="width: 16.3823%; height: 18px; text-align: left; vertical-align: top;">
+<p>Devemos informar o nome do perfil criando na opção APIs no menu Ferramentas.</p>
+<p>Quando utilizado, este parâmetro carrega as configurações informadas na criação do perfil.</p>
+<p><strong>Quando utilizado, o parâmetro settings não precisar ser informado.</strong></p>
+Veja o exemplo: <strong>Utilizando a macro com profile</strong></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 4.23045%; height: 21px; text-align: center; vertical-align: middle;">settings</td>
+<td style="width: 21.5176%; height: 21px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'settings' => [<br /></em><em>'app_name' => 'scriptcase',<br /></em><em>'gateway' => 'dropbox',<br /></em><em>'api_key' => '',<br /></em><em>'api_secret' => '',<br /></em><em>'access_token' => '',<br /></em><em>],</em></code></p>
+<strong>Obs: </strong>Para mais informações sobre o parâmetro, veja a tabela exclusive do settings abaixo, para cada uma das APIs</td>
+<td style="width: 16.3823%; height: 21px; text-align: left; vertical-align: top;">
+<p>Recebe um array com as credenciais de acesso referentes API que será utilizada.</p>
+<p><strong>Quando utilizado, o parâmetro profile não precisar ser informado.</strong></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.23045%; height: 18px; text-align: center; vertical-align: middle;">file</td>
+<td style="width: 21.5176%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'file' => 'nome_do_arquivo.pdf',</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li><code>{nome_do_campo}</code></li>
+<li><code>[variável_global]</code></li>
+<li><code>‘nome_do_arquivo.doc’</code></li>
+</ul>
+</td>
+<td style="width: 16.3823%; height: 18px; text-align: left; vertical-align: top;">
+<p>Este parâmetro recebe o nome do arquivo que será baixando do servidor.</p>
+<p>O nome do arquivo deve está acompanhado de sua extensão.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 4.23045%; height: 18px; text-align: center; vertical-align: middle;">destination</td>
+<td style="width: 21.5176%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><strong>Utilizando um campo<br /></strong><code><em>'destination' => {nome_do_campo},</em></code></p>
+<p><strong>Informando uma String<br /></strong><code><em>'destination' => ‘caminho_do_arquivo/novo_nome.pdf’,</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li><code>{nome_campo}</code></li>
+<li><code>[variável_global]</code></li>
+<li><code>‘String’</code></li>
+</ul>
+</td>
+<td style="width: 16.3823%; height: 18px; text-align: left; vertical-align: top;">
+<p>Caminho local onde o arquivo será salvo após o download.</p>
+<p>Devemos informar também um nome, com o qual o arquivo será salvo e sua extensão.</p>
+<p><strong>Obs:</strong><br />O nome do arquivo não precisa ser o mesmo do arquivo original.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Como visto acima, o parâmetro <strong>settings</strong> recebe um o array com as credenciais de acesso referentes API utilizada.</p>
+<blockquote>
+<p>Este parâmetro deve ser utilizado apenas quando não definimos um perfil no menu Ferramentas > API</p>
+</blockquote>
+<p>Cada API possui suas próprias configurações para o parâmetro settings, veja abaixo como cada uma deve ser configurada.</p>
+<h2>Utilizando a macro com profile</h2>
+<p>A utilização da macro com um perfil, pede a criação prévia do mesmo.<br /><a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/07-ferramentas/13-api/#id-6">Clique aqui</a>, para ver como criar um perfil em cada uma das APIs de armazenamento disponíveis.</p>
+<p>O perfil ou profile, contém os dados para utilização da API desejada, desta forma, ao utilizar um perfil na macro não se faz necessário utilizar o parâmetro settings.</p>
+<blockquote>
+<p>O parâmetro profile aceita apenas o nome do perfil criado, para a utilização dinâmica da macro, será necessário utilizar o parâmetros settings.</p>
+</blockquote>
+<p><strong>Exemplo de uso da macro com o profile.</strong></p>
+<pre><em><code>sc_api_download([</code><br /><span style="font-family: monospace;"><span style="background-color: #bfe6ff;"> 'profile' => 'minha_api'</span></span><br /><code> 'file' => {arquivo},</code><br /><code> 'destination' => {destination},</code><code><br />]);</code></em></pre>
+<h2>Utilizando a macro com parâmetro settings</h2>
+<p>O array com as credenciais de acesso que deve ser passado na parâmetro settings varia de acordo com a API utilizada.</p>
+<p>Veja abaixo como utilizar este parâmetro de acordo com cada uma das APIs disponíveis.</p>
+<blockquote>
+<p>Ao utilizar o parâmetro settings na configuração na macro, não é necessário informar um profile.</p>
+</blockquote>
+<h3>Exemplo utilizando o parâmetro settings - API Google Drive</h3>
+<p>Primeiramente, devemos ter em mãos as credenciais para a utilização da API do Google Drive, <a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-google-drive-no-console-do-google" target="_blank" rel="noopener">clique aqui</a> para saber como obtê-las.</p>
+<p>Após a configuração das credenciais, veja abaixo todos os valores do array que devem ser passados no parâmetro settings utilizando a API do Google Drive.</p>
+<p><strong>Todos os valores abaixo são obrigatórios ao utilizarmos o parâmetro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 5%; background-color: #dddddd; height: 18px; text-align: center; vertical-align: middle;">Índice</th>
+<th style="background-color: #dddddd; height: 18px; text-align: center; vertical-align: middle; width: 34.6766%;">Valor</th>
+<th style="background-color: #dddddd; height: 18px; text-align: center; vertical-align: middle; width: 29.6925%;">Descrição</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 5%; height: 18px; text-align: center; vertical-align: middle;">app_name</td>
+<td style="width: 34.6766%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'app_name' => 'scriptcase',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.6925%; height: 18px; text-align: left; vertical-align: top;">
+<p>Nome da app informado na criação das credenciais de acesso.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 5%; height: 18px; text-align: center; vertical-align: middle;">gateway</td>
+<td style="width: 34.6766%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'gateway'  => 'google_driver',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.6925%; text-align: left; vertical-align: top; height: 18px;">
+<p>Nome do gateway para identificar a API utilizada.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 5%; height: 18px; text-align: center; vertical-align: middle;">json_oauth</td>
+<td style="width: 34.6766%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'json_oauth'  => 'JSON',</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.6925%; text-align: left; vertical-align: top; height: 18px;">
+<p>Recebe o conteúdo do arquivo (JSON) de autenticação gerado pelo usuário.</p>
+<p>Este arquivo deve ser baixado após a criação das credenciais no site do google.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 5%; height: 18px; text-align: center; vertical-align: middle;">auth_code</td>
+<td style="width: 34.6766%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'auth_code'  => '5/4wHt7TBTY4MtvQ',</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.6925%; height: 18px; text-align: left; vertical-align: top;">
+<p>Recebe o código auth_code, gerado após a configuração da API seguindo os passos descritos no tutorial:</p>
+<p><a href="https://help.scriptcase.net/portal/pt/kb/articles/como-gerar-o-token-code-e-o-auth-code#Gerar_auth_code_com_a_macro_sc_api_gc_get_url" target="_blank" rel="noopener">Como gerar o auth_code para utilização da API do Google Driver</a></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 5%; height: 18px; text-align: center; vertical-align: middle;">token_code</td>
+<td style="width: 34.6766%; height: 18px; text-align: left; vertical-align: top;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'token_code'  => '4/4wHt7TBTY4MtvQ',</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.6925%; height: 18px; text-align: left; vertical-align: top;"><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; background-color: #ffffff;">É possível gerar o token_code utilizando nossa macro </span><a style="box-sizing: inherit; background-color: #ffffff; color: #0070ff; text-decoration-line: none; touch-action: manipulation; z-index: 91; position: relative; display: inline-block; border-bottom: 1px solid transparent; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px;" href="https://help.scriptcase.net/portal/pt/kb/articles/como-gerar-o-token-code-e-o-auth-code#Gerar_token_code_com_a_macro_sc_api_gc_get_obj" target="_blank" rel="noopener">sc_api_gc_get_obj</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Exemplos de utilização da macro com o Google Drive, utilizando o parâmetro settings</strong></p>
+<pre><code>sc_api_download([</code><br /><code>  'settings' => [</code><br /><code>    'app_name' => {appname},</code><br /><code>    'gateway' => 'google_drive',</code><br /><code>    'json_oauth' => {jsonoauth},</code><br /><code>    'auth_code' => {authcode},</code><br /><code>    'token_code' => {tokencode},</code><br /><code>  ],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></pre>
+<h3>Utilizando A Macro Com Settings - Dropbox</h3>
+<p>Primeiramente, devemos ter em mãos as credenciais para a utilização da API do Dropbox, <a href="https://help.scriptcase.net/portal/pt/kb/articles/habilitando-api-dropbox" target="_blank" rel="noopener">clique aqui</a> para saber como obtê-las.</p>
+<p>Após a configuração das credenciais, veja abaixo todos os valores do array que devem ser passados no parâmetro settings utilizando a API do Dropbox.</p>
+<p><strong>Todos os valores abaixo são obrigatórios ao utilizarmos o parâmetro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 5.96844%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;">Índice</th>
+<th style="width: 34.2977%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;">Valor</th>
+<th style="width: 29.14%; text-align: center; vertical-align: middle; background-color: #dddddd; height: 18px;">Descrição</th>
+</tr>
+<tr style="height: 111px;">
+<td style="width: 5.96844%; text-align: center; vertical-align: middle; height: 111px;">app_name</td>
+<td style="width: 34.2977%; text-align: left; vertical-align: top; height: 111px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'app_name' => 'scriptcase',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.14%; text-align: left; vertical-align: top; height: 111px;">
+<p>Nome da app informado na criação das credenciais de acesso.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 111px;">
+<td style="width: 5.96844%; text-align: center; vertical-align: middle; height: 111px;">gateway</td>
+<td style="width: 34.2977%; text-align: left; vertical-align: top; height: 111px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'gateway'  => 'google_driver',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.14%; text-align: left; vertical-align: top; height: 111px;">
+<p>Nome do gateway para identificar a API utilizada.</p>
+</td>
+</tr>
+<tr style="height: 179px;">
+<td style="width: 5.96844%; text-align: center; vertical-align: middle; height: 179px;">api_key</td>
+<td style="width: 34.2977%; text-align: left; vertical-align: top; height: 179px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'api_key’  => {nome_campo},</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.14%; text-align: left; vertical-align: top; height: 179px;">
+<p>Recebe o app key, disponibilizado ao configurar as credenciais da API.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 179px;">
+<td style="width: 5.96844%; text-align: center; vertical-align: middle; height: 179px;">api_secret</td>
+<td style="width: 34.2977%; text-align: left; vertical-align: top; height: 179px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'api_secret’  => {nome_campo},</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.14%; text-align: left; vertical-align: top; height: 179px;">
+<p>Recebe o app secret, disponibilizado ao configurar as credenciais da API.</p>
+<p> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<pre><em> </em></pre>
+<p><strong>Exemplos de utilização da macro com o Dropbox, utilizando o parâmetro settings</strong></p>
+<pre><code>sc_api_download([<br />  'settings' => [</code><br /><code>    'gateway' => 'dropbox',</code><br /><code>    'api_key' => {apikey},</code><br /><code>    'api_secret' => {apisecret},</code><br /><code>    'access_token' => {accesstoken},</code><br /><code>  ],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></pre>
+<p> </p>
+<h3>Utilizando A Macro Com Settings - Amazon S3</h3>
+<p>Devemos ter em mãos as credenciais para a utilização da API de armazenamento do Amazon S3, <a href="https://help.scriptcase.net/portal/pt/kb/articles/ativando-a-api-do-amazon-s3">clique aqui</a> para saber como obtê-las.</p>
+<p>Após a configuração das credenciais, veja abaixo todos os valores do array que devem ser passados no parâmetro settings utilizando a API da Amazon S3.</p>
+<p><strong>Todos os valores abaixo são obrigatórios ao utilizarmos o parâmetro settings</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 6.04074%; height: 18px; text-align: center; vertical-align: middle; border-color: #dddddd; background-color: #dddddd; border-style: none;">Índice</th>
+<th style="width: 34.0169%; height: 18px; text-align: center; vertical-align: middle; border-color: #dddddd; background-color: #dddddd; border-style: none;">Valor</th>
+<th style="width: 29.4015%; height: 18px; text-align: center; vertical-align: middle; border-color: #dddddd; background-color: #dddddd; border-style: none;">Descrição</th>
+</tr>
+<tr style="height: 111px;">
+<td style="width: 6.04074%; height: 111px; text-align: center; vertical-align: middle;">app_name</td>
+<td style="width: 34.0169%; height: 111px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'app_name' => 'scriptcase',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.4015%; height: 111px; text-align: left; vertical-align: top;">
+<p>Nome da app informado na criação das credenciais de acesso.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 111px;">
+<td style="width: 6.04074%; height: 111px; text-align: center; vertical-align: middle;">gateway</td>
+<td style="width: 34.0169%; height: 111px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'gateway'  => 'google_driver',</em></code></p>
+<p>Este índice aceita apenas string</p>
+</td>
+<td style="width: 29.4015%; height: 111px; text-align: left; vertical-align: top;">
+<p>Nome do gateway para identificar a API utilizada.</p>
+</td>
+</tr>
+<tr style="height: 179px;">
+<td style="width: 6.04074%; height: 179px; text-align: center; vertical-align: middle;">api_key</td>
+<td style="width: 34.0169%; height: 179px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'api_key’  => {nome_campo},</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.4015%; height: 179px; text-align: left; vertical-align: top;">
+<p>Recebe o app key, disponibilizado ao configurar as credenciais da API.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 179px;">
+<td style="width: 6.04074%; height: 179px; text-align: center; vertical-align: middle;">api_secret</td>
+<td style="width: 34.0169%; height: 179px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'api_secret’  => {nome_campo},</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.4015%; height: 179px; text-align: left; vertical-align: top;">
+<p>Recebe o app secret, disponibilizado ao configurar as credenciais da API.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 161px;">
+<td style="width: 6.04074%; height: 161px; text-align: center; vertical-align: middle;">region</td>
+<td style="width: 34.0169%; height: 161px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'region'  => 'us-east-1',</em></code></p>
+<p>O parâmetro region da macro aceita apenas o código da região.<br />Para facilitar, segue link para verificação do código de cada região.</p>
+<p><a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">https://docs.aws.amazon.com/general/latest/gr/rande.html</a></p>
+</td>
+<td style="width: 29.4015%; height: 161px; text-align: left; vertical-align: top;">
+<p>Recebe o código da região, o mesmo utilizado na criação das credenciais.</p>
+<p> </p>
+</td>
+</tr>
+<tr style="height: 179px;">
+<td style="width: 6.04074%; height: 179px; text-align: center; vertical-align: middle;">bucket</td>
+<td style="width: 34.0169%; height: 179px;">
+<p>Exemplo de como o parâmetro deve ser informado.</p>
+<p><code><em>'bucket'  => 'bucket_name',</em></code></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li>‘string’</li>
+<li>{nome_campo}</li>
+<li>$variavel</li>
+</ul>
+</td>
+<td style="width: 29.4015%; height: 179px; text-align: left; vertical-align: top;">
+<p>Recebe o nome do bucket criado ao configurar as credenciais da API.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplos de utilização da macro com o Amazon S3, utilizando o parâmetro settings</strong></p>
+<pre><em><code>sc_api_download([</code><br /><code>  'settings' => [</code><br /><code>    'app_name' => 'scriptcase',</code><br /><code>    'gateway' => 'S3',</code><br /><code>    'api_key' => {apikey},</code><br /><code>    'api_secret' => {apisecret},</code><br /><code>    'region' => {api_region},</code><br /><code>    'bucket' => {api_bucket},</code><br /><code>  ],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></em></pre>
+<p><code></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onLoadAll<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

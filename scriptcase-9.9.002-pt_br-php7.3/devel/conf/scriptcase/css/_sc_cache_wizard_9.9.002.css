@@ -1,0 +1,21 @@
+.multiselect-container > li > a > label {
+	text-transform: none!important;
+}
+
+.multiselect-container>li>a>label.radio input,
+.multiselect-container>li>a>label.checkbox input {
+	margin: 2px -20px 0;
+}
+
+input.form-control.multiselect-search {
+	width: 100%!important;
+}
+
+.multiselect.dropdown-toggle b {
+	float:right;
+	margin-top:7px;
+}
+
+.btn-group{
+	width: 100%;
+}

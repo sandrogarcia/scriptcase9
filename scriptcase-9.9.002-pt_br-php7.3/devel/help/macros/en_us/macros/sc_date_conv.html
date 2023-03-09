@@ -1,0 +1,153 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro converts the date field passed as parameter with an input format to another field with an output format. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_conv({Field_Date}, "Input_Format", "Output_Format")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/WhGyMv80tL8" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a>
+</div>
+<p>This macro converts the date field passed as a parameter with an input format to another field with an output format.<br /><br /></p>
+<p class="corpo1">Check below the list of parameters for this macro and the accepted values.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 12.0297%; height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Parameter</strong></td>
+<td style="width: 34.976%; height: 18px;"><strong>Values </strong></td>
+<td style="width: 52.9412%; height: 18px;" align="left" valign="top"><strong>Description</strong></td>
+</tr>
+<tr style="height: 79px;">
+<td class="corpo1" style="width: 12.0297%; height: 79px;" align="left" valign="top">
+<p style="text-align: center;"><br />field_name</p>
+</td>
+<td style="width: 34.976%; height: 79px;">
+<p>Example of how the parameter should be informed: <strong>{field_name}</strong></p>
+</td>
+<td class="corpo1" style="width: 52.9412%; height: 79px;" align="left" valign="top"><br />This parameter must receive the name of the data field that will have the manipulated value</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 12.0297%; height: 18px; text-align: center;" align="left" valign="top"><br /><br /><br /><br />input_format</td>
+<td style="width: 34.976%; height: 18px;">
+<p>The string must have the same format used in the database.<br /><br />Example of how to enter the date string in the macro: <strong>"yyyy-mm-dd"<br /><br /></strong>Accepted values:</p>
+<ul style="list-style-type: square;">
+<li><strong>Date string - </strong>For example "<strong>yyyy-dd-mm</strong>"</li>
+<li><strong>db_Format</strong> - Retrieves the date format from the database.</li>
+</ul>
+</td>
+<td class="corpo1" style="width: 52.9412%; height: 18px;" align="left" valign="top">
+<p>Receives the string with the current date format, saved in the database.<br /><br />If the format informed is different from the one used in the database, the macro will not work as expected.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 12.0297%; height: 18px; text-align: center;" align="left" valign="top"><br /><br /><br /><br /><br />output_format</td>
+<td style="width: 34.976%; height: 18px;">
+<p>The String must have the format in which the date will be displayed.<br /><br />Example of how to enter the date string in the macro: "<strong>yyyy/dd/mm/</strong>"</p>
+<p>Accepted options</p>
+<ul style="list-style-type: square;">
+<li><strong>Date string</strong> - For example "<strong>yyyy-dd-mm</strong>"</li>
+<li><strong>sc_format_region&nbsp;</strong>- Value formatted according to the regional configuration</li>
+<li><strong>db_Format -&nbsp;</strong>Convert the date to the database's native value</li>
+</ul>
+</td>
+<td class="corpo1" style="width: 52.9412%; height: 18px;" align="left" valign="top">
+<p>Receive the string with the desired date display format.<br /><br />If you want to use the format according to the regional configuration, the value <strong>sc_format_region</strong> in this parameter must be informed</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1"><br />For more information on the data strings consult the <a href="https://www.php.net/manual/en/function.date.php" target="_blank" rel="noopener">PHP Manual</a></p>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1: </strong>Converts the date from<strong>"dd/mm/yyyy" </strong>format to the&nbsp;<strong>"yyyymmdd" </strong>format<strong>.</strong></p>
+<p class="corpo1"><code>{field_date} = sc_date_conv({field_date}, "dd/mm/aaaa", "aaaammdd");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><code></code><code></code><strong>Ex. 2:</strong> Converts the date from the&nbsp;<strong>database native format</strong> to&nbsp;<strong>"dd/mm/yyyy" </strong>format.</p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code>{field_date} = sc_date_conv({field_date}, "db_format", "dd/mm/aaaa");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><strong>Ex. 3:</strong> Converts the date from the&nbsp;<strong>"dd/mm/yyyy" </strong>format to the&nbsp;Database native format(<strong>db_format</strong>)<strong>.<br /><br /></strong><code>{field_date} = sc_date_conv({field_date}, "dd/mm/aaaa", "db_format");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><code></code><strong>Ex. 4:</strong> Converting the date from the database's native format (<strong>db_format</strong>) to the regional setting format (<strong>sc_format_region</strong>)<br /><br /><code>{field_date} = sc_date_conv({field_date},"db_format","sc_format_region");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><code></code><strong>Ex. 5:</strong> Converting the date from the <strong>"yyyy-mm-dd"</strong>&nbsp;to the regional Setting format (<strong>sc_format_region</strong>)</p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code>{field_date} = sc_date_conv({field_date},"aaaa-mm-dd","sc_format_region");</code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

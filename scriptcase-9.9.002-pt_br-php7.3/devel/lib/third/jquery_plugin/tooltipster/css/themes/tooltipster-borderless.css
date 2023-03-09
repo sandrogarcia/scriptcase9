@@ -1,0 +1,14 @@
+.tooltipster-borderless {
+	border-radius: 5px;
+	border: none;
+	background:#1b1b1b;
+	background:rgba(10,10,10,.9);
+	color: #FFFFFF;
+	white-space: nowrap;
+}
+.tooltipster-borderless .tooltipster-content {
+	font-family: 'Georgia', serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+}

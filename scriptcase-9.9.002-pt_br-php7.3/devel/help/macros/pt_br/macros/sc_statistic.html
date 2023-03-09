@@ -1,0 +1,196 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Calcula e retorna um array com os valores estatísticos, a partir de uma array com valores numéricos</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_statistic (arr_val, tp_var)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="font-weight: 400;">Esta macro calcula e retorna um array com os valores estat&iacute;sticos informados a partir de um array de valores num&eacute;ricos.</span></p>
+<p><span style="font-weight: 400;">S&atilde;o necess&aacute;rio dois par&acirc;metros para a utiliza&ccedil;&atilde;o da macro.<br /></span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<th style="width: 7.94698%; background-color: #dddddd; text-align: center; vertical-align: middle;"><strong>Par&acirc;metro</strong></th>
+<th style="width: 33.1272%; background-color: #dddddd; text-align: center; vertical-align: middle;">Valor</th>
+<th style="width: 26.1224%; background-color: #dddddd; text-align: center; vertical-align: middle;"><strong>Descri&ccedil;&atilde;o</strong></th>
+</tr>
+<tr>
+<td style="width: 7.94698%; text-align: center; vertical-align: middle;"><span style="font-weight: 400;">arr_val</span></td>
+<td style="width: 33.1272%; text-align: left; vertical-align: top;">
+<p>Este par&acirc;metro aceita apenas vari&aacute;veis</p>
+<p><strong>Exemplo de utiliza&ccedil;&atilde;o</strong><br /><code>$arr_val = array(5230.01,8374,625.45,8926.34,7000,523.78);</code><br /><code><span style="font-weight: 400;">sc_statistic($arr_val, <strong>$type</strong>);</span></code></p>
+</td>
+<td style="width: 26.1224%; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Vari&aacute;vel contendo um array com os valores num&eacute;ricos de entrada.</span></p>
+<p><span style="font-weight: 400;"><strong>Par&acirc;metros s&atilde;o obrigat&oacute;rio.</strong></span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 7.94698%; text-align: center; vertical-align: middle;"><span style="font-weight: 400;">tp_var</span></td>
+<td style="width: 33.1272%; text-align: left; vertical-align: top;">
+<p>Este par&acirc;metro aceita o valor ou uma vari&aacute;vel.</p>
+<p><strong>Exemplo informando o valor:</strong><br /><span style="font-weight: 400;"><code>sc_statistic($arr_val, <strong>'P'</strong>);</code></span></p>
+<p><strong>Exemplo utilizando uma vari&aacute;vel</strong><br /><code>$type = 'P';</code><br /><code><span style="font-weight: 400;">sc_statistic($arr_val, <strong>$type</strong>);</span></code></p>
+<p>Lista das valores aceito no par&acirc;metro.</p>
+<ul>
+<li><strong>P</strong></li>
+<li><strong>A</strong></li>
+</ul>
+</td>
+<td style="width: 26.1224%; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Este par&acirc;metro define o tipo de c&aacute;lculo da <strong>vari&acirc;ncia</strong>(&iacute;ndice 2) e do <strong>desvio padr&atilde;o</strong>(&iacute;ndice 3) do array. <br /><br />Os valores aceitos s&atilde;o <strong>P</strong> e <strong>A</strong><br /></span></p>
+<ul>
+<li><strong>P</strong> =&nbsp;populacional</li>
+<li><strong>A</strong> =Amostral</li>
+</ul>
+<p><strong>Par&acirc;metros s&atilde;o obrigat&oacute;rio.</strong></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Esta macro retorna o c&aacute;lculo em um array com 10 posi&ccedil;&otilde;es, onde cada posi&ccedil;&atilde;o &eacute; referente a um dado estat&iacute;stico.</span></p>
+<p><span style="font-weight: 400;">Confira abaixo o que cada um dos &iacute;ndices ir&aacute; retornar.</span></p>
+<p><strong>Valores retornados em cada &iacute;ndice do array:</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 1.62866%; height: 18px; background-color: #dddddd; text-align: center; vertical-align: middle;"><strong>&Iacute;ndice</strong></th>
+<th style="width: 1.62866%; height: 18px; background-color: #dddddd; text-align: center; vertical-align: middle;"><strong>Valor</strong></th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 17px; text-align: center; vertical-align: middle;">[0]</td>
+<td style="width: 1.62866%; height: 17px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">M&eacute;dia aritm&eacute;tica</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[1]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Mediana</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[2]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Vari&acirc;ncia</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[3]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Desvio Padr&atilde;o</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[4]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Amplitude</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[5]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Total de valores diferentes</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[6]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Total de valores geral</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[7]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Total de valores n&atilde;o nulos</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; height: 18px; text-align: center; vertical-align: middle;">[8]</td>
+<td style="width: 1.62866%; height: 18px; text-align: left; vertical-align: top;"><span style="font-weight: 400;">Menor valor</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.62866%; text-align: center; vertical-align: middle; height: 18px;">[9]</td>
+<td style="width: 1.62866%; text-align: left; vertical-align: top; height: 18px;"><span style="font-weight: 400;">Maior valor</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Exemplo de utiliza&ccedil;&atilde;o da macro</strong></p>
+<pre><span style="font-weight: 400;">$arr_val = array(5230.01,8374,625.45,8926.34,7000,523.78,523.78,6897.21,987.56,987.56,8729,63);</span><br /><br /><span style="font-weight: 400;">$arr_stat = sc_statistic($arr_val, 'P');</span></pre>
+<p>&nbsp;</p>
+<p><strong>Retorno da macro:</strong></p>
+<pre><span style="font-weight: 400;">Array</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">(</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [0] => 4072.3075</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [1] => 3108.785</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [2] => 12817792.489302</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [3] => 3580.1944764638</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [4] => 8863.34</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [5] => 10</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [6] => 12</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [7] => 12</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [8] => 63</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">&nbsp; &nbsp; [9] => 8926.34</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">);</span><span style="font-weight: 400;"><br /></span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

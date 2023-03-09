@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre antes de um registro ser deletado em um formulário.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Excluir do <strong>formulário de múltiplos registros</strong>. O formulário executará então os eventos onValidate e onValidateSuccess, em seguida ele executará o evento <strong>onBeforeDeleteAll</strong> antes de iniciar a execução dos comandos SQL de exclusão dos registros no banco de dados.</p>
+<p><em>Obs: Este evento é acionado apenas uma vez, independente da quantidade de linhas removidas em um clique no botão Excluir .</em></p>
+<p> </p>
+<hr />
+<p>Como exemplos podemos verificar no exemplo abaixo, consultamos uma tabela de privilegios de usuário antes de excluir o registro , caso o mesmo não tenha tal privilégio, mandamos uma mensagem de erro.</p>
+<p>sc_lookup(priv_del," select priv_del from tb_privilegios where login = [var_login] ");</p>
+<p>if({priv_del[0][0]} != 'SIM'){</p>
+<p>sc_erro_mensagem(" você nao tem privilégios para executar esta operação ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

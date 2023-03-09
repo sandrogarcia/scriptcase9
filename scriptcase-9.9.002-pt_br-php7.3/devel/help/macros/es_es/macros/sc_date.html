@@ -1,0 +1,140 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro calcula y devuelve incrementos y decrementos usando fechas.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date(Fecha, "Formato", "Operador", D, M, Y)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/coYgblYZ53k" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /></a>
+<div class="div-macros-desc">
+<p><span class="corpo1">Ver un v&iacute;deo tutorial</span></p>
+</div>
+</div>
+<p class="corpo1">Esta macro tiene el objetivo de calcular el incremento o disminuci&oacute;n de fechas. Para su uso son necesarios algunos par&aacute;metros de la siguiente manera:</p>
+<table style="height: 126px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 86.1px; height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Par&aacute;metros&nbsp;<br /></strong></td>
+<td style="width: 481px; height: 18px;" align="left" valign="top"><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">Date</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">Campo de fecha que contiene la fecha a modificar.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">Format</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">Formato del campo fecha.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">Operator</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">"+" para incremento y "-" para decremento.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">D</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">N&uacute;mero de d&iacute;as para aumentar o disminuir.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">M</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">N&uacute;mero de meses para aumentar o disminuir.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 86.1px; height: 18px;" align="left" valign="top">Y</td>
+<td class="corpo1" style="width: 481px; height: 18px;" align="left" valign="top">N&uacute;mero de a&ntilde;os para aumentar o disminuir.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1"><br /><br /><strong>Ej. 1:</strong><br />{birthdate} = sc_date({birthdate}, "dd/mm/yyyy", "+", 30, 0, 0);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ej. 2:</strong><br />$new_date = sc_date({birthdate}, "yyyy-mm-dd", "-", 15, 3, 2);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ej. 3:</strong><br />{inclusion_dt} = sc_date(date('Ymd'), "yyyymmdd", "-", 0, 1, 1);</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>OBS:</strong> Para obtener la certificaci&oacute;n del formato de fecha, antes de usar la funci&oacute;n, pru&eacute;belo en cualquier caso:<em><br />echo "form_date =". {nombre del campo fecha};</em></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

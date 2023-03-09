@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre antes de uma atualização em um formulário.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após a validação do formulário (onValidate e onValidateSuccess), ao clicar no botão Salvar, e antes de executar o comando SQL de Update do registro no banco de dados.</p>
+<p> </p>
+<hr />
+<p><strong>Exemplo:</strong> Consultamos uma tabela de privilegios de usuário antes de atualizar o registro, caso o mesmo não tenha tal privilégio, mandamos uma mensagem de erro.</p>
+<p>sc_lookup(<strong>priv_upd</strong> ," select priv_upd from tb_privilegios where login = [var_login] ");</p>
+<p>if(<strong>{priv_upd [0][0]}</strong> != 'SIM'){</p>
+<p>  sc_error_message(" você nao tem privilégios para executar esta operação ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs on the application footer display.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after the processing of the grid lines, during the display of the HTML elements of the page footer.</p>
+<p>onFooter is used when we want to display some information in the footer, such as a sales total or a legend for a line graph.</p>
+<blockquote>
+<p><br />onFooter runs only when the option to show footer is enabled in the application's layout settings.</p>
+</blockquote>
+<hr />
+<p> </p>
+<p><strong>E.g:</strong> We want at the bottom of the application to display the total value of orders displayed in the grid of an invoice, with a 10% discount:</p>
+<pre><code>sc_lookup(ret," select sum( valueitem ) from sales_item where sale_id={sale_id} ");</code><br /><br /><code>[v_footnote] = {ret[0][0]} * 0.1;</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

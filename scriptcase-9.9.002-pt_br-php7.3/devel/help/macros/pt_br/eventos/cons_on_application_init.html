@@ -1,0 +1,19 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre uma unica vez quando a aplicação é carregada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>É o primeiro evento executado na aplicação, sendo acionado antes mesmo da montagem do SQL e HTML.</p>
+<p>Funciona como uma preparação para a aplicação, onde é possível entre outras coisas, manipular variáveis, realizar validações e mudar a conexão com a macro <strong>sc_change_connection</strong>, por exemplo.</p>
+<hr />
+<p>No exemplo abaixo, o acesso ao formulário de edição(form_orders) vinculado a consulta será limitado, dependendo do usuário que está acessando a aplicação.<br /><br />Caso a variável <code>[usr_login]</code> seja igual a <strong>admin</strong> o usuário terá acesso ao formulário com a possibilidade de inserir e excluir um registro.<br /><br />Caso a variável possua algum outro valor, o usuário ainda terá acesso ao formulário, porém, apenas com a possibilidade de alterar um registro.</p>
+<p><strong>Exemplo do Código</strong></p>
+<pre><code>if ( [usr_login] == 'admin') {</code><br /><br /><code>  sc_apl_conf("form_orders", "insert", "on");</code><br /><code>  sc_apl_conf("form_orders", "delete", "on");</code><br /><br /><code>} else {</code><br /><br /><code>  sc_apl_conf("form_orders", "insert", "off");</code><br /><code>  sc_apl_conf("form_orders", "delete", "off");</code><br /><br /><code>}</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

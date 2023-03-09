@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before the update of a record in a form.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after form validation (onValidate and onValidateSuccess), when clicking the Save button, and before executing the SQL command to Update the record in the database.</p>
+<p> </p>
+<hr />
+<p><strong>Example:</strong> We are checking the user privileges table before updating the record, if it does not have such privilege, we send an error message.</p>
+<p>sc_lookup(<strong>priv_upd</strong> ," select priv_upd from tb_privileges where login = [var_login] ");</p>
+<p>if( <strong>{priv_upd [0][0]}</strong> != 'YES'){</p>
+<p>  sc_error_message("You do not have privileges to perform this operation");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

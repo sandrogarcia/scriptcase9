@@ -1,0 +1,107 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>(Aplicación, Parámetro01; Parámetro02; Destino, Error, height_modal, width_modal)</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_redir(Aplicación, Parámetro01; Parámetro02; Destino, Error, height_modal, width_modal)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/Je10S03d0xg" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un video tutorial</a></div>
+<p>Esta macro se utiliza para redirigir el procesamiento a otra aplicaci&oacute;n o URL.<br /><br />Si el redir utiliza par&aacute;metros, estos deben pasarse en el siguiente formato:<br /><strong>1)</strong> Despu&eacute;s del nombre de la aplicaci&oacute;n, use el delimitador de coma (,) luego<br /><strong>2)</strong> = (signo igual).<br /><strong>3)</strong> M&aacute;s de un par&aacute;metro, debe estar separado por punto y coma (;)<br /><strong>4)</strong> Destino determina qu&eacute; aplicaci&oacute;n se abre (por defecto = _self): _self, _parent, _blank o modal.<br /><strong>5)</strong> Par&aacute;metro opcional para establecer la redirecci&oacute;n de mensajes de error en la aplicaci&oacute;n: "F" redirige si hay un error en la aplicaci&oacute;n (valor predeterminado) y "E" no redirige.</p>
+<p>OBS. Si su conexi&oacute;n utiliza el control de transacciones, el uso de esta macro en los eventos onAfterInsert, onafterupdate, onAfterDelete, onBeforeInsert, Onbeforeupdate o onBeforeDelete deber&iacute;a venir despu&eacute;s del uso de la macro sc_commit_trans, de esta manera guardar&aacute; los cambios en el formulario.</p>
+<p><strong>Esta macro no admite el uso del par&aacute;metro Modal cuando se utiliza en un bot&oacute;n Ejecutar.</strong></p>
+<p><br /><strong>Ej. 1:</strong> <strong>Aplicaci&oacute;n sin par&aacute;metros o target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x.php);<br />}<br /><br /><strong>Ej. 2: Aplicaci&oacute;n sin par&aacute;metros o target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, parm1={var_test}; parm2="xxx");<br />}<br /><br /><strong>Ej. 3: Aplicaci&oacute;n sin par&aacute;metros y con destino.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, "", "_parent");<br />}<br /><br /><strong>Ej. 4: Aplicaci&oacute;n con par&aacute;metro y target.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(application_x, parm1={var_test}; parm2="xxx", "_blank");<br />}<br /><br /><strong>Ej. 5: URL.</strong><br />if ([global_user] == "test")<br />{<br />sc_redir(http://www.my_page.com);<br />}</p>
+<p>&nbsp;</p>
+<p><strong>OBS.</strong> Todo lo que se pas&oacute; como par&aacute;metro a la aplicaci&oacute;n llamada estar&aacute; disponible como variable global.</p>
+<p><strong>EJ:</strong> sc_redir(employee.php, parm1={var_test}; parm2="xxx", "_blank");</p>
+<p>En la aplicaci&oacute;n employee.php, los par&aacute;metros estar&aacute;n accesibles en [param1] y [param2]</p>
+<div id="gtx-trans" style="position: absolute; left: 20px; top: 164.4px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

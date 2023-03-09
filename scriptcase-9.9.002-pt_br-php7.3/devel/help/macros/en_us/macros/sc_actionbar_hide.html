@@ -1,0 +1,94 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Hides created buttons in the action bar.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_hide("button_name")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro hides the button created on the action bar, which can be displayed again with the <code>sc_actionbar_show</code> macro.</p>
+<blockquote>
+<p>This macro can be used with any type of button (link or ajax) created in the action bar.</p>
+</blockquote>
+<h2>Parameter definition</h2>
+<table style="width: 1117px;" border="1">
+<thead>
+<tr>
+<td style="width: 114.375px;">Parameter</td>
+<td style="width: 482.016px;">Syntax</td>
+<td style="width: 478.266px;">Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 114.375px;">button_name</td>
+<td style="width: 482.016px;">
+<p><strong>It is not possible to use variables. </strong>The button name must be informed using <strong>double quotes</strong> or <strong>single quotes</strong>.</p>
+<p>&nbsp;</p>
+<p><strong>Example<br /></strong><code>sc_actionbar_hide<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 478.266px;">
+<p><strong>This parameter is mandatory.</strong></p>
+<p>We must inform the name of the action bar button that must be hidden.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Exemplos</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong> Basic macro usage</p>
+<pre><strong>sc_actionbar_show("</strong>button_name<strong>");</strong></pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 2: </strong>Showing the order detail link button if there are any records to show.</p>
+<pre><span style="color: #ced4d9;">// Example created in the onRecord event of the query using the order and orderdetail table
+// If there are no items in the order, the detail link button will be hidden.
+
+<span style="color: #7e8c8d;">$query = "SELECT count(*) FROM OrderDetails WHERE OrderID =" . {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} == 0) {
+
+     <span style="color: #ced4d9;">//Example of using the macro sc_actionbar_hide</span>
+     <span style="color: #000000;"><strong>sc_actionbar_hide("button_name");</strong></span>
+
+} else {
+
+     sc_actionbar_show("button_name");
+
+}</span></span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

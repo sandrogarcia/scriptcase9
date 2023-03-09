@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Inhibits the header display.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_head_hide()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/fyMCIqO_1YU" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a></div>
+<p>&nbsp;</p>
+<p>This macro is intended to hide the application header.</p>
+<p><strong>With no mandatory parameter</strong>, the macro is available in the following applications:</p>
+<ul>
+<li>Form</li>
+<li>Control</li>
+<li>Graphic</li>
+<li>Grid</li>
+</ul>
+<p><strong>In the Grid application</strong>, in addition to its standard use (without parameters), it is possible to individually define the module where the display of the header will be inhibited.</p>
+<p>Below is the list of&nbsp;<strong>unique grid parameters</strong></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>grid -&nbsp;</strong>Hide only the header of the grid module</li>
+<li><strong>res&nbsp;</strong>or<strong>&nbsp;sum -&nbsp;</strong>Hide only the summary module header</li>
+<li><strong>det -&nbsp;</strong>Hides the detail module header</li>
+</ul>
+<p>&nbsp;</p>
+<blockquote>
+<p>Remembering that the parameters are not mandatory, in the case of the grid application, if no parameter is informed, the header display will be inhibited in all modules.</p>
+</blockquote>
+<p>&nbsp;</p>
+<p><strong>Examples</strong></p>
+<hr />
+<p><strong>Eg. no parameter</strong> - Default use of the macro, without passing a parameter, inhibits the display of the header in the Form, Control, Chart and in all modules of the Grid.</p>
+<p>sc_foot_hide();</p>
+<p>&nbsp;</p>
+<p>Below are examples of using the macro with parameter,&nbsp;<strong>exclusively for use in the grid</strong></p>
+<hr />
+<p><strong>Eg. using the 'grid' parameter -&nbsp;</strong>Inhibits the header view only in the grid application grid module.</p>
+<pre>sc_foot_hide('grid');</pre>
+<p>&nbsp;</p>
+<p><strong>Eg. using the 'sum' parameter</strong> - Inhibits the header view only in the grid application summary module.</p>
+<pre>sc_foot_hide('res');&nbsp;or&nbsp;sc_foot_hide('sum');</pre>
+<p>&nbsp;</p>
+<p><strong>Eg. using the 'det' parameter</strong> - Inhibits the header view only in the grid application detail module.</p>
+<pre>sc_foot_hide('det');</pre>
+<p>&nbsp;</p>
+<p><strong>Eg. using more than one parameter -&nbsp;</strong>Inhibits the visualization of the header in the grid application and detail module.</p>
+<p><strong>In this case the parameters must be separated by a comma.</strong></p>
+<pre>sc_foot_hide('grid,det');</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

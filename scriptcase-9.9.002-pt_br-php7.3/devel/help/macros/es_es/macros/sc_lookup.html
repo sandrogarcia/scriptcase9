@@ -1,0 +1,106 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro ejecuta un comando SELECT almacenado en el segundo parámetro y devuelve los datos en una variable.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_lookup(Conjunto de datos, "Comando SQL", "Conexión")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/j5yPBFnUZtU" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un video tutorial</a></div>
+<p>&nbsp;</p>
+<p>Esta macro permite al usuario ejecutar comandos SQL y devuelve el resultado a la variable "conjunto de datos". La estructura del "conjunto de datos" es una matriz (l&iacute;nea / columna).</p>
+<p>El par&aacute;metro "conexi&oacute;n" es opcional. Se usa cuando el comando se ejecuta en una base de datos distinta de la especificada para la aplicaci&oacute;n.<br />Nota: El par&aacute;metro de conexi&oacute;n no acepta variable. Debe ingresar el nombre de la conexi&oacute;n que ejecutar&aacute; el comando SQL.</p>
+<p><span class="corpo1"><br /><strong>Ej. 1:</strong><br />sc_lookup(dataset, "select customer_id, customer_name, credit_limit from customers" );<br /><br />Para tener acceso a la primera l&iacute;nea (Dataset), use:<br />{customer_id} = {dataset[0][0]};<br />{customer_name} = {dataset[0][1]};<br />{credit_limit } = {dataset[0][2]};</span></p>
+<p><span class="corpo1">Para tener acceso a la segunda l&iacute;nea (Dataset), use:<br />{customer_id} = {dataset[1][0]};<br />{customer_name} = {dataset[1][1]};<br />{credit_limit} = {dataset[1][2]};<br /><br /></span><span class="corpo1">Si ocurre un <strong>error en la ejecuci&oacute;n del comando SQL</strong>, la variable atribuida al conjunto de datos volver&aacute; como <strong>"falso"</strong> y el mensaje de error estar&aacute; disponible en la variable<strong> "dataset_erro"</strong>. Tambi&eacute;n es importante verificar los datos devueltos seleccionados, para evitar el acceso a variables inexistentes, una vez que la matriz de salida solo se crear&aacute; si el comando select devuelve datos.</span></p>
+<p><span class="corpo1"><br /><strong>Ej. 2:<br /></strong>sc_lookup(my_data, "select customer_id, customer_name, credit_limit from customers");<br />if ({my_data} === false)<br />{<br />echo "Access error. Message=". {my_data_erro} ;<br />}<br />elseif (empty({my_data}))<br />{<br />echo "Select command didn't return data";<br />}<br />else<br />{<br />{customer_id} = {my_data[0][0]};<br />{customer_name} = {my_data[0][1]};<br />{credit_limit} = {my_data[0][2]};<br />}<br /><br /><br /><br /><strong>Ej. 3: El comando SQL tambi&eacute;n puede estar compuesto de campos de aplicaci&oacute;n (variables locales) o de variables globales:</strong></span><span class="corpo1"><br />sc_lookup(dataset, "select order_value from orders where clienteid = '{customer_id} ' and salesman_id = [var_glo_salesman]");<br /><br /><strong>Nota:</strong> El comando siempre debe terminar con punto y coma ";".<br /></span></p>
+<p><strong>Nota 2:</strong> Para obtener un gran resultado devuelto en el conjunto de datos, recomendamos el uso de la macro sc_selec en lugar de esta.</p>
+<div id="gtx-trans" style="position: absolute; left: -83px; top: -12px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

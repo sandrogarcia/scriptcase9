@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs once only when the application is loaded.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			This event occurs before the application execute the SQL, and execute only once.
+
+Is used to do verification of variables, and security verification.
+
+Ex:
+
+if ([glo_var_department] != 'financial'){
+
+sc_redir(app_x.php);
+
+}
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

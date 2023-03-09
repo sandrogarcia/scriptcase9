@@ -1,0 +1,94 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Enables the buttons created on the action bar.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_enable("boton_nombre")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Enables the action bar button, making it available for clicking.</p>
+<blockquote>
+<p>This macro can be used for any type of button (link or ajax) on the action bar.</p>
+</blockquote>
+<h2>Parameter definition</h2>
+<table style="border-collapse: collapse; width: 100%; height: 221.735px;" border="1">
+<thead>
+<tr style="height: 22.3906px;">
+<td style="width: 11.2834%; height: 22.3906px;">Parameter</td>
+<td style="width: 28.1796%; height: 22.3906px;">Syntax</td>
+<td style="width: 60.537%; height: 22.3906px;">Description</td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 199.344px;">
+<td style="width: 11.2834%; height: 199.344px;">button_name</td>
+<td style="width: 28.1796%; height: 199.344px;">
+<p><strong>It is not possible to use variables</strong>, the name of the button must be informed using <strong>double quotes</strong> or <strong>single quotes</strong></p>
+<p>&nbsp;</p>
+<p><strong>Example<br /></strong><code>sc_actionbar_enable<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 60.537%; height: 199.344px;">
+<p><strong>This parameter is mandatory.</strong></p>
+<p>We must inform the name of the action bar button that will be enabled.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Examples</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 1: </strong>Basic macro usage</p>
+<pre><span style="color: #7e8c8d;"><span style="color: #000000;">sc_actionbar_enable("button_name");</span></span></pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 2: </strong>Enabling the link button to the order detail if there is any record to be displayed.</p>
+<pre><span style="color: #7e8c8d;"><span style="color: #7e8c8d;"><span style="color: #ced4d9;">// Example created in the onRecord event of the grid using the order table and orderdetail table
+// If there are no items ordered in the measurement, the button will be disabled</span><span style="color: #7e8c8d;"><br /><br /></span><span style="color: #7e8c8d;">$query = "SELECT count(*) FROM OrderDetails WHERE OrderID =" . {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} <> 0) {</span>
+
+    <span style="color: #000000;"><span style="color: #ced4d9;">//Example of using the <strong>sc_actionbar_enable</strong> macro</span>
+    sc_actionbar_enable("button_name");</span><span style="color: #7e8c8d;">
+
+} else {
+</span></span><span style="color: #000000;"><br />    <span style="color: #7e8c8d;">sc_actionbar_disable("button_name");</span><br /></span><span style="color: #7e8c8d;">
+}</span></span></pre>
+<div id="gtx-trans" style="position: absolute; left: 4px; top: 129.688px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

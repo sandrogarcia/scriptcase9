@@ -1,0 +1,113 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p>Esta macro estabelece a conexão pelas credenciais do usuário.</p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ldap_login<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><strong>$ldapConn = sc_ldap_login($server[, $domain, $user, $password, $dn, $group]);</strong></p>
+<p>&Eacute; necess&aacute;rio realizar login pra fazer qualquer consulta de LDAP, essa macro estabelece a conex&atilde;o e a amarra&ccedil;&atilde;o pelas credenciais do usu&aacute;rio. Seus parametros s&atilde;o:</p>
+<p>Servidor = <br />Dom&iacute;nio = <br />Usu&aacute;rio = <br />Senha = <br />DN = <br />Grupo =</p>
+<p>Existem 3 possibilidades de retorno:</p>
+<table border="0">
+<tbody>
+<tr>
+<td><strong>Retorno da macro</strong></td>
+<td><strong>Situa&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td>(string)'ldap_connect_error'</td>
+<td>Erro ao conectar com o servidor/servi&ccedil;o LDAP.</td>
+</tr>
+<tr>
+<td>(string)'ldap_bind_error'</td>
+<td>Erro com autentica&ccedil;&atilde;o, ap&oacute;s conex&atilde;o bem-sucedida com o servidor.</td>
+</tr>
+<tr>
+<td>(resource)</td>
+<td>Conex&atilde;o e autentica&ccedil;&atilde;o bem-sucedidos.</td>
+</tr>
+</tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<g>
+		<rect x="2.4" y="1.5" fill="#FFFFFF" width="27.1" height="29"/>
+		<path fill="#8F9BA8" d="M30.3,31.2H1.7V0.7h28.6V31.2z M3.2,29.7h25.6V2.2H3.2V29.7z"/>
+	</g>
+	<g>
+		<polyline fill="#CDE4F7" points="18,25.8 25.3,25.8 19.6,19.5 16.1,23.5 		"/>
+		<polygon fill="#74B1E0" points="26.9,26.6 18,26.6 18,25.1 23.6,25.1 19.6,20.6 16.6,24 15.5,23 19.6,18.4 		"/>
+	</g>
+	<g>
+		<line fill="#CDE4F7" x1="7.9" y1="6.2" x2="24.1" y2="6.2"/>
+		<rect x="7.9" y="5.4" fill="#79C693" width="16.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#CDE4F7" x1="7.9" y1="10.4" x2="24.1" y2="10.4"/>
+		<rect x="7.9" y="9.7" fill="#79C693" width="16.2" height="1.5"/>
+	</g>
+	<g>
+		<line fill="#CDE4F7" x1="7.9" y1="14.7" x2="15.3" y2="14.7"/>
+		<rect x="7.9" y="13.9" fill="#79C693" width="7.4" height="1.5"/>
+	</g>
+	<g>
+		<polygon fill="#CDE4F7" points="18,25.8 12.4,19.5 6.7,25.8 		"/>
+		<path fill="#74B1E0" d="M19.7,26.6H5.1l7.3-8.2L19.7,26.6z M8.4,25.1h8l-4-4.5L8.4,25.1z"/>
+	</g>
+</g>
+</svg>

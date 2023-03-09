@@ -1,0 +1,118 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Cambia el nombre de los archivos exportados por la consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_set_export_name<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span style="font-weight: 400;">Los archivos resultantes de las exportaciones realizadas en la consulta se almacenan en el directorio </span><strong>tmp</strong><span style="font-weight: 400;"> (temporal) especificado en la configuraci&oacute;n de la herramienta.</span></p>
+<p><span style="font-weight: 400;">Tanto en desarrollo como en producci&oacute;n, los archivos se almacenan con el prefijo </span><strong>sc_</strong><span style="font-weight: 400;"> y una clave &uacute;nica. Despu&eacute;s de un tiempo,archivos con el prefijo </span><strong>sc_ </strong><span style="font-weight: 400;">se eliminar&aacute;n los.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Para evitar que se eliminen los archivos exportados, es posible utilizar esta macro para cambiarles el nombre.</span></p>
+<h3><strong>Lista de</strong></h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>par&aacute;metrospar&aacute;metro</strong></p>
+</td>
+<td>
+<p><strong>Valor de</strong></p>
+</td>
+<td>
+<p><strong>Descripci&oacute;n</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">"export_type"</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Cadena que contiene el tipo de exportaci&oacute;n, que debe estar protegido por comillas.</span></p>
+<br />
+<p><span style="font-weight: 400;">&nbsp;&nbsp;Ejemplo de uso en la macro.</span></p>
+<p><strong>&nbsp;&nbsp;&nbsp;"csv"</strong></p>
+<p><strong>&nbsp;Lista de valores admitidos:</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">csv</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">json</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">pdf</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">rtf</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">xml</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">xls</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">word</span></li>
+</ul>
+</td>
+<td>
+<p><strong>Par&aacute;metro obligatorio</strong><span style="font-weight: 400;">, donde debemos informar el tipo de archivo que queremos renombrar.</span></p>
+<br />
+<p><strong>Este par&aacute;metro no acepta variables.</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">"nombre de archivo"</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Cadena que contiene el nombre que recibir&aacute; el archivo.</span></p>
+<p><span style="font-weight: 400;">Ejemplo de uso en la macro:</span></p>
+<p><strong>"Nuevo nombre de archivo"</strong></p>
+<p><strong>Valores admitidos</strong></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Cadena con el nombre</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Variable global</span></li>
+</ul>
+</td>
+<td>
+<p><span style="font-weight: 400;">Par&aacute;metro obligatorio, donde debemos informar el nombre que recibir&aacute; el archivo.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<h3><strong>Vea a continuaci&oacute;n algunos ejemplos de uso de la macro:</strong></h3>
+<p><strong>Ejemplo 1 -</strong><span style="font-weight: 400;"> Definici&oacute;n de un nombre para un archivo PDF</span></p>
+<p><code><strong>sc_set_export_name ("pdf", "meu_arquivo_pdf.pdf");</strong></code></p>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+<p><strong>Ejemplo 2:</strong><span style="font-weight: 400;"> definici&oacute;n de un nombre de archivo pasando el valor a trav&eacute;s de una variable global.</span></p>
+<p><code><strong>sc_set_export_name ("json", [glo_nome_json]);</strong></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

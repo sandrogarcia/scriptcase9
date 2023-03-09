@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre uma única vez quando a aplicação é carregada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p><span style="font-weight: 400;">Primeiro evento executado no formulário, sendo acionado antes mesmo da montagem do SQL e HTML.</span></p>
+<p><span style="font-weight: 400;">Funciona como uma preparação para a aplicação, onde é possível entre outras coisas, manipular variáveis, realizar validações e mudar a conexão com a macro </span><strong>sc_change_connection</strong><span style="font-weight: 400;">, por exemplo.</span></p>
+<p><span style="font-weight: 400;">Veja abaixo um exemplo de como utilizá-lo.</span></p>
+<hr />
+<p><span style="font-weight: 400;">No exemplo abaixo, o </span><strong>form_orders</strong><span style="font-weight: 400;"> será alterado de acordo com o usuário que estiver acessando o sistema.</span></p>
+<p><span style="font-weight: 400;">Caso a variável </span><code><span style="font-weight: 400;">[usr_login]</span></code><span style="font-weight: 400;"> seja igual a </span><strong>admin,</strong><span style="font-weight: 400;"> o usuário terá acesso ao formulário com a possibilidade de inserir e excluir um registro.</span></p>
+<p><span style="font-weight: 400;">Caso a variável possua algum outro valor, o usuário ainda terá acesso ao formulário, porém, apenas com a possibilidade de alterar um registro.</span></p>
+<h4><strong>Exemplo do Código</strong></h4>
+<pre>if ( [usr_login] == 'admin') {<br /><br />  sc_apl_conf("form_orders", "insert", "on");<br /><br />  sc_apl_conf("form_orders", "delete", "on");<br /><br />} else {<br /><br />  sc_apl_conf("form_orders", "insert", "off");<br /><br />  sc_apl_conf("form_orders", "delete", "off");<br /><br />}</pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

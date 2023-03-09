@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-289 381 32 32" style="enable-background:new -289 381 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#CF817E;stroke-width:1.5;stroke-miterlimit:10;}
+	.st1{fill:#F8DDE6;stroke:#CF817E;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:#F0F7F7;stroke:#CF817E;stroke-width:1.5;stroke-miterlimit:10;}
+	.st3{fill:#CF817E;}
+	.st4{font-family:'OpenSans-Semibold';}
+	.st5{font-size:13.266px;}
+</style>
+<g>
+	<path class="st0" d="M-288,387.9v20.6c0,1.7,0.9,3,2.1,3h26c1.1,0,2.1-1.4,2.1-3v-20.6H-288z"/>
+	<path class="st1" d="M-257.9,384.1c0-1.1-0.9-2.1-2.1-2.1h-26c-1.1,0-2.1,0.9-2.1,2.1v3.8h30.1V384.1z"/>
+	<line class="st2" x1="-284.2" y1="384.2" x2="-284.2" y2="385.7"/>
+	<line class="st2" x1="-280.8" y1="384.2" x2="-280.8" y2="385.7"/>
+	<line class="st2" x1="-277.5" y1="384.2" x2="-277.5" y2="385.7"/>
+	<text transform="matrix(1 0 0 1 -284.939 403.5176)" class="st3 st4 st5">{ ... }</text>
+</g>
+</svg>

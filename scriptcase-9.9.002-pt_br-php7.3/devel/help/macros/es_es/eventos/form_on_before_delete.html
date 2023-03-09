@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre antes de eliminar un registro en una aplicación de formulario.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después de la validación del formulario (onValidate y onValidateSuccess), al hacer clic en el botón Eliminar y antes de ejecutar el comando SQL para eliminar el registro en la base de datos.</p>
+<p> </p>
+<hr />
+<p>Como ejemplos podemos ver en el ejemplo a continuación, consultamos una tabla de privilegios de usuario antes de eliminar el registro, si no tiene dicho privilegio, enviamos un mensaje de error.</p>
+<p>sc_lookup(priv_del," select priv_del from tb_privilegios where login = [var_login] ");</p>
+<p>if({priv_del[0][0]} != 'SI'){</p>
+<p>  sc_error_messagem ("No tiene privilegios para realizar esta operación");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

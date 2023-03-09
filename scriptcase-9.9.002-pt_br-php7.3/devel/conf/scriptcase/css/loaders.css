@@ -1,0 +1,256 @@
+:root {
+    --sc-yellow: #fad534;
+    --sc-blue: #5580c1;
+}
+
+
+/*=======================================================================================*/
+/*====================================LAYERS=============================================*/
+/*=======================================================================================*/
+
+
+@keyframes moveup {
+    0%, 60%, 100% {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+    }
+    25% {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(1em);
+    }
+}
+@keyframes movedown {
+    0%, 60%, 100% {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(0);
+    }
+    25% {
+        transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg) translateZ(-1em);
+    }
+}
+@keyframes scaledown {
+    0%, 60%, 100% {
+        transform: scale3d(1,1,1) translate3d(0,0,0);
+    }
+    25% {
+        transform: scale3d(0.8,0.8,1) translate3d(-10%,-10%,0);
+    }
+}
+.sc-loader .loader-layer {
+    display: block;
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    top: 15px;
+    left: 20px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: rotateX(50deg) rotateY(0deg) rotateZ(45deg);
+}
+.sc-loader .loader-layer:nth-of-type(1) {
+    background: var(--sc-yellow);
+    margin-top: 1.5em;
+    animation: movedown 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s infinite normal;
+}
+.sc-loader .loader-layer:nth-of-type(1):before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 85%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: scaledown 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s infinite normal;
+}
+.sc-loader .loader-layer:nth-of-type(2) {
+    background: var(--sc-blue);
+    margin-top: 0.75em;
+}
+.sc-loader .loader-layer:nth-of-type(3) {
+    background: rgba(210, 235, 255, 0.6);
+    animation: moveup 1.8s cubic-bezier(0.39, 0.575, 0.565, 1) infinite normal;
+}
+
+
+/*=======================================================================================*/
+/*=====================================SPIN==============================================*/
+/*=======================================================================================*/
+
+
+@keyframes sc-spin {
+    0% {
+        transform: rotate(0deg) scale(.7);
+    }
+    60% {
+        transform: rotate(-360deg) scale(.7);
+    }
+    100% {
+        transform: rotate(-360deg) scale(.7);
+    }
+}
+.sc-loader {
+    box-sizing: content-box;
+    height: 70px;
+    margin: 0 auto 10px auto;
+    position: relative;
+    width: 70px;
+}
+.sc-loader .spin {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    animation: sc-spin 1.2s cubic-bezier(0.5, -0.5, 0.5, 1.5) infinite;
+}
+.sc-loader .spin:after, .sc-loader .spin:before {
+    box-sizing: content-box;
+    content: "";
+    height: 30px;
+    position: absolute;
+    transform: rotate(45deg) skew(-15deg, 0deg);
+    width: 30px;
+}
+.sc-loader .spin:before {
+    border: solid 0px var(--sc-blue);
+    border-width: 0 0 11px 11px;
+    left: 12px;
+    bottom: 25px;
+}
+.sc-loader .spin:after {
+    border: 0px solid var(--sc-yellow);
+    border-width: 11px 11px 0 0;
+    right: 12px;
+    top: 25px;
+}
+.sc-loader .spin-gray {
+    height: 100%;
+    margin: 0 auto -105% auto;
+    position: relative;
+    width: 100%;
+}
+.sc-loader .spin-gray:after, .sc-loader .spin-gray:before {
+    box-sizing: content-box;
+    content: "";
+    height: 30px;
+    position: absolute;
+    transform: rotate(45deg) skew(-15deg, 0deg);
+    width: 30px;
+    filter: blur(1px);
+}
+.sc-loader .spin-gray:before {
+    border: solid 0px rgba(0, 0, 0, 0.3);
+    border-width: 0 0 11px 11px;
+    left: 12px;
+    bottom: 25px;
+}
+.sc-loader .spin-gray:after {
+    border: 0px solid rgba(0, 0, 0, 0.3);
+    border-width: 11px 11px 0 0;
+    right: 12px;
+    top: 25px;
+}
+
+
+/*=======================================================================================*/
+/*=====================================PLANE=============================================*/
+/*=======================================================================================*/
+
+
+.sc-loader .mask{
+    position:absolute;
+    border-radius:2px;
+    overflow:hidden;
+    perspective: 1000;
+    backface-visibility: hidden;
+}
+
+.sc-loader .plane{
+    width:400%;
+    height:100%;
+    position:absolute;
+    transform : translate3d(0px,0,0);
+    z-index:100;
+    perspective: 1000;
+    backface-visibility: hidden;
+
+}
+
+.sc-loader .animation{
+    transition: all 0.3s ease;
+}
+
+
+
+.sc-loader #top .plane{
+    background-color: var(--sc-blue);
+    z-index:2000;
+    animation : trans1 1.3s ease-in infinite  0s backwards;
+}
+.sc-loader #middle .plane{
+    transform : translate3d(0px,0,0);
+    background : #ddd;
+    animation : trans2 1.3s linear infinite  0.3s  backwards;
+
+}
+.sc-loader #bottom .plane{
+    background-color: var(--sc-yellow);
+    z-index:2000;
+    animation : trans3 1.3s ease-out infinite  0.7s backwards;
+}
+.sc-loader #top{
+    width:53px;
+    height:20px;
+    left:20px;
+    transform: skew(-15deg, 0);
+    z-index:100;
+}
+
+.sc-loader #middle{
+    width:33px;
+    height:20px;
+    left:20px;
+    top:15px;
+
+    transform: skew(-15deg, 40deg)
+}
+.sc-loader #bottom{
+    width:53px;
+    height:20px;
+    top:30px;
+    transform: skew(-15deg, 0)
+}
+
+@keyframes trans1{
+    from {
+        transform : translate3d(53px,0,0)
+    }
+    to {
+        transform : translate3d(-250px,0,0)
+    }
+}
+
+@keyframes trans2{
+    from {
+        transform : translate3d(-160px,0,0)
+    }
+    to {
+        transform : translate3d(53px,0,0)
+    }
+}
+
+@keyframes trans3{
+    from {
+        transform : translate3d(53px,0,0)
+    }
+    to {
+        transform : translate3d(-220px,0,0)
+    }
+}
+
+
+/*=======================================================================================*/
+/*======================================LOGO=============================================*/
+/*=======================================================================================*/
+
+
+.sc-loader .logo {
+    background: url(../img/btnnew/crystal/sc_preloader_64.gif) no-repeat top center!important;
+    height: 100%;
+    width: 100%;
+}

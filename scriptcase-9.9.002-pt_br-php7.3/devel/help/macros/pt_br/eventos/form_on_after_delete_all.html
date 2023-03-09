@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre após algum registro do form multiplo registro seja deletado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Excluir do formulário de múltiplos registros. O formulário executará então os eventos onValidate, onValidateSuccess e onBeforeDelete, e logo após executar todos os comandos SQL para excluir os registros no banco de dados, ele executará o evento <strong>onAfterDeleteAll</strong>.</p>
+<p><em>Obs: Este evento ocorre apenas uma vez independentemente da quantidade de registros excluídos por vez.</em></p>
+<hr />
+<p>Ex: Em um form de itens de pedido (multiplos registros), desejamos excluir o pedido caso todos os itens da tela sejam excluídos.</p>
+<p>sc_exec_sql(" DELETE FROM adm_pedidos WHERE pedido_id = {pedido} ");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

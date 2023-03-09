@@ -1,0 +1,111 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro troca dinamicamente as conexões das aplicações.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_change_connection("Conexao_Antiga", "Conexao_Nova")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/KVFhFu94pB4" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a>
+</div>
+<p>Esta macro troca dinamicamente as conex&otilde;es das aplica&ccedil;&otilde;es</p>
+<p><strong>Ex. 1: Trocar as conex&otilde;es :</strong></p>
+<p><code>sc_change_connection("Conex&atilde;o_Antiga01", "Conex&atilde;o_Nova01" ; "Conex&atilde;o_Antiga02", "Conex&atilde;o_Nova02");</code></p>
+<p><br /><br />&Eacute; poss&iacute;vel alterar mais de uma conex&atilde;o com o mesmo comando, usando o separador <strong>";"</strong>.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 2: Utilizando vari&aacute;veis:</strong></p>
+<p><code>sc_change_connection([Conex&atilde;o_Global], [Nova_Conex&atilde;o]);</code></p>
+<p><br /><br /><strong>As trocas s&oacute; t&ecirc;m efeito nas aplica&ccedil;&otilde;es seguintes.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Ex. 3: Alterando a conex&atilde;o principal da aplica&ccedil;&atilde;o:</strong> <br /><br /></p>
+<p><code>sc_change_connection({Senha}, [Teste] ; "Minha_Conex&atilde;o", [Global_Conex&atilde;o]);</code></p>
+<p><br /><br /><strong>As trocas s&oacute; t&ecirc;m efeito nas aplica&ccedil;&otilde;es seguintes.</strong></p>
+<p>&nbsp;</p>
+<p><strong>Ex. 4: Para apagar as trocas feitas:</strong> <br /><br />Para retornar as configura&ccedil;&otilde;es realizadas com a macro utilize <a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/14-macros/02-macros/#sc_reset_change_connection">sc_reset_change_connection();</a></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit<br>onLoadAll
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit<br>onLoadAll<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit<br>onLoadAll
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#8F9BA8" d="M26.7,11.8H0.8V8.6C0.8,7.2,1.9,6,3.4,6h0.8l1-2.8h7.7l1,2.8H24c1.5,0,2.7,1.2,2.7,2.7V11.8z M2.3,10.3
+			h22.9V8.6c0-0.6-0.5-1.2-1.2-1.2H12.7l-1-2.8H6.2l-1,2.8H3.4C2.8,7.5,2.3,8,2.3,8.6V10.3z"/>
+	</g>
+	<g>
+		<path fill="#8F9BA8" d="M20,27.3H3.4c-1.5,0-2.7-1.2-2.7-2.7V10.3h25.9v5.1L20,27.3z M2.3,11.8v12.8c0,0.6,0.5,1.2,1.2,1.2h15.7
+			l6-10.8v-3.2C25.2,11.8,2.3,11.8,2.3,11.8z"/>
+	</g>
+	<g>
+		<circle fill="#CDE4F7" cx="23.9" cy="21.5" r="6.6"/>
+		<path fill="#74B1E0" d="M23.9,28.9c-4.1,0-7.4-3.3-7.4-7.4s3.3-7.4,7.4-7.4s7.4,3.3,7.4,7.4S27.9,28.9,23.9,28.9z M23.9,15.6
+			c-3.2,0-5.9,2.6-5.9,5.9c0,3.2,2.6,5.9,5.9,5.9c3.2,0,5.9-2.6,5.9-5.9S27.1,15.6,23.9,15.6z"/>
+	</g>
+	<g>
+		<line fill="none" x1="23.9" y1="17.8" x2="23.9" y2="25.1"/>
+		<rect x="23.1" y="17.8" fill="#74B1E0" width="1.5" height="7.3"/>
+	</g>
+	<g>
+		<line fill="none" x1="27.5" y1="21.5" x2="20.2" y2="21.5"/>
+		<rect x="20.2" y="20.7" fill="#74B1E0" width="7.3" height="1.5"/>
+	</g>
+</g>
+</svg>

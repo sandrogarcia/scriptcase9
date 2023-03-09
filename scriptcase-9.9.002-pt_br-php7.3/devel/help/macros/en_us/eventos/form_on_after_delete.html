@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when a register is deleted.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking the form's Delete button. The form will then execute the events onValidate, onValidateSuccess and onBeforeDelete, and then, right after executing the SQL command to delete the record in the database, it will execute the event onAfterDelete.</p>
+<p> </p>
+<hr />
+<p><strong>Example:</strong> After deleting the record we can easily create logs, according to the code below:</p>
+<p>sc_exec_sql(" insert into tb_log values([glo_user],'exclusion','customer_table',{code}); //we are storing the literals 'exclusion' and 'customer_table', the session variable [glo_user] and the field variable {code} containing the deleted content of the code field.</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

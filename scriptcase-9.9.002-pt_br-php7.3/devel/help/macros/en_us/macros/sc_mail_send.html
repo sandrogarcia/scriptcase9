@@ -1,0 +1,176 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p>This macro is used to send e-mails.</p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_mail_send(SMTP, Usr, Pw, From, To, Subject, Message, Mens_Type, Copies, Copies_Type, Port, Connection_Type, Attachment, SSL)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/VhBl04JDzQM" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a></div>
+<p class="corpo1">This macro is used to send emails.</p>
+<table style="height: 594px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Parameter<br /></strong></td>
+<td style="height: 18px;" align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="height: 36px;" align="left" valign="top">SMTP</td>
+<td class="corpo1" style="height: 36px;" align="left" valign="top"><span class="corpo1">SMTP server name or IP address</span>. (String or Variable that contains the server name)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Usr</td>
+<td class="corpo1" style="height: 36px;" align="left" valign="top"><span class="corpo1">SMTP user name</span>. (String or Variable that contains the user name)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Pw</td>
+<td class="corpo1" style="height: 36px;" align="left" valign="top">SMTP password. (String or Variable that contains the password)</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">From</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">From email. (String or Variable that contains the email)</td>
+</tr>
+<tr style="height: 72px;">
+<td class="corpo1" style="height: 72px;" align="left" valign="top">To</td>
+<td class="corpo1" style="height: 72px;" align="left" valign="top">List of the emails that will receive the message, it could be a string or variable that contains one or more emails separated by ";" or one variable that contains one array of emails.</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Subject</td>
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Message subject. (String or Variable that contains the subject)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Message</td>
+<td class="corpo1" style="height: 36px;" align="left" valign="top">Message body. (String or Variable that contains the message)</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Mens_Type</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Message format: (T)ext or (H)tml.</td>
+</tr>
+<tr style="height: 72px;">
+<td class="corpo1" style="height: 72px;" align="left" valign="top">Copies</td>
+<td class="corpo1" style="height: 72px;" align="left" valign="top">List of the emails that will receive the message, it could be a string or variable that contains one or more emails separated by ";" or one variable that contains one array of emails.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Copies_Type</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Type copies: BCC (Hidden copies) or CCC (Regular copies)<span class="corpo1"><strong>.</strong></span></td>
+</tr>
+<tr style="height: 72px;">
+<td class="corpo1" style="height: 72px;" align="left" valign="top">Port</td>
+<td class="corpo1" style="height: 72px;" align="left" valign="top">The port used by your e-mail server. Use the port <strong>465</strong> for the security type SSL, and the port <strong>587</strong> for the security type TLS or the port <strong>25</strong> for no security. If not informed, Scriptcase will set the default port: <strong>25</strong></td>
+</tr>
+<tr style="height: 54px;">
+<td class="corpo1" style="height: 54px;" align="left" valign="top">Connection_Type</td>
+<td class="corpo1" style="height: 54px;" align="left" valign="top">Indicating a secure connection. Use <strong>S</strong> for SSL, <strong>T</strong> for TLS or <strong>N</strong> for non secure connections. If not informed, Scriptcase will set the default value:<strong>N</strong>.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Attachment</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Absolute path of the file that will be attached in the email</td>
+</tr>
+<tr style="height: 54px;">
+<td class="corpo1" style="height: 54px;" align="left" valign="top">SSL</td>
+<td class="corpo1" style="height: 54px;" align="left" valign="top">Optional parameter to add SSL settings. If you need to add more than one setting, use ";" for separate them. Ex: $ssl = 'allow_self_signed=false;verify_peer=false';</td>
+</tr>
+<tr>
+<td>Reply_to</td>
+<td>It is the email address the reply message is sent to, when you want the reply to go to an email address other than the From address.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> To use safe connection <strong>its required </strong>to have the PHP "<strong>php_openssl</strong>" extension enable.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:&nbsp;Sending e-mail with reply_to parameter</strong><br />sc_mail_send('smtp.meuserver.com.br', 'usr', 'pw', 'from@netmake.com.br', 'to@netmake.com.br', 'test sending<br />of e-mail', 'message', 'H', 'abc@cop.com.br;zxy@cop.com.br', 'CCC', '587', '', 'c:/teste/arq .txt','','reply@netmake.com.br');</p>
+<p>To use the replay_to parameter you must include all the other parameters before it, just inform them empty.</p>
+<p><strong>Ex. 2: Using variables and defining the port.</strong><br />sc_mail_send([glo_smtp], [usuar], [glo_pw], {from}, {to}, {subject}, {message}, 'T', [glo_copias], 'CCC', '419', 'S', {attached});</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 3: No user and password.</strong><br />sc_mail_send([glo_smtp], '', '', 'from.netmake.com.br', {to}, {subject}, {message}, 'H', '', '', '', '', [glo_att]);</p>
+<p>The amount of emails sent will be stored at the special variable "sc_mail_count".<br /><br />If any error happen when the scriptcase try to send the email, the variable "sc_mail_ok" will receive "false" and the error message will be stored on the variable "sc_mail_erro".</p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex.4 :</strong><br /></span><span class="corpo1">sc_mail_send([glo_smtp], '', '', <a href="mailto:'de@netmake.com.br'">'from@netmake.com.br'</a></span><span class="corpo1">, {to}, {subject}, {message}, 'H');</span></p>
+<p class="corpo1">if ({sc_mail_ok})<br />{<br />echo "sent {sc_mail_count} e-mail(s) with success!!";<br />}<br />else<br />{<br />sc_error_message({sc_mail_erro});<br />}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,41 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event it is executed inside the grouping.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event is executed whenever breaks occur, regardless of the break level, and allows the manipulation of the totalization fields.</p>
+<p>Scriptcase makes all the totalization variables available in the scope of the Grid.</p>
+<blockquote>
+<p>onGroupBy  is only executed when the Query application has one or more Breaks configured.</p>
+</blockquote>
+<hr />
+<p><strong>Eg:</strong></p>
+<p>Assuming an application that has two levels of <strong>state</strong> and <strong>city</strong> break and that totals two <strong>parcel</strong> and <strong>balance</strong> fields, we can have access to the totals, in the scope of "calculating each record", as follows:</p>
+<ul>
+<li><code>{count_ger}</code> - contains the total amount of the registers;</li>
+<li><code>{sum_parcel}</code> - contains the general summing of the "parcel" field;</li>
+<li><code>{sum_balance}</code> - contains the general summing of the "balance" field;</li>
+<li><code>{count_state}</code> - contains the total amount of the registers, of "state" grouping that is being processed;</li>
+<li><code>{sum_state_parcel}</code> - contains the summing of the "parcel" field, of the "state" grouping that is being processed;</li>
+<li><code>{sum_state_balance}</code> - contains the summing of the "balance" field, of the "state" grouping that is being processed;</li>
+<li><code>{count_city}</code> - contains the total amount of the registers, of the "city" grouping that is being processed;</li>
+<li><code>{sum_city_parcel}</code> - contains the summing of the "parcel" field, of the "city" grouping that is being processed;</li>
+<li><code>{sum_city_balance}</code> - contains the summing of the "balance" field, of the "city" grouping that is being processed;</li>
+</ul>
+<p>Considering that the formulas, defined to be processed in the scope of "calculate during the groupings" will be acting for the various grouping levels, the special sum variables, in this scope, are referenced substituting the grouping name by the word key "grouping", or either:</p>
+<ul>
+<li><code>{count_ger}</code> - contains the total amount of the registers;</li>
+<li><code>{sum_parcel}</code> - contains the general summing of the "parcel" field;</li>
+<li><code>{sum_balance}</code> - contains the general summing of the "balance" field;</li>
+<li><code>{count_groupby}</code> - contains the total amount of the registers, of the grouping that is being processed;</li>
+<li><code>{sum_groupby_parcel}</code> - contains the summing of the "parcel" field, of the grouping is being processed;</li>
+<li><code>{sum_groupby_balance}</code> - contains the summing of the "balance" field, of the grouping is being processed;</li>
+</ul>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

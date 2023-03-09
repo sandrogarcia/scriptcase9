@@ -1,0 +1,215 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro cambia las propiedades de ejecución de las aplicaciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_apl_conf("Aplicación", "Propiedad", "Valor")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1"><a title="Ver un v&iacute;deo tutorial" href="https://youtu.be/2-eBitBeSqc" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" width="24" height="24" /></a></span></p>
+<p><span class="corpo1">Ver un v&iacute;deo tutorial</span></p>
+<p><span class="corpo1">Esta macro permite modificar la propiedad de la aplicaci&oacute;n. El usuario puede determinar si un Formulario se iniciar&aacute; en modo de inserci&oacute;n, o una grid se iniciar&aacute; por filtro, etc.<br /><br />Esta macro <strong>debe</strong> ser usada por una aplicaci&oacute;n para modificar las propiedades de otra aplicaci&oacute;n.</span></p>
+<p><br /><strong class="corpo1">Propiedades para aplicaciones Formularios</strong></p>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Propiedad</strong></td>
+<td style="height: 18px;" align="left" valign="top" width="10%"><strong class="corpo1">Valor</strong></td>
+<td style="height: 18px;" align="left" valign="top" width="75%"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">start</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">new</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Fuerza al formulario a comenzar en el modo de inserci&oacute;n para agregar nuevos registros.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">insert</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Habilita (on) o deshabilita (off) el bot&oacute;n para la inclusi&oacute;n de nuevos registros.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">update</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Habilita (on) o deshabilita (off) el bot&oacute;n para la inclusi&oacute;n de nuevos registros.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">delete</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Habilita (on) o deshabilita el bot&oacute;n para cambiar los registros..</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field_display_off</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Din&aacute;micamente oculta un campo.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field_display_on</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Muestra din&aacute;micamente un campo.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field_readonly</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">field</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Fuerza un campo para que se muestre como "readonly"..</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1 corpo1" style="height: 36px;" align="left" valign="top">rows</td>
+<td class="corpo1 corpo1" style="height: 36px;" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" style="height: 36px;" align="left" valign="top">Fuerza el n&uacute;mero de l&iacute;neas para cada una de las p&aacute;ginas (solo para formularios de multiples registros).</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">rows_ins</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" style="height: 18px;" align="left" valign="top">Fueza el n&uacute;mero de l&iacute;neas para insertar (solo para formulario de multiples registros).</td>
+</tr>
+</tbody>
+</table>
+<p><strong class="corpo1"><br /></strong><span class="corpo1"><strong>Propiedad para aplicaciones Grid</strong></span></p>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Propiedad</strong></td>
+<td align="left" valign="top" width="10%"><strong class="corpo1">Valor</strong></td>
+<td align="left" valign="top" width="75%"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">start</td>
+<td class="corpo1 corpo1" align="left" valign="top">filter</td>
+<td class="corpo1 corpo1" align="left" valign="top">Fuerza a la grid a comenzar por el filtro.</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">cols</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Fuerza el n&uacute;mero de columnas. (tipo vertical y deslizante)</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">rows</td>
+<td class="corpo1 corpo1" align="left" valign="top">&nbsp;</td>
+<td class="corpo1 corpo1" align="left" valign="top">Fuerza a la grid a comenzar por el filtro..</td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="left" valign="top">lig_edit</td>
+<td class="corpo1 corpo1" align="left" valign="top">on/off</td>
+<td class="corpo1 corpo1" align="left" valign="top">Habilita (on) o deshabilita el bot&oacute;n de edici&oacute;n del registro (l&aacute;piz) </ td></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong class="corpo1">Propiedad para todas las aplicaciones</strong></p>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td><strong class="corpo1">Propiedad</strong></td>
+<td><strong class="corpo1">Valor</strong></td>
+<td><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1 corpo1" align="center">exit</td>
+<td class="corpo1 corpo1" align="center">apl/url</td>
+<td class="corpo1 corpo1" align="left">Fuerza la aplicaci&oacute;n a salir a una ubicaci&oacute;n especificada.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 1: Fuerza a la aplicaci&oacute;n de formulario "my_form" a comenzar en el modo de inserci&oacute;n.<br /></strong>sc_apl_conf("my_form", "start", "new");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 2: No permite que la aplicaci&oacute;n de formulario"my_form" agregue nuevos registros.<br /></strong>sc_apl_conf("my_form", "add", "off");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 3: Muestra un campo "my_field", de una aplicaci&oacute;n de formulario "my_form", din&aacute;micamente.<br /></strong>sc_apl_conf("my_form", "field_display_off", "my_field");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 4: Fuerza a la aplicaci&oacute;n de formulario "my_query" a iniciar por el filtro.<br /></strong>sc_apl_conf("my_form", "field_display_on", "my_field");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 5: Fuerza a la aplicaci&oacute;n de grid "my_grid" a iniciar en modo filtro.<br /></strong>sc_apl_conf("my_grid", "start", "filter");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 6: Fuerza la aplicacion&nbsp;de grid "my_grid"a mostrar N lineas en este ejemplo 20.</strong><br />sc_apl_conf("my_grid", "rows", "20");</p>
+<p class="corpo1 corpo1">&nbsp;</p>
+<p class="corpo1 corpo1"><strong>Ej. 7: Oculta un campo "my_field" en la aplicaci&oacute;n de formulario "my_form" din&aacute;micamente</strong>.<br />sc_apl_conf("my_form", "field_display_off", "my_field");</p>
+<p class="corpo1 corpo1"><strong>Ej. 8: Usa el boton del menu de la barra de herramientas. </strong><br />if ({sc_menu_item} == "btn_1")<br />{<br />sc_apl_conf("form_customer", "start", "new");<br />}</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

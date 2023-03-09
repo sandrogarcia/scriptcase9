@@ -1,0 +1,181 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro exibe uma tela de mensagem no estilo Javascript. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_alert("Mensagem", $array)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/1nhmbgys_e0" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /> Assista um video</a></div>
+<p>Esta macro envia uma mensagem no estilo de alerta de Javascript (Sweetalert) ou Sweetalert2.</p>
+<blockquote>
+<p><strong>Obs<br /></strong>Para a exibição da mensagem utilizando a biblioteca <strong>sweetalert2</strong>, é necessário que a opção <strong>Usar SweetAlert</strong> esteja ativada na aplicação onde a macro será utilizada.<br />Esta opção pode ser habilitada no menu <strong>Aplicação > Configuração</strong> no bloco <strong>Configurações de notificações</strong></p>
+</blockquote>
+<p>Confira abaixo os parâmetros suportados pela macro:</p>
+<ul>
+<li><strong>Mensagem</strong>: Parâmetro obrigatório que contém a mensagem que será exibida.</li>
+<li><strong>$array</strong>: Este parâmetro é opcional na utilização da macro, mas obrigatório quando desejamos utilizar o <strong>Sweetalert2</strong>.<br />Quando utilizado, espera receber um array com as configurações do Sweetalert2.</li>
+</ul>
+<p>Confira a lista de configurações aceitas pelo Sweetalert2 nesta macro:</p>
+<p> </p>
+<table style="width: 100%;">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 8.95829%; text-align: center; height: 18px;">Parâmetro</td>
+<td style="width: 38.8713%; text-align: center; height: 18px;">Valor</td>
+<td style="width: 52.1703%; text-align: center; height: 18px;">Descrição</td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 8.95829%; height: 36px;">title</td>
+<td style="width: 38.8713%;">Exemplo de como deve ser informada dentro do array: <strong>'title' => 'Título'</strong></td>
+<td style="width: 52.1703%; height: 36px;">Texto que será exibido no título do card, caso a opção toast esteja marcada como false. 'toast' => false</td>
+</tr>
+<tr style="height: 164px;">
+<td style="width: 8.95829%; height: 164px;">type</td>
+<td style="width: 38.8713%; height: 164px;">
+<p>Exemplo de como deve ser informada dentro do array: <strong>'type' => 'warning'</strong></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li><strong>success</strong></li>
+<li><strong>error</strong></li>
+<li><strong>warning</strong></li>
+<li><strong>info</strong></li>
+</ul>
+</td>
+<td style="width: 52.1703%;">Define o tipo da mensagem que será exibida.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.95829%; height: 18px;">timer</td>
+<td style="width: 38.8713%; height: 18px;">Exemplo de como deve ser informada dentro do array: <strong>'timer' => '2000'</strong></td>
+<td style="width: 52.1703%;">Define o tempo em milissegundos que a mensagem será exibida.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.95829%; height: 18px;">showConfirmButton</td>
+<td style="width: 38.8713%; height: 18px;">
+<p>Exemplo de como deve ser informada dentro do array: <strong>'showConfirmButton' => false</strong></p>
+<p>Lista das opções aceitas:</p>
+<ul>
+<li><strong>True: </strong>Exibe o botão de confirmação.</li>
+<li><strong>false:</strong> Não exibe o botão de confirmação.</li>
+</ul>
+</td>
+<td style="width: 52.1703%;">Define se um botão de confirmação será exibido.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.95829%; height: 18px;">position</td>
+<td style="width: 38.8713%;">
+<p>Exemplo de como deve ser informada dentro do array: <strong>'position' => 'bottom-end',<br /><br /></strong>Lista das opções aceitas:<strong><br /></strong></p>
+<ul>
+<li><strong>top</strong></li>
+<li><strong>top-start</strong></li>
+<li><strong>top-end</strong></li>
+<li><strong>center</strong></li>
+<li><strong>center-start</strong></li>
+<li><strong>center-end</strong></li>
+<li><strong>bottom</strong></li>
+<li><strong>bottom-start</strong></li>
+<li><strong>bottom-end</strong></li>
+</ul>
+</td>
+<td style="width: 52.1703%;">Define a posição onde o pop-up será exibido.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.95829%; height: 18px;">toast</td>
+<td style="width: 38.8713%; height: 18px;">Exemplo de como deve ser informada dentro do array: <strong>'toast' => true</strong></td>
+<td style="width: 52.1703%;">Define se iremos ou não utilizar o toast para a exibição das mensagens. Quando ativada, esta opção não exibe o botão de confirmação.</td>
+</tr>
+</tbody>
+</table>
+<p>Confira abaixo os exemplos de utilização da macro:</p>
+<p><strong><strong class="text-strong"><em class="text-italics">Exemplo</em></strong>:</strong> Mensagem utilizando o Sweetalert<br /><code>sc_alert("Esta é uma mensagem de alerta!!");</code></p>
+<p><code></code></p>
+<p><strong><strong class="text-strong"><em class="text-italics">Exemplo</em></strong>: </strong>Message using Sweetalert2</p>
+<p><code><span class="im">$params = array(<br />'title' => 'Título',<br />'type' => 'success',<br />'timer' => '2000',<br /></span>'showConfirmButton' => false, <br />'position' => 'bottom-end',<br />'toast' => true<br />);<br /><br />sc_alert("Inserido com sucesso!", $params);</code></p>
+<p> </p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onFooter<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

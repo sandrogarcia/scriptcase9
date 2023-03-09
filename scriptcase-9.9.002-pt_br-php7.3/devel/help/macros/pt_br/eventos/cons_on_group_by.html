@@ -1,0 +1,41 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre durante as quebras.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento é executado sempre que ocorrer quebras, independente do nível da quebra, e permitem a manipulação dos campos de totalização.</p>
+<p>O Scriptcase disponibiliza todas as variáveis de totalização no escopo da Grid.</p>
+<blockquote>
+<p><span style="font-weight: 400;">O onGroupBy </span><span style="font-weight: 400;">é executado apenas quando a aplicação de Consulta possui uma ou mais Quebras configurada. </span></p>
+</blockquote>
+<hr />
+<p><span style="font-weight: 400;"><strong>Ex</strong>:</span></p>
+<p><span style="font-weight: 400;">Supondo uma aplicação que tenha dois níveis de quebra, <strong>estado</strong> e <strong>cidade</strong>, e que totaliza dois campos, <strong>parcela</strong> e <strong>saldo</strong>, podemos ter acesso aos totais, no escopo de "calcular a cada registro", da seguinte forma:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{count_ger}</code> - contém a quantidade total dos registros;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_parcela}</code> - contém o somatório geral do campo "parcela";</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_saldo}</code> - contém o somatório geral do campo "saldo";</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{count_estado}</code> - contém a quantidade total dos registros, da quebra de "estado" que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_estado_parcela}</code> - contém o somatório do campo "parcela", da quebra de "estado" que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_estado_saldo}</code> - contém o somatório do campo "saldo", da quebra de "estado" que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{count_cidade}</code> - contém a quantidade total dos registros, da quebra de "cidade" que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_cidade_parcela}</code> - contém o somatório do campo "parcela", da quebra de "cidade" que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_cidade_saldo}</code> - contém o somatório do campo "saldo", da quebra de "cidade" que estiver sendo processada;</span></li>
+</ul>
+<p><span style="font-weight: 400;">Considerando que as fórmulas, definidas para serem processadas no escopo de "calcular durante as quebras" estarão atuando para os vários níveis de quebra, as variáveis especiais de totalização, neste escopo, são referenciadas substituindo-se o nome da quebra pela palavra chave "quebra", ou seja:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{count_ger}</code> - contém a quantidade total dos registros;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_parcela}</code> - contém o somatório geral do campo "parcela";</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_saldo}</code> - contém o somatório geral do campo "saldo";</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{count_quebra}</code> - contém a quantidade total dos registros, da quebra que estiver sendo processada;</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_quebra_parcela}</code> - contém o somatório do campo "parcela", da quebra que estiver sendo processada; </span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"><code>{sum_quebra_saldo}</code> - contém o somatório do campo "saldo", da quebra que estiver sendo processada;</span></li>
+</ul>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

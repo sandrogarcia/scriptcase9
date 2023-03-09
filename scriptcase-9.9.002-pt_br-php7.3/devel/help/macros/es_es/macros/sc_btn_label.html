@@ -1,0 +1,377 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro se utiliza para cambiar la etiqueta de los botones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_btn_label("btn_name", "new_label")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/2ebXok-WT04" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un v&iacute;deo tutorial</a></div>
+<p>Esta macro se utiliza para cambiar din&aacute;micamente la etiqueta de los botones, ya sean creados por el desarrollador o por el propio Scriptcase.</p>
+<p>Para ello, es necesario informar dos par&aacute;metros obligatorios,&nbsp; <code>'btn_name'</code> e <code>'new_label'</code>&nbsp;(nombre del bot&oacute;n, y nueva etiqueta)<strong>.</strong></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 9.55423%; height: 18px;">Parametro</th>
+<th style="width: 40.8333%; height: 18px;">Valor</th>
+<th style="width: 49.6124%; height: 18px;">Descripci&oacute;n</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 9.55423%; height: 18px; text-align: center;">btn_name</td>
+<td style="width: 40.8333%; height: 18px;">
+<p>El par&aacute;metro se puede ingresar usando variables (globales o locales) o cadena (usando comillas dobles o simples)</p>
+<p>En negrita, aqu&iacute; est&aacute; el ejemplo de c&oacute;mo se debe ingresar el par&aacute;metro:</p>
+<p><code>sc_btn_label(<strong>'update'</strong>,<span style="color: #808080;"> 'Actualizar Registro'</span>);</code></p>
+<p><strong>Valores aceptados en el parametro:</strong></p>
+<ul>
+<li><strong>String</strong>&nbsp;- Protegida por comillas simples o dobles. <br /><strong>Ej.:</strong>&nbsp;<code><span style="color: #000000;">'update'</span></code></li>
+<li><strong><span style="color: #000000;">Variables - </span></strong><span style="color: #000000;">Locales o globales</span><span style="color: #000000;">.&nbsp;</span><strong>Ej.:</strong>&nbsp;<code><span style="color: #000000;">$btn_update</span></code></li>
+</ul>
+</td>
+<td style="width: 49.6124%; height: 18px;">
+<p>Recibe el nombre de los botones a los que se les cambiar&aacute; la etiqueta.</p>
+<p>Los nombres de los botones, que son creados autom&aacute;ticamente por Scriptcase, est&aacute;n disponibles a continuaci&oacute;n, separados por aplicaci&oacute;n.</p>
+<ul>
+<li><a href="#tb-btn-01">Grid/Gr&aacute;fico</a></li>
+<li><a href="#tb-btn-02">Formulario/Calendario</a></li>
+<li><a href="#tb-btn-03">Control</a></li>
+</ul>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 9.55423%; height: 18px; text-align: center;">new_label</td>
+<td style="width: 40.8333%; height: 18px;">
+<p>El par&aacute;metro se puede ingresar usando variables (globales o locales) o cadena (usando comillas dobles o simples)</p>
+<p><code>sc_btn_label(<span style="color: #808080;">'update'</span>,<strong><span style="color: #000000;"> 'Actualizar Registro'</span></strong>);</code></p>
+<p><strong>Valores aceptados en el parametro:</strong></p>
+<ul>
+<li><strong>String</strong>&nbsp;-&nbsp;Protegido por comillas simple o dobles. <strong>Ej.:</strong>&nbsp;<code><span style="color: #000000;">'Actualizar Registro'</span></code></li>
+<li><strong><span style="color: #000000;">Vari&aacute;veis - </span></strong><span style="color: #000000;">Local o global.</span><span style="color: #000000;">&nbsp;</span><strong>Ej.:</strong>&nbsp;<code><span style="color: #000000;">$new_label</span></code></li>
+<li><strong><span style="color: #000000;">Lang -</span></strong><span style="color: #000000;">variable&nbsp;</span><span style="color: #000000;">lang. <strong>Ej.:</strong>&nbsp;<code>{lang_btn_label}</code></span></li>
+</ul>
+</td>
+<td style="width: 49.6124%; height: 18px;">
+<p>Este par&aacute;metro recibe la nueva etiqueta del bot&oacute;n informado en el par&aacute;metro anterior.</p>
+<p>Adem&aacute;s de la cadena y la variable, tambi&eacute;n es posible utilizar un idioma para definir la etiqueta, lo que permite la traducci&oacute;n de la internacionalizaci&oacute;n de su aplicaci&oacute;n.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a href="#exemplos">Clique aqui y vea ejemplos de como usar la macro.</a></p>
+<p>&nbsp;</p>
+<hr />
+<p><a id="tb-btn-01"></a>Nombre de los botones de la Grid y del grafico.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n</strong></th>
+<th style="width: 88.4322%; height: 18px;" align="left" valign="top">Descripci&oacute;n</th>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">first</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">
+<p>Navega para el inicio de la grid.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">back</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Navega para la pagina anterior.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">forward</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Navega para la pagina siguiente.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">last</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Navega para la &uacute;ltima p&aacute;gina.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">filter</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "Filtro" de la grid.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera el PDF a color de la grid.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">det_pdf</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera PDF del detalle.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">pdfbw</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera PDF blanco y negro de la grid.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">xls</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera&nbsp;archivo XLS.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">xml</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera archivo&nbsp; XML.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">csv</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera archivo CSV.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">rtf</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera archivo RTF.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">word</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Genera archivo Word.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5148%; height: 18px; text-align: center;">json</td>
+<td style="width: 88.4322%; height: 18px;">Genera archivo JSON.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">print</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Abre la grid en formato de impresi&oacute;n.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">det_print</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Abre el detalle en formato de impresi&oacute;n.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">summary</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Resumen</strong>" en la grid.</td>
+</tr>
+<tr style="height: 54px;">
+<td class="corpo1" style="width: 11.5148%; height: 54px; text-align: center;" align="left" valign="top">new</td>
+<td class="corpo1" style="width: 88.4322%; height: 54px;" align="left" valign="top">
+<p>Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Nuevo</strong>", permitiendo agregar nuevos registros.</p>
+<p><strong>Nota:</strong> si la aplicaci&oacute;n tiene un enlace a ella, o si el formulario se est&aacute; ejecutando en el iframe de la grid</p>
+</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="width: 11.5148%; height: 36px; text-align: center;" align="left" valign="top">insert</td>
+<td class="corpo1" style="width: 88.4322%; height: 36px;" align="left" valign="top">
+<p>Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Agregar</strong>".<br /><br /><strong>Nota:</strong> solo en los casos en que el formulario se ejecuta en iframe de la grid</p>
+</td>
+</tr>
+<tr style="height: 32px;">
+<td class="corpo1" style="width: 11.5148%; height: 32px; text-align: center;" align="left" valign="top">update</td>
+<td class="corpo1" style="width: 88.4322%; height: 32px;" align="left" valign="top">
+<p>Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Actualizar</strong>".</p>
+<p><strong>Nota:</strong> solo en los casos en que el formulario se ejecuta en iframe de la grid</p>
+</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="width: 11.5148%; height: 36px; text-align: center;" align="left" valign="top">delete</td>
+<td class="corpo1" style="width: 88.4322%; height: 36px;" align="left" valign="top">
+<p>Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Eliminar</strong>".</p>
+<p><strong>Nota:</strong> solo en los casos en que el formulario se ejecuta en iframe de la grid</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">groupby</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Agrupaci&oacute;n</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">dynsearch</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Filtro dinamico</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 11.5148%; height: 18px; text-align: center;" align="left" valign="top">gridsave</td>
+<td class="corpo1" style="width: 88.4322%; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Guardar Grid</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5148%; height: 18px; text-align: center;">sel_col</td>
+<td style="width: 88.4322%; height: 18px;">Bot&oacute;n de selecionar columnas</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 11.5148%; height: 18px; text-align: center;">sort_col</td>
+<td style="width: 88.4322%; height: 18px;">Bot&oacute;n de ordenar</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a id="tb-btn-02"></a>Nombre de los botones del formulario y calendario</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n</strong></th>
+<th style="height: 18px; width: 88.5002%;" align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></th>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">first</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Navega para el primer registro del formulario.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">back</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Navega para el registro anteriordel formulario.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">forward</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Navega para el registro siguiente del formulario.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">last</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Navega para el utlimo registro del formulario.</td>
+</tr>
+<tr style="height: 22px;">
+<td class="corpo1" style="height: 22px; width: 11.5024%; text-align: center;" align="left" valign="top">new</td>
+<td class="corpo1" style="height: 22px; width: 88.5002%;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Nuevo</strong>" en un formulario, usado en 'off' el formulario es iniciado en modo agregar o nuevo.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">insert</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Agregar</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">update</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Actualizar</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">delete</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Eliminar</strong>".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px; width: 11.5024%; text-align: center;" align="left" valign="top">copy</td>
+<td class="corpo1" style="height: 18px; width: 88.5002%;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Copiar</strong>".</td>
+</tr>
+<tr style="height: 46px;">
+<td style="height: 46px; width: 11.5024%; text-align: center;">dynsearch</td>
+<td style="height: 46px; width: 88.5002%;">
+<p>Controla la visualizaci&oacute;n del bot&oacute;n "<strong>Filtro din&acirc;mico</strong>".</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td class="corpo1" style="height: 46px; width: 11.5024%; text-align: center;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="height: 46px; width: 88.5002%;" align="left" valign="top">
+<p>Genera documento PDF a partir del formul&aacute;rio.</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td class="corpo1" style="height: 46px; width: 11.5024%; text-align: center;" align="left" valign="top">print</td>
+<td class="corpo1" style="height: 46px; width: 88.5002%;" align="left" valign="top">
+<p>Abre el formul&aacute;rio en modo impreci&oacute;n.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><a id="tb-btn-03"></a>Nombre de los botones de la grid.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 11.5553%; height: 17px; text-align: center;" align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n<br /></strong></td>
+<td style="width: 88.4473%; height: 17px;" align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px; width: 11.5553%; text-align: center;" align="left" valign="top">ok</td>
+<td class="corpo1" style="height: 17px; width: 88.4473%;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "Ok" en el form control.</td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px; width: 11.5553%; text-align: center;" align="left" valign="top">exit</td>
+<td class="corpo1" style="height: 17px; width: 88.4473%;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "Sair".</td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px; width: 11.5553%; text-align: center;" align="left" valign="top">facebook</td>
+<td class="corpo1" style="height: 17px; width: 88.4473%;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "Facebook".</td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px; width: 11.5553%; text-align: center;" align="left" valign="top">twitter</td>
+<td class="corpo1" style="height: 17px; width: 88.4473%;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "Twitter"</td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px; width: 11.5553%; text-align: center;" align="left" valign="top">paypal</td>
+<td class="corpo1" style="height: 17px; width: 88.4473%;" align="left" valign="top">Controla la exibici&oacute;n del bot&oacute;n "PayPal"</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr />
+<p><strong>Ejemplo: </strong>Parametro con string</p>
+<pre><span style="color: #000000;">sc_btn_label('update', 'Actualizar registro');</span></pre>
+<p>&nbsp;</p>
+<p><strong>Ejemplo:</strong> Parametro con lang</p>
+<pre><span style="color: #000000;">sc_btn_label("update", {lang_btn_label});</span></pre>
+<p>&nbsp;</p>
+<p><strong>Ejemplo:</strong> Parametro con variable Global</p>
+<pre><span style="color: #000000;">[btn_name] =&nbsp;"update";<br />[label] =&nbsp;"update";<strong><br /></strong></span><span style="color: #000000;">sc_btn_label([btn_name], [label]);</span></pre>
+<p>&nbsp;</p>
+<p><strong>Ejemplo:</strong> Parametro con variable local</p>
+<pre><span style="color: #000000;">$btn_name =&nbsp;"update";<br />$label=&nbsp;"update";<strong><br /></strong></span><span style="color: #000000;">sc_btn_label($btn_name, $label);</span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

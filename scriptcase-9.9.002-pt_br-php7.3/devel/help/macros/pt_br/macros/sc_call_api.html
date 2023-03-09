@@ -1,0 +1,181 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Permite utilizar as APIs integradas ao Scriptcase.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_call_api($profile, $arr_settings)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="body1">Nos permite utilizar as APIs integradas ao Scriptcase. Atualmente disponibilizamos a integra&ccedil;&atilde;o com as APIs do Mandrill e Amazon SES.</p>
+<p>Esta macro possui dois par&acirc;metros:</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">Par&acirc;metros</strong></td>
+<td align="left"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$profile</td>
+<td class="corpo1" align="left">Par&acirc;metro obrigat&oacute;rio. Pode ser passado vazio '' ou conter o nome do gateway configurado em "ferramentas > API".</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$arr_settings</td>
+<td class="corpo1" align="left">Este par&acirc;metro &eacute; opcional, desde que o "profile" n&atilde;o esteja vazio. Ao ser informado, este par&acirc;metro deve conter um Array com o Gateway utilizado e a chave da API.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Exemplo 1 - Par&acirc;metro $arr_settings, array com as informa&ccedil;&otilde;es da API.</strong></p>
+<pre>$settings = array( 'settings' => ['gateway' => 'mandrill', 'api_key'=> {api_key}] );
+
+$mandrill = sc_call_api('', $settings);
+</pre>
+<p>&nbsp;</p>
+<p><strong>Exemplo 2 - Envio de e-mail utilizando o mandrill.</strong></p>
+<pre>$txt_no_tags = strip_tags({msg});
+
+$arr_merge = array(
+                 'name'  => '',
+                 'type'  => 'to',
+                 'email' => 'exemplo@exemplo.com'
+             );
+
+$var_config = array( 'settings' => ['gateway' => 'mandrill', 'api_key'=> {api_key}] );
+
+$mandrill = sc_call_api('', $var_config);
+$var_msg = array(
+               'from_email'                     => {from_email},
+               'from_name'                      => {from_name},
+                'html'                          => {msg},
+                'text'                          => $txt_no_tags,
+                'to'                            => array($arr_merge),              
+                'subject'                       => {subject},
+                'important'                     => true,            
+                'auto_text'                     => null,
+                'auto_html'                     => null,
+                'inline_css'                    => null,
+                'metadata'                      => array('website' => 'www.scriptcase.net')
+    );
+
+$async = false;
+$retorno = $mandrill->messages->send($var_msg, $async);
+</pre>
+<p><strong>Exemplo 3 - Enviando SMS utilizando clickatell.</strong></p>
+<pre>$var_config     = array( 
+  'message'     => [
+    'to'      => {sms_to},
+    'message'     => {sms_txt},
+    ],
+    'settings'    => [
+    'gateway'   => {gateway},
+    'auth_token'  => {auth_token},
+    ] 
+);
+
+sc_send_sms($var_config);
+</pre>
+<p><strong>Exemplo 4 - Usando a macro com PagSeguro</strong></p>
+<pre>  $arr_settings = [
+            'gateway' => 'pagseguro',
+            'environment' => 'sandbox',
+            'auth_email' => 'exemplo@gmail.com',
+            'auth_token' => '72AE21503DDA4840BE1DC7945F6D1CE1'
+                 ];
+sc_call_api('',$arr_settings);
+</pre>
+<p><strong>Exemplo 5 - Usando a macro com PayPal</strong></p>
+<pre>  $arr_settings = [
+            'gateway' => 'paypal',
+            'environment' => 'sandbox',
+            'auth_email' => 'exemplo@gmail.com',
+            'auth_token' => '72AE21503DDA4840BE1DC7945F6D1CE1'
+                 ];
+sc_call_api('',$arr_settings);
+</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

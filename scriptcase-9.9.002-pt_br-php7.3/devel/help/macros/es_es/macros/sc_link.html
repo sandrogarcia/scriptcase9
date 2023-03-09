@@ -1,0 +1,280 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro crea o modifica dinámicamente enlaces entre aplicaciones de cuadrícula y otras aplicaciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_link(Columna, Aplicación, Parámetros, "Sugerencia", "Objetivo", Altura, Ancho)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/9StfE8RAnTA" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un v&iacute;deo tutorial</a></div>
+<p><span style="font-weight: 400;">Le permite crear din&aacute;micamente una conexi&oacute;n de campo entre dos aplicaciones.</span></p>
+<blockquote>
+<p><strong>Nota: </strong><span style="font-weight: 400;">Esta macro solo est&aacute; disponible en Query.</span></p>
+</blockquote>
+<p><span style="font-weight: 400;">A continuaci&oacute;n se muestra la lista de par&aacute;metros de la macro, los cuales deben ser informados separados por comas.</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 12.0965%; text-align: center; vertical-align: middle; height: 18px;"><strong>Par&aacute;metro</strong></td>
+<td style="width: 40.1594%; text-align: center; height: 18px;"><strong>Valor</strong></td>
+<td style="width: 47.744%; text-align: center; height: 18px;"><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 229px;">
+<td style="width: 12.0965%; text-align: center; vertical-align: middle; height: 229px;">
+<p><strong>Columna</strong></p>
+</td>
+<td style="width: 40.1594%; height: 229px;">
+<p><span style="font-weight: 400;">Acepta solo cadenas con o sin protecci&oacute;n de comillas.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><strong>customerid</strong><span style="font-weight: 400;">,form_customer,custom={customerid},"Datos del cliente","_self");</span></code></p>
+<p><span style="font-weight: 400;">Formas aceptadas de pasar el par&aacute;metro:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">customerid</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'customerid'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"customerid"</span></li>
+</ul>
+</td>
+<td style="width: 47.744%; text-align: left; vertical-align: top; height: 229px;">
+<p><strong>Par&aacute;metro obligatorio</strong><span style="font-weight: 400;">, donde se debe informar el nombre del campo que se transformar&aacute; en un enlace a la otra aplicaci&oacute;n.</span></p>
+<p><strong>Nota</strong><span style="font-weight: 400;">: Si el campo informado ya tiene un enlace de campo, el enlace definido en la macro sobrescribir&aacute; el enlace de la interfaz.</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr style="height: 316px;">
+<td style="width: 12.0965%; height: 316px; text-align: center;">
+<p><strong>Aplicaci&oacute;n</strong></p>
+</td>
+<td style="width: 40.1594%; height: 316px;">
+<p><span style="font-weight: 400;">Acepta cadenas con o sin la protecci&oacute;n de comillas, adem&aacute;s de variables globales o locales.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">$var_cliente = 'formulario_cliente';</span></code></p>
+<p><code><span style="font-weight: 400;">sc_link(id_cliente,</span><strong>$var_cliente</strong><span style="font-weight: 400;">,custom={id_cliente},"Datos del cliente","_self");</span></code></p>
+<p><span style="font-weight: 400;">Formas aceptadas de pasar el par&aacute;metro:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">form_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'form_customer'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"form_customer"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">$var_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">[glob_customer]</span></li>
+</ul>
+</td>
+<td style="width: 47.744%; vertical-align: top; height: 316px;">
+<p><strong>Par&aacute;metro requerido</strong><span style="font-weight: 400;">, define la aplicaci&oacute;n de destino de la llamada.</span></p>
+<br />
+<p><span style="font-weight: 400;">En este par&aacute;metro es posible utilizar variables que permitan cambiar la aplicaci&oacute;n de destino, dependiendo de su regla de negocio.</span></p>
+</td>
+</tr>
+<tr style="height: 348px;">
+<td style="width: 12.0965%; height: 348px; text-align: center;">
+<p><strong>Par&aacute;metros</strong></p>
+</td>
+<td style="width: 40.1594%; height: 348px;">
+<p><span style="font-weight: 400;">Este par&aacute;metro define el valor de la variable que estar&aacute; disponible desde la aplicaci&oacute;n de destino como una variable global.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid,form_customer,</span><strong>custom={customerid}</strong><span style="font-weight: 400;">,"Datos del cliente","_self");</span></code></p>
+<p><span style="font-weight: 400;">Formas aceptadas de pasar el par&aacute;metro:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = {customerid}</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = 'ALFKI'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = $var_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom - [glob_customer]</span></li>
+</ul>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+</td>
+<td style="width: 47.744%; height: 348px; vertical-align: top;">
+<p><span style="font-weight: 400;">Este par&aacute;metro no es obligatorio, pero su uso es necesario para la correcta visualizaci&oacute;n de los datos en la aplicaci&oacute;n de destino. Cuando no se informa, la aplicaci&oacute;n de destino mostrar&aacute; todos los datos en la tabla.</span></p>
+<p><strong>Recuperaci&oacute;n del valor en la</strong></p>
+<p><span style="font-weight: 400;">aplicaci&oacute;n de destino En la aplicaci&oacute;n de destino de la conexi&oacute;n, en el ejemplo al lado est&aacute; la aplicaci&oacute;n form_customer, el </span><strong>personalizado</strong><span style="font-weight: 400;"> debe recuperarse como una variable global en el SQL de la aplicaci&oacute;n.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">En este ejemplo, se ha agregado la siguiente instrucci&oacute;n SQL al formulario (form_customer)</span></p>
+<p><span style="font-weight: 400;">customerid = '[custom]'</span></p>
+<blockquote>
+<p><span style="font-weight: 400;">Para obtener m&aacute;s detalles sobre el uso de variables globales,</span><a href="https://www.scriptcase.net/docs/es_es/v9/manual/03-knowing-scriptcase/09-variables-del-scriptcase/#id-2" target="_blank" rel="noopener"> <span style="font-weight: 400;">acceda a nuestra documentaci&oacute;n en l&iacute;nea</span></a><span style="font-weight: 400;">.</span></p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 384px;">
+<td style="width: 12.0965%; height: 384px; text-align: center;">
+<p><strong>Sugerencia</strong></p>
+</td>
+<td style="width: 40.1594%; height: 384px;">
+<p><span style="font-weight: 400;">Acepta cadenas, con o sin la protecci&oacute;n de comillas, idioma y variables globales o locales.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">id_cliente,formulario_cliente,custom={id_cliente},</span><strong>"Datos del cliente"</strong><span style="font-weight: 400;">,"_self");</span></code></p>
+<p><strong>Obs</strong><span style="font-weight: 400;">: Para usar </span><strong>comas</strong><span style="font-weight: 400;"> y </span><strong>ap&oacute;strofes</strong><span style="font-weight: 400;"> en el texto, es necesario proteger con el car&aacute;cter de escape </span><strong>"\"</strong></p>
+<p><span style="font-weight: 400;">Formas aceptadas de pasar el par&aacute;metro:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"Texto de ayuda\, con una coma"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'Datos del cliente'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Datos del cliente</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">{lang_text}</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">[glob_txt]</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">$var_txt</span></li>
+</ul>
+<p><span style="font-weight: 400;">&nbsp;</span></p>
+</td>
+<td style="width: 47.744%; height: 384px; vertical-align: top;">
+<p><span style="font-weight: 400;">Este par&aacute;metro no es obligatorio.</span></p>
+<p><span style="font-weight: 400;">Recibe un texto con alguna ayuda o comentario para el usuario del sistema, el texto se muestra cada vez que el cursor del mouse pasa sobre el enlace.</span></p>
+<p><span style="font-weight: 400;">Es posible utilizar langs para la definici&oacute;n de mensajes, permitiendo la traducci&oacute;n de su sistema.</span></p>
+<blockquote>
+<p><strong>Obs</strong><span style="font-weight: 400;">: Para utilizar </span><strong>comas</strong><span style="font-weight: 400;"> y </span><strong>ap&oacute;strofes</strong><span style="font-weight: 400;"> en el texto es necesario proteger con el car&aacute;cter de escape </span><strong>"\"</strong></p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 401px;">
+<td style="width: 12.0965%; height: 401px; text-align: center;">
+<p><strong>Destino</strong></p>
+</td>
+<td style="width: 40.1594%; height: 401px;">
+<p><span style="font-weight: 400;">Este par&aacute;metro acepta s&oacute;lo cadena. Los valores disponibles se enumeran a continuaci&oacute;n.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid,form_customer,custom={customerid},"Datos del cliente", </span><strong>"modal"</strong><span style="font-weight: 400;">,850,600);</span></code></p>
+<p><strong>Nota:</strong><span style="font-weight: 400;"> Si se omite, se asignar&aacute; el valor "_self".</span></p>
+<p><span style="font-weight: 400;">Formas aceptadas de pasar el par&aacute;metro:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"_self"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"_blank"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeT"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeL"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeR"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeB"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"modal"</span></li>
+</ul>
+</td>
+<td style="width: 47.744%; height: 401px; vertical-align: top;">
+<p><span style="font-weight: 400;">Define la forma de abrir la aplicaci&oacute;n de destino.</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">_self: ejecuta la aplicaci&oacute;n de destino en la misma p&aacute;gina, superponi&eacute;ndose a la aplicaci&oacute;n de consulta;</span><span style="font-weight: 400;"><br /><br /></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">_blank: ejecuta la aplicaci&oacute;n de destino en otra p&aacute;gina (ventana emergente);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeT: muestra la aplicaci&oacute;n de destino en un iframe encima de la consulta (superior);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeL: la aplicaci&oacute;n de destino se mostrar&aacute; en un iframe a la izquierda de la consulta (izquierda)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeR: la aplicaci&oacute;n de destino se mostrar&aacute; en un iframe a la derecha de la consulta (derecha);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeB: la aplicaci&oacute;n de destino se mostrar&aacute; en un iframe debajo de la consulta (Bot);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">modal: abre una nueva ventana y bloquea cualquier interacci&oacute;n en la ventana principal;</span></li>
+</ul>
+<blockquote>
+<p><span style="font-weight: 400;">Al usar cualquiera de los </span><strong>iframe </strong><span style="font-weight: 400;">o </span><strong>modal</strong><span style="font-weight: 400;"> para abrir la aplicaci&oacute;n, es posible definir la </span><strong>altura</strong><span style="font-weight: 400;"> y </span><strong>ancho</strong><span style="font-weight: 400;"> agregando los valores en los par&aacute;metros opcionales a continuaci&oacute;n.</span></p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 146px;">
+<td style="width: 12.0965%; height: 146px; text-align: center;">
+<p><strong>Altura</strong></p>
+</td>
+<td style="width: 40.1594%; height: 146px;">
+<p><span style="font-weight: 400;">Este par&aacute;metro acepta solo valores num&eacute;ricos y su unidad de medida es el p&iacute;xel.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">id_cliente,formulario_cliente,personalizado={id_cliente},"Datos del cliente","modal",</span><strong>850</strong><span style="font-weight: 400;">,</span><span style="font-weight: 400;">600);</span></code></p>
+</td>
+<td style="width: 47.744%; height: 146px; vertical-align: top;">
+<p><strong>Par&aacute;metro no obligatorio</strong><span style="font-weight: 400;">, disponible solo cuando se usa el </span><strong>iframe</strong><span style="font-weight: 400;"> y </span><strong>modal</strong><span style="font-weight: 400;"> par&aacute;metro </span><strong>Destino</strong></p>
+<p><span style="font-weight: 400;">Define la altura del iframe o modal donde se mostrar&aacute; la aplicaci&oacute;n de destino.</span></p>
+<p><strong>Obs</strong><span style="font-weight: 400;">: Si se omite, el valor predeterminado ser&aacute; 440</span></p>
+</td>
+</tr>
+<tr style="height: 146px;">
+<td style="width: 12.0965%; height: 146px; text-align: center;">
+<p><strong>Anchura</strong></p>
+</td>
+<td style="width: 40.1594%; height: 146px;">
+<p><span style="font-weight: 400;">Este par&aacute;metro acepta solo valores num&eacute;ricos y su unidad de medida es el p&iacute;xel.</span></p>
+<p><strong>Por ejemplo:&nbsp;</strong></p>
+<p><code><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">id_cliente,formulario_cliente,custom={id_cliente},"Datos del cliente","iframeB",850,</span><strong>600</strong><span style="font-weight: 400;">);</span></code></p>
+</td>
+<td style="width: 47.744%; height: 146px; vertical-align: top;">
+<p><strong>Par&aacute;metro no obligatorio</strong><span style="font-weight: 400;">, disponible solo cuando se usa el </span><strong>iframe</strong><span style="font-weight: 400;"> y </span><strong>modal</strong><span style="font-weight: 400;"> par&aacute;metro </span><strong>Destino</strong></p>
+<p><span style="font-weight: 400;">Define el ancho del iframe o modal donde se mostrar&aacute; la aplicaci&oacute;n de destino.</span></p>
+<p><strong>Nota:</strong><span style="font-weight: 400;"> si se omite, el valor predeterminado ser&aacute; 630</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<p><strong>Ej. 1:</strong> Crea un enlace a la aplicaci&oacute;n customer.php, en el campo Id, pasando la variable global [cliente_global] como y el campo del producto (variable local) {Id} a la aplicaci&oacute;n costumer.php:</p>
+<pre>sc_link(Id, costumer.php, product=[cliente_global]; Id={Id}, "Client Data", "_blank");</pre>
+<p><br /><strong>Ej. 2:</strong> Crear un enlace din&aacute;mico a otra aplicaci&oacute;n dependiendo del valor del campo {tipo_cliente} y abrirlo en un modal.</p>
+<pre>if ( {tipo_cliente} == "F") {<br />&nbsp; &nbsp; sc_link (costumer_type, type_f.php, product=[cliente_global]; Id={Id}," Personal Data ", "modal", 500, 700);<br />} else {<br />&nbsp; &nbsp; sc_link (costumer_type, type_a.php, product=[cliente_global]; Id={Id}," Company Data ", "iframeR");<br />}</pre>
+<p><br /><strong>Ej. 3:</strong> Crear un enlace a una URL: en este caso, "par&aacute;metro y destino" no tienen ning&uacute;n efecto. Se ejecutar&aacute; redirigiendo a una URL informada.</p>
+<pre>sc_link (my_field, http://www.scriptcase.com, ,"mensaje de sugerencia");</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

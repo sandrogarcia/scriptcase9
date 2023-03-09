@@ -1,0 +1,111 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Cambia el estado actual del botón en la barra de acciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_state("nombre_boton", "nombre_estado")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro le permite cambiar el estado actual del bot&oacute;n de la barra de acci&oacute;n.</p>
+<blockquote>
+<p>Para usar el evento ajax del bot&oacute;n, recomendamos usar esta macro junto con <code>sc_actionbar_clicked_state();</code> que permite recuperar el estado actual del bot&oacute;n.</p>
+</blockquote>
+<h2>Definici&oacute;n de par&aacute;metros</h2>
+<table style="border-collapse: collapse; width: 100%; height: 68.1718px;" border="1">
+<thead>
+<tr style="height: 23.3906px;">
+<td style="width: 15.2406%; height: 23.3906px;"><strong>Par&aacute;metros</strong></td>
+<td style="width: 47.1658%; height: 23.3906px;"><strong>Valores</strong></td>
+<td style="width: 37.5936%; height: 23.3906px;"><strong>Descripci&oacute;n</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 22.3906px;">
+<td style="width: 15.2406%; height: 22.3906px;"><code><span style="font-size: 12px; box-sizing: border-box; font-weight: bold; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif;">button_name</span></code></td>
+<td style="width: 47.1658%; height: 22.3906px;">
+<p style="text-align: justify;"><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">El nombre del bot&oacute;n debe informarse mediante <strong>comillas dobles o simples</strong>.</span></p>
+<p><strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Ejemplo<br /><br /></span></strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">En negrita, se puede ver el ejemplo de c&oacute;mo el par&aacute;metro </span><code>button_name</code>&nbsp;<span style="background-color: #ffffff; color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">debe ser informado:</span></p>
+<p><code><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">sc_actionbar_state(<span style="color: #000000;"><strong>"ajax_btn"</strong></span>,&nbsp;<span style="color: #95a5a6;">"sent"</span></span><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 37.5936%; height: 22.3906px;">
+<p><strong>Este es un par&aacute;metro obligatorio.</strong></p>
+<p>Debe informar el nombre del bot&oacute;n creado en la barra de acci&oacute;n.</p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 15.2406%; height: 22.3906px;"><code><span style="font-size: 12px; box-sizing: border-box; font-weight: bold; color: rgba(0, 0, 0, 0.87); font-family: Arial, sans-serif;">state_name</span></code></td>
+<td style="width: 47.1658%; height: 22.3906px;">
+<p style="text-align: justify;"><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">El nombre del estado debe informarse mediante <strong>comillas dobles o simples.</strong></span></p>
+<p><strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Ejemplo</span></strong><strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;"><br /><br /></span></strong><span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">En negrita, se puede ver el ejemplo de c&oacute;mo el par&aacute;metro </span><code>state_name</code> debe ser informado:</p>
+<p><code><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">sc_actionbar_state(<span style="color: #95a5a6;">"ajax_btn"</span>,&nbsp;<strong><span style="color: #000000;">"sent"</span></strong></span><span style="color: #6c757d; font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 37.5936%; height: 22.3906px;">
+<p><strong>Este es un par&aacute;metro obligatorio.</strong></p>
+<p>Debe informar el nombre del siguiente estado que asumir&aacute; el bot&oacute;n.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Ejemplos</h2>
+<hr />
+<p><strong><br />Ejemplo</strong>: cambiar el estado del bot&oacute;n ajax_btn entre pendiente y enviado en el evento onclick del bot&oacute;n.</p>
+<pre>if (sc_actionbar_clicked_state() == 'pending') {<br />
+        sc_actionbar_state('ajax_btn', 'sent');
+
+} else {
+
+        sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+<hr />
+<p><strong><br />Ejemplo</strong>: cambiar el estado del bot&oacute;n ajax_btn entre pendiente y enviado, y almacenar el cambio en la base en el campo email_sent.</p>
+<pre>if (sc_actionbar_clicked_state() == 'pending') {
+
+	$update = "update orders set email_sent = 'S' WHERE orderid =". {orderid};<br />	sc_exec_sql($update);
+        sc_actionbar_state('ajax_btn', 'sent');<br />
+} else {
+
+	$update = "update orders set email_sent = 'N' WHERE orderid =". {orderid};<br />	sc_exec_sql($update);
+        sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+<hr />
+<p><strong><br />Ejemplo</strong>: Visualizaci&oacute;n del estado del bot&oacute;n ajax_btn seg&uacute;n el valor almacenado en el campo email_sent en el evento onRecord de la aplicaci&oacute;n Grid.</p>
+<pre>if ({email_sent} == 'S') {
+
+    sc_actionbar_state('ajax_btn', 'sent');<br />
+} else {
+
+    sc_actionbar_state('ajax_btn', 'pending');<br />
+}</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

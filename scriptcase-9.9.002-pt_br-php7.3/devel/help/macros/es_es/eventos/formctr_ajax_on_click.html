@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando se hace clic en un objeto de entrada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Ocurre cuando el usuario hace clic en el campo configurado con el evento, lo que permite realizar acciones específicas luego de la interacción del usuario del sistema. </p>
+<hr />
+<p><strong>Ejemplo:</strong></p>
+<p>En un campo de tipo de radio, queremos ocultar o mostrar otro campo dependiendo del valor en el que se haga clic en el campo de radio.</p>
+<p>if ( <strong>{fld_radio}</strong> == 1 ) {</p>
+<p>  sc_field_display(<strong>{fld_information}</strong>, on);</p>
+<p>}else{</p>
+<p>   sc_field_display(<strong>{fld_information}</strong>, off);</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

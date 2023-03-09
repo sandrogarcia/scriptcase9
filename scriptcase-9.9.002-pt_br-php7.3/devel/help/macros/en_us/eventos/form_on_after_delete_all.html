@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when a register is deleted on multiple rows forms.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking no button Exclude form multiple records. Or the form will execute the onValidate, onValidateSuccess and onBeforeDelete events, and the logo will execute all the SQL commands to exclude the records not the data bank, it will execute or the <strong>onAfterDeleteAll</strong> event.</p>
+<p><em>Note: This event occurs only once regardless of the quantity of records excluded at a time.</em></p>
+<hr />
+<p>Ex. In an order item form (multiple records), we want to delete the order if all screen items are deleted. Just in the event OnAfterDeleteAll use a block similar to the one shown below:</p>
+<p>sc_exec_sql ("DELETE FROM orders WHERE order_id = {order}");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

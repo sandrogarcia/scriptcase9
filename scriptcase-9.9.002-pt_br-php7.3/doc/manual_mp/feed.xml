@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentação Scriptcase</title>
+    <description>Documentação completa para consultar todos os recursos do ambiente de desenvolvimento do Scriptcase. Nossa documentação é atualizada continuamente, de acordo com o lançamento de novas funcionalidades.
+</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 24 Nov 2022 11:16:40 -0300</pubDate>
+    <lastBuildDate>Thu, 24 Nov 2022 11:16:40 -0300</lastBuildDate>
+    <generator>Jekyll v3.6.0</generator>
+    
+  </channel>
+</rss>

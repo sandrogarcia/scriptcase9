@@ -1,0 +1,150 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro converte o conteúdo do campo passado como parâmetro do formato de entrada para o formato de saída.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_date_conv({Campo_Data}, "Formato_Entrada", "Formato_Saída")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/XG_bihqVvIg" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a>
+</div>
+<p class="corpo1">Um trabalho relativamente complexo na programa&ccedil;&atilde;o &eacute; a manipula&ccedil;&atilde;o de datas. Para minimizar este problema o ScriptCase disponibiliza a fun&ccedil;&atilde;o para convers&atilde;o de datas <strong>sc_date_conv.</strong></p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">Confira abaixo a lista de par&acirc;metros para esta macro e os valores aceitos.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 6.94218%; height: 18px; text-align: left;" align="left" valign="top" width="15%"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td style="width: 32.2204%; height: 18px;"><strong>Valores</strong></td>
+<td style="width: 31.3825%; height: 18px;" align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr style="height: 79px;">
+<td class="corpo1" style="width: 6.94218%; height: 79px; text-align: left;" align="left" valign="top">
+<p style="text-align: left;"><br />field_name</p>
+</td>
+<td style="width: 32.2204%; height: 79px;">
+<p>Exemplo de como deve ser informado o par&acirc;metro:&nbsp;<strong>{Nome_Campo_Data}</strong></p>
+</td>
+<td class="corpo1" style="width: 31.3825%; height: 79px;" align="left" valign="top"><br />Esta par&acirc;metro deve receber o nome do campo data que ter&aacute; o valor manipulado</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 6.94218%; height: 18px; text-align: left;" align="left" valign="top"><br /><br /><br /><br />formato_Entrada&nbsp;</td>
+<td style="width: 32.2204%; height: 18px;">
+<p>A string deve ter o mesmo formato utilizado no banco de dados.<br /><br />Exemplo de como deve ser informada a string da data na macro:&nbsp;<strong>"aaaa-mm-dd"<br /><br /></strong>Op&ccedil;&otilde;es aceitas:</p>
+<ul style="list-style-type: square;">
+<li><strong>String de datas - </strong>Por exemplo&nbsp;"aaaa-mm-dd"</li>
+<li><strong>db_Format</strong> - Recupera o formato da data do banco de dados.</li>
+</ul>
+</td>
+<td class="corpo1" style="width: 31.3825%; height: 18px;" align="left" valign="top">
+<p>Recebe a string com o formato atual da data, salvo no banco de dados.<br /><br />Caso o formato informado esteva diferente do utilizado no banco de dados, a macro n&atilde;o ir&aacute; funcionar da forma esperada.</p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 6.94218%; height: 18px; text-align: left;" align="left" valign="top"><br /><br /><br /><br /><br />formato_Sa&iacute;da&nbsp;</td>
+<td style="width: 32.2204%; height: 18px;">
+<p>A String deve ter o formato que a data ser&aacute; exibida.<br /><br />Exemplo de como deve ser informada a string da data na macro: "<strong>dd/mm/aaaa</strong><strong>"</strong></p>
+<p>Op&ccedil;&otilde;es aceitas:</p>
+<ul style="list-style-type: square;">
+<li><strong>String de datas - </strong>Por exemplo&nbsp;"dd-mm-aaaa"</li>
+<li><strong>sc_format_region&nbsp;</strong>- Valor formatado de acordo com a configura&ccedil;&atilde;o regional</li>
+<li><strong>db_Format - </strong>Converte a data para o valor nativo do banco de dados</li>
+</ul>
+</td>
+<td class="corpo1" style="width: 31.3825%; height: 18px;" align="left" valign="top">
+<p>Recebe a string com o formado de exibi&ccedil;&atilde;o da data desejado.<br /><br />Caso queira utilizar o formato de acordo com a configura&ccedil;&atilde;o regionar, deve ser informado o valo&nbsp;<strong>sc_format_region</strong> neste par&acirc;metro</p>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><br /><br />Para mais informa&ccedil;&otilde;es sobre as strings das dadas consulte o&nbsp;<a href="https://www.php.net/manual/pt_BR/function.date.php" target="_blank" rel="noopener">Manual do PHP</a></p>
+</blockquote>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1: </strong>Convertendo a data do formato<strong> "dd/mm/aaaa" </strong>para o formato <strong>"aaaammdd"<br /></strong></p>
+<p class="corpo1"><code>{campo_data} = sc_date_conv({campo_data},"dd/mm/aaaa","aaaammdd");</code><code></code></p>
+<p class="corpo1"><code></code><strong>Ex. 2:</strong> Convertendo a data do <strong>formato nativo do banco de dados</strong> para o formato <strong>"dd/mm/aaaa"</strong></p>
+<p class="corpo1"><code>{campo_data} = sc_date_conv({campo_data},"db_format","dd/mm/aaaa");</code><code></code></p>
+<p class="corpo1"><code></code><strong>Ex. 3:</strong>&nbsp;Convertendo&nbsp;a data do formato <strong>"dd/mm/aaaa"</strong> para o <strong>formato nativo do Banco de dados<br /></strong></p>
+<p class="corpo1"><code>{campo_data} = sc_date_conv({campo_data},"dd/mm/aaaa","db_format");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><strong>Ex. 4:</strong>&nbsp;Convertendo&nbsp;a data do formato <strong>formato nativo do Banco de dados</strong>&nbsp;para o <strong>formato da configura&ccedil;&atilde;o regional</strong></p>
+<p class="corpo1"><code>{campo_data} = sc_date_conv({campo_data},"db_format","sc_format_region");</code></p>
+<p class="corpo1"><code></code></p>
+<p class="corpo1"><code></code><code></code><strong>Ex. 5:</strong>&nbsp;Convertendo&nbsp;a data do formato <strong>"aaaa-mm-dd"</strong>&nbsp;para o <strong>formato da configura&ccedil;&atilde;o regional</strong></p>
+<p class="corpo1"><code>{campo_data} = sc_date_conv({campo_data},"aaaa-mm-dd","sc_format_region");</code><code></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

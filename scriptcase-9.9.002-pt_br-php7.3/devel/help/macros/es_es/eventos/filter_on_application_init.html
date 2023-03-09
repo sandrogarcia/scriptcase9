@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento se produce una sola vez cuando se carga la aplicación.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			Este evento ocurre solo una vez antes de mostrar el formulario de búsqueda. Se puede usar para establecer algunos valores predeterminados en los campos. Por ejemplo:
+
+{empresa} = [glo_empresa];
+
+Los campos de fecha se usan de manera diferente. Usan un sufijo "dia" para el día, "mes" para el mes y / o "ano" para el año. Por ejemplo, el campo {Nacimiento} será:
+
+{Birth_dia}=date("d");
+
+{Birth_mes}=date("m");
+
+{Birth_ano}=date("Y");
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

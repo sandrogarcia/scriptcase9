@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when the menu its loaded</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			This event occurs when loading a horizontal / vertical menu.
+
+In this case, we can execute some security policy, for example, if you try to access the menu directly, without first going through a login form, we can test a session variable defined in the login form, redirect the flow to the initial application.
+
+if( !isset([var_id_user]) or empty([var_id_user]) )
+
+{
+       sc_redirect("login.php");
+}
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

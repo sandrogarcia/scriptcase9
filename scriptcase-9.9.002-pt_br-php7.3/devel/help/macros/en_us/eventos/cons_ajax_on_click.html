@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when a input object is clicked.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>It occurs when the user clicks on the field configured with the event, thus allowing specific actions to be performed after the interaction of the system user.</p>
+<p>Among other features, it is possible to create a redirect to other applications with the sc_redir macro, delete records without leaving the query using the sc_exec_sql macro, among other implementations.</p>
+<p>----</p>
+<p>In the example below, a redirect will be performed using the sc_redir macro sent as a parameter the order number to the ReportPDF, which will show the order details.</p>
+<p>In the ReportPDF that uses the orders_detais table, add a where clause in SQL:</p>
+<p><strong>WHERE orders.orderid = [order]</strong></p>
+<p>In the query, using the orders table, create an onClick event in the field of your choice, and add the command line below.</p>
+<p>sc_redir(pdf_name.php, order={orderid}, "_blank");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

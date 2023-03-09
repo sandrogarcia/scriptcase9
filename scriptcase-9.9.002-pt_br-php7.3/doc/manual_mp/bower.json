@@ -1,0 +1,23 @@
+{
+  "name": "documentation",
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.3",
+    "jquery-sticky": "https://github.com/garand/sticky.git#^1.0.3",
+    "sticky-kit": "https://github.com/leafo/sticky-kit.git#^1.1.2"
+  },
+  "devDependencies": {
+    "slug": "^0.9.1",
+    "highlight.js": "https://github.com/isagalaev/highlight.js.git#^9.6.0"
+  }
+}

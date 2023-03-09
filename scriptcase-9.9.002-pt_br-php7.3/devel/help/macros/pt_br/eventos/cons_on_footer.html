@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre na exibição do rodapé.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após o processamento das linhas da grid, durante a exibição dos elementos HTML do rodapé da página. </p>
+<p>O onFooter é utilizado quando desejamos exibir alguma informação no rodapé, como um total de vendas ou uma legenda para um gráfico de linha.</p>
+<blockquote>
+<p><br />O onFooter é executado apenas quando a opção de exibir rodapé está habilitada nas configurações de layout da aplicação.</p>
+</blockquote>
+<hr />
+<p> </p>
+<p><strong>Ex:</strong> Queremos no rodapé da consulta exibir o valor total dos pedidos exibidos na grid de uma nota fiscal, com um desconto de 10%:</p>
+<pre><code>sc_lookup(ret," select sum( valoritem ) from vendas_item where id_venda={id_venda} ");</code><br /><br /><code>[v_nota_rodape] = {ret[0][0]} * 0,1;</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

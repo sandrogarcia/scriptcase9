@@ -1,0 +1,98 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro actualiza un objeto de aplicación maestra desde una aplicación de detalle.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_master_value('Objeto', Valor)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/kp3t8G_2O-U" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /></a>
+<p class="p-macros-desc">Ver un video tutorial</p>
+</div>
+<p>Actualice los datos en la aplicaci&oacute;n <strong> principal , en tiempo real, de acuerdo con los cambios realizados en un campo determinado de la aplicaci&oacute;n <strong> detalle. </strong></strong></p>
+<table style="height: 53px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Par&aacute;metro<br /></strong></td>
+<td style="height: 18px;" align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td class="corpo1" style="height: 17px;" align="left" valign="top">Objeto</td>
+<td class="corpo1" style="height: 17px;" align="left" valign="top"><span class="corpo1">Nombre del objeto que se actualizar&aacute; en la aplicaci&oacute;n maestra. No es necesario el {} en un nombre de campo.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Valor</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Valor del objeto El valor puede ser un campo o una variable.</td>
+</tr>
+</tbody>
+</table>
+<p><br /><br /><strong>Ej. 1:</strong> <br /><br />sc_lookup(result,"SELECT SUM(Total) FROM adm_order_itens WHERE OrderID = '{OrderID}'"); <br /><br /><span style="color: #929292;">//Using <strong>sc_format_num()</strong> to format the value that will be updated in the master application</span><br />$value = sc_format_num({result[0][0]}, ',', '.', 2, 'S', 1, ''); <br />sc_master_value('OrderPrice', $value); <br /><br /><span style="color: #ff0000;"><em>* Si el valor, que se enviar&aacute; al maestro, sea num&eacute;rico, debe usar sc_format_num() para formatearlo. Para ver la documentaci&oacute;n de la macro, <a href="#sc_format_num" target="_blank" rel="noopener">haga clic aqu&iacute;</a>.</em></span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit<br>onLoadAll<br>onRefresh
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,24 @@
+<?php
+/* Classes ancestrais */
+nm_load_class('xmlparser', 'Xmlparser');
+
+/* Definicao da classe */
+class nmXmlparserTabbedAttr1 extends nmXmlparser
+{
+    /* ----- Construtor e Destrutor ------------------------------------ */
+
+    /**
+     * Construtor da classe.
+     *
+     * Seta o elemento raiz do XML.
+     *
+     * @access  public
+     */
+    function __construct()
+    {
+        $this->str_id = "Aba_attr1";
+		$this->StartDefault();
+    } // nmXmlparserTabbedAttr1
+}
+
+?>

@@ -1,0 +1,57 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Returns the current state of the ajax button created in the action bar.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_clicked_state()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>The <code>sc_actionbar_clicked_state()</code> macro makes it possible for the developer to retrieve the current state of the button at the time of clicking the ajax button on the action bar.</p>
+<p>This way you can validate the current state of the button and change it according to your business rule.</p>
+<blockquote>
+<p>This macro is exclusive for using the <strong>ajax event of the action bar button</strong>.</p>
+</blockquote>
+<h2>Examples</h2>
+<hr />
+<p><strong>Example</strong>: Identification of the current state of the button in the ajax event, to change the state when clicking.</p>
+<pre><span style="color: #7e8c8d;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; white-space: normal;">if (<strong><span style="color: #000000;">sc_actionbar_clicked_state()</span></strong><strong>&nbsp;<span style="color: #000000;">== 'pending'</span></strong>) {<br /><br /></span>    sc_actionbar_state('ajax_btn', 'sent');</span><br /><br /><span style="color: #7e8c8d;">} else {</span><br /><br /><span style="color: #7e8c8d;">    sc_actionbar_state('ajax_btn', 'pending');</span><br /><br /><span style="color: #7e8c8d;">}</span></pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example</strong>: Example for viewing the current value of the button.</p>
+<pre>echo sc_actionbar_clicked_state();</pre>
+<div id="gtx-trans" style="position: absolute; left: 215px; top: 265.969px;">
+<div class="gtx-trans-icon">&nbsp;</div>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

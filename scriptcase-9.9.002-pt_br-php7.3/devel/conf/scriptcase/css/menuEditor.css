@@ -1,0 +1,148 @@
+.sc-header {
+  background: white;
+  height: 151px;
+  border-bottom: 1px solid #D1DDE2; }
+
+.sc-container {
+  display: flex;
+  height: calc(100% - 151px); }
+
+.sc-treeview {
+  width: 260px;
+  display: none;
+  height: 100%;
+  background: #F2F2F2;
+  border-right: 1px solid #eee; }
+
+.sc-view {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.sc-view > .header {
+  padding: 60px 60px 20px 60px; }
+
+.menu-box {
+  padding: 20px 60px;
+  border-top: 1px solid #DEDEDF;
+  border-bottom: 1px solid #DEDEDF; }
+
+.menu-view {
+  border: 1px solid;
+  padding: 10px 50px; }
+
+.sc-menueditor {
+  width: 100%;
+  display: flex; }
+  .sc-menueditor-sidebar {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .sc-menueditor-sidebar:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 1px;
+      background: rgba(34, 36, 38, 0.1); }
+  .sc-menueditor-sidebarview {
+    overflow-y: auto; }
+  .sc-menueditor-wrapper {
+    flex: 1;
+    background: #EFF2F7;
+    padding: 50px; }
+  .sc-menueditor-wrapper + .sc-menueditor-sidebar:after {
+    left: 0;
+    right: auto; }
+  .sc-menueditor-header {
+    border-bottom: 1px solid #EFF2F7;
+    padding: 4px;
+    height: 40px;
+    display: flex; }
+    .sc-menueditor-header h3 {
+      flex: 1;
+      margin: 0;
+      font-size: 16px; }
+  .sc-menueditor-toolbar {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1; }
+    .sc-menueditor-toolbar ul,
+    .sc-menueditor-toolbar li {
+      list-style: none;
+      margin: 0; }
+    .sc-menueditor-toolbar li {
+      padding: 4px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #EFF2F7; }
+    .sc-menueditor-toolbar .moreItens {
+      display: flex;
+      }
+    .sc-menueditor-toolbar .moreItens > div {
+      flex:1;
+      }
+    .sc-menueditor-toolbar .padding{
+      padding-left: 20px;
+      }
+    .sc-menueditor-toolbar h6 {
+      font-size: 11px;
+      margin: 0 0 7px;
+      color: #8492A6;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
+    .sc-menueditor-toolbar .menu {
+      margin: 0; }
+  .sc-menueditor-pallet .button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0; }
+  .sc-menueditor-generated-menu {
+    padding: 0;
+    margin: 5px;
+    overflow-y: auto; }
+    .sc-menueditor-generated-menu .obj {
+      margin: 3px 0; }
+      .sc-menueditor-generated-menu .obj span {
+        display: block;
+        padding: 0 0 0 6px;
+        cursor: pointer;
+        border: 1px solid transparent; }
+      .sc-menueditor-generated-menu .obj span:before {
+        content: "";
+        display: inline-block;
+        background: #EFF2F7;
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+        border-radius: 2px;
+        border: 1px solid #30C2FF; }
+      .sc-menueditor-generated-menu .obj span:hover {
+        border-color: #30C2FF; }
+      .sc-menueditor-generated-menu .obj > .obj-item {
+        padding-left: 20px; }
+      .sc-menueditor-generated-menu .obj.active > span {
+        background: #30C2FF;
+        color: white; }
+    .sc-menueditor-generated-menu .item-add span {
+      font-size: 10px;
+      display: inline-block;
+      border: 1px solid #30C2FF;
+      border-radius: 25px;
+      color: #30C2FF;
+      padding: 0 5px;
+      cursor: pointer;
+      margin-left: 20px; }
+    .sc-menueditor-generated-menu .item-add span:hover {
+      background: #30C2FF;
+      color: white; }
+    .sc-menueditor-generated-menu .item-add span:before {
+      background: none;
+      content: '+';
+      border: 0;
+      font-size: 13px;
+      font-weight: bold;
+      margin-right: 0; }

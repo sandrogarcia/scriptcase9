@@ -1,0 +1,223 @@
+#css que estava no template
+  .sc-ui-chart-tabs,
+  .sc-ui-chart-data-container {
+    border: none;
+  }
+
+  .sc-ui-chart-tabs {
+    border-right: 1px solid #d1dde2;
+  }
+
+  .sc-ui-chart-tabs:last-child {
+    border-right: none;
+  }
+
+  .sc-ui-chart-selector-off {
+    background: #f9fafc;
+  }
+
+  .sc-ui-chart-selector-on {
+    background: white;
+  }
+
+  .sc-ui-chart-tabs {
+    padding: 20px 30px;
+  }
+
+  #id_tr_chart_config > td > table > tbody > tr + tr > td {
+    padding: 20px;
+  }
+
+  #id_tr_chart_config .checkboxes {
+    display: none;
+  }
+
+  .sc-ui-chart-data-container {
+    padding: 0;
+  }
+
+  .sc-ui-chart-tabs-title {
+    font-style: normal;
+    color: #3c4858;
+    text-transform: uppercase;
+  }
+
+  .sc-ui-chart-tab-info {
+    color: #8492A6;
+  }
+
+  .sc-ui-chart-tabs div {
+    height: 50px;
+  }
+
+  .columns {
+    padding: 0!important;
+  }
+
+  .groupy-footer {
+    border-bottom: 1px solid #d1dde2;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .sc-ui-sortable {
+    background: white;
+    border-color:#d1dde2;
+    padding: 5px;
+  }
+
+  .sc-ui-chart-item {
+    border: 1px solid #d1dde2;
+    margin: 0 0 2px;
+    padding: 5px!important;
+    height: auto;
+    min-height: 25px;
+    background: white;
+  }
+
+  .sc-ui-chart-item:hover {
+    background: #f3f3f3;
+  }
+
+
+                ul.initial-sort-ul {
+                  border: 1px solid #d1dde2;
+                  margin: 0;
+                  padding: 0;
+                }
+                ul.initial-sort-ul li {
+                  list-style: none;
+                  border-top: 1px solid #d1dde2;
+                  padding: 5px;
+                }
+                ul.initial-sort-ul li:first-child {
+                  border:none;
+                }
+                ul.initial-sort-ul li input[type=radio] {
+                  position: relative;
+                  float: left;
+                  margin-right: 5px;
+                }
+                ul.initial-sort-ul li strong {
+                  position: relative;
+                  top: 2px;
+                }
+
+
+
+
+
+#regular chart config
+.sc-ui-chart-item{
+    white-space: normal !important;
+}
+.sc-ui-chart-tabs {
+ vertical-align: top;
+ text-align: left;
+}
+.sc-ui-chart-tabs div {
+ overflow-y: hidden;
+ height: 75px;
+}
+.sc-ui-chart-tabs div p {
+ margin: 0
+}
+.sc-ui-chart-tabs-title {
+ font-size: 17px;
+ font-style: italic;
+}
+.sc-ui-chart-tabs-icon {
+ float: left;
+ vertical-align: top;
+ margin-right: 10px;
+ height: 48px;
+ width: 48px;
+}
+.sc-ui-chart-tab-info {
+ font-size: 11px;
+}
+.sc-ui-chart-tab-error {
+ color: #dd0000;
+}
+.sc-ui-title {
+ font-size: 15px;
+}
+.sc-ui-table-no-border {
+ border-collapse: collapse;
+ border-width: 0;
+}
+.sc-ui-chart-selector-off {
+ background-color: #F4F8FF;
+ border-color: #63AFD1;
+ border-style: solid;
+ border-width: 1px;
+ padding: 8px 12px;
+ width: 20%;
+}
+.sc-ui-chart-selector-on {
+ background-color: #FFFFFF;
+ border-color: #63AFD1 #63AFD1 #FFFFFF #63AFD1;
+}
+.sc-ui-chart-data-container {
+ border-color: #63AFD1;
+ border-style: solid;
+ border-width: 0 1px 1px 1px;
+ height: 275px;
+ padding: 3px 5px;
+ vertical-align: top;
+}
+.sc-ui-chart-data-dimensions
+{
+	width:100%;
+}
+.sc-ui-sortable {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+.sc-ui-sortable li {
+ margin: 0 3px 3px 3px;
+ padding: 3px 3px 3px 15px;
+ height: 18px;
+ white-space: nowrap;
+}
+.sc-ui-sortable li span {
+ position: absolute;
+ margin-left: -1.3em;
+}
+.sc-ui-chart-list {
+ background-color: F8F8F8;
+ border-color: #9F9F9F;
+ border-style: dashed;
+ border-width: 1px;
+ min-width: 250px;
+ padding-top: 3px;
+}
+.sc-ui-chart-item {
+ border-color: #63AFD1;
+ border-style: solid;
+ border-width: 1px;
+ background-color: #F8FCFF;
+}
+.sc-ui-chart-placeholder {
+ border-color: #FEF2A8;
+ border-style: solid;
+ border-width: 1px;
+ background-color: #FFFBF0;
+}
+.sc-ui-drag-icon {
+ background-image: url("<?php echo $nm_config['url_js_third']; ?>jquery/css/smoothness/images/ui-icons_2e83ff_256x240.png");
+ background-position: -128px -48px;
+ height: 16px;
+ width: 16px;
+ background-repeat: no-repeat;
+ display: block;
+ overflow: hidden;
+ text-indent: -99999px;
+}
+.center{
+    float:none;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}

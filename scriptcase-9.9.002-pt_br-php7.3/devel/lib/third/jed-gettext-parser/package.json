@@ -1,0 +1,45 @@
+{
+    "name": "jed-gettext-parser",
+    "description": "JavaScript Gettext .mo file parsing for Jed.",
+    "author": "Oliver Hamlet <oliver.hamlet@gmail.com>",
+    "version": "1.0.0",
+    "main": "jedGettextParser.js",
+    "files": [
+        "jedGettextParser.js"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "text-encoding": "0.7.0"
+    },
+    "devDependencies": {
+        "mocha": "~5.2.0",
+        "should": "~13.2.3",
+        "jed": "1.1.1",
+        "es6-promise": "4.2.6",
+        "grunt": "1.0.3",
+        "grunt-mocha-test": "0.13.3",
+        "grunt-cli": "1.3.2",
+        "grunt-saucelabs": "9.0.0",
+        "grunt-contrib-connect": "2.0.0"
+    },
+    "keywords": [
+        "internationalisation",
+        "localisation",
+        "i18n",
+        "l10n",
+        "gettext",
+        "mo",
+        "Jed"
+    ],
+    "scripts": {
+        "test": "grunt test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Ortham/jed-gettext-parser.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Ortham/jed-gettext-parser/issues"
+    },
+    "homepage": "https://github.com/Ortham/jed-gettext-parser"
+}

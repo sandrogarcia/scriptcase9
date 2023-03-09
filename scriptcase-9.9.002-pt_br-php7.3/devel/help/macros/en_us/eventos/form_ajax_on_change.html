@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when the field "loses" focus and the field value its changed.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Occurs when focus leaves the HTML object and its content has changed.</p>
+<hr />
+<p>Ex: In an Order form, we want to fill in the value in the "price" field when we enter a product code.</p>
+<p>sc_lookup(prc," select price from products where productid = '{field_product_id}' "); {other_form_field_price} = {prc[0][0]};</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

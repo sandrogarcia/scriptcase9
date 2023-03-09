@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando navegas entre las páginas de la Consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>En la aplicación de consulta, este evento se ejecuta en dos situaciones:</p>
+<ul>
+<li>Cuando se configura con paginación parcial, el evento se ejecuta al navegar entre páginas usando los botones de navegación, navegación de página o la opción Ir para.</li>
+<li>Al configurar la aplicación con Infinite Scroll, se ejecuta cada vez que se cargan registros. </li>
+</ul>
+<p>A diferencia de otros eventos, este depende de que se active la interacción del usuario, lo que permite, por ejemplo, que cualquier validación o cambio de diseño se realice solo después de esta interacción.</p>
+<p><strong>Nota</strong></p>
+<p>La navegación de consultas la realiza ajax, por lo que no es posible utilizar códigos Javascript (JQuery, Ajax).</p>
+<p>Cuando se usa la paginación completa en la aplicación, el evento no se ejecuta.</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

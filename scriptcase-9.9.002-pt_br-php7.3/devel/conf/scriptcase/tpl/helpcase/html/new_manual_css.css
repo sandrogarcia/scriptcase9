@@ -1,0 +1,109 @@
+body{
+    background-color:#333;
+    margin:0;
+}
+
+a:hover { background: none; }
+
+.btn_home {
+	position:absolute;
+	left:230px;
+	top:9px;
+}
+
+#abas{
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: 13px; color:#000000;
+    vertical-align:text-top;
+}
+#id_bodyContent{
+    width:100%;
+    height:100%;
+    border-width:0;
+}
+#geral_content{
+    *height: -moz-calc(100% - 80px);
+    *height: -webkit-calc(100% - 80px);
+    *height:calc(100% - 80px);
+}
+#id_bodyContent{
+    border-radius:5px;
+}
+#td_content{
+    vertical-align: top;
+    background-color: #FFF;
+    border-radius:5px;
+    height:100%;
+    border-width:0;
+}
+#principaltable{
+    height: -moz-calc(100% - 70px);
+    height: -webkit-calc(100% - 70px);
+    height:calc(100% - 70px);
+    width:100%;
+}
+#menu_list{
+    height:100%;
+    width:300px
+}
+#tabs{
+    height:100%;
+}
+#topoTotal {
+    height: 65px;
+    width: 100%;
+    background-color: #333333;
+    position:relative;
+}
+#img_logo{
+    text-decoration:none;
+    border:0;
+}
+#img_logo{
+    text-decoration:none;
+    border:0;
+     /*background-color:#333*/
+	margin-left: 30px;
+}
+#img_logo:hover{
+    background:none;
+}
+#topoEsquerda {
+    height: 49px;
+    width: 49%;
+    float:left
+}
+#topoDireita {
+    height: 49px;
+    width: 49%;
+    float:left
+}
+
+.ui-tabs-nav {
+  height: 30px;
+}
+
+.ui-widget-content{border-width:0px;}
+#divisor{width:2px}
+#search { overflow-y:overlay; }
+#search_content{ height: 90%; }
+#id_menu{font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 11px; overflow-y:overlay;}
+
+/* Here is the css settings of the jquery-tree */
+#id_menu{ font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 11px; }
+li.jstree-leaf > a .jstree-icon { background: url("files/img/leaf.png") 0px 0px no-repeat !important; }
+li.jstree-open > a .jstree-icon {background:url("files/img/folderOpen.png") 0px 0px no-repeat !important;}
+li.jstree-closed > a .jstree-icon {background:url("files/img/folderClosed.png") 0px 0px no-repeat !important;}
+/* End of jquery-tree CSS */
+
+/* Here is the class used in the body of the html files */
+.content_file {
+	background-color:#FFFFFF;
+	margin:0px 10px; 
+}
+.hc-container   { width:100%; height: 100%; }
+.hc-main-table  { height: 100%; }
+.hc-body-main   { overflow-y:hidden; }
+.hc-nav-bar     { font-size:80%;font-weight:bold;border:1px solid #999999;border-radius:6px;padding:2px 5px;background:lightyellow; } /* default styles for the navigation bar on the generated webhelp */
+.hc-nav-link    { text-decoration:none;color:cadetblue;cursor:pointer; }
+.hc-img         { max-width:100%; } /* default classes from images manager */

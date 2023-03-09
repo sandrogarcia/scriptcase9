@@ -1,0 +1,149 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro permite o envio dinâmico de mensagem de texto SMS</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_send_sms($arr_settings)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Esta macro recebe um array como par&acirc;metro de configura&ccedil;&atilde;o que cont&eacute;m a mensagem, o destinat&aacute;rio, o gateway e a chave da API.</p>
+<table>
+<tbody>
+<tr>
+<td><strong>Par&acirc;metro</strong></td>
+<td><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td>$arr_settings</td>
+<td>Array com as informa&ccedil;&otilde;es para a utiliza&ccedil;&atilde;o na macro.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td><strong>&Iacute;ndice do Array</strong></td>
+<td><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td>to:</td>
+<td>Destinat&aacute;rio de SMS</td>
+</tr>
+<tr>
+<td>message:</td>
+<td>O conte&uacute;do da mensagem de texto</td>
+</tr>
+<tr>
+<td>gateway:</td>
+<td>API para ser utilizada (clickatell, plivo ou twilio)</td>
+</tr>
+<tr>
+<td>auth_token:</td>
+<td>Token de autentica&ccedil;&atilde;o de API</td>
+</tr>
+</tbody>
+</table>
+<p><br /><strong>Exemplo 1 - Estrutura b&aacute;sica de envio utilizando clickatell:</strong></p>
+<pre>$arr_settings = array(
+	'message' => 
+	[
+		'to' => '+55999999999',
+		'message' => 'Scriptcase SMS'
+	],
+	'settings' => 
+	  [
+		'gateway' => 'clickatell',
+		'auth_token' => '54Cik1-gQ4GqtuN70d4y4w=='
+	]<br />);
+
+sc_send_sms($arr_settings);<br /><br /><br /></pre>
+<p><strong>Exemplo 2 - Estrutura b&aacute;sica de envio utilizando Plivo:</strong></p>
+<pre><code>$arr_settings = array(</code><br /><code>  'message' =></code><br /><code>  [</code><br /><code>      'from' => '<a href="https://s3.amazonaws.com/plivosamplexml/speak_url.xml" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?q=https://s3.amazonaws.com/plivosamplexml/speak_url.xml&source=gmail&ust=1596541405311000&usg=AFQjCNFr1V45Vh_E9kKX1yKPV2pT4lzFJA">https://s3.amazonaws.com/<wbr />plivosamplexml/speak_url.xml</a>',</code><br /><code>      'to' => '+5581984796338',</code><br /><code>      'message' => 'Scriptcase SMS'</code><br /><code>  ],</code><br /><code>  'settings' =></code><br /><code>  [</code><br /><code>      'auth_id' => 'MAMDHIYZM0YJCZYTJLNJ',</code><br /><code>      'gateway' => 'plivo',</code><br /><code>      'auth_token' => '<wbr />ZGExOTgzZjNiOTE4YjBiN2ExMzdlZG<wbr />YxYzQ4Yjc1'</code><br /><code>  ]<br /></code><code>);</code><br /><br /><code>sc_send_sms($arr_settings);</code></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onApplicationInit<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

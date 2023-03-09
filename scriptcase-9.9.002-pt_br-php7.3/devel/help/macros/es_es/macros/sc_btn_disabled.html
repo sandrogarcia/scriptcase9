@@ -1,0 +1,344 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Está destinado a habilitar o deshabilitar dinámicamente un botón de la barra de herramientas.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_btn_disabled("boton_nombre", "status")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/YREicw71-rs" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /> Ver un v&iacute;deo tutorial</a></div>
+<p>Esta macro est&aacute; destinada a habilitar o deshabilitar din&aacute;micamente un bot&oacute;n de la barra de herramientas.</p>
+<p>Tiene dos par&aacute;metros obligatorios:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px; text-align: center;">
+<th style="width: 16.3752%; height: 18px;">Parametro</th>
+<th style="width: 38.5267%; height: 18px;">Valor</th>
+<th style="width: 45.098%; height: 18px;">Descripci&oacute;n</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 16.3752%; height: 18px; text-align: center;">nombre_boton</td>
+<td style="width: 38.5267%; height: 18px;">
+<p>El valor debe informarse mediante variables o en formato de cadena, con comillas simples o dobles.</p>
+<p>En negrita, aqu&iacute; est&aacute; el ejemplo de c&oacute;mo se debe ingresar el par&aacute;metro:</p>
+<p>sc_btn_disabled(<strong>'update'</strong>,<span style="color: #999999;"> 'off'</span>);</p>
+<p><strong>Obs:</strong> Los nombres de los botones deben estar en min&uacute;sculas.</p>
+</td>
+<td style="width: 45.098%; height: 18px;">
+<p>Este par&aacute;metro define el bot&oacute;n cuya visualizaci&oacute;n cambiar&aacute;.</p>
+<p>Los nombres de los botones est&aacute;n disponibles en la tabla siguiente, separados por aplicaci&oacute;n.</p>
+<ul>
+<li><a href="#btn_disabled-01">Grid/Gr&aacute;fico</a></li>
+<li><a href="#btn_disabled-02">Formul&aacute;rio/Calendario</a></li>
+<li><a href="#btn_disabled-03">Control</a></li>
+</ul>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 16.3752%; height: 18px; text-align: center;">status</td>
+<td style="width: 38.5267%; height: 18px;">
+<p>Al igual que el nombre del campo, el par&aacute;metro solo acepta cadenas, protegidas con comillas simples o dobles.</p>
+<p>En negrita, aqu&iacute; est&aacute; el ejemplo de c&oacute;mo se debe ingresar el par&aacute;metro:</p>
+<p>sc_btn_disabled(<span style="color: #999999;">'update'</span>, <strong>'off'</strong>);</p>
+</td>
+<td style="width: 45.098%; height: 18px;">
+<p>Este par&aacute;metro define si el bot&oacute;n est&aacute; habilitado, cuando est&aacute; <strong>on</strong> encendido, o deshabilitado si est&aacute; <strong>off</strong> apagado</p>
+<p><strong>Valores aceptados en el par&aacute;metro:</strong></p>
+<ul>
+<li><strong>on</strong> - El bot&oacute;n se muestra deshabilitado;</li>
+<li><strong>off</strong> - El bot&oacute;n se muestra habilitado;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-01"></a>Nombre de los botones de grid</h4>
+<table style="width: 757px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 178px; height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n</strong></th>
+<th style="width: 572px; height: 18px;" align="left" valign="top">Descripci&oacute;n</th>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">first</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Navegue para la primera p&aacute;gina.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">back</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Navega para la p&aacute;gina anterior.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">forward</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Navega para la p&aacute;gina siguiente.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">last</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Navega para a &uacute;ltima p&aacute;gina.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">filter</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Controle la visualizaci&oacute;n del bot&oacute;n "Filtro" en la grid.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo PDF a color.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">det_pdf</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo PDF en el detalle.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">pdfbw</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo PDF blanco y negro de la grid.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">xls</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo XLS.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">xml</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo XML.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">csv</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo CSV.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">rtf</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo RTF.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">word</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Genera archivo Word.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 178px; height: 18px;">json</td>
+<td style="width: 572px; height: 18px;">Genera archivo JSON.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">print</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Abre la consulta en formato de impresi&oacute;n.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">det_print</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Abre el detalle en formato de impresi&oacute;n.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">summary</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Resumen" en la cuadr&iacute;cula.</td>
+</tr>
+<tr style="height: 54px;">
+<td class="corpo1" style="width: 178px; height: 54px;" align="left" valign="top">new</td>
+<td class="corpo1" style="width: 572px; height: 54px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Nuevo", lo que permite la inclusi&oacute;n de nuevos registros. (si la aplicaci&oacute;n tiene un enlace o si el formulario se est&aacute; ejecutando en el iframe de la consulta)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="width: 178px; height: 36px;" align="left" valign="top">insert</td>
+<td class="corpo1" style="width: 572px; height: 36px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Insertar". (solo en casos de formulario que se ejecuta en iframe de consulta)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="width: 178px; height: 32px;" align="left" valign="top">update</td>
+<td class="corpo1" style="width: 572px; height: 32px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Actualizar". (solo en casos de formulario que se ejecuta en iframe de consulta)</td>
+</tr>
+<tr style="height: 36px;">
+<td class="corpo1" style="width: 178px; height: 36px;" align="left" valign="top">delete</td>
+<td class="corpo1" style="width: 572px; height: 36px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Eliminar". (solo en los casos en que el formulario se ejecuta en el iframe de la consulta)</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">groupby</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Agrupaci&oacute;n".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">dynsearch</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Filtro din&aacute;mico".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="width: 178px; height: 18px;" align="left" valign="top">gridsave</td>
+<td class="corpo1" style="width: 572px; height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Guardar grid".</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 178px; height: 18px;">sel_col</td>
+<td style="width: 572px; height: 18px;">Bot&oacute;n Seleccionar columnas</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 178px; height: 18px;">sort_col</td>
+<td style="width: 572px; height: 18px;">Bot&oacute;n Ordenar</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-02"></a>Nombre de los botones de la aplicaci&oacute;n Calendario y Formulario</h4>
+<table style="height: 368px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 18px;" align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n</strong></td>
+<td style="height: 18px;" align="left" valign="top"><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">first</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Navega para el primeir registro del formulario.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">back</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Navega para el registro anterior.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">forward</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Navega para el registro siguiente.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">last</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Navega para el &uacute;ltimo registro del formul&aacute;rio.</td>
+</tr>
+<tr style="height: 22px;">
+<td class="corpo1" style="height: 22px;" align="left" valign="top">new</td>
+<td class="corpo1" style="height: 22px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Nuevo" en un formulario, usado en off el formulario es iniciado en modo incluir.</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">insert</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Incluir".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">update</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Actualizar".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">delete</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Excluir".</td>
+</tr>
+<tr style="height: 18px;">
+<td class="corpo1" style="height: 18px;" align="left" valign="top">copy</td>
+<td class="corpo1" style="height: 18px;" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Copiar".</td>
+</tr>
+<tr style="height: 46px;">
+<td style="height: 46px;">dynsearch</td>
+<td style="height: 46px;">
+<p>Controla la visualizaci&oacute;n del&nbsp;bot&oacute;n "Filtro din&acirc;mico".</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td class="corpo1" style="height: 46px;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="height: 46px;" align="left" valign="top">
+<p>Genera archivo PDF a partir del formulario.</p>
+</td>
+</tr>
+<tr style="height: 46px;">
+<td class="corpo1" style="height: 29px;" align="left" valign="top">print</td>
+<td class="corpo1" style="height: 29px;" align="left" valign="top">
+<p>Abre el formulario en formato de impresi&oacute;n.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-03"></a>Nombre de los botones del Control</h4>
+<table style="width: 778px;" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Nombre del bot&oacute;n<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">ok</td>
+<td class="corpo1" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Ok" en el control.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">exit</td>
+<td class="corpo1" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Salir".</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">facebook</td>
+<td class="corpo1" align="left" valign="top">Controla la&nbsp;visualizaci&oacute;n del bot&oacute;n "Facebook".</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">twitter</td>
+<td class="corpo1" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Twitter"</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">google</td>
+<td class="corpo1" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "Google+"</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">paypal</td>
+<td class="corpo1" align="left" valign="top">Controla la visualizaci&oacute;n del bot&oacute;n "PayPal"</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+<hr />
+<p class="corpo1"><strong><a id="exemplos"></a>Ejemplo:</strong> Habilitando bot&oacute;n delete apenas para el usuario 'admin' con comillas.</p>
+<p class="corpo1">if ( [user_login] == 'admin' ) {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled('delete', 'on');</p>
+<p class="corpo1">} else {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled('delete', 'off');</p>
+<p class="corpo1">}</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ejemplo:</strong> Usando variables.</p>
+<p class="corpo1"><strong>Obs:</strong> Pueden ser utilizadas variables globales o locales.</p>
+<p class="corpo1">if ( [user_login] == 'admin' ) {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled([btn_name], [status]);</p>
+<p class="corpo1">} else {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled([btn_name], [status]);</p>
+<p class="corpo1">}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre uma unica vez quando a aplicacao é carregada.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			Este evento ocorre antes da aplicação executar o SQL. Só é executada ao carregar a aplicação.
+
+É usado para verificações de variáveis e para verificações de segurança.
+
+Ex:
+
+if ([glo_var_depto] != 'financeiro'){
+
+sc_redir(app_x.php);
+
+}
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

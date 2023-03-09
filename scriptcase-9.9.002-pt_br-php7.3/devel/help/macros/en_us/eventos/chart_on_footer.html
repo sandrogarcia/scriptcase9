@@ -1,0 +1,23 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs on the application footer display.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			This event occurs on the application footer display, it is frequently used when it is required to display any calculated data on grids or report footer.
+ 
+Ex:
+
+sc_lookup(ret," select sum({item_value}) from orders_items where id_order='{fld_id_order}' ");
+
+{fld_footer_total_field_a} = {ret[0][0]} * 0,1;
+
+
+The field {fld_footer_total_field_a} must be created on fields menu
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

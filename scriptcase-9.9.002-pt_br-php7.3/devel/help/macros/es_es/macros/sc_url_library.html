@@ -1,0 +1,124 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro devuelve la ruta de un archivo, dentro de una biblioteca, para ser utilizado en las aplicaciones.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_url_library("Destino", "Nombre de la biblioteca", "Archivo")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1"><a title="Ver un video tutorial" href="https://youtu.be/v_o0oEDYQUg" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /></a></p>
+<p class="corpo1">Ver un v&iacute;deo tutorial</p>
+<p class="corpo1">Esta macro devolver&aacute; la ruta del archivo, dentro de una biblioteca, para ser utilizada en las aplicaciones de script. Es necesario tener una biblioteca creada en Scriptcase para usar esta Macro. Para crear una biblioteca, vaya al men&uacute; "Herramientas> Biblioteca".</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Par&aacute;metros&nbsp;<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Target</td>
+<td class="corpo1" align="left" valign="top">Informa cu&aacute;l es el alcance de la biblioteca. Puede ser "sys" para bibliotecas de &aacute;mbito p&uacute;blico o "prj" para bibliotecas de &aacute;mbito de proyecto.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Library Name</td>
+<td class="corpo1" align="left" valign="top">Nombre dado a la biblioteca en el momento de la creaci&oacute;n.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">File</td>
+<td class="corpo1" align="left" valign="top">Ruta absoluta dentro de la biblioteca.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ej. 1 - Importar archivos CSS desde una biblioteca:</strong><br /><<span class="obs">*</span>link rel="stylesheet" type="text/css" href="<<span class="obs">*</span>?php echo sc_url_library('prj', 'bootstrap-3.3.2-dist', 'css/style1.css'); ?>" /></p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ej. 2 - Importar un archivo JS desde una biblioteca:</strong><br /><<span class="obs">*</span>script type="text/javascript" src="<<span class="obs">*</span>?php echo sc_url_library('prj', 'bootstrap-3.3.2-dist', 'js/bootstrap,js'); ?>"></p>
+<p style="background-color: #ffffcc;"><strong>NOTA:</strong><em style="color: #ff0000;"> Tenga en cuenta que debe eliminar el asterisco (*) de los ejemplos anteriores para usarlo.</em></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

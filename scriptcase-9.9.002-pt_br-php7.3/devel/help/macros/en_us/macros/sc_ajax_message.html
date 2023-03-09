@@ -1,0 +1,206 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro allows the application to display customized messages. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_message("Message", "Title", "Parameters", "Parameters_Redir", "String_toast");<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/uejdGxaTbXQ" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a></div>
+<p>This macro allows the application to show customizable messages. Its use is restricted to <strong>AJAX events of Form/Control applications.</strong></p>
+<p> </p>
+<p>This macro is only available in applications with <strong>AJAX support</strong>.</p>
+<p> </p>
+<table class="cls_tabela" style="width: 1597px;" border="0">
+<tbody>
+<tr>
+<th style="width: 196px;">Parameters</th>
+<th style="width: 843px;">Description</th>
+</tr>
+<tr>
+<td style="width: 196px;">Message</td>
+<td style="width: 843px;">The message to be shown. This parameter is required.</td>
+</tr>
+<tr>
+<td style="width: 196px;">Title</td>
+<td style="width: 843px;">Messagebox title, if this parameter is empty, the title will not be shown.</td>
+</tr>
+<tr>
+<td style="width: 196px;">Message Parameters String</td>
+<td style="width: 843px;">
+<p>Message format parameters. <br />Ex.: modal=Y&button=Y&button_label=Ok&redir=form_employees.php&redir_target=_blank</p>
+<p>For more details about this parameter, see Table2.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196px;">Redirecting Parameters String</td>
+<td style="width: 843px;">
+<p>In this section is possible to define values for the redirecting target application. This parameter works only if a "redir" property was informed. The properties for this parameter must be informed in this format: parameter=value;parameter=value.</p>
+<p>Ex.: customer_id=ALFKI;customer_name=ALBERT FRANCINET</p>
+</td>
+</tr>
+<tr>
+<td style="width: 196px;">Toast parameter string</td>
+<td style="width: 843px;">
+<p>Message formatting parameter using Toast.<br /><br /></p>
+<div><strong>- toast</strong>: Y or N</div>
+<div> </div>
+<div><strong>- toast_pos</strong>: 'top', 'top-start', 'top-end', 'center', 'center-start', 'center-end', 'bottom', 'bottom-start', 'bottom-end'</div>
+<div> </div>
+<div><strong>- type</strong>: 'warning', 'error', 'success', 'info', 'question'</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Table2: Message Parameters String</strong></p>
+<p> </p>
+<table class="cls_tabela" border="0">
+<tbody>
+<tr>
+<th style="width: 93px;">Property</th>
+<th style="width: 377px;">Description</th>
+<th style="width: 34px;">Values</th>
+<th style="width: 243px;">Example</th>
+</tr>
+<tr>
+<td style="width: 93px;">modal</td>
+<td style="width: 377px;">Flag to define if the message will be shown in modal</td>
+<td style="width: 34px;">Y or N</td>
+<td style="width: 243px;">modal=Y</td>
+</tr>
+<tr>
+<td style="width: 93px;">timeout</td>
+<td style="width: 377px;">Time in seconds to hide the message. If this property is not informed, the message will be shown indefinitely. This property works only if "button" property is not enabled.</td>
+<td style="width: 34px;">Seconds</td>
+<td style="width: 243px;">timeout=5</td>
+</tr>
+<tr>
+<td style="width: 93px;">button</td>
+<td style="width: 377px;">Shows a button inside the message. This button default function is to close the message. If there is redirecting enabled, the application will be redirected after closing the message.</td>
+<td style="width: 34px;">Y or N</td>
+<td style="width: 243px;">button=Y</td>
+</tr>
+<tr>
+<td style="width: 93px;">button_label</td>
+<td style="width: 377px;">Button label. This option works only if the "button" property is enabled.</td>
+<td style="width: 34px;">String</td>
+<td style="width: 243px;">button=Y&button_label=OK</td>
+</tr>
+<tr>
+<td style="width: 93px;">top</td>
+<td style="width: 377px;">Message positioning value in pixels from top margin.</td>
+<td style="width: 34px;">Pixels Number</td>
+<td style="width: 243px;">top=300</td>
+</tr>
+<tr>
+<td style="width: 93px;">left</td>
+<td style="width: 377px;">Message positioning value in pixels from left margin.</td>
+<td style="width: 34px;">Pixels Number</td>
+<td style="width: 243px;">left=200</td>
+</tr>
+<tr>
+<td style="width: 93px;">width</td>
+<td style="width: 377px;">Messagebox width value in pixels</td>
+<td style="width: 34px;">Pixels Number</td>
+<td style="width: 243px;">width=320</td>
+</tr>
+<tr>
+<td style="width: 93px;">height</td>
+<td style="width: 377px;">Messagebox height value in pixels</td>
+<td style="width: 34px;">Pixels Number</td>
+<td style="width: 243px;">height=30</td>
+</tr>
+<tr>
+<td style="width: 93px;">redir</td>
+<td style="width: 377px;">URL or application name for redirecting. This macro works only if the "button" property is enabled.</td>
+<td style="width: 34px;">String</td>
+<td style="width: 243px;">button=Y&redir=form_employees.php</td>
+</tr>
+<tr>
+<td style="width: 93px;">redir_target</td>
+<td style="width: 377px;">Target for redirecting. This property works only when the "redir" property is enabled.</td>
+<td style="width: 34px;">String</td>
+<td style="width: 243px;">redir=form_employees.php&redir_target=_blank</td>
+</tr>
+<tr>
+<td style="width: 93px;">show_close</td>
+<td style="width: 377px;">Flag for exhibition of the "close" button on the messagebox title bar. When activated, this parameter forces a title bar to be shown, even if there is no title defined.</td>
+<td style="width: 34px;">Y or N</td>
+<td style="width: 243px;">show_close=Y</td>
+</tr>
+<tr>
+<td style="width: 93px;">body_icon</td>
+<td style="width: 377px;">Flag for exhibiting a icon on the message body. The icon exhibition depends on the applications theme configuration (exhibition schemes).</td>
+<td style="width: 34px;">Y or N</td>
+<td style="width: 243px;">body_icon=N</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Example 01</strong></p>
+<p><code>sc_ajax_message ("Message", "Title", "timeout=0");</code></p>
+<p> </p>
+<p><strong>Example 02: Using Toast</strong></p>
+<p><code>sc_ajax_message ("Client", "Title", "toast=Y&toasto_pos=center-start&type=success");</code><strong><br /></strong></p>
+<p> </p>
+<blockquote>
+<p>To display the message using Toast, this option must be enabled in the application interface.</p>
+</blockquote>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

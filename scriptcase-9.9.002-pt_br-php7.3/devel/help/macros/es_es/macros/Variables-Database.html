@@ -1,0 +1,99 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Variables globales que contienen valores de acceso a la base de datos utilizados por la conexión principal.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">Variables-DatabaseVariables de base de datos<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/zbwFUaZGdiw" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /></a>
+<p class="p-macros-desc">Ver un video tutorial</p>
+</div>
+<p><span class="corpo1"> Variables globales que contienen valores de acceso a la base de datos utilizadas por la conexi&oacute;n principal.</span></p>
+<table style="height: 160px;" border="0">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;" align="left" valign="top" width="15%"><strong class="corpo1">Variables<br /></strong></td>
+<td style="height: 15px;" align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">sc_glo_server</span></td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">Nombre del servidor.</span></td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">sc_glo_db</span></td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">Nombre de la base de datos.</span></td>
+</tr>
+<tr style="height: 33px;">
+<td class="corpo1" style="height: 33px;" align="left" valign="top"><span class="corpo1">sc_glo_db_type</span></td>
+<td class="corpo1" style="height: 33px;" align="left" valign="top"><span class="corpo1">Tipo de base de datos (mssql, oracle, mysql, etc).</span></td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">sc_glo_user</span></td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">Nombre de usuario conectado</span></td>
+</tr>
+<tr style="height: 19px;">
+<td class="corpo1" style="height: 19px;" align="left" valign="top"><span class="corpo1">sc_glo_pass</span></td>
+<td class="corpo1" style="height: 19px;" align="left" valign="top"><span class="corpo1">Password de la base de datos</span></td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">sc_glo_cript_pass</span></td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">Contrase&ntilde;a encriptada (S/N).</span></td>
+</tr>
+<tr style="height: 33px;">
+<td class="corpo1" style="height: 33px;" align="left" valign="top"><span class="corpo1">sc_glo_decimal_db</span></td>
+<td class="corpo1" style="height: 33px;" align="left" valign="top">Contiene el separador decimal utilizado (punto y coma o coma).</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Ej. 1:</strong><br />$my_database = [sc_glo_db];</p>
+<p><span class="corpo1"><br />Estas variables solo hacen referencia a los valores sin actualizarlo (no es posible atribuir / modificar los valores). Para definir el usuario y la contrase&ntilde;a para conectarse a la base de datos, use las siguientes variables:<br /></span></p>
+<table style="height: 70px;" border="0">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;" align="left" valign="top" width="15%"><strong class="corpo1">Variables<br /></strong></td>
+<td style="height: 15px;" align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 16px;">
+<td class="corpo1" style="height: 16px;" align="left" valign="top"><span class="corpo1">sc_db_master_usr</span></td>
+<td class="corpo1" style="height: 16px;" align="left" valign="top">Inicio de sesi&oacute;n de usuario para ser utilizado.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">sc_db_master_pass</span></td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top"><span class="corpo1">Contrase&ntilde;a para ser utilizada</span></td>
+</tr>
+<tr style="height: 24px;">
+<td class="corpo1" style="height: 24px;" align="left" valign="top"><span class="corpo1">sc_db_master_cript</span></td>
+<td class="corpo1" style="height: 24px;" align="left" valign="top"><span class="corpo1">Contrase&ntilde;a cifrada (S / N) (ver macro sc_encode).</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><strong>Importante:</strong> <em>Estas variables solo entran en vigencia durante la pr&oacute;xima ejecuci&oacute;n de la aplicaci&oacute;n, siendo v&aacute;lidas durante toda la sesi&oacute;n (a menos que se modifiquen).</em></span></p>
+<p><span class="corpo1"><strong><br />Ej. 2: </strong>Un tipo de aplicaci&oacute;n "control" con un formulario creado con informaci&oacute;n "inicio de sesi&oacute;n" y "contrase&ntilde;a cifrada". Estos datos deben usarse para conectarse a la base de datos, durante la ejecuci&oacute;n de las aplicaciones del sistema.<br />$ temp_pass = sc_encode ({password});<br />[sc_db_master_usr] = {login};<br />[sc_db_master_pass] = $ temp_pass;<br />[sc_db_master_cript] = "S";<strong><br /></strong></span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+								
+						</tr>
+						<tr>
+								
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

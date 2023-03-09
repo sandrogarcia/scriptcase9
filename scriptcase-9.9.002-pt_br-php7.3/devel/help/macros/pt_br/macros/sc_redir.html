@@ -1,0 +1,106 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro tem por objetivo redirecionar para outra aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_redir(Aplicação, Parâmetro01; Parâmetro02, Target, Error, alt_modal, larg_modal)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/Ssp08o4BobI" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a></div>
+<p>Esta macro tem por objetivo redirecionar o processamento para outra aplica&ccedil;&atilde;o ou URL.</p>
+<p>Caso a aplica&ccedil;&atilde;o de redirecionamento utilize par&acirc;metros, estes devem ser passados da seguinte forma:</p>
+<p><strong>1.</strong> Ap&oacute;s o nome da aplica&ccedil;&atilde;o, utilizar o delimitador v&iacute;rgula (,) <br /><strong>2.</strong> Informar o nome do par&acirc;metro, o sinal de igualdade (=) e o valor ou vari&aacute;vel a ser atribu&iacute;da.<br /><strong>3.</strong> Havendo mais de um par&acirc;metro, utilizar o delimitador ponto e v&iacute;rgula (;) <br /><strong>4.</strong> Poder&aacute; ser informado o target no qual a aplica&ccedil;&atilde;o ser&aacute; aberta (default=_self), podendo ser: _self, _parent, _blank ou modal.<br /><strong>5.</strong> Par&acirc;metro opcional para definir se vai redirecionar caso existam mensagens de erro na aplica&ccedil;&atilde;o. "E" n&atilde;o redireciona caso existam erros e "F" for&ccedil;a redirecionamento mesmo se houver erro na aplica&ccedil;&atilde;o.</p>
+<p>Nas aplica&ccedil;&otilde;es de formul&aacute;rio, alguns eventos onde essa macro pode ser utilizada dependem da atualiza&ccedil;&atilde;o da base de dados (onAfterInsert, onAfterUpdate, onAfterDelete, onBeforeInsert, onBeforeUpdate or onBeforeDelete) esses eventos s&atilde;o automaticamente protegidos por um controle de transa&ccedil;&atilde;o desde que a conex&atilde;o seja a mesma da aplica&ccedil;&atilde;o.<br /><br />Contudo, se o usu&aacute;rio deseja fazer um controle de transa&ccedil;&atilde;o, ele precisa iniciar essa macro e finalizar com "sc_commit_trans()" macro para confirmar a atualiza&ccedil;&atilde;o ou o "sc_rollback_trans" para cancelar a transa&ccedil;&atilde;o.</p>
+<p><strong>A macro em quest&atilde;o n&atilde;o da suporte ao par&acirc;metro Modal quando utilizada em bot&otilde;es do tipo Run</strong></p>
+<p><strong> <br />Ex. 1: Aplica&ccedil;&atilde;o sem par&acirc;metros e sem target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />sc_redir(aplx.php);<br />}<br /><strong><br /><br />Ex. 2: Aplica&ccedil;&atilde;o com par&acirc;metros e sem target</strong>&nbsp;<strong>sc_redir(Aplica&ccedil;&atilde;o, Parametro01; Parametro02, Target, Error)</strong><br />if ([glo_usuario] == "teste")<br />{<br />sc_redir(aplx.php, parm1={clienteid}; parm2="xxx");<br />}<br /><br /><strong><br />Ex. 3: Aplica&ccedil;&atilde;o sem par&acirc;metros e com target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />sc_redir(aplx.php, "", "_parent");<br />}<br /><br /><strong><br />Ex. 4: Aplica&ccedil;&atilde;o com par&acirc;metros e com target.</strong><br />if ([glo_usuario] == "teste")<br />{<br />sc_redir(aplx.php, parm1={clienteid}; parm2="xxx", "_blank");<br />}<br /><br /><br /><strong>Ex. 5: URL.</strong><br />if ([glo_usuario] == "teste")<br />{<br />sc_redir(<a href="http://www.minha_pagina.com.br" target="_blank" rel="noopener">http://www.minha_pagina.com.br</a>);<br />}</p>
+<p>&nbsp;</p>
+<p><strong>OBS:</strong> Tudo que foi passado como par&acirc;metro pela macro ser&aacute; acess&iacute;vel como vari&aacute;vel global na aplica&ccedil;&atilde;o a qual foi redirecionada.</p>
+<p><strong>EX:</strong> sc_redir(aplx.php, parm1={clienteid}; parm2="xxx");</p>
+<p>Na aplica&ccedil;&atilde;o aplx.php o par&acirc;metro poder&aacute; ser acessado fazendo chamada a vari&aacute;vel global [parm1] e [parm2]</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onCalendarApplicationInit<br>onCalendarScriptInit<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

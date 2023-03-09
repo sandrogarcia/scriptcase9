@@ -1,0 +1,134 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro executa o cálculo de dígitos verificadores. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_calc_dv(Dígito, Resto, Valor, Módulo, Pesos, Tipo)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/Zpy_-nLgKKA" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a></div>
+<p><span class="corpo1">Esta macro tem por objetivo o c&aacute;lculo de d&iacute;gitos verificadores.</span></p>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Par&acirc;metro<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">D&iacute;gito</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Vari&aacute;vel na qual ser&aacute; retornado o d&iacute;gito calculado.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Resto</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Vari&aacute;vel na qual ser&aacute; retornado o "resto" da divis&atilde;o do c&aacute;lculo do d&iacute;gito.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Valor</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel sobre o qual ser&aacute; calculado o d&iacute;gito.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">M&oacute;dulo</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo o m&oacute;dulo a ser utilizado. Se omitido ser&aacute; assumido o m&oacute;dulo "11".</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Pesos</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo os pesos a serem utilizados. Se omitido ser&atilde;o assumidos os valores "98765432".</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">Tipo</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Valor ou Vari&aacute;vel contendo o tipo de c&aacute;lculo das parcelas a ser utilizado, sendo: 1 para soma normal dos valores das parcelas e 2 para soma de cada algarismo das parcelas. Se omitido ser&aacute; assumido o tipo "1".</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p class="corpo1"><strong>Ex. 1:</strong><br />sc_calc_dv({meu_dig}, {meu_resto}, 1234567, 11, 98765432, 1);<br />Calculo parcelas: 7x2= 14 ; 6x3=18 ; 5x4=20 ; 4x5=20 ; 3x6=18 ; 2x7=14 ; 1x8=8 <br />Soma parcelas : 14+18+20+20+18+14+8 = 112<br />Resto da divisao de 112 / 11 = 2<br />D&iacute;gito : 11 - 2 = 9</p>
+<p class="corpo1">&nbsp;</p>
+<p class="corpo1"><strong>Ex. 2:</strong><br />sc_calc_dv({meu_dig}, {meu_resto}, 1234567, 10, 12, 2);<br />Calculo parcelas: 7x2= 14 ; 6x1=6 ; 5x2=10 ; 4x1=4 ; 3x2=6 ; 2x1=2 ; 1x2=2 <br />Soma parcelas : 1+ 4+6+1+0+4+6+2+2 = 26<br />Resto da divisao de 26 / 10 = 6<br />D&iacute;gito : 10 - 6 = 4</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onApplicationInit<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onApplicationInit<br>onFooter<br>onGroupBy<br>onHeader<br>onInit<br>onNavigate<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit<br>onFilterRefresh<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onApplicationInit<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onApplicationInit<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

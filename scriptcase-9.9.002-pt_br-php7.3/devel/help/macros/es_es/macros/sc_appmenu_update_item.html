@@ -1,0 +1,97 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro actualiza un elemento de menú.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_update_item("Menu_Name", "Id_Item", "Id_Parent", "Etiqueta", "Aplicación", "Parámetros", "Icono", "Sugerencia", "Objetivo")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Actualiza din&aacute;micamente un elemento a una aplicaci&oacute;n de men&uacute;.</p>
+<p><strong>Solo puede usar esta macro cuando ya hay una matriz generada con la macro sc_appmenu_create antes.</strong></p>
+<p><strong>Esta macro solo se puede usar en elementos que se crearon con la macro sc_appmenu_add_item anteriormente.</strong></p>
+<p>&nbsp;</p>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;"><strong>Parametos</strong></td>
+<td style="height: 15px;"><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 51px;">
+<td style="height: 51px;">menu_name</td>
+<td style="height: 51px;">Nombre del elemento del menu</td>
+</tr>
+<tr style="height: 51px;">
+<td style="height: 51px;">id_item</td>
+<td style="height: 51px;">ID del elemento del menu</td>
+</tr>
+<tr style="height: 69px;">
+<td style="height: 69px;">id_parent</td>
+<td style="height: 69px;">ID del elemento del men&uacute; de la aplicaci&oacute;n. Para las ra&iacute;ces se pasa el valor nulo / vac&iacute;o.</td>
+</tr>
+<tr style="height: 54px;">
+<td style="height: 54px;">Label</td>
+<td style="height: 54px;">Descripci&oacute;n elemento del menu aplicaci&oacute;n</td>
+</tr>
+<tr style="height: 33px;">
+<td style="height: 33px;">Aplication</td>
+<td style="height: 33px;">Elemento de menu o nombre de la aplicaci&oacute;n</td>
+</tr>
+<tr style="height: 51px;">
+<td style="height: 51px;">Parameters</td>
+<td style="height: 51px;">Cadena con paramentro para pasar al elemento del menu<br />Ej.: param1 = valor; param2 = valor</td>
+</tr>
+<tr style="height: 33px;">
+<td style="height: 33px;">Icon</td>
+<td style="height: 33px;">Ruta de icono utilizada en el elemento del menu</td>
+</tr>
+<tr style="height: 33px;">
+<td style="height: 33px;">Hint</td>
+<td style="height: 33px;">Sugerencia descriptiva para el elemento de menu</td>
+</tr>
+<tr style="height: 33px;">
+<td style="height: 33px;">Target</td>
+<td style="height: 33px;">Objetivo para el enlace del elemento del menu</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ej. 1:</strong><br />sc_appmenu_update_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

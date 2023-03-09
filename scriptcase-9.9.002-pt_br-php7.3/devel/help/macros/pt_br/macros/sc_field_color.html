@@ -1,0 +1,98 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro altera a cor do texto de um determinado campo. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_field_color("Campo", "Cor")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="corpo1">Esta macro tem por objetivo, de forma dinâmica, alterar/restaurar a cor do texto de determinado campo da <strong>consulta</strong>.</p>
+<p class="corpo1"><strong> </strong></p>
+<p class="corpo1"><strong>Ex. 1: Altera em definitivo a cor de texto do campo "clienteid" da consulta.</strong><br />sc_field_color ("clienteid", "#33FF66");</p>
+<p class="corpo1"> </p>
+<p class="corpo1"><strong>Ex. 2: Altera a cor de texto do campo "valor_pedido", se o valor for maior que 1000. Caso contrário, mantem a cor padrão.</strong><br />if ({valor_pedido} > 1000)<br />{<br />sc_field_color ("valor_pedido", "#33FF66");<br />}<br />else <br />{<br />sc_field_color ("valor_pedido", "");<br />}</p>
+<p class="corpo1"> </p>
+<p class="corpo1"><strong>Ex. 3: Utilizando uma variável local.</strong><br />sc_field_color ("clienteid", {cmp_cor});</p>
+<p class="corpo1"> </p>
+<p class="corpo1"><strong>Ex. 4: Utilizando uma variável global.</strong><br />sc_field_color ("clienteid", [cor_global]);</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

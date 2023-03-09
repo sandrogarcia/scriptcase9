@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EAEAEA;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#F6F6F6;}
+	.st3{display:none;fill:#F6F6F6;}
+	.st4{fill:#555454;}
+	.st5{font-family:'ArialMT';}
+	.st6{font-size:12px;}
+	.st7{fill:#E5E4E4;}
+	.st8{font-size:10px;}
+	.st9{fill:#7EC395;}
+	.st10{fill:#CECDCD;}
+	.st11{fill:#EB5953;}
+	.st12{fill:#55B03F;}
+	.st13{fill:#F8C524;}
+	.st14{fill:#888989;}
+</style>
+<path class="st0" d="M494.16,200H5.84C2.61,200,0,197.39,0,194.16V5.84C0,2.61,2.61,0,5.84,0h488.32c3.22,0,5.84,2.61,5.84,5.84
+	v188.32C500,197.39,497.39,200,494.16,200z"/>
+<rect x="9" y="27" class="st1" width="483" height="173"/>
+<rect x="9" y="27" class="st2" width="483" height="26"/>
+<path class="st3" d="M488,196.19H10.14c-3.22,0-5.84-2.61-5.84-5.84v-28.69c0-3.22,2.61-5.84,5.84-5.84H488
+	c3.22,0,5.84,2.61,5.84,5.84v28.69C493.83,193.58,491.22,196.19,488,196.19z"/>
+<path class="st3" d="M488,147.45H10.14c-3.22,0-5.84-2.61-5.84-5.84v-28.69c0-3.22,2.61-5.84,5.84-5.84H488
+	c3.22,0,5.84,2.61,5.84,5.84v28.69C493.83,144.84,491.22,147.45,488,147.45z"/>
+<path class="st3" d="M488.93,99.71H11.07c-3.22,0-5.84-2.61-5.84-5.84V65.18c0-3.22,2.61-5.84,5.84-5.84h477.85
+	c3.22,0,5.84,2.61,5.84,5.84v28.69C494.76,97.09,492.15,99.71,488.93,99.71z"/>
+<text transform="matrix(1 0 0 1 22.5852 86.1601)" class="st4 st5 st6">Name</text>
+<text transform="matrix(1 0 0 1 259.1454 86.16)" class="st4 st5 st6">Email</text>
+<text transform="matrix(1 0 0 1 23.4971 125.2595)" class="st4 st5 st6">Active</text>
+<text transform="matrix(1 0 0 1 258.8412 125.3697)" class="st4 st5 st6">Data</text>
+<text transform="matrix(1 0 0 1 23.4784 165.9441)" class="st4 st5 st6">Maps</text>
+<text transform="matrix(1 0 0 1 260.2944 165.9444)" class="st4 st5 st6">Types</text>
+<path class="st7" d="M234.32,90.16H67.95c-2.2,0-3.99-1.78-3.99-3.99v-7.31c0-2.2,1.78-3.99,3.99-3.99h166.37
+	c2.2,0,3.99,1.78,3.99,3.99v7.31C238.31,88.37,236.52,90.16,234.32,90.16z"/>
+<path class="st7" d="M234.28,169.65H67.88c-2.19,0-3.97-1.78-3.97-3.97v-7.33c0-2.19,1.78-3.97,3.97-3.97h166.4
+	c2.19,0,3.97,1.78,3.97,3.97v7.33C238.25,167.87,236.48,169.65,234.28,169.65z"/>
+<path class="st7" d="M473.01,90.16H306.6c-2.19,0-3.97-1.78-3.97-3.97v-7.35c0-2.19,1.78-3.97,3.97-3.97h166.41
+	c2.19,0,3.97,1.78,3.97,3.97v7.35C476.98,88.38,475.2,90.16,473.01,90.16z"/>
+<path class="st7" d="M407.4,129.05H306.62c-2.21,0-3.99-1.79-3.99-3.99v-7.29c0-2.2,1.79-3.99,3.99-3.99H407.4
+	c2.2,0,3.99,1.79,3.99,3.99v7.29C411.4,127.26,409.61,129.05,407.4,129.05z"/>
+<text transform="matrix(1 0 0 1 416.6799 124.6003)" class="st4 st5 st8">dd/mm/aaaa</text>
+<path class="st7" d="M313.99,169.65h-7.44c-2.17,0-3.92-1.76-3.92-3.92v-7.44c0-2.17,1.76-3.92,3.92-3.92h7.44
+	c2.17,0,3.92,1.76,3.92,3.92v7.44C317.91,167.9,316.15,169.65,313.99,169.65z"/>
+<path class="st7" d="M384.48,169.65h-7.44c-2.16,0-3.92-1.76-3.92-3.92v-7.44c0-2.16,1.76-3.92,3.92-3.92h7.44
+	c2.16,0,3.92,1.76,3.92,3.92v7.44C388.4,167.9,386.64,169.65,384.48,169.65z"/>
+<text transform="matrix(1 0 0 1 325.5969 165.944)" class="st4 st5 st8">Sport</text>
+<text transform="matrix(1 0 0 1 396.4572 167.9443)" class="st4 st5 st8">Auto</text>
+<path class="st7" d="M75.26,129.05h-7.32c-2.2,0-3.98-1.78-3.98-3.98v-7.32c0-2.2,1.78-3.98,3.98-3.98h7.32
+	c2.2,0,3.98,1.78,3.98,3.98v7.32C79.24,127.27,77.46,129.05,75.26,129.05z"/>
+<path class="st7" d="M137.74,129.05h-7.3c-2.2,0-3.99-1.79-3.99-3.99v-7.3c0-2.2,1.79-3.99,3.99-3.99h7.3c2.2,0,3.99,1.79,3.99,3.99
+	v7.3C141.73,127.26,139.94,129.05,137.74,129.05z"/>
+<text transform="matrix(1 0 0 1 87.4995 125.2602)" class="st4 st5 st8">Yes</text>
+<text transform="matrix(1 0 0 1 149.8066 125.2598)" class="st4 st5 st8">No</text>
+<g>
+	
+		<rect x="66.94" y="121.26" transform="matrix(0.7378 0.6751 -0.6751 0.7378 100.8422 -15.2646)" class="st9" width="6.25" height="1.81"/>
+	
+		<rect x="69.13" y="118.55" transform="matrix(-0.6751 0.7378 -0.7378 -0.6751 215.4371 144.1261)" class="st9" width="13.69" height="1.92"/>
+</g>
+<g>
+	
+		<rect x="375.65" y="161.76" transform="matrix(0.7378 0.6751 -0.6751 0.7378 209.1439 -213.0382)" class="st9" width="6.25" height="1.81"/>
+	
+		<rect x="377.84" y="159.05" transform="matrix(-0.6751 0.7378 -0.7378 -0.6751 762.4205 -15.768)" class="st9" width="13.69" height="1.92"/>
+</g>
+<rect x="0" class="st10" width="500" height="18"/>
+<text transform="matrix(1 0 0 1 100.3422 44.5363)" class="st4 st5 st6">Insert</text>
+<text transform="matrix(1 0 0 1 352.3422 44.5363)" class="st4 st5 st6">Cancel</text>
+<circle class="st11" cx="12.77" cy="8.77" r="3.77"/>
+<circle class="st12" cx="36.23" cy="8.77" r="3.77"/>
+<circle class="st13" cx="24.5" cy="8.77" r="3.77"/>
+<rect x="250" y="31" class="st14" width="1" height="18"/>
+</svg>

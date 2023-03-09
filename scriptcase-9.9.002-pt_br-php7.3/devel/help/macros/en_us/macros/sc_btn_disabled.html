@@ -1,0 +1,328 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>It is intended to dynamically enable or disable a toolbar button.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_btn_disabled("name_button", "status")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver tutorial" href="https://youtu.be/ZTK4w3QmzhI" target="_blank" rel="noopener"> <img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" /> Watch a tutorial</a></div>
+<p class="corpo1">This macro is intended to dynamically enable or disable a toolbar button.</p>
+<p class="corpo1">It has two required parameters:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 16.3752%; height: 18px;">Parameters</th>
+<th style="width: 38.5267%; height: 18px;">Value</th>
+<th style="width: 45.098%; height: 18px;">Description</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 16.3752%; height: 18px;">name_button</td>
+<td style="width: 38.5267%; height: 18px;">
+<p>The value must be informed using variables or in string format, with double or single quotes.</p>
+<p>In bold, the example of how the parameter should be reported follows:</p>
+<p>sc_btn_disabled(<strong>'update'</strong>,<span style="color: #999999;"> 'off'</span>);</p>
+<p><strong>Note:</strong> The name of the buttons should be all in tiny.</p>
+</td>
+<td style="width: 45.098%; height: 18px;">
+<p>This parameter sets the button that will have its display changed.</p>
+<p>Button names are available in the table below, separated by application.</p>
+<ul>
+<li><a href="#btn_disabled-01">Grid</a></li>
+<li><a href="#btn_disabled-02">Form/Calendar</a></li>
+<li><a href="#btn_disabled-03">Control</a></li>
+</ul>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 16.3752%; height: 18px;">status</td>
+<td style="width: 38.5267%; height: 18px;">
+<p>Like the field name, the parameter accepts only string, with single or double quotation marks.</p>
+<p>In bold, the example of how the parameter should be reported follows:</p>
+<p>sc_btn_disabled(<span style="color: #999999;">'<strong>update</strong>'</span>, <strong>'off'</strong>);</p>
+</td>
+<td style="width: 45.098%; height: 18px;">
+<p>This parameter sets whether the button is enabled, when set to <strong>on</strong>, or disabled if set to <strong>off</strong></p>
+<p><strong>Values accepted in the parameter:</strong></p>
+<ul>
+<li><strong>on -&nbsp;</strong>The button will be disabled;</li>
+<li><strong>off - </strong>The button will be enabled;</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="corpo1">&nbsp;</h4>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-01"></a>Name of Grid buttons</h4>
+<table style="width: 757px;" border="0">
+<tbody>
+<tr style="height: 33px;">
+<th style="height: 33px; width: 15%;" align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name <br /></strong></th>
+<th style="height: 33px;" align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">first</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Goes to the first page of the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">back</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Goes to the previous page of the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">forward</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Goes to the next page of the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">last</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Goes to the last page of the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">filter</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Filter" button.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates colored PDF.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">det_pdf</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates a detailed PDF.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">pdfbw</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates black and white PDF.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">xls</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates the XLS.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">xml</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates the XML.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">csv</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates the CVS.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">rtf</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates the RTF.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">word</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Generates the Word.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px;">json</td>
+<td style="height: 18px;">Generates the JSON.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">print</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Print" button in the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">det_print</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Print" button in detail.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">summary</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Summary" button in the grid.</td>
+</tr>
+<tr style="height: 33px;">
+<td class="corpo1" style="height: 33px;" align="left" valign="top">new</td>
+<td class="corpo1" style="height: 33px;" align="left" valign="top">Displays the "New" button. (if the application has a link for it, or if the form is running in the grid iframe)</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">insert</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Include" button of the form. (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">update</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Update" button of the form. (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">delete</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Delete" button of the form (only for forms running in grid&acute;s iframe)</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">qsearch</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Quick Search" button in the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">dynsearch</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Dynamic Search" button in the grid.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px;" align="left" valign="top">gridsave</td>
+<td class="corpo1" style="height: 15px;" align="left" valign="top">Displays the "Save Grid" button in the grid.</td>
+</tr>
+<tr>
+<td>sel_col</td>
+<td>Select columns button</td>
+</tr>
+<tr>
+<td>sort_col</td>
+<td>Sort Button</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-02"></a>Name of Form buttons</h4>
+<table border="0">
+<tbody>
+<tr style="height: 33px;">
+<th style="height: 33px; width: 139.55px;" align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name </strong><strong class="corpo1"><br /></strong></th>
+<th style="height: 33px; width: 631px;" align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">first</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Goes to the first page of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">back</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Goes to the previous page of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">forward</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Goes to the next page of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">last</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Goes to the last page of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">new</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "New" button on the form, if it's off the form will starts in insertion mode.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">insert</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "Include" button of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">update</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "Update" button of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">delete</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "Delete" button of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">copy</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "Copy" button of the form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">pdf</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Generates PDF file from a form.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">print</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Open the form in print mode.</td>
+</tr>
+<tr style="height: 15px;">
+<td class="corpo1" style="height: 15px; width: 139.55px;" align="left" valign="top">dynsearch</td>
+<td class="corpo1" style="height: 15px; width: 631px;" align="left" valign="top">Displays the "Dynamic Search" button in the grid.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr />
+<h4 id="01" class="corpo1"><a id="btn_disabled-03"></a>Name of Control Buttons</h4>
+<table border="0">
+<tbody>
+<tr>
+<th style="width: 159.55px;" align="left" valign="top" width="15%"><strong class="corpo1">Buttons Name <br /></strong></th>
+<th style="width: 611px;" align="left" valign="top"><strong class="corpo1">Description</strong></th>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">ok</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "Ok" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">exit</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "Exit" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">facebook</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "Facebook" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">twitter</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "Twitter" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">google</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "Google+" button on the control.</td>
+</tr>
+<tr>
+<td class="corpo1" style="width: 159.55px;" align="left" valign="top">paypal</td>
+<td class="corpo1" style="width: 611px;" align="left" valign="top">Displays the "PayPal" button on the control.</td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<hr />
+<p class="corpo1"><strong>Example</strong>: Enabling delete button only for admin user</p>
+<p class="corpo1">if ( [user_login] == 'admin' ) {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled('delete', 'on');</p>
+<p class="corpo1">} else {</p>
+<p class="corpo1">&nbsp; &nbsp; sc_btn_disabled('delete', 'off');</p>
+<p class="corpo1">}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

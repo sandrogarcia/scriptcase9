@@ -1,0 +1,249 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro cria dinamicamente um link para outra aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_link(Coluna, Aplicação, Parâmetros, "Hint", "Target", Altura, Largura)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/PANFHCtotJ4" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a></div>
+<p><span class="corpo1">Permite criar uma liga&ccedil;&atilde;o de campo entre duas aplica&ccedil;&otilde;es de forma din&acirc;mica.</span></p>
+<p><strong><span class="corpo1">Obs:&nbsp;</span></strong><span class="corpo1">Esta macro est&aacute; dispon&iacute;vel apenas na Consulta.</span></p>
+<p><span class="corpo1">Abaixo seguem a lista de par&acirc;metros da macro, que devem ser informados separados por <span style="font-weight: 400;">v&iacute;rgula</span>.</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 10.6861%; height: 18px;">Par&acirc;metro</th>
+<th style="width: 43.4575%; height: 18px;">Valor</th>
+<th style="width: 45.8563%; height: 18px;">Descri&ccedil;&atilde;o</th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 10.6861%; height: 18px;"><span class="corpo1"><strong>Coluna</strong></span></td>
+<td style="width: 43.4575%; height: 18px; vertical-align: top;">
+<p>Aceita apenas string com ou sem prote&ccedil;&atilde;o das aspas.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<strong>customerid</strong><span style="color: #808080;">, form_customer, custom={customerid}, "Dados do Cliente", "_self");</span></code></p>
+<p>Formas aceitas de passagem do par&acirc;metro:</p>
+<ul>
+<li>customerid</li>
+<li>'customerid'</li>
+<li>"customerid"</li>
+</ul>
+</td>
+<td style="width: 45.8563%; height: 18px; vertical-align: top;">
+<p><strong>Par&acirc;metro obrigat&oacute;rio</strong>, onde deve ser informado o nome do campo que ser&aacute; transformaod em link para a outra aplica&ccedil;&atilde;o.</p>
+<p><strong>Obs</strong>: Caso o campo informado j&aacute; possua uma liga&ccedil;&atilde;o de campo, a liga&ccedil;&atilde;o definida na macro ir&aacute; sobrescrever a liga&ccedil;&atilde;o da interface.<br /><br /></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 10.6861%; height: 18px;"><span class="corpo1"><strong>Aplica&ccedil;&atilde;o</strong></span></td>
+<td style="width: 43.4575%; height: 18px; vertical-align: top;">
+<p>Aceita string com ou sem a prote&ccedil;&atilde;o das aspas, al&eacute;m de vari&aacute;veis globais ou locais.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>$var_customer = 'form_customer';</code><br /><code>sc_link(<span style="color: #808080;">customerid,<strong><span style="color: #000000;">$var_customer</span></strong>,custom={customerid},"Dados do Cliente","_self");</span></code></p>
+<p>Formas aceitas de passagem do par&acirc;metro:</p>
+<ul>
+<li><span style="color: #808080;"><span style="color: #000000;">form_customer</span></span></li>
+<li>'form_customer'</li>
+<li>"form_customer"</li>
+<li>$var_customer</li>
+<li>[glob_customer]</li>
+</ul>
+</td>
+<td style="width: 45.8563%; height: 18px; vertical-align: top;"><strong>Par&acirc;metro obrigat&oacute;rio</strong>, define a aplica&ccedil;&atilde;o de destino da liga&ccedil;&atilde;o.<br /><br />Neste par&acirc;metro &eacute; poss&iacute;vel utilizar variais tornando poss&iacute;vel a altera&ccedil;&atilde;o da aplica&ccedil;&atilde;o de destino, dependendo da sua regra de neg&oacute;cio.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 10.6861%; height: 18px;"><span class="corpo1"><strong>Par&acirc;metros</strong></span></td>
+<td style="width: 43.4575%; height: 18px; vertical-align: top;">
+<p>Neste par&acirc;metro &eacute; definido o valor da vari&aacute;vel que estar&aacute; dispon&iacute;vel a partir da aplica&ccedil;&atilde;o de destino. como uma vari&aacute;vel global.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<span style="color: #808080;">customerid, form_customer, <span style="color: #000000;"><strong>custom={customerid}</strong></span>, "Dados do Cliente", "_self");</span></code></p>
+<p>Formas aceitas de passagem do par&acirc;metro:</p>
+<ul>
+<li><span style="color: #808080;"><span style="color: #000000;">custom = {customerid}</span></span></li>
+<li><span style="color: #808080;"><span style="color: #000000;">custom = 'ALFKI'</span></span></li>
+<li><span style="color: #808080;"><span style="color: #000000;">custom = $var_customer</span></span></li>
+<li>custom - [glob_customer]</li>
+</ul>
+</td>
+<td style="width: 45.8563%; height: 18px; vertical-align: top;">
+<p>Par&acirc;metro n&atilde;o obrigat&oacute;rio, porem sua utiliza&ccedil;&atilde;o &eacute; necess&aacute;ria para a exibi&ccedil;&atilde;o correta dos dados na aplica&ccedil;&atilde;o de destino. Quando n&atilde;o informado, a aplica&ccedil;&atilde;o de destino exibir&aacute; todos os dados da tabela.</p>
+<p><strong>Recupera&ccedil;&atilde;o do valor na aplica&ccedil;&atilde;o de destino</strong></p>
+<p>Na aplica&ccedil;&atilde;o de destino da liga&ccedil;&atilde;o, no exemplo ao lado &eacute; a aplica&ccedil;&atilde;o form_customer, o par&acirc;metro <strong>custom</strong> deve ser recuperado como uma vari&aacute;vel global no SQL da aplica&ccedil;&atilde;o.<br /><br />Neste exemplo, foi adicionado a seguinte instru&ccedil;&atilde;o SQL no formul&aacute;rio (form_customer)</p>
+<p><code>customerid = '[custom]'</code></p>
+<blockquote>
+<p>Para mais detalhes sobre a utiliza&ccedil;&atilde;o de vari&aacute;vel global, <a href="https://www.scriptcase.com.br/docs/pt_br/v9/manual/03-conhecendo-scriptcase/09-variaveis-scriptcase/#id-2" target="_blank" rel="noopener">acesse nossa documenta&ccedil;&atilde;o online</a>.</p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 10.6861%; height: 18px;"><span class="corpo1"><strong>Hint </strong></span></td>
+<td style="width: 43.4575%; height: 18px; vertical-align: top;">
+<p>Aceita string, com ou sem a prote&ccedil;&atilde;o das aspas, lang e vari&aacute;veis globais ou locais.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<span style="color: #808080;">customerid, form_customer, custom={customerid}, <span style="color: #000000;"><strong>"Dados do Cliente"</strong></span>, "_self");</span></code></p>
+<p><strong>Obs</strong>: Para utiliza&ccedil;&atilde;o de <strong>virgulas</strong> e <strong>ap&oacute;strofos</strong> no texto &eacute; necess&aacute;rio proteger com o scape <strong>"\"</strong></p>
+<p>Formas aceitas de passagem do par&acirc;metro:</p>
+<ul>
+<li>"Texto de ajuda\, com virgula"</li>
+<li><span style="color: #808080;"><span style="color: #000000;">'Dados do Cliente'</span></span></li>
+<li><span style="color: #808080;"><span style="color: #000000;">Dados do Cliente</span></span></li>
+<li>{lang_texto}</li>
+<li>[glob_txt]</li>
+<li>$var_txt</li>
+</ul>
+<p>&nbsp;</p>
+</td>
+<td style="width: 45.8563%; height: 18px; vertical-align: top;">
+<p>Este par&acirc;metro n&atilde;o &eacute; obrigat&oacute;rio.</p>
+<p>Recebe um texto com alguma ajuda ou observa&ccedil;&atilde;o para o usu&aacute;rio do sistema, o texto &eacute; exibido sempre que o cursor do mouse passa sobre o link.</p>
+<p>&Eacute; poss&iacute;vel a utiliza&ccedil;&atilde;o de langs para a defini&ccedil;&atilde;o das mensagens, permitindo a tradu&ccedil;&atilde;o do seu sistema.</p>
+<blockquote>
+<p><strong>Obs</strong>: Para utiliza&ccedil;&atilde;o de <strong>virgulas</strong> e <strong>ap&oacute;strofos</strong> no texto &eacute; necess&aacute;rio proteger com o scape <strong>"\"</strong></p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 10.6861%; height: 18px;"><span class="corpo1"><strong>Target</strong></span></td>
+<td style="width: 43.4575%; height: 18px; vertical-align: top;">
+<p>Este par&acirc;metro aceita apenas string. Os valores dispon&iacute;veis est&atilde;o listados abaixo.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<span style="color: #808080;">customerid, form_customer, custom={customerid}, "Dados do Cliente", <span style="color: #000000;"><strong>"modal"</strong><span style="color: #808080;">, 850, 600</span></span>);</span></code></p>
+<p><strong>Obs:</strong> Se omitido, ser&aacute; atribu&iacute;do o valor "_self".</p>
+<p>Formas aceitas de passagem do par&acirc;metro:</p>
+<ul>
+<li>"_self"</li>
+<li>"_blank"</li>
+<li>"iframeT"</li>
+<li>"iframeL"</li>
+<li>"iframeR"</li>
+<li>"iframeB"</li>
+<li>"modal"</li>
+</ul>
+</td>
+<td style="width: 45.8563%; height: 18px; vertical-align: top;">
+<p>Define a forma de abertura da aplica&ccedil;&atilde;o de destino.</p>
+<ul>
+<li>_self - Executa a aplica&ccedil;&atilde;o de destino na mesma p&aacute;gina, sobrepondo a aplica&ccedil;&atilde;o de consulta;</li>
+<li>_blank - Executa a aplica&ccedil;&atilde;o de destino em outra p&aacute;gina&nbsp;(pop-up);</li>
+<li>iframeT - A aplica&ccedil;&atilde;o de destino ser&aacute; exibida&nbsp;em um iframe acima da consulta (Top);</li>
+<li>iframeL - A aplica&ccedil;&atilde;o de destino ser&aacute; exibida&nbsp;em um iframe&nbsp;a esquerda da consulta (Left)</li>
+<li>iframeR - A aplica&ccedil;&atilde;o de destino ser&aacute; exibida&nbsp;em um iframe&nbsp;a direita da consulta (Right);</li>
+<li>iframeB - A aplica&ccedil;&atilde;o de destino ser&aacute; exibida&nbsp;em um iframe&nbsp;abaixo da consulta (Bot);</li>
+<li>modal -&nbsp;Abre uma nova janela e bloqueia qualquer intera&ccedil;&atilde;o na janela principal;</li>
+</ul>
+<blockquote>
+<p>Ao utilizar alguma das op&ccedil;&otilde;es de&nbsp;<strong>iframe&nbsp;</strong>ou <strong>modal</strong>&nbsp;para a abertura da aplica&ccedil;&atilde;o &eacute; poss&iacute;vel definir a <strong>altura</strong> e <strong>largura</strong> adicionado os valores nos par&acirc;metros opcionais abaixo.</p>
+</blockquote>
+</td>
+</tr>
+<tr style="height: 110px;">
+<td style="width: 10.6861%; height: 110px;"><span class="corpo1"><strong>Altura</strong></span></td>
+<td style="width: 43.4575%; vertical-align: top; height: 110px;">
+<p>Este par&acirc;metro aceita apenas valores num&eacute;ricos e sua unidade de medida &eacute; pixel.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<span style="color: #808080;">customerid, form_customer, custom={customerid}, "Dados do Cliente", <span style="color: #000000;"><span style="color: #808080;">"modal"</span><span style="color: #808080;">,</span> <strong>850</strong>,<span style="color: #808080;"> 600</span></span>);</span></code></p>
+</td>
+<td style="width: 45.8563%; vertical-align: top; height: 110px;">
+<p><strong>Par&acirc;metro n&atilde;o obrigat&oacute;rio</strong>, dispon&iacute;vel apenas ao utilizar as op&ccedil;&otilde;es <strong>Iframe</strong> e <strong>modal</strong> no par&acirc;metro <strong>Target</strong></p>
+<p>Define a altura do iframe ou modal onde a aplica&ccedil;&atilde;o de destino ser&aacute; exibida.</p>
+<p><strong>Obs</strong>: Caso seja omitido o valor padr&atilde;o ser&aacute; 440</p>
+</td>
+</tr>
+<tr style="height: 116px;">
+<td style="width: 10.6861%; height: 116px;"><span class="corpo1"><strong>Largura</strong></span></td>
+<td style="width: 43.4575%; vertical-align: top; height: 116px;">
+<p>Este par&acirc;metro aceita apenas valores num&eacute;ricos e sua unidade de medida &eacute; pixel.</p>
+<p><strong>Por exemplo:&nbsp;</strong><br /><code>sc_link(<span style="color: #808080;">customerid, form_customer, custom={customerid}, "Dados do Cliente", "iframeB", 850, <span style="color: #000000;"><strong>600</strong></span>);</span></code></p>
+</td>
+<td style="width: 45.8563%; height: 116px; vertical-align: top;">
+<p><strong>Par&acirc;metro n&atilde;o obrigat&oacute;rio</strong>, dispon&iacute;vel apenas ao utilizar as op&ccedil;&otilde;es <strong>Iframe</strong> e <strong>modal</strong> no par&acirc;metro <strong>Target</strong></p>
+<p>Define a largura do iframe ou modal onde a aplica&ccedil;&atilde;o de destino ser&aacute; exibida.</p>
+<p><strong>Obs:</strong> Caso seja omitido o valor padr&atilde;o ser&aacute; 630</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3>Exemplos</h3>
+<p><strong>Ex. 1:</strong> Criando um link para a aplica&ccedil;&atilde;o dados_cli.php, no campo cpf, passando a vari&aacute;vel global [glo_emp] como empresa e o campo (vari&aacute;vel local) {cpf} para a aplica&ccedil;&atilde;o dados_cli.php:</p>
+<pre>sc_link(cpf,dados_cli.php,empresa=[glo_emp];cpf={cpf},"Dados individuais do Cliente ", "_blank");</pre>
+<p><br /><strong>Ex. 2:</strong> Criando um link din&acirc;mico para uma ou outra aplica&ccedil;&atilde;o dependendo do valor no campo {tp_cli} e abrindo uma janela modal:</p>
+<pre>if ( {tp_cli} == "F" ) {<br />    sc_link(tpcli, fisica.php, empresa=[glo_emp]; cpf={cpf}," Pessoa F&iacute;sica ", "modal", 500, 700);<br />} else {<br />    sc_link(tpcli, juridica.php, empresa=[glo_emp]; cnpj={cnpj}," Pessoa Jur&iacute;dica ", "iframeR");<br />}</pre>
+<p><br /><strong>Ex. 3:</strong> - Criando um link para uma URL. Ser&aacute; executado um redirecionamento para a URL informada.</p>
+<pre>sc_link(minha_coluna, http://www.scriptcase.com.br, ,"hint do link", '_blank');</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

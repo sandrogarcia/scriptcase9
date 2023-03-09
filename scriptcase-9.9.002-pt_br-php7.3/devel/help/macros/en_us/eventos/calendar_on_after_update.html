@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs after a row is updated on a form applications.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking on the Form's Save button. The form will then execute the onValidate, onValidateSuccess and onBeforeUpdate events, and right after executing the SQL command to insert the database record, it will execute the onAfterUpdate event.</p>
+<p> </p>
+<hr />
+<p><strong>Example:</strong> After updating a record in the database, we want to store the update operation in a log table.</p>
+<p>sc_exec_sql(" insert into log values ([glo_user],'target table','update',{key_field}) "); //insert the user id that was stored in a session variable [glo_user] and the newly added registry key {key_field}.</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

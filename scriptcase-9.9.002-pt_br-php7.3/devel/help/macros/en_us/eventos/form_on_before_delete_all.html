@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before deleting a record on a form application.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking the Delete button on the <strong>multi-record form</strong>. The form will execute the onValidate and onValidateSuccess events, then it will execute the <strong>onBeforeDeleteAll</strong> event before starting the execution of the SQL commands to delete records in the database.</p>
+<p><em>Note: This event is triggered only once, regardless of the amount of lines removed in one click on the Delete button.</em></p>
+<p> </p>
+<hr />
+<p>As examples we can see in the example below, we consult a user privileges table before deleting the record, if it does not have such privilege, we send an error message.</p>
+<p>sc_lookup(priv_del," select priv_del from tb_privileges where login = [var_login] ");</p>
+<p>if({priv_del[0][0]} != 'YES'){</p>
+<p>sc_error_message(" you do not have privileges to perform this operation ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

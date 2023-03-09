@@ -1,0 +1,20 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre cuando hay una actualización en una fila múltiple solo en formularios de filas múltiples.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después de hacer clic en el botón Guardar del <strong>formulario de registro múltiple</strong>. El formulario ejecutará los eventos onValidate, onValidateSuccess y onBeforeUpdateAll, y luego ejecutará el evento <strong>onAfterUpdateAll</strong> después de ejecutar todos los comandos SQL para actualizar los registros en la base de datos.</p>
+<p> </p>
+<hr />
+<p>Ejemplo: podemos actualizar el valor total de una factura (tb_invoice) después de actualizar sus artículos (tb_invoice_items) en un formulario de registros múltiples.</p>
+<p>sc_lookup (tot, "select sum(value_item) from tb_invoice_items where num_nf = {num_nf}");</p>
+<p>{tmp_tot} = {tot [0] [0]};</p>
+<p>sc_exec_sql ("UPDATE tb_invoice SET total_items = {tmp_tot} WHERE num_nf = {num_nf}");</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

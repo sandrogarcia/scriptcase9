@@ -1,0 +1,145 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p>Esta macro interrompe a execução da aplicação, se existir mensagens de erro geradas pela macro "sc_error_message".</p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_error_exit(URL / Minha_Aplicação, "Target");<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span id="FSGcaller1" style="display: inline-block; width: 100%;"><span class="FSG_texto">A utiliza&ccedil;&atilde;o da macro resulta na interrup&ccedil;&atilde;o da execu&ccedil;&atilde;o da aplica&ccedil;&atilde;o. <br />Desta forma, qualquer processamento que venha a executar ap&oacute;s a ativa&ccedil;&atilde;o da macro ou que esteja sendo executado no momento em que a macro for ativada ser&aacute; interrompido. <br />Veja como utilizar a macro no <strong>exemplo de utiliza&ccedil;&atilde;o da macro</strong>.</span></span></p>
+<blockquote>
+<p>Esta macro deve ser utilizada obrigatoriamente ap&oacute;s a macro sc_error_message();</p>
+</blockquote>
+<p>Esta macro pode ser utilizada de duas formas; Sem par&acirc;metros <strong>sc_error_exit();</strong> que apenas interrompe o funcionamento da aplica&ccedil;&atilde;o ou informando uma <strong>URL/aplica&ccedil;&atilde;o</strong> para qual o usu&aacute;rio ser&aacute; redirecionado quando o erro for apresentado.</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 50.3701%; height: 18px;" colspan="3">Par&acirc;metros da macro, todos os par&acirc;metros desta macro s&atilde;o opcionais.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.41044%; height: 18px; text-align: left;">Aplica&ccedil;&atilde;o/URL</td>
+<td style="width: 6.38569%; text-align: center;">Opcional</td>
+<td style="width: 42.574%; height: 18px;">Nome da aplica&ccedil;&atilde;o ou URL de destino para onde seremos redirecionados.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 1.41044%; height: 18px; text-align: left;">Target</td>
+<td style="width: 6.38569%; text-align: center;">Opcional</td>
+<td style="width: 42.574%; height: 18px;">
+<p><strong>_blank,</strong> _<strong>self<br /></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ao informar uma Aplica&ccedil;&atilde;o ou URL de destino, caso nenhum target seja informado o _<strong>self</strong> ser&aacute; utilizado como padr&atilde;o.</p>
+</blockquote>
+<table class="w3-table-all notranslate" style="height: 72px;">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 617px; height: 18px;" colspan="2">Target dispon&iacute;veis.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">_blank</td>
+<td style="width: 549px; height: 18px;">Exibe a aplica&ccedil;&atilde;o ou URL de destino em uma outra janela ou aba.</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 68px; height: 18px;">_self</td>
+<td style="width: 549px; height: 18px;">Exibe a aplica&ccedil;&atilde;o / URL de destino na mesma janela ou aba</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ex. 1: Apenas exibe as mensagens de erro.</strong></span></p>
+<p><span class="corpo1"><code>sc_error_message('Mensagem de erro');<br />sc_error_exit();</code></span></p>
+<p><span class="corpo1"><br /><strong>Ex. 2: Exibe as mensagens de erro e o bot&atilde;o "OK" para redirecionar para a URL informada.</strong><br /></span></p>
+<p><span class="corpo1"><code>sc_error_message('Mensagem de erro');<br />sc_error_exit(http://www.meusite.com);</code></span></p>
+<p><span class="corpo1"><strong>Ex. 3: Exibe as mensagens de erro e o bot&atilde;o "OK" para redirecionar para a Aplica&ccedil;&atilde;o informada.</strong><br /></span></p>
+<p><code><code></code></code></p>
+<pre><span class="corpo1"><code>sc_error_message('Mensagem de erro');<br /></code></span><span class="corpo1">sc_error_exit(minha_aplicacao, "_blank");</span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onNavigate<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs once only when the application is loaded.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			This event occurs just once before it display the search form. It can be used to set some default values to the fields. For example:
+
+{company} = [glo_company];
+
+Date fields are used differently, They use a suffix "day" for day, "month" for month and/or "year" for year. For example, The {Birth} field will be:
+
+{Birth_day}=date("d");
+
+{Birth_month}=date("m");
+
+{Birth_year}=date("Y");
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

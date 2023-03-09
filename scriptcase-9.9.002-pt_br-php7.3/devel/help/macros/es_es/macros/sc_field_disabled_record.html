@@ -1,0 +1,49 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro tiene el objetivo de bloquear la escritura en campos determinados en los Formularios.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_field_disabled_record("Field_Name = True / False", "Parametre")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/yMyxQ-M6WmM" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un video tutorial</a></div>
+<p>Esta macro tiene el objetivo de bloquear el tipado en campos determinados en las l&iacute;neas del formulario de Grabaci&oacute;n m&uacute;ltiple, Grid editable y Visi&oacute;n de Grid editable.</p>
+<p>Los campos que se supone que deben bloquearse deben aplicarse a las opciones, "verdadero" (Para bloquear) o "falso" (para desbloquear). Si no est&aacute; informado, el valor predeterminado es "verdadero".</p>
+<p>El par&aacute;metro opcional es usar la "I" para bloquear al insertar un nuevo registro y "U" para bloquear mientras se actualiza un registro. Si no se informa, Scriptcase bloquear&aacute; en ambas ocasiones de manera predeterminada.</p>
+<p><strong>Ej. 1:&nbsp;Bloquear el campo al incluir y actualizar.</strong><br />sc_field_disabled_record("Field_01");<br /><br /><strong>Ej. 2: Desbloqueo del campo al incluir y actualizar.</strong><br />sc_field_disabled_record("Field_02=false");<br /><br /><strong>Ej. 3: Bloquear los distintos campos solo cuando se actualiza.</strong><br />sc_field_disabled_record("Field_01; Field_02; Field_03", "U");<br /><br /><strong>Ej. 4:Combinaci&oacute;n de bloqueo y desbloqueo de varios campos al mismo tiempo que incluye y actualiza.</strong><br />sc_field_disabled_record("Field_01=true; Field_02=false; Field_03=true");</p>
+<p>La macro tambi&eacute;n puede funcionar dentro de una condici&oacute;n, bloqueando un campo espec&iacute;fico en la l&iacute;nea de registro.</p>
+<p><strong>Ejemplo 1:</strong><br />if ({Filed_01} == 1)<br />{<br />&nbsp; sc_field_disabled_record("Filed_03");<br />}</p>
+<p><strong>Ejemplo 2:</strong><br />switch(trim([arr_apps][ {app_name} ]))<br />{<br />case 'form':<br />break;<br />case 'calendar':<br />sc_field_disabled_record("priv_export; priv_print");<br />break;<br />case 'cons':<br />sc_field_disabled_record("priv_insert; priv_delete; priv_update");<br />break;<br />default:<br />sc_field_disabled_record("priv_insert; priv_delete; priv_update; priv_export; priv_print");<br />break;<br />}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

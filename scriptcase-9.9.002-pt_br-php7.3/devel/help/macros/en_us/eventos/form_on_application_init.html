@@ -1,0 +1,23 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs once only when the application is loaded.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>First non-formal event executed, being triggered before the assembly of SQL and HTML.</p>
+<p>It works as a preparation for an application, since it is possible among other things, various manipulatives, performs validations and changes a connection with a macro <strong>sc_change_connection</strong>, for example.</p>
+<p>See below an example of how you use it.</p>
+<p> </p>
+<hr />
+<p>No example below, or <strong>form_orders</strong> will be altered according to the user accessing the system.</p>
+<p>If variable <code>[usr_login]</code> is equal to <strong>admin</strong>, or user will have access to or form with the possibility of inserting and excluding a registration.</p>
+<p>If a variable has some other value, or user still has access to the form, therefore, only with a possibility of altering a registry.</p>
+<p><strong>Code example</strong></p>
+<pre><code>if ([usr_login] == 'admin') {</code><br /><br /><code>    sc_apl_conf ("form_orders", "insert", "in");</code><br /><br /><code>    sc_apl_conf ("form_orders", "remove", "activated");</code><br /><br /><code>} else {</code><br /><br /><code>    sc_apl_conf ("form_orders", "insert", "off");</code><br /><br /><code>    sc_apl_conf ("form_orders", "remove", "off");</code><br /><br /><code>}</code></pre>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

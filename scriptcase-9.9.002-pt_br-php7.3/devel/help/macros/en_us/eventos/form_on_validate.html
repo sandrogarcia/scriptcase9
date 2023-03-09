@@ -1,0 +1,17 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs during the data validation in a form application.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event is executed when the form is submitted to the server, using the buttons: "add", "change" or "delete"<br />In this event, it is allowed to perform validations before the form data is sent to the database.</p>
+<hr />
+<p><br />In the example below, using the form_orders application, we will validate the freight field, where if the value assigned to the freight field is greater than 30, an error message will be triggered to the user and the form submission will be cancelled.</p>
+<p><br />Code example:<br />if({freight} > 30){<br />  sc_error_message("Shipping value is too high");<br />}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

@@ -1,0 +1,69 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Breaking totals variables.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">Variables-Totalling(groupby)Totalling Variables (group by)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><span class="corpo1">During the group by processing, Scriptcase generates total variables to each group level. The routines are defined in event “<strong>onGroupBy</strong>” determining the group levels. Totals special variables are then referenced substituting the group name for the key word “<strong>quebra</strong>”, as in:</span></p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Variable<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_ger}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Records total amount</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_parcel}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Field “parcels” total</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_balance}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Field “Balance” total</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_quebra}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current group level records total</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_<span class="corpo1">quebra</span>_parcel}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current <span class="corpo1">group</span> level field “parcels” total</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_quebra_balance}</span></td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Current <span class="corpo1">group</span> level field “Balance” total</span>.</td>
+</tr>
+</tbody>
+</table>
+<p><span class="corpo1"><br /><br /><strong>Ex. 1:</strong> <strong>In an application with a group by state and city and that totalizes a balance field, in the group totals, is possible to display the average (avg) instead of the balance as follows</strong>.<br /><br />{sum_quebra_balance} = {sum_quebra_balance} / {count_quebra};</span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+								
+						</tr>
+						<tr>
+								
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

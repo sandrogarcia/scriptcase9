@@ -1,0 +1,101 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro desactiva la visualización del pie de página.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_foot_hide()()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div>
+<div>El prop&oacute;sito de esta macro es deshabilitar la visualizaci&oacute;n del pie de p&aacute;gina en la aplicaci&oacute;n.</div>
+<br />
+<div>En el caso espec&iacute;fico de la <strong>consulta</strong>, el evento se realiza en la <strong>Grid</strong> en el <strong>Resumen</strong>. Para configurarlo, se cre&oacute; un <strong>par&aacute;metro</strong>, como se muestra en los siguientes ejemplos:</div>
+<div>&nbsp;</div>
+<div>
+<table style="width: 50%; border-collapse: collapse;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; text-align: center; height: 18px;">Par&aacute;metro</td>
+<td style="width: 0.929368%; text-align: center; height: 18px;">Valor</td>
+<td style="width: 10.964%; text-align: center; height: 18px;">Description</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">sc_foot_hide('grid')</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>grid</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Deshabilitar pie de p&aacute;gina de Grid</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 3.69302%; height: 18px;">
+<p>sc_foot_hide('res')</p>
+<p>sc_foot_hide('sum')</p>
+</td>
+<td style="width: 0.929368%; height: 18px;">
+<ul>
+<li><strong>res</strong></li>
+<li><strong>sum</strong></li>
+</ul>
+</td>
+<td style="width: 10.964%; height: 18px;">Deshabilitar pie de p&aacute;gina de resumen</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+<br />
+<pre>1 - <strong>Inhibe la consulta y el resumen de pie de p&aacute;gina:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide();<br /><br />2 - <strong>Inhibe solo el pie de p&aacute;gina de la consulta:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide('cuadr&iacute;cula');<br /><br />3 - <strong>Inhibe el pie de p&aacute;gina del resumen &uacute;nicamente:</strong><br /><br />&nbsp; &nbsp; sc_foot_hide('res'); o sc_foot_hide('suma');</pre>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

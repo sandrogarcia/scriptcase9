@@ -1,0 +1,92 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Essa macro é utilizada para fazer o download de arquivos utilizando as APIs de armazenamento.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_api_dowload(profile, settings, file, destination)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Essa macro &eacute; utilizada para fazer o download de arquivos utilizando as APIs para servi&ccedil;os de armazenamento.</p>
+<p>Ela possui os par&acirc;metros:</p>
+<table style="width: 100%; border-collapse: collapse;" border="1">
+<tbody>
+<tr>
+<td style="width: 50%; text-align: center;"><strong>Par&acirc;metro&nbsp;</strong></td>
+<td style="width: 50%; text-align: center;"><strong>Descri&ccedil;&atilde;o</strong></td>
+</tr>
+<tr>
+<td style="width: 50%;">profile</td>
+<td style="width: 50%;">Ao informar o "profile" ele ir&aacute; carregar as configura&ccedil;&otilde;es que informadas na cria&ccedil;&atilde;o da API.</td>
+</tr>
+<tr>
+<td style="width: 50%;">settings</td>
+<td style="width: 50%;">Se n&atilde;o quiser informar o valor do profile, &eacute; necess&aacute;rio passar os par&acirc;metro do "settings" seguindo a configura&ccedil;&atilde;o de Ferramentas > API.</td>
+</tr>
+<tr>
+<td style="width: 50%;">file</td>
+<td style="width: 50%;">Nome do arquivo.</td>
+</tr>
+<tr>
+<td style="width: 50%;">destination</td>
+<td style="width: 50%;">Diret&oacute;rio onde o arquivo est&aacute; armazenado.</td>
+</tr>
+</tbody>
+</table>
+<h4><strong><br /><br />Ao informar o "profile" ele ir&aacute; carregar as configura&ccedil;&otilde;es informadas na cria&ccedil;&atilde;o da API.<br />Exemplo:<br /></strong></h4>
+<blockquote>
+<p><code>sc_api_download([</code><br /><span style="font-family: monospace;"><span style="background-color: #bfe6ff;">'profile' => 'minha_api'</span></span><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></p>
+</blockquote>
+<h4><strong><br />Se n&atilde;o quiser informar o valor do profile, &eacute; necess&aacute;rio passar os par&acirc;metro do "settings" seguindo a configura&ccedil;&atilde;o em Ferramentas > API. &Eacute; necess&aacute;rio informar as credenciais de cada servi&ccedil;o de armazenamento.<br /><br /></strong></h4>
+<h4>Usando a op&ccedil;&atilde;o Google Drive:</h4>
+<blockquote>
+<p><code>sc_api_download([</code><br /><code>'settings' => [</code><br /><code>'app_name' => {appname},</code><br /><code>'gateway' => 'google_drive',</code><br /><code>'json_oauth' => {jsonoauth},</code><br /><code>'auth_code' => {authcode},</code><br /><code>'token_code' => {tokencode},</code><br /><code>],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></p>
+</blockquote>
+<h4><strong><br /><br />Usando a op&ccedil;&atilde;o Dropbox:<br /></strong></h4>
+<blockquote>
+<p><code>sc_api_download([<br />'settings' => [</code><br /><code>'gateway' => 'dropbox',</code><br /><code>'api_key' => {apikey},</code><br /><code>'api_secret' => {apisecret},</code><br /><code>'access_token' => {accesstoken},</code><br /><code>],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></p>
+</blockquote>
+<p><code></code></p>
+<h4>Usando a op&ccedil;&atilde;o S3:</h4>
+<blockquote>
+<p><code>sc_api_download([</code><br /><code>'settings' => [</code><br /><code>'app_name' => 'scriptcase',</code><br /><code>'gateway' => 'S3',</code><br /><code>'api_key' => {apikey},</code><br /><code>'api_secret' => {apisecret},</code><br /><code>'region' => {api_region},</code><br /><code>'bucket' => {api_bucket},</code><br /><code>],</code><br /><code>'file' => {arquivo},</code><br /><code>'destination' => {destination},</code><code><br />]);</code></p>
+</blockquote>
+<p><code></code></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onLoadAll<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

@@ -1,0 +1,1014 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro allows us to dynamically change the application language.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_set_language('String Language')<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/ZikcdQtoRb8" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a>
+</div>
+<p>This macro allows us to define the application language dynamically.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Changes the language to English.</strong><br />sc_set_language('en_us');</p>
+<p><br /><br /><strong>Ex. 2</strong>: <strong>Changes the language to Spanish.</strong><br />sc_set_language('es');</p>
+<p>&nbsp;</p>
+<p>It still allows to define the language and regional settings of the applications using a delimiter ";" between the parameters.</p>
+<p>&nbsp;</p>
+<p><strong>Ex. 1:</strong> <strong>Changing the language to English and regional settings to Canada.</strong><br />sc_set_language('en_us;en_ca');</p>
+<p><br /><strong><br />Ex. 2:</strong> <strong>Changing the language to Spanish and regional settings to Mexico.</strong><br />sc_set_language('es;es_mx');</p>
+<p><br /><strong><br />Ex. 3:</strong> <strong>Changing the language to Germanian and regional settings to Luxembourg.</strong><br />sc_set_language('de;de_lu');</p>
+<p><br /><strong><br />Ex. 4: Changing the language to Slovak and regional settings to Slovak Republic.</strong><br />sc_set_language('sk;sk_sk');<br /><br /></p>
+<div style="float: left;">
+<table style="border-collapse: collapse; width: 23.7748%; height: 1045px;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 259.679%; text-align: center; vertical-align: middle; height: 18px; background-color: #dddddd;" colspan="2"><strong>Languague Code</strong><strong><br /></strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px; background-color: #dddddd;"><strong>Language</strong></td>
+<td style="width: 171.056%; height: 17px; background-color: #dddddd;"><strong>Value</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 88.6236%; height: 17px;">Arabic</td>
+<td style="width: 171.056%; height: 17px;">ar</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Bahasa Melayu</td>
+<td style="width: 171.056%; height: 17px;">ms</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Belarusian</td>
+<td style="width: 171.056%; height: 17px;">be</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Bengali</td>
+<td style="width: 171.056%; height: 17px;">bn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Bosnian</td>
+<td style="width: 171.056%; height: 17px;">bs</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Bulgarian</td>
+<td style="width: 171.056%; height: 17px;">bg</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Catalan</td>
+<td style="width: 171.056%; height: 17px;">ca</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Chinese Simplified</td>
+<td style="width: 171.056%; height: 17px;">zh_cn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Chinese Traditional</td>
+<td style="width: 171.056%; height: 17px;">zh_hk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Croatian</td>
+<td style="width: 171.056%; height: 17px;">hr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Czech</td>
+<td style="width: 171.056%; height: 17px;">cz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Danish</td>
+<td style="width: 171.056%; height: 17px;">da</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Dutch</td>
+<td style="width: 171.056%; height: 17px;">nl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">English</td>
+<td style="width: 171.056%; height: 17px;">en_us</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Estonian</td>
+<td style="width: 171.056%; height: 17px;">et</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Finnish</td>
+<td style="width: 171.056%; height: 17px;">fi</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">French</td>
+<td style="width: 171.056%; height: 17px;">fr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Galician</td>
+<td style="width: 171.056%; height: 17px;">gl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">German</td>
+<td style="width: 171.056%; height: 17px;">de</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Greek</td>
+<td style="width: 171.056%; height: 17px;">el</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Gujarati</td>
+<td style="width: 171.056%; height: 17px;">gu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Hebrew</td>
+<td style="width: 171.056%; height: 17px;">he</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Hindi</td>
+<td style="width: 171.056%; height: 17px;">hi</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Hungarian</td>
+<td style="width: 171.056%; height: 17px;">hu_hu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Indonesian</td>
+<td style="width: 171.056%; height: 17px;">id</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Italian</td>
+<td style="width: 171.056%; height: 17px;">it</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Japanese</td>
+<td style="width: 171.056%; height: 17px;">ja</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Kannada</td>
+<td style="width: 171.056%; height: 17px;">kn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Korean</td>
+<td style="width: 171.056%; height: 17px;">ko</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Latvian</td>
+<td style="width: 171.056%; height: 17px;">lv</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Lithuanian</td>
+<td style="width: 171.056%; height: 17px;">lt</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Macedonian</td>
+<td style="width: 171.056%; height: 17px;">mk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Marathi</td>
+<td style="width: 171.056%; height: 17px;">mr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Norwegian</td>
+<td style="width: 171.056%; height: 17px;">no</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Polish</td>
+<td style="width: 171.056%; height: 17px;">pl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Portuguese Brazil</td>
+<td style="width: 171.056%; height: 17px;">pt_br</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Portuguese Portugal</td>
+<td style="width: 171.056%; height: 17px;">pt_pt</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Punjabi</td>
+<td style="width: 171.056%; height: 17px;">pa</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Romanian</td>
+<td style="width: 171.056%; height: 17px;">ro</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Russian</td>
+<td style="width: 171.056%; height: 17px;">ru</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Serbian Cyrillic</td>
+<td style="width: 171.056%; height: 17px;">sr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Shuar</td>
+<td style="width: 171.056%; height: 17px;">jiv</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Sinhalese</td>
+<td style="width: 171.056%; height: 17px;">si</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Slovak</td>
+<td style="width: 171.056%; height: 17px;">sk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Slovenian</td>
+<td style="width: 171.056%; height: 17px;">sl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Spanish</td>
+<td style="width: 171.056%; height: 17px;">es</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Swedish</td>
+<td style="width: 171.056%; height: 17px;">sv</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Telugu</td>
+<td style="width: 171.056%; height: 17px;">te</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Thai</td>
+<td style="width: 171.056%; height: 17px;">thai</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Turkish</td>
+<td style="width: 171.056%; height: 17px;">tr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Ukrainian</td>
+<td style="width: 171.056%; height: 17px;">uk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 88.6236%; height: 17px;">Urdu</td>
+<td style="width: 171.056%; height: 17px;">ur</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="float: left;">
+<table dir="ltr" style="height: 3053px;" border="1" cellspacing="0" cellpadding="0"><colgroup><col width="215" /><col width="100" /></colgroup>
+<tbody>
+<tr style="height: 18px;">
+<td style="height: 18px; text-align: center; vertical-align: middle; background-color: #dddddd; width: 353px;" colspan="2"><strong>Regional settings code</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; background-color: #dddddd; width: 328px;"><strong>Reginal Settings</strong></td>
+<td style="height: 18px; background-color: #dddddd; width: 25px;"><strong>Value</strong></td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Afrikaans (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">af_za</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Albanian (Albania)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sq_al</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Amharic (Ethiopia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">am_et</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Algeria)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_dz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Bahrain)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_bh</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Egypt)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_eg</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Iraq)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_iq</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Jordan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_jo</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Kuwait)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_kw</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Lebanon)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_lb</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Libya)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_ly</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Morocco)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_ma</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Oman)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_om</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Qatar)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_qa</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Saudi Arabia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_sa</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Syria)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_sy</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Tunisia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_tn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (United Arab Emirates)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_ae</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Arabic (Yemen)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ar_ye</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Armenian (Armenia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">hy_am</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Azerbaijan (Azerbaijan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">az_az</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Bahasa Melayu (Malaysia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ms_my</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Basque</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">eu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Belarusian (Belarus)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">be_by</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Bengali (Bangladesh)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">bn_bd</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Bengali (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">bn_in</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 21px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Bosnian (Bosnia-Herzegovina)</td>
+<td style="height: 21px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">bs_ba</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Breton (France)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">br_fr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Bulgarian (Bulgaria)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">bg_bg</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Catalan (Spain)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ca_es</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Chinese (Republic of China)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zh_cn</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 23px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Chinese (Simplified, Singapore)</td>
+<td style="height: 23px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zh_sg</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 20px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Chinese (Traditional, Hong Kong)</td>
+<td style="height: 20px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zh_hk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Chinese (Traditional, Macau)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zh_mo</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Chinese (Traditional, Taiwan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zh_tw</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 22px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Croatian (Bosnia and Herzegovina)</td>
+<td style="height: 22px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">hr_ba</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Croatian (Croatia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">hr_hr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Czech (Czech Republic)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">cs_cz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Danish (Denmark)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">da_dk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Dutch (Belgium)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">nl_be</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Dutch (Netherlands)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">nl_nl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Australia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_au</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Belize)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_bz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Botswana)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_bw</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Cameroon)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_cm</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Canada)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_ca</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Caribbean)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_cb</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Ireland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_ie</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Jamaica)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_jm</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Malaysia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_my</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Namibia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_na</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (New Zealand)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_nz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Nigeria)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_ng</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Philippines)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_ph</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Singapore)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_sg</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_za</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Trinidad and Tobago)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_tt</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Uganda)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_ug</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (United Kingdom)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_gb</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (United States)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_us</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Zambia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_zm</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">English (Zimbabwe)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">en_zw</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Estonian (Estonia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">et_ee</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Faroese (Faroe Islands)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fo_fo</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Finnish (Finland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fi_fi</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Belgium)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_be</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Cameroon)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_cm</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Canada)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_ca</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (France)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_fr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Ivory Coast)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_ci</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Luxembourg)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_lu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Monaco)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_mc</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">French (Switzerland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fr_ch</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 22px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Frisian, Western (Netherlands)</td>
+<td style="height: 22px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fy_nl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Galician (Spain)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">gl_es</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Georgian (Georgia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ka_ge</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">German (Austria)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">de_at</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">German (Germany)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">de_de</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">German (Lichtenstein)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">de_li</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">German (Luxembourg)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">de_lu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">German (Switzerland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">de_ch</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Greek (Greece)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">el_gr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Gujarati (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">gu_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Hausa (Ghana)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ha_gh</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Hebrew (Israel)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">he_il</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Hindi (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">hi_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Hungarian (Hungary)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">hu_hu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Icelandic (Iceland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">is_is</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Indonesian (Indonesia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">id_id</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Irish (Ireland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ga_ie</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Italian (Italy)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">it_it</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Italian (Switzerland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">it_ch</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Japanese (Japan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ja_jp</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Kalaallisut (Kalaallit Nunaat)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">kl_gl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Kannada (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">kn_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Kazakh (Kazakhstan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">kk_kz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Khmer (Cambodia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">km_kh</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Kirghiz (Kyrgyzstan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ky_kg</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Korean (Korea)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ko_kr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Lao (Laos)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">lo_la</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Latvian (Latvia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">lv_lv</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Lithuanian (Lithuania)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">lt_lt</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 21px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Luxembourgish (Luxembourg)</td>
+<td style="height: 21px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">lb_lu</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 16px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Macedonian (Republic of Macedonia)</td>
+<td style="height: 16px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">mk_mk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Malayalam (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ml_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Marathi (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">mr_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Mongolian (Mongolia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">mn_mn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Nepali (Nepal)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ne_np</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Northern Sotho (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">nso_z</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Norwegian (Norway)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">no_no</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Norwegian Bokmal (Norway)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">nb_no</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Norwegian Nynorsk (Norway)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">nn_no</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Occitan (France)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">oc_fr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Oriya (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">or_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Persian (Iran)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">fa_ir</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Polish (Poland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">pl_pl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Portuguese (Angola)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">pt_ao</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Portuguese (Brazil)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">pt_br</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Portuguese (Portugal)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">pt_pt</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Punjabi (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">pa_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Romanian (Moldova)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ro_md</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Romanian (Romania)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ro_ro</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Russian (Belarus)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ru_by</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Russian (Kazakhstan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ru_kz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Russian (Russia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ru_ru</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 35px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Serbian Cyrillic (Serbia and Montenegro)</td>
+<td style="height: 35px; width: 25px; text-align: left; vertical-align: middle;" data-sheets-value="{">sr_yu</td>
+</tr>
+<tr style="height: 35px;">
+<td style="height: 35px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Serbian Latin (Serbia and Montenegro)</td>
+<td style="height: 35px; width: 25px; text-align: left; vertical-align: middle;" data-sheets-value="{">sh_yu</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Slovak (Slovak Republic)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sk_sk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Slovenian (Slovenia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sl_si</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Sotho (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">st_za</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Argentina)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_ar</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Bolivia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_bo</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Chile)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_cl</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Colombia)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_co</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Costa Rica)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_cr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Dominican Republic)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_do</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Ecuador)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_ec</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (El Salvador)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_sv</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Guatemala)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_gt</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Honduras)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_hn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Mexico)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_mx</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Nicaragua)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_ni</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Panama)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_pa</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Paraguay)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_py</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Peru)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_pe</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Puerto Rico)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_pr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Spain)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_es</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (United States)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_us</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Uruguay)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_uy</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Spanish (Venezuela)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">es_ve</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Sri Lanka (Sinhalese)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">si_si</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Swahili (Tanzania)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sw_tz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Swedish (Finland)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sv_fi</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Swedish (Sweden)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">sv_se</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Tajik (Tajikistan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">tg_tj</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Tamil (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ta_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Telugu (India)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">te_in</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Thai (Thailand)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">th_th</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Tswana (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">tn_za</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Turkish (Turkey)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">tr_tr</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Ukrainian (Ukraine)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">uk_ua</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Urdu (Pakistan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">ur_pk</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Uzbek (Uzbekistan)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">uz_uz</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Vietnamese (Vietnam)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">vi_vn</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Welsh (United Kingdom)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">cy_gb</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Xhosa (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">xh_za</td>
+</tr>
+<tr style="height: 17px;">
+<td style="height: 17px; width: 328px; text-align: left; vertical-align: top;" data-sheets-value="{">Zulu (South Africa)</td>
+<td style="height: 17px; width: 25px; text-align: left; vertical-align: top;" data-sheets-value="{">zu_za</td>
+</tr>
+</tbody>
+</table>
+</div>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onFilterInit<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onInit<br>onValidate<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onInit
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

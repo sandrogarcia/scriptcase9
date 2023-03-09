@@ -1,0 +1,62 @@
+table td,
+table th {
+    padding: 2px;
+}
+
+.table_macro {
+    background: #f8f8f8;
+}
+
+.table_macro td {
+    border: 1px solid #ddd;
+}
+
+.macros_desc_main_table {
+    border: 1px solid #dddddd;
+    width: 100%;
+}
+
+.macros_desc_main_table .macros_tit {
+    background: #dddddd;
+    font-weight: bold;
+    color: #5381c6;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.macros_desc_table > tbody > tr > td {
+    padding: 10px;
+}
+
+.macros_desc_table table td {
+    border: 1px solid #ddd;
+}
+
+.macros_desc_table table th {
+    background: #ddd!;
+}
+
+.macros_desc_scope_table {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px;
+}
+
+.macros_desc_scope_table td,
+.macros_desc_scope_table th {
+    border: 1px solid #ddd;
+}
+
+.macros_desc_scope_table th {
+    background: #ddd!important;
+}
+
+.cls_tabela,
+.cls_tabela td,
+.cls_tabela th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.cls_tabela th {
+    background: #ddd;
+}

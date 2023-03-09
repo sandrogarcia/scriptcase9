@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<pattern  x="-252" y="-294" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_2" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#E0CB81" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<g>
+	<g>
+		<path fill="#B4A79C" d="M9,9.7H0.8V0.8H9V9.7z M2.3,8.2h5.3V2.3H2.3V8.2z"/>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="1.5" y="12.3" width="6.8" height="7.4"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="1.5" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="1.5" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="-22.6" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="-22.6" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+		</g>
+		<pattern  id="SVGID_4_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 -31.7875 -33.7809)">
+		</pattern>
+		<path fill="url(#SVGID_4_)" d="M9,20.5H0.8v-8.9H9V20.5z M2.3,19h5.3V13H2.3V19z"/>
+	</g>
+	<g>
+		<path fill="#B4A79C" d="M9,31.3H0.8v-8.9H9V31.3z M2.3,29.8h5.3v-5.9H2.3V29.8z"/>
+	</g>
+	<g>
+		<path fill="#B4A79C" d="M31.3,9.7H10.5V0.8h20.8V9.7z M12,8.2h17.8V2.3H12V8.2z"/>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<rect id="SVGID_3_" x="11.2" y="12.3" width="19.3" height="7.4"/>
+			</defs>
+			<clipPath id="SVGID_5_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_5_)">
+				<rect x="25.7" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="25.7" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+			<g clip-path="url(#SVGID_5_)">
+				<rect x="1.5" y="8.7" fill="none" width="24.1" height="24.1"/>
+				<rect x="1.5" y="8.7" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+		</g>
+		<pattern  id="SVGID_6_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 -31.7875 -33.7809)">
+		</pattern>
+		<path fill="url(#SVGID_6_)" d="M31.3,20.5H10.5v-8.9h20.8V20.5z M12,19h17.8V13H12V19z"/>
+	</g>
+	<g>
+		<path fill="#B4A79C" d="M31.3,31.3H10.5v-8.9h20.8V31.3z M12,29.8h17.8v-5.9H12V29.8z"/>
+	</g>
+</g>
+</svg>

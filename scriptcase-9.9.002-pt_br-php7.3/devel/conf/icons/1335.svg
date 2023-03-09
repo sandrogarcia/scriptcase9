@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<pattern  x="-168" y="-126" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_1" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#FEE99B" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<pattern  x="-168" y="-126" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_2" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#E0CB81" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<g>
+	<path fill="#8F9BA8" d="M21.7,7.1H7.5c-0.4,0-0.7-0.3-0.7-0.6C6.7,6.1,7,5.7,7.3,5.6l14.2-4.8c0.2-0.1,0.5,0,0.7,0.1
+		c0.2,0.1,0.3,0.4,0.3,0.6v4.8C22.5,6.7,22.2,7.1,21.7,7.1z M12.1,5.6H21v-3L12.1,5.6z"/>
+	<path fill="#8F9BA8" d="M24.5,31.3H7.5c-0.4,0-0.8-0.3-0.8-0.8V6.3c0-0.4,0.3-0.8,0.8-0.8h16.9c0.4,0,0.8,0.3,0.8,0.8v24.2
+		C25.2,30.9,24.9,31.3,24.5,31.3z M8.3,29.8h15.4V7.1H8.3V29.8z"/>
+	<g>
+		<pattern  id="SVGID_1_" xlink:href="#New_Pattern_Swatch_1" patternTransform="matrix(1 0 0 1 -4.5858 -22.5941)">
+		</pattern>
+		<circle fill="url(#SVGID_1_)" cx="16" cy="15.7" r="5.3"/>
+		<pattern  id="SVGID_2_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 -4.5858 -22.5941)">
+		</pattern>
+		<path fill="url(#SVGID_2_)" d="M16,21.7c-3.3,0-6-2.7-6-6s2.7-6,6-6c3.3,0,6,2.7,6,6S19.3,21.7,16,21.7z M16,11.1
+			c-2.5,0-4.5,2-4.5,4.5s2,4.5,4.5,4.5c2.5,0,4.5-2,4.5-4.5S18.5,11.1,16,11.1z"/>
+	</g>
+	<g>
+		<pattern  id="SVGID_3_" xlink:href="#New_Pattern_Swatch_1" patternTransform="matrix(1 0 0 1 -4.5858 -22.5941)">
+		</pattern>
+		<line fill="url(#SVGID_3_)" x1="12" y1="26.3" x2="20" y2="26.3"/>
+		<pattern  id="SVGID_4_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 -4.5858 -22.5941)">
+		</pattern>
+		<rect x="12" y="25.5" fill="url(#SVGID_4_)" width="7.9" height="1.5"/>
+	</g>
+</g>
+</svg>

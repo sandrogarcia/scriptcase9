@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre quando o objeto html recebe um click.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p><span style="font-weight: 400;">Ocorre a partir do clique do usuário no campo configurado com o evento, permitindo assim, que ações específicas sejam executadas após a interação do usuário do sistema.</span></p>
+<p><span style="font-weight: 400;">Entre outras funcionalidades, é possível criar um redirecionamento para outras aplicações com a macro sc_redir, deletar registros sem sair da consulta utilizando a macro sc_exec_sql entre outras implementações.</span></p>
+<p><span style="font-weight: 400;">----</span></p>
+<p><span style="font-weight: 400;">No exemplo abaixo, será realizado um redirecionamento utilizando a macro </span><strong>sc_redir </strong><span style="font-weight: 400;">enviado como parâmetro o número do pedido para o ReportPDF, que mostrará os detalhes do pedido.</span></p>
+<p><span style="font-weight: 400;">No ReportPDF que utiliza a tabela orders_detais, adicione uma cláusula where no SQL:</span></p>
+<p><strong>WHERE orders.orderid = [pedido]</strong></p>
+<p><span style="font-weight: 400;">Na consulta, utilizando a tabela </span><strong>orders</strong><span style="font-weight: 400;">, crie um evento onClick no campo de sua escolha, e adicione a linha de comando abaixo.</span></p>
+<p><span style="font-weight: 400;">sc_redir(pdf_name.php, pedido={orderid}, "_blank");</span></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

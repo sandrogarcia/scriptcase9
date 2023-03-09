@@ -1,0 +1,251 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro dynamically creates or modifies links between grid applications and other applications.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_link(Column, Application, Parameters, "Hint", "Target", Height, Width)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/9U2mAJPn2mk" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a></div>
+<p><span style="font-weight: 400;">Allows you to dynamically create a field connection between two applications.</span></p>
+<blockquote>
+<p><strong>Note: </strong><span style="font-weight: 400;">This macro is only available in Query.</span></p>
+</blockquote>
+<p><span style="font-weight: 400;">Below is the list of macro parameters, which must be informed separated by commas.</span></p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr style="height: 18px;">
+<th style="width: 8.75262%; text-align: center; height: 18px;"><strong>Parameter</strong></th>
+<th style="width: 45.8954%; text-align: center; height: 18px;"><strong>Value</strong></th>
+<th style="width: 45.3519%; text-align: center; height: 18px;"><strong>Description</strong></th>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Column</strong></td>
+<td style="width: 45.8954%; vertical-align: top;">
+<p><span style="font-weight: 400;">Accepts only string with or without quote protection.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<p><span style="font-weight: 400;">sc_link(</span><strong>customerid</strong><span style="font-weight: 400;">, form_customer, custom={customerid}, "Customer Data", "_self");</span></p>
+<p><span style="font-weight: 400;">Accepted ways of passing the parameter:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">customerid</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'customerid'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"customerid"</span></li>
+</ul>
+</td>
+<td style="width: 45.3519%; height: 18px; vertical-align: top;">
+<p><strong>Mandatory parameter</strong><span style="font-weight: 400;">, where the name of the field that will be transformed into a link to the other application must be informed.</span></p>
+<strong>Note</strong><span style="font-weight: 400;">: If the informed field already has a field link, the link defined in the macro will overwrite the interface link.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Application</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Accepts strings with or without the protection of quotes, in addition to global or local variables.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<p><span style="font-weight: 400;">$var_customer = 'form_customer';</span></p>
+<p><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, </span><strong>$var_customer</strong><span style="font-weight: 400;">, custom={customerid}, "Customer Data", "_self");</span></p>
+<p><span style="font-weight: 400;">Accepted ways of passing the parameter:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">form_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'form_customer'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"form_customer"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">$var_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">[glob_customer]</span></li>
+</ul>
+</td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><strong>Required parameter</strong><span style="font-weight: 400;">, defines the target application of the call.</span></p>
+<p><span style="font-weight: 400;">In this parameter it is possible to use variables making it possible to change the target application, depending on your business rule.</span></p>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Parameters</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter defines the value of the variable that will be available from the target application as a global variable.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<p><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, form_customer, </span><strong>custom={customerid}</strong><span style="font-weight: 400;">, "Customer Data", "_self");</span></p>
+<p><span style="font-weight: 400;">Accepted ways of passing the parameter:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = {customerid}</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = 'ALFKI'</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom = $var_customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">custom - [glob_customer]</span></li>
+</ul>
+</td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter is not mandatory, but its use is necessary for the correct display of data in the target application. When not informed, the target application will display all data in the table.</span></p>
+<p><strong>Retrieving the value in the target</strong></p>
+<p><span style="font-weight: 400;">application In the target application of the connection, in the example on the side is the form_customer application, the </span><strong>custom</strong><span style="font-weight: 400;"> must be retrieved as a global variable in the application's SQL.</span></p>
+<p><span style="font-weight: 400;">In this example, the following SQL statement has been added to the form (form_customer)</span></p>
+<p><span style="font-weight: 400;">customerid = '[custom]'</span></p>
+<blockquote><span style="font-weight: 400;">For more details on global variable usage,</span><a href="http://royalsalutre.netmake.com.br/tools/nm/sc_helpv9/gerado/en_us/manual_mp/manual/03-knowing-scriptcase/09-scriptcase-variables/#id-2" target="_blank" rel="noopener"> <span style="font-weight: 400;">access our online documentation</span></a><span style="font-weight: 400;">.</span></blockquote>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Hint</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Accepts string, with or without the protection of quotes, lang and global or local variables.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<p><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, form_customer, custom={customerid}, </span><strong>"Customer Data"</strong><span style="font-weight: 400;">, "_self");</span></p>
+<p><strong>Obs</strong><span style="font-weight: 400;">: To use </span><strong>commas</strong><span style="font-weight: 400;"> and </span><strong>apostrophes</strong><span style="font-weight: 400;"> in the text, it is necessary to protect with the scape </span><strong>"\"</strong></p>
+<p><span style="font-weight: 400;">Accepted ways of passing the parameter:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"Help text\, with a comma"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">'Customer</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Data' Customer Data</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">{lang_text}</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">[glob_txt]</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">$ var_txt</span></li>
+</ul>
+</td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter is not mandatory.</span></p>
+<p><span style="font-weight: 400;">Receives a text with some help or remark for the system user, the text is displayed whenever the mouse cursor passes over the link.</span></p>
+<p><span style="font-weight: 400;">It is possible to use langs for the definition of messages, allowing the translation of your system.</span></p>
+<strong>Obs</strong><span style="font-weight: 400;">: To use </span><strong>commas</strong><span style="font-weight: 400;"> and </span><strong>apostrophes</strong><span style="font-weight: 400;"> in the text it is necessary to protect with the scape </span><strong>"\"</strong></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Target</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter accepts only string. Available values ​​are listed below.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<p><span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, form_customer, custom={customerid}, "Customer Data", </span><strong>"modal"</strong><span style="font-weight: 400;">, 850, 600);</span></p>
+<p><strong>Note:</strong><span style="font-weight: 400;"> If omitted, the value "_self" will be assigned.</span></p>
+<p><span style="font-weight: 400;">Accepted ways of passing the parameter:</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"_self"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"_blank"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeT"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeL"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeR"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"iframeB"</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">"modal"</span></li>
+</ul>
+</td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">Defines the way to open the target application.</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">_self - Runs the target application on the same page, overlapping the query application;</span><span style="font-weight: 400;"><br /><br /></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">_blank - Runs the target application on another page (pop-up);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeT - Displays the target application in an iframe above the query (Top);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeL - The target application will be displayed in an iframe to the left of the query (Left)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeR - The target application will be displayed in an iframe to the right of the query (Right);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">iframeB - The target application will be displayed in an iframe below the query (Bot);</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">modal - Opens a new window and blocks any interaction in the main window;</span></li>
+</ul>
+<span style="font-weight: 400;">When using any of the </span><strong>iframe </strong><span style="font-weight: 400;">or </span><strong>modal</strong><span style="font-weight: 400;"> to open the application, it is possible to define the </span><strong>height</strong><span style="font-weight: 400;"> and </span><strong>width</strong><span style="font-weight: 400;"> by adding the values ​​in the&nbsp;optional parameters below.</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Height</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter accepts only numerical values ​​and its unit of measurement is pixel.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, form_customer, custom={customerid}, "Customer Data", "modal",</span> <strong>850</strong><span style="font-weight: 400;">,</span><span style="font-weight: 400;"> 600);</span></td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><strong>Non-mandatory parameter</strong><span style="font-weight: 400;">, available only when using the </span><strong>Iframe</strong><span style="font-weight: 400;"> and </span><strong>modal</strong><span style="font-weight: 400;"> parameter </span><strong>Target</strong></p>
+<p><span style="font-weight: 400;">Defines the height of the iframe or modal where the target application will be displayed.</span></p>
+<blockquote><span style="font-weight: 400;"><strong>Note</strong>: If omitted, the default value will be 440</span></blockquote>
+</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 8.75262%; height: 18px; text-align: center; vertical-align: middle;"><strong>Width</strong></td>
+<td style="width: 45.8954%; height: 18px; text-align: left; vertical-align: top;">
+<p><span style="font-weight: 400;">This parameter accepts only numerical values ​​and its unit of measurement is pixel.</span></p>
+<p><strong>For example:&nbsp;</strong></p>
+<span style="font-weight: 400;">sc_link(</span><span style="font-weight: 400;">customerid, form_customer, custom={customerid}, "Customer Data", "iframeB", 850, </span><strong>600</strong><span style="font-weight: 400;">);</span></td>
+<td style="width: 45.3519%; height: 18px; text-align: left; vertical-align: top;">
+<p><strong>Non-mandatory parameter</strong><span style="font-weight: 400;">, available only when using the </span><strong>Iframe</strong><span style="font-weight: 400;"> and </span><strong>modal</strong><span style="font-weight: 400;"> parameter </span><strong>Target</strong></p>
+<p><span style="font-weight: 400;">Defines the width of the iframe or modal where the target application will be displayed.</span></p>
+<strong>Note:</strong><span style="font-weight: 400;"> If omitted, the default value will be 630</span></td>
+</tr>
+</tbody>
+</table>
+<p class="corpo1">&nbsp;</p>
+<hr />
+<h3 class="corpo1"><strong>Examples</strong></h3>
+<p><strong>Ex. 1:</strong> Creates a link to the costumer.php application, on the Id field, passing the global variable [global_costumer] as and the product field (local variable) {Id} to the costumer.php application:</p>
+<pre>sc_link(Id, costumer.php, product=[global_costumer]; Id={Id}, "Client Data", "_blank");</pre>
+<p><br /><strong>Ex. 2:</strong> Creating a dynamic link to another application depeding on the field valor {costumer_type} and opening it in a modal.</p>
+<pre>if ( {costumer_type} == "F") {<br /><br />&nbsp; &nbsp; sc_link (costumer_type, type_f.php, product=[global_costumer]; Id={Id}," Personal Data ", "modal", 500, 700);<br /><br />} else {<br /><br />&nbsp; &nbsp; sc_link (costumer_type, type_a.php, product=[global_costumer]; Id={Id}," Company Data ", "iframeR");<br /><br />}</pre>
+<p><br /><strong>Ex. 3:</strong> Creating a link to a URL. A redirect to the given URL will be performed.</p>
+<pre>sc_link (my_field, http://www.scriptcase.com, ,"hint of the link", "_blank");</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

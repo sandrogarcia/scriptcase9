@@ -1,0 +1,70 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro comprueba si hay un elemento de menú.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_exist_item("Menu_Name", "Id_Item")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Compruebe si existe un elemento de men&uacute; y devuelva un valor verdadero o falso.</p>
+<table style="height: 45px;" border="0">
+<tbody>
+<tr style="height: 15px;">
+<td style="height: 15px;"><strong>Parametros</strong></td>
+<td style="height: 15px;"><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr style="height: 15px;">
+<td style="height: 15px;">Menu_Name</td>
+<td style="height: 15px;">Men&uacute; de nombre de la aplicaci&oacute;n</td>
+</tr>
+<tr style="height: 15px;">
+<td style="height: 15px;">Id_Item</td>
+<td style="height: 15px;">C&oacute;digo de identificaci&oacute;n del elemento del men&uacute;</td>
+</tr>
+</tbody>
+</table>
+<p><strong><br />Ej. 1:</strong></p>
+<p>if(sc_appmenu_exist_item('menu_main', 'item_2')){</p>
+<p>sc_appmenu_update_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+<p>}<br />else{</p>
+<p>sc_appmenu_add_item('menu_main','item_2','item_1','Category Form','form_category');</p>
+<p>}</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

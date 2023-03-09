@@ -1,0 +1,109 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Changes the CSS property of fields</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_change_css('attribute', 'value', 'field_name')<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>This macro allows changing CSS attributes of application fields.</p>
+<p>&nbsp;</p>
+<h2>Parameter List</h2>
+<table style="border-collapse: collapse; width: 100%; height: 160.953px;" border="1">
+<tbody>
+<tr style="height: 23.3906px;">
+<td style="width: 14.4411%; height: 23.3906px;">parameters</td>
+<td style="width: 52.1859%; height: 23.3906px;"><span style="color: #000000; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">parameter values</span></td>
+<td style="width: 33.3135%; height: 23.3906px;">Description</td>
+</tr>
+<tr style="height: 92.7812px;">
+<td style="width: 14.4411%; height: 92.7812px;"><span style="font-family: monospace; color: #000000;"><span style="background-color: #e8e8e8;">attribute_name</span></span></td>
+<td style="width: 52.1859%; height: 92.7812px;">
+<p style="text-align: justify;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">The button name must be informed using <strong>double quotes</strong>, <strong>single quotes</strong> or <strong>variables</strong>.</span></p>
+<p style="text-align: justify;"><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">Example<br /></span></strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">In this example we are using the color attribute</span></p>
+<p><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>('<strong>color'</strong>,&nbsp;</span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; color: #7e8c8d;"><span style="font-size: 13px;">'#dcfce7'</span></span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 33.3135%; height: 92.7812px;">
+<p><strong>Required Attribute.</strong></p>
+<p>Defines the CSS attribute that will be changed.</p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 14.4411%; height: 22.3906px;"><code>value</code></td>
+<td style="width: 52.1859%; height: 22.3906px;">
+<p>The button name must be informed using&nbsp;<strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">double quotes</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">,&nbsp;</span><strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">single quotes</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">&nbsp;or&nbsp;</span><strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">variables</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">.</span></p>
+<p style="text-align: justify;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;"><strong>Example</strong><br /></span><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;">In this parameter we define the value for the CSS attribute it should receive, in the example we are defining the color:&nbsp;</span></span><code>#dcfce7</code></p>
+<p><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>(<span style="color: #7e8c8d;">'color',&nbsp;</span></span><strong><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana;"><span style="font-size: 13px;">'#dcfce7'</span></span></strong><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;">);</span></code></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><strong>Required Attribute.</strong></p>
+<p>Defines the value that the informed attribute will receive</p>
+</td>
+</tr>
+<tr style="height: 22.3906px;">
+<td style="width: 14.4411%; height: 22.3906px;"><code>field_name</code></td>
+<td style="width: 52.1859%; height: 22.3906px;">
+<p><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">The button name must be informed using&nbsp;</span><strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">double quotes</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">,&nbsp;</span><strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">single quotes</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">&nbsp;or&nbsp;</span><strong style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">variables</strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; text-align: justify;">.</span></p>
+<p><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;"><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif;"><strong>Example</strong></span><br /></span><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">In this example we are defining the change in the font color of the field </span><code style="font-size: 16px; text-align: justify;">fld_status</code><strong><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;"><br /></span></strong></p>
+<p><span style="color: #7e8c8d;"><code><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px;"><span style="color: #000000;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">sc_change_css</span>(</span>'color',&nbsp;</span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana;"><span style="font-size: 13px;">'#dcfce7',&nbsp;<strong><span style="color: #000000;">'status'</span></strong></span></span><span style="font-family: Leelawadee, Ebrima, 'Bahnschrift Light', Gadugi, 'Nirmala UI', 'Segoe UI', Verdana; font-size: 13px; color: #000000;">);</span></code></span></p>
+</td>
+<td style="width: 33.3135%; height: 22.3906px;">
+<p><strong>Optional Attribute.</strong></p>
+<p><span style="font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify; background-color: #ffffff;">Defines the field where the CSS will be applied, if no value is entered, the change will be made in all fields of the line.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Example</h2>
+<hr />
+<p>Example of changing the font color and using the attribute <code>sc_badge</code></p>
+<pre>switch({taskstatus}) {
+	case 'COMPLETED':
+		sc_change_css('color', '#dcfce7', 'taskstatus');
+		sc_change_css('sc_badge', 'green', 'taskstatus');
+		break;
+		
+	case 'IN-PROGRESS':
+		sc_change_css('color', '#1e40af', 'taskstatus');
+		sc_change_css('sc_badge', 'blue', 'taskstatus');
+		break;
+		
+	case 'NOT-STARTED':
+		sc_change_css('color', '#991b1b', 'taskstatus');
+		sc_change_css('sc_badge', 'red', 'taskstatus');
+		break;
+}</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

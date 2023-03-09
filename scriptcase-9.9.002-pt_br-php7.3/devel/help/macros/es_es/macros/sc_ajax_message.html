@@ -1,0 +1,204 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro permite que la aplicación muestre mensajes personalizados.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_ajax_message("Mensaje", "Título", "Parámetros", "Parameters_Redir", "String_toast");<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un vídeo tutorial" href="https://youtu.be/-luxYq-KV94" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un vídeo tutorial</a></div>
+<p>Esta macro permite que la aplicación muestre mensajes personalizables, con su uso restringido a eventos de forma / control cuando se usa en eventos AJAX.</p>
+<p>Esta macro solo es válida en aplicaciones compatibles con AJAX.</p>
+<p><strong>Descripción de los parámetros</strong></p>
+<table class="cls_tabela" style="width: 1001px;" border="0">
+<tbody>
+<tr>
+<th style="width: 227px;"><strong>Parámetros</strong></th>
+<th style="width: 774px;">Descripción</th>
+</tr>
+<tr>
+<td style="width: 227px;">Mensaje</td>
+<td style="width: 774px;">Mensaje de texto que se mostrará en el cuerpo del mensaje. Este parámetro es obligatorio.</td>
+</tr>
+<tr>
+<td style="width: 227px;">Título</td>
+<td style="width: 774px;">Texto que se mostrará en el título del mensaje. Si no se completa, el título del mensaje no se mostrará.</td>
+</tr>
+<tr>
+<td style="width: 227px;">Cadena de parámetros del mensaje</td>
+<td style="width: 774px;">
+<p>Parámetro de formato de mensaje.<br />Ejemplo: modal = Y & button = Y & button_label = Ok & redir = form_employees.php & redir_target = _blank</p>
+<p>Los detalles de este parámetro se detallan en la tabla 2.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 227px;">Cadena de parámetro de redireccion</td>
+<td style="width: 774px;">
+<p>En esta propiedad se pueden definir los valores para la aplicación de redireccionamiento. Esta propiedad funciona solo si la propiedad redir es informada. Los parámetros se deben ingresar en el siguiente formato: parámetro = valor, parámetro = valor.</p>
+<p>Por ejemplo, customer_id = ALFKI; customer_name = ALBERT FRANCINET</p>
+</td>
+</tr>
+<tr>
+<td style="width: 227px;">Cadena de parámetro Toast</td>
+<td style="width: 774px;">
+<p>Parámetro de formato de mensaje utilizando Toast.<br /><br /></p>
+<div><strong>- toast</strong>: Y o N</div>
+<div> </div>
+<div><strong>- toast_pos</strong>: 'top', 'top-start', 'top-end', 'center', 'center-start', 'center-end', 'bottom', 'bottom-start', 'bottom-end'</div>
+<div> </div>
+<div><strong>- type</strong>: 'warning', 'error', 'success', 'info', 'question'</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Tabla2: Cadena de parámetros de mensaje</strong></p>
+<table class="cls_tabela" style="height: 378px;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<th style="height: 18px; width: 93px;"><strong>Parámetros</strong></th>
+<th style="height: 18px; width: 588px;">Descripción</th>
+<th style="height: 18px; width: 399px;">Valores</th>
+<th style="height: 18px; width: 261px;">Exemplo</th>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 93px;">modal</td>
+<td style="height: 18px; width: 588px;">Flag para exibição da mensagem em modal</td>
+<td style="height: 18px; width: 399px;">Y o N</td>
+<td style="height: 18px; width: 261px;">modal=Y</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">timeout</td>
+<td style="height: 36px; width: 588px;">Tiempo en segundos para ocultar el mensaje. Si no se ingresa el mensaje se mostrará de forma indefinida. Esta propiedad solo funciona si la propiedad del botón no está habilitada.</td>
+<td style="height: 36px; width: 399px;">Seconds</td>
+<td style="height: 36px; width: 261px;">timeout=5</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">button</td>
+<td style="height: 36px; width: 588px;">Muestra el botón dentro del mensaje. Su operación por defecto es cerrar el mensaje. Si la redirección está habilitada, después de cerrar el mensaje, la aplicación será redirigida.</td>
+<td style="height: 36px; width: 399px;">Y o N</td>
+<td style="height: 36px; width: 261px;">button=Y</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 93px;">button_label</td>
+<td style="height: 18px; width: 588px;">Etiqueta de botón. Esta opción solo funciona si la propiedad del botón habilitó.</td>
+<td style="height: 18px; width: 399px;">String</td>
+<td style="height: 18px; width: 261px;">button=Y&button_label=OK</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">top</td>
+<td style="height: 36px; width: 588px;">Valor de posicionamiento del mensaje en píxeles desde el margen superior.</td>
+<td style="height: 36px; width: 399px;">Pixels Number</td>
+<td style="height: 36px; width: 261px;">top=300</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">left</td>
+<td style="height: 36px; width: 588px;">Valor de posicionamiento del mensaje en píxeles desde el margen izquierdo.</td>
+<td style="height: 36px; width: 399px;">Pixels Number</td>
+<td style="height: 36px; width: 261px;">left=200</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">width</td>
+<td style="height: 36px; width: 588px;">Valor del ancho del cuadro de mensaje en píxeles</td>
+<td style="height: 36px; width: 399px;">Pixels Number</td>
+<td style="height: 36px; width: 261px;">width=320</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">height</td>
+<td style="height: 36px; width: 588px;">Valor de altura del cuadro de mensaje en píxeles</td>
+<td style="height: 36px; width: 399px;">Pixels Number</td>
+<td style="height: 36px; width: 261px;">height=30</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 93px;">redir</td>
+<td style="height: 18px; width: 588px;">URL o nombre de la aplicación para redireccionar. Esta macro funciona solo si la propiedad "button" está habilitada.</td>
+<td style="height: 18px; width: 399px;">String</td>
+<td style="height: 18px; width: 261px;">button=Y&redir=form_employees.php</td>
+</tr>
+<tr style="height: 18px;">
+<td style="height: 18px; width: 93px;">redir_target</td>
+<td style="height: 18px; width: 588px;">Objetivo para redireccionar. Esta propiedad solo funciona cuando la propiedad "redir" está habilitada.</td>
+<td style="height: 18px; width: 399px;">String</td>
+<td style="height: 18px; width: 261px;">redir=form_employees.php&redir_target=_blank</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">show_close</td>
+<td style="height: 36px; width: 588px;">Bandera para la exposición del botón "cerrar" en la barra de título del cuadro de mensaje. Cuando se activa, este parámetro hace que se muestre una barra de título, incluso si no hay un título definido.</td>
+<td style="height: 36px; width: 399px;">Y o N</td>
+<td style="height: 36px; width: 261px;">show_close=Y</td>
+</tr>
+<tr style="height: 36px;">
+<td style="height: 36px; width: 93px;">body_icon</td>
+<td style="height: 36px; width: 588px;">Bandera para mostrar un icono en el cuerpo del mensaje. La exposición de iconos depende de la configuración del tema de aplicaciones (esquemas de exposición).</td>
+<td style="height: 36px; width: 399px;">Y o N</td>
+<td style="height: 36px; width: 261px;">body_icon=N</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Ejemplo 01</strong></p>
+<p><code>sc_ajax_message ("Mensaje", "Título", "timeout=0");</code></p>
+<p> </p>
+<p><strong>Ejemplo 02: Usando Toast</strong></p>
+<p><code>sc_ajax_message ("Mensaje", "Título", "toast=Y&toasto_pos=center-start&type=success");</code><strong><br /></strong></p>
+<p> </p>
+<blockquote>
+<p>Para mostrar el mensaje utilizando Toast, esta opción debe estar habilitada en la interfaz de la aplicación.</p>
+</blockquote>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>ajaxFieldonBlur<br>ajaxFieldonChange<br>ajaxFieldonClick<br>ajaxFieldonFocus<br>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

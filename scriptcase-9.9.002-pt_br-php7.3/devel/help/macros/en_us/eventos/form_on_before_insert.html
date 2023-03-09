@@ -1,0 +1,21 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before add a new record on the form application.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after form validation (onValidate and onValidateSuccess), when clicking the Insert button, and before executing the SQL command to add the record to the database.</p>
+<p> </p>
+<hr />
+<p>Example: We check the user privileges table before inserting the record, if he does not have privilege, we should send an error message.</p>
+<p>sc_lookup(priv_ins," select priv_ins from tb_privileges where login = [var_login] ");</p>
+<p>if({priv_ins [0][0]} != 'YES'){</p>
+<p>  sc_error_message(" you do not have privileges to perform this operation ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

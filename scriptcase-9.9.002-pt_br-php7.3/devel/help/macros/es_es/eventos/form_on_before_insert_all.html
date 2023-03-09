@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocurre antes de agregar un nuevo registro en una aplicación de formulario de registro múltiple.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocurre después de hacer clic en el botón Insertar del <strong>formulario de registro múltiple</strong>. El formulario luego ejecutará los eventos onValidate y onValidateSuccess, luego ejecutará el evento <strong>onBeforeInsertAll</strong> antes de comenzar la ejecución de los comandos SQL para insertar los registros en la base de datos.</p>
+<p> </p>
+<p><em>Nota: Este evento se activa solo una vez, independientemente del número de líneas insertadas con un clic en el botón Insertar.</em></p>
+<hr />
+<p>Ejemplo: Consultamos una tabla de privilegios de usuario antes de insertar el registro, si no tiene dicho privilegio, enviamos un mensaje de error.</p>
+<p>sc_lookup (priv_ins, "seleccione priv_ins de tb_privileges donde login = [var_login]");</p>
+<p>if ({priv_ins [0] [0]}! = 'SÍ') {</p>
+<p>sc_error_message ("no tiene privilegios para realizar esta operación");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

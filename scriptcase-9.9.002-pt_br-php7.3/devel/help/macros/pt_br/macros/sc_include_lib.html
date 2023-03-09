@@ -1,0 +1,147 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro é usada para selecionar dinamicamente as bibliotecas da aplicação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_include_lib("Lib1", "Lib2", ...)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/91hAk3todwk" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Assista um video</a>
+</div>
+<p>Esta macro &eacute; usada para selecionar dinamicamente as bibliotecas da aplica&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<table style="width: 300px;">
+<tbody>
+<tr>
+<td align="left" valign="top"><strong>Bibliotecas PHP</strong><strong class="corpo1"><br /></strong></td>
+<td align="left" valign="top"><span class="corpo1"><strong>Bibliotecas JavaScript</strong><br /></span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">tcpdf</td>
+<td class="corpo1" align="left" valign="top">Jquery</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">fpdf_html</td>
+<td class="corpo1" align="left" valign="top">jquery_thickbox</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">excel</td>
+<td class="corpo1" align="left" valign="top">jquery_blockui</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">rtf</td>
+<td class="corpo1" align="left" valign="top">tiny_mce</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><center>-</center></td>
+<td class="corpo1" align="left" valign="top">jquery_touch_punch</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><center>-</center></td>
+<td class="corpo1" align="left" valign="top">fusioncharts</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><center>-</center></td>
+<td class="corpo1" align="left" valign="top">jsmind</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><center>-</center></td>
+<td class="corpo1" align="left" valign="top">jkanban</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><center>-</center></td>
+<td class="corpo1" align="left" valign="top">orgchart</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo 1:</strong></p>
+<pre>sc_include_lib ("tcpdf");<br /> <br />$pdf=new TCPDF();<br />$pdf->AddPage();<br />$pdf->SetFont('Helvetica','B',16);<br />$pdf->Cell(40,10,'Saida de texto!');<br />$pdf->Output();</pre>
+<p><strong>Exemplo 2:</strong></p>
+<pre>?><br />sc_include_lib ("jsmind");<br />< ?php</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Calendário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Gráfico
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Filtro
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Menu árvore
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicação Report PDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

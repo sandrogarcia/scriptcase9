@@ -1,0 +1,98 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro modifica dinámicamente un campo que se recuperará en la Consulta.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_select_field({Campo})<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Ver un video tutorial" href="https://youtu.be/YhWDIbKm-wM" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Ver un vídeo tutorial</a>
+</div>
+<p>Esta macro modifica din&aacute;micamente el SELECT:<br />Es posible modificar din&aacute;micamente los campos de la cuadr&iacute;cula a trav&eacute;s de la modificaci&oacute;n din&aacute;mica de la selecci&oacute;n original.</p>
+<p><span class="corpo1"><br /><strong>Ej. 1:</strong><br />Se usa una tabla con las columnas a&ntilde;o y los meses de enero a diciembre para crear una grid usando un par&aacute;metro, muestra los a&ntilde;os y solo un mes espec&iacute;fico. Al pasar el par&aacute;metro como una variable global llamada "show_month", en la aplicaci&oacute;n se encuentra la siguiente estructura:<br /><br /><strong>Seleccionar cl&aacute;usula</strong>: seleccionar a&ntilde;o, par_mes de la tabla<br /></span></p>
+<p>sc_select_field(pair_month) = [show_month];<br />sc_label(pair_month) = [show_month];</p>
+<p><br />Modifique la selecci&oacute;n y la etiqueta de la columna del Grid.</p>
+<p><span class="corpo1"><br />Es posible, durante el tiempo de ejecuci&oacute;n de la cuadr&iacute;cula, modificar la cl&aacute;usula ORDER BY de la cuadr&iacute;cula.<br />Se requiere al menos un ORDER BY en el comando SQL de la cuadr&iacute;cula original para permitir la ejecuci&oacute;n de sustituci&oacute;n durante el tiempo de la cuadr&iacute;cula.<br /></span></p>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ej. 2:</strong> Seleccionar cl&aacute;usula: seleccione el c&oacute;digo, el nombre, el valor del orden de la tabla por c&oacute;digo. Para cambiar el orden, de c&oacute;digo a nombre, use: sc_select_order ("code") = "name";<br /><br /><strong>Nota:</strong> Este comando debe estar en el contexto del evento "onInit";<br /></span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

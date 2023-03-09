@@ -1,0 +1,22 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs before the update of a record in a multiple register form.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event occurs after clicking the Save button on the <strong>multi-record form</strong>. The form will then execute the events onValidate and onValidateSuccess, and then execute the event <strong>onBeforeUpdateAll</strong> before starting the execution of SQL commands to update records in the database.</p>
+<p><em>Note: This event is triggered only once, regardless of the amount of rows updated in one click on the Save button.</em></p>
+<p> </p>
+<hr />
+<p>As examples we can see in the example below, we consult a user privileges table before updating the record, if it does not have such privilege, we send an error message.</p>
+<p>sc_lookup(priv_upd ," select priv_upd from tb_privileges where login = [var_login] ");</p>
+<p>if({priv_upd [0][0]} != 'YES'){</p>
+<p>sc_error_message(" you do not have privileges to perform this operation ");</p>
+<p>}</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

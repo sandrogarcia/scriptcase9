@@ -1,0 +1,25 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs immediately before printing a row.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>This event is executed immediately before the display of each record displayed in the query, regardless of user interaction.</p>
+<p>Thus, it is commonly used for data manipulation and validation, creating links with the <code>sc_link</code> macro or changing the layout with the <code>sc_field_style</code> macro, based on the displayed information.</p>
+<p><span style="font-weight: 400;"> </span></p>
+<hr />
+<p>In the example below, the style of the text in the <code>{priceorder}</code> field will change according to the value.</p>
+<p>For values below 500 reais, the text will have a different color from values above 500 reais,</p>
+<p><strong>Samples Code</strong></p>
+<p><code><span style="font-weight: 400;">if ( {priceorder} < 500 ) {</span></code></p>
+<p><code></code><code></code><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#228B22", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">} else {<br /></span></code></p>
+<p><code><span style="font-weight: 400;">   sc_field_style({priceorder}, "Background-Color", "15", "#006400", "", "bold");<br /></span></code></p>
+<p><code><span style="font-weight: 400;">}</span></code></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

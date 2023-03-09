@@ -1,0 +1,113 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Menu - Aplicação Filtro - onFilterValidate</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+<script language='JavaScript' type='text/javascript'>
+
+var str_macro = '';
+
+parent.wiz.location.href = '../../nowiz.html';
+parent.macro.location.href = '../eventos/filter_on_validate.html';
+
+function linkMacroWiz(basepath, path, macro, arqtipo, wiz) {
+		parent.wiz.location.href = '../' + basepath + wiz + arqtipo;
+		parent.macro.location.href = basepath + path + macro + arqtipo;
+		str_macro = macro;
+}
+
+function getMacro() {
+	return str_macro;
+}
+function afterOnLoad() {
+}
+
+</script>
+<style type='text/css'>
+	BODY { margin: 0px; }
+</style>
+<table width='100%' height='100%' cellpadding='0' cellspacing='0' border='0'><tr><td height='100%' valign='top'>
+<script type="text/javascript">
+		
+			
+var TREE1_NODES = 
+[["Macros para este evento", "javascript:linkMacroWiz('../', 'eventos/', 'filter_on_validate', '.html', 'nowiz');", null, {format:{expanded:true}}, 
+	["SQL", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_1', '.html', 'nowiz');", null, 
+		['sc_begin_trans', "javascript:linkMacroWiz('../', 'macros/', 'sc_begin_trans', '.html', 'wiz');", null], 
+		['sc_commit_trans', "javascript:linkMacroWiz('../', 'macros/', 'sc_commit_trans', '.html', 'wiz');", null], 
+		['sc_concat', "javascript:linkMacroWiz('../', 'macros/', 'sc_concat', '.html', 'wiz');", null], 
+		['sc_connection_edit', "javascript:linkMacroWiz('../', 'macros/', 'sc_connection_edit', '.html', 'wiz');", null], 
+		['sc_connection_new', "javascript:linkMacroWiz('../', 'macros/', 'sc_connection_new', '.html', 'wiz');", null], 
+		['sc_exec_sql', "javascript:linkMacroWiz('../', 'macros/', 'sc_exec_sql', '.html', 'wiz');", null], 
+		['sc_lookup', "javascript:linkMacroWiz('../', 'macros/', 'sc_lookup', '.html', 'wiz');", null], 
+		['sc_reset_connection_edit', "javascript:linkMacroWiz('../', 'macros/', 'sc_reset_connection_edit', '.html', 'wiz');", null], 
+		['sc_reset_connection_new', "javascript:linkMacroWiz('../', 'macros/', 'sc_reset_connection_new', '.html', 'wiz');", null], 
+		['sc_rollback_trans', "javascript:linkMacroWiz('../', 'macros/', 'sc_rollback_trans', '.html', 'wiz');", null], 
+		['sc_select', "javascript:linkMacroWiz('../', 'macros/', 'sc_select', '.html', 'wiz');", null], 
+		['sc_set_fetchmode', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_fetchmode', '.html', 'wiz');", null], 
+		['sc_sql_injection', "javascript:linkMacroWiz('../', 'macros/', 'sc_sql_injection', '.html', 'wiz');", null], 
+		['sc_sql_protect', "javascript:linkMacroWiz('../', 'macros/', 'sc_sql_protect', '.html', 'wiz');", null], 
+		['sc_where_orig', "javascript:linkMacroWiz('../', 'macros/', 'sc_where_orig', '.html', 'wiz');", null], 
+		['Variables - Database', "javascript:linkMacroWiz('../', 'macros/', 'Variables-Database', '.html', 'wiz');", null], 
+	],
+	["Data", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_2', '.html', 'nowiz');", null, 
+		['sc_date', "javascript:linkMacroWiz('../', 'macros/', 'sc_date', '.html', 'wiz');", null], 
+		['sc_date_conv', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_conv', '.html', 'wiz');", null], 
+		['sc_date_dif', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_dif', '.html', 'wiz');", null], 
+		['sc_date_dif_2', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_dif_2', '.html', 'wiz');", null], 
+		['sc_date_empty', "javascript:linkMacroWiz('../', 'macros/', 'sc_date_empty', '.html', 'wiz');", null], 
+		['sc_time_diff', "javascript:linkMacroWiz('../', 'macros/', 'sc_time_diff', '.html', 'wiz');", null], 
+	],
+	["Controle", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_3', '.html', 'nowiz');", null, 
+		['sc_calc_dv', "javascript:linkMacroWiz('../', 'macros/', 'sc_calc_dv', '.html', 'wiz');", null], 
+		['sc_call_api', "javascript:linkMacroWiz('../', 'macros/', 'sc_call_api', '.html', 'wiz');", null], 
+		['sc_decode', "javascript:linkMacroWiz('../', 'macros/', 'sc_decode', '.html', 'wiz');", null], 
+		['sc_encode', "javascript:linkMacroWiz('../', 'macros/', 'sc_encode', '.html', 'wiz');", null], 
+		['sc_error_exit', "javascript:linkMacroWiz('../', 'macros/', 'sc_error_exit', '.html', 'wiz');", null], 
+		['sc_error_message', "javascript:linkMacroWiz('../', 'macros/', 'sc_error_message', '.html', 'wiz');", null], 
+		['sc_get_language', "javascript:linkMacroWiz('../', 'macros/', 'sc_get_language', '.html', 'wiz');", null], 
+		['sc_get_regional', "javascript:linkMacroWiz('../', 'macros/', 'sc_get_regional', '.html', 'wiz');", null], 
+		['sc_get_theme', "javascript:linkMacroWiz('../', 'macros/', 'sc_get_theme', '.html', 'wiz');", null], 
+		['sc_include', "javascript:linkMacroWiz('../', 'macros/', 'sc_include', '.html', 'wiz');", null], 
+		['sc_include_library', "javascript:linkMacroWiz('../', 'macros/', 'sc_include_library', '.html', 'wiz');", null], 
+		['sc_mail_send', "javascript:linkMacroWiz('../', 'macros/', 'sc_mail_send', '.html', 'wiz');", null], 
+		['sc_redir', "javascript:linkMacroWiz('../', 'macros/', 'sc_redir', '.html', 'wiz');", null], 
+		['sc_reset_global', "javascript:linkMacroWiz('../', 'macros/', 'sc_reset_global', '.html', 'wiz');", null], 
+		['sc_send_mail_api', "javascript:linkMacroWiz('../', 'macros/', 'sc_send_mail_api', '.html', 'wiz');", null], 
+		['sc_send_sms', "javascript:linkMacroWiz('../', 'macros/', 'sc_send_sms', '.html', 'wiz');", null], 
+		['sc_send_whatsapp', "javascript:linkMacroWiz('../', 'macros/', 'sc_send_whatsapp', '.html', 'wiz');", null], 
+		['sc_set_global', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_global', '.html', 'wiz');", null], 
+		['sc_set_language', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_language', '.html', 'wiz');", null], 
+		['sc_set_regional', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_regional', '.html', 'wiz');", null], 
+		['sc_set_theme', "javascript:linkMacroWiz('../', 'macros/', 'sc_set_theme', '.html', 'wiz');", null], 
+		['sc_statistic', "javascript:linkMacroWiz('../', 'macros/', 'sc_statistic', '.html', 'wiz');", null], 
+		['sc_trunc_num', "javascript:linkMacroWiz('../', 'macros/', 'sc_trunc_num', '.html', 'wiz');", null], 
+		['sc_url_library', "javascript:linkMacroWiz('../', 'macros/', 'sc_url_library', '.html', 'wiz');", null], 
+		['sc_warning', "javascript:linkMacroWiz('../', 'macros/', 'sc_warning', '.html', 'wiz');", null], 
+		['sc_zip_file', "javascript:linkMacroWiz('../', 'macros/', 'sc_zip_file', '.html', 'wiz');", null], 
+	],
+	["Exibição", "javascript:linkMacroWiz('../', '', 'list_filter_on_validate_7', '.html', 'nowiz');", null, 
+		['sc_format_num', "javascript:linkMacroWiz('../', 'macros/', 'sc_format_num', '.html', 'wiz');", null], 
+		['sc_format_num_region', "javascript:linkMacroWiz('../', 'macros/', 'sc_format_num_region', '.html', 'wiz');", null], 
+	],
+
+]];
+    
+			
+			
+var TREE1_FORMAT = [0, 0, true, ["cool_js_c.png", "cool_js_e.png", "cool_js_b.gif"], [ 16, 16, 0], true, ["cool_js_fc.png", "cool_js_fe.png", "cool_js_d.png"], [ 16, 16], [ 0, 16, 32, 64], "#FFFFFF", "clsNode", ["nmText", "nmText", "nmText", "nmText", "nmText", "nmText"], false, [ 0, 0 ], true, ["cool_js_folder.png", "cool_js_folderopen.png", "cool_js_evt_macro.gif", "cool_js_minus.png", "cool_js_minusbottom.png", "cool_js_plus.png", "cool_js_plusbottom.png", "cool_js_line.png", "cool_js_join.png", "cool_js_joinbottom.png"], [ 16, 16 ], true, true, [ 200, 50 ], true, true, ["#FFFFFF", "#FFFFFF", "nmText", "nmText"], 0, "top"];
+				
+			var myTree = new COOLjsTreePRO("tree1", TREE1_NODES, TREE1_FORMAT);
+
+			myTree.init();
+			myTree.collapseAll();
+			myTree.expandNode(0);
+			
+			
+</script></td></tr>
+<tr><td>&nbsp;</td></tr></table>
+
+</HTML>

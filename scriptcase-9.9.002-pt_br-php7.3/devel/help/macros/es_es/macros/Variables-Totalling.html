@@ -1,0 +1,71 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Variables que contiene todos los totales (generales y para agrupar).</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">Variables-TotallingTotalización de variables<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Durante el procesamiento de grupo por y resumen, Scriptcase genera variables totales para cada nivel de grupo.</p>
+<p>Las rutinas se definen en el evento "<strong>onGroupBy</strong>" que determina los niveles de agrupamiento y se puede evaluar para cada registro. Luego se hace referencia a las variables especiales de totales sustituyendo el nombre del grupo por la palabra clave "<strong>groupby</strong>", como en:<br /><br /></p>
+<table style="width: 454px; height: 144px;" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Variables<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_ger}</span></td>
+<td class="corpo1" align="left" valign="top">N&uacute;mero general de registros.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_parcel}</span></td>
+<td class="corpo1" align="left" valign="top">Devuelve la suma del campo "parcela"</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_balance}</span></td>
+<td class="corpo1" align="left" valign="top">Devuelve la suma del campo de saldo</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{count_groupby}</span></td>
+<td class="corpo1" align="left" valign="top">N&uacute;mero de registros de la agrupaci&oacute;n.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_groupby_parcel}</span></td>
+<td class="corpo1">Contiene la suma del campo "parcela" de la agrupaci&oacute;n que se est&aacute; procesando.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">{sum_groupby_balance}</span></td>
+<td class="corpo1" align="left" valign="top">Contiene la suma del campo "balance" de la agrupaci&oacute;n que se est&aacute; procesando.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span class="corpo1"><strong>Ej. 1: En una aplicaci&oacute;n con un grupo por estado y ciudad que utiliza un campo de saldo, en los totales de grupo, es posible mostrar el promedio (promedio) en lugar del saldo de la siguiente manera.</strong><br /><br />{sum_<span class="corpo1">groupby</span>_balance} = {sum_<span class="corpo1">groupby</span>_balance} / {count_<span class="corpo1">groupby</span>};</span></p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+								
+						</tr>
+						<tr>
+								
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

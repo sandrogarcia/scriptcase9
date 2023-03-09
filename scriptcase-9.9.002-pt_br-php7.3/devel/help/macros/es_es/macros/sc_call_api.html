@@ -1,0 +1,172 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro le permite utilizar las API de Scriptcase de la API</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_call_api($profile, $arr_settings)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p class="body1">Permite utilizar las API integradas con Scriptcase. Actualmente ofrecemos la integraci&oacute;n con Mandrill y Amazon SES API.</p>
+<p>Esta macro tiene dos par&aacute;metros:</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">Par&aacute;metros</strong></td>
+<td align="left"><strong class="corpo1">Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$profile</td>
+<td class="corpo1" align="left">Par&aacute;metro requerido. Puede ser vac&iacute;o '' o contener el nombre de la puerta de enlace configurada en "Herramientas> API".</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$arr_settings</td>
+<td class="corpo1" align="left">This parameter is optional, as long as the "profile" is not empty.Cuando el mismo es informado debe contenr un Array con la puerta usada y la API key.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Ej.1 - Configuraci&oacute;n de par&aacute;metros, array con informaci&oacute;n de la API.</strong></p>
+<pre>$settings = array( 'settings' => ['gateway' => 'mandrill', 'api_key'=> {api_key}] );
+
+$mandrill = sc_call_api('', $settings);
+</pre>
+<p>&nbsp;</p>
+<p><strong>Ej. 2: Env&iacute;o de correo electr&oacute;nico usando Mandril.</strong></p>
+<pre>$txt_no_tags = strip_tags({body});
+
+$arr_merge = array(
+                'name'  => '',
+                'type'  => 'to',
+                'email' => 'example@exemple.com'
+            );
+
+$var_config = array( 'settings' => ['gateway' => 'mandrill', 'api_key'=> {api_key}] );
+
+$mandrill = sc_call_api('', $var_config);
+$var_msg = array(
+              'from_email'                     => {from_email},
+              'from_name'                      => {from_name},
+               'html'                          => {body},
+               'text'                          => $txt_no_tags,
+               'to'                            => array($arr_merge),              
+               'subject'                       => {subject},
+               'important'                     => true,            
+               'auto_text'                     => null,
+               'auto_html'                     => null,
+               'inline_css'                    => null,
+               'metadata'                      => array('website' => 'www.scriptcase.net')
+   );
+
+$async = false;
+$return = $mandrill->messages->send($var_msg, $async);
+</pre>
+<p><strong>Ej. 3 - Env&iacute;o de SMS usando clickatell.</strong></p>
+<pre>$var_config     = array( 
+  'message'     => [
+    'to'      => {sms_to},
+    'message'     => {sms_txt},
+    ],
+    'settings'    => [
+    'gateway'   => {gateway},
+    'auth_token'  => {auth_token},
+    ] 
+);
+
+sc_send_sms($var_config);
+</pre>
+<p><strong>Ej. 4 - Uso de la macro con PayPal</strong></p>
+<pre>  $arr_settings = [
+            'gateway' => 'paypal',
+            'environment' => 'sandbox',
+            'auth_email' => 'vitorjamil@gmail.com',
+            'auth_token' => '72AE21503DDA4840BE1DC7945F6D1CE1'
+                 ];
+sc_call_api('',$arr_settings);
+</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Blank
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Calendario
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Gráfica
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Grid
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Búsqueda
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Formulário
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Controle
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación ReportPDF
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

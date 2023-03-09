@@ -1,0 +1,82 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Disables the buttons created on the action bar.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_disable("button_name")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Disables the action bar button, making it unavailable for clicking.</p>
+<blockquote>
+<p>This macro can be used for any type of button (link or ajax) on the action bar.</p>
+</blockquote>
+<h2>Parameter definition</h2>
+<table style="width: 1871px;" border="1">
+<tbody>
+<tr>
+<td style="width: 232.734px;">Parameter</td>
+<td style="width: 398.188px;">Syntax</td>
+<td style="width: 1197.73px;">Description</td>
+</tr>
+<tr>
+<td style="width: 232.734px;">button_name</td>
+<td style="width: 398.188px;">
+<p><strong>It is not possible to use variables</strong>, the name of the button must be informed using <strong>double quotes</strong> or <strong>single quotes</strong>.</p>
+<p><strong>Example<br /></strong><code>sc_actionbar_disable<span style="color: #4d4d4d; font-family: OpenSans, Raleway, Lato, Arial, sans-serif; font-size: 16px; text-align: justify;">(<strong>"ajax_btn"</strong>);</span></code></p>
+</td>
+<td style="width: 1197.73px;">
+<p><strong>This parameter is mandatory.</strong></p>
+<p>We must inform the name of the action bar button that will be disabled.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>Examples</h2>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example 1</strong>: Basic macro usage</p>
+<pre>sc_actionbar_disable("link_detalhe");</pre>
+<hr />
+<p>&nbsp;</p>
+<p><strong>Example </strong><strong>2:&nbsp;</strong>Disabling the link button to the order detail if there are no items in the order.</p>
+<pre><span style="color: #7e8c8d;"><span style="color: #ced4d9;"><span style="color: #ced4d9;">// Example created in the onRecord event of the grid using the order and orderdetail table
+// If there are no items in the order, the button will be disabled<br /></span></span><span style="color: #7e8c8d;"><br />$query = "SELECT count(*) FROM OrderDetails WHERE OrderID = ". {OrderID};
+sc_lookup(ds, $query);
+
+if ({ds[0][0]} == 0) {<br /><br />    </span><span style="color: #ced4d9;">//Exemplo de utiliza&ccedil;&atilde;o da macro sc_actionbar_disable</span>
+    <span style="color: #000000;"><strong>sc_actionbar_disable("</strong>button_name<strong>");</strong></span><span style="color: #7e8c8d;"><br /><br /></span></span><span style="color: #7e8c8d;">} else { <br /><br /></span><span style="color: #7e8c8d;">    sc_actionbar_enable("button_name");</span><br /><span style="color: #7e8c8d;"> <br />}</span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

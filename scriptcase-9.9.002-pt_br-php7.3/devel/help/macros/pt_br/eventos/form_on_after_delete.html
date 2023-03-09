@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre após que algum resgistro tenha sido deletado.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Excluir do formulário. O formulário executará, na sequência, os eventos onValidate, onValidateSuccess e onBeforeDelete, e então, logo após executar o comando SQL de exclusão do registro no banco de dados, ele executará o evento onAfterDelete.</p>
+<p> </p>
+<hr />
+<p><strong>Exemplo:</strong> Depois da exclusão do registro podemos criar logs com facilidade, conforme o código abaixo:</p>
+<p>sc_exec_sql(" insert into tb_log values([glo_usuario],'exclusao','tabela_clientes',{codigo}); //gravamos alem dos literais 'exclusão' e 'tabela_clientes', a variável de sessão [glo_usuario], e a variável local {codigo}, que continha o conteúdo do campo código recém excluído</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

@@ -1,0 +1,96 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Esta macro agrega dinámicamente un elemento al menú.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_appmenu_add_item("Menu_Name", "Id_Item", "Id_Parent", "Etiqueta", "Aplicación", "Parámetros", "Icono", "Sugerencia", "Objetivo")<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>Agrega din&aacute;micamente&nbsp; un elemento a una aplicaci&oacute;n de men&uacute;.</p>
+<p><strong>Solo es posible usar esta macro cuando hay una matriz creada anteriormente por la macro <em>sc_appmenu_create</em>.</strong></p>
+<table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td><strong>Parametro</strong></td>
+<td><strong>Descripci&oacute;n</strong></td>
+</tr>
+<tr>
+<td>Menu_name</td>
+<td>Nombre del men&uacute; de la aplicaci&oacute;n.</td>
+</tr>
+<tr>
+<td>Id_item</td>
+<td>ID del elemento de men&uacute;.</td>
+</tr>
+<tr>
+<td>Id_Parent</td>
+<td>ID del elemento de men&uacute;. Si el elemento es ra&iacute;z, el valor ese par&aacute;metro se debe pasar en blanco.</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>Descripci&oacute;n para el elemento de men&uacute;</td>
+</tr>
+<tr>
+<td>Aplicaci&oacute;n</td>
+<td>Elemento de men&uacute; URL o nombre de la aplicaci&oacute;n...</td>
+</tr>
+<tr>
+<td>Parametros</td>
+<td>Cadena con par&aacute;metros para pasar a la aplicaci&oacute;n del elemento de men&uacute;.<br />Ej.: param1=valor;param2=valor</td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>Ruta del icono utilizado en el elemento del men&uacute;.</td>
+</tr>
+<tr>
+<td>Hint</td>
+<td>Descripci&oacute;n descriptiva del elemento del men&uacute;.</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>Objetivo para el enlace del elemento de men&uacute;. ("_self" para usar la misma ventana, "_blank" a una nueva y "_parent" para salir de la ventana.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Ej. 1:</strong> <strong>Crea un men&uacute; llamado menu_main.</strong><br />sc_appmenu_create('menu_main');<br /><br /><strong><br />Ej. 2:</strong> <strong>Agrega un en el menu_main el elemento_1 llamado Category.</strong><br />sc_appmenu_add_item('menu_main','item_1','','Category','');<br /><br /><br /><strong>Ej. 3: Agrega en el men&uacute;_main (elemento_2) al elemento_1 Nombre Categor&iacute;a vinculado a form_category pasando algunos par&aacute;metros. </strong><br />sc_appmenu_add_item('menu_main','item_2','item_1','Category Form','form_category','param1=value;param2=value');</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onLoad
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

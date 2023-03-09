@@ -1,0 +1,24 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This event occurs when navigating among the grid pages.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>In the query application, this event runs in two situations:</p>
+<ul>
+<li>When configured with partial paging, the event is executed when navigating between pages using the <strong>navigation buttons</strong>, <strong>navigation by page</strong> or the <strong>Jump to</strong> option.</li>
+<li>When configuring the application with <strong>Infinite Scroll</strong>, it is executed every time records are loaded.</li>
+</ul>
+<p>Unlike other events, this one depends on user interaction to be triggered, allowing, for example, that any validation or layout change is performed only after this interaction.</p>
+<blockquote>
+<p><strong>Note</strong></p>
+<p>The query navigation is performed by ajax, thus, it is not possible to use Javascript codes (JQuery, Ajax).</p>
+<p>When using full paging in the application, the event is not executed.</p>
+</blockquote>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

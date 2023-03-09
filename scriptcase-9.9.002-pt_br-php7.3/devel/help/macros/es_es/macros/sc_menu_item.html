@@ -1,0 +1,56 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p> Esta macro identifica el elemento de menú seleccionado. </p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_menu_item<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p><a title="Ver v&iacute;deo tutorial" href="https://youtu.be/UC3sY3Wg2Kw?list=PLDMYt0EmYW5xcBhHKCMpG089WuUXiTUF1" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" width="24" height="24" /></a></p>
+<p>Ver un v&iacute;deo tutorial</p>
+<p>Esta variable solo est&aacute; disponible para la aplicaci&oacute;n de men&uacute; y tiene el objetivo de dar acceso a un &iacute;tem del men&uacute; que fue seleccionado, de esta manera el usuario puede tomar las decisiones antes de ejecutar la aplicaci&oacute;n.</p>
+<p>&nbsp;</p>
+<p><strong>Ej. 1:&nbsp;Para limpiar la variable global.</strong><br />if ({sc_menu_item} == "item_1")<br />{<br />sc_reset_global([global1], [global2]);<br />}<br /><br /><br /><strong>Ej. 2: Si una aplicaci&oacute;n requiere una variable global, otra aplicaci&oacute;n puede inicializarla en consecuencia.</strong></p>
+<p>if ({sc_menu_item} == "item_5" && (!isset([glo_employ]) || empty([glo_employ])))<br />{<br />sc_redir(apl_inf_emp);<br />}</p>
+<p>&nbsp;</p>
+<p><strong><br />Ej. 2: Usando el bot&oacute;n en el men&uacute; de la barra de herramientas.</strong><br />if ({sc_menu_item} == "btn_1")<br />{<br />sc_apl_conf("form_customer", "start", "new");<br />}</p>
+<p>&nbsp;</p>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicación Menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Aplicación Menú Arból
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

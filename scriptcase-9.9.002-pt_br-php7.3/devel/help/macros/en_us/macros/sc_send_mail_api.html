@@ -1,0 +1,231 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE><p>Enables dynamic sending of embedded emails with Mandrill and Amazon SES</p></TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_send_mail_api($arr_settings)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/RTLgOd-USJM" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a>
+</div>
+<p class="body1">This macro allows dynamic sending of embedded emails with the <strong>Mandrill</strong> and <strong>Amazon SES</strong> APIs. It is also possible to send e-mail using the <strong>SMTP</strong> protocol.</p>
+<blockquote style="color: #4d4d4d;">This macro uses the same mandrill parameters to send e-mail, regardless of the Gateway (Changer, Amazon SES or SMTP) selected. <a href="https://mandrillapp.com/api/docs/messages.JSON.html#method=send" target="_blank" rel="noopener"> click here </a> and see the list of parameters that can be used.</blockquote>
+<p>This macro contains a single parameter "<strong>$arr_settings</strong>", which receives an array with the email sending information.</p>
+<blockquote style="color: #4d4d4d;">For more information on the parameters the mandirll <a href="https://mandrillapp.com/api/docs/messages.JSON.html" target="_blank" rel="noopener"> click here</a></blockquote>
+<p>.</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">Parameter <br /></strong></td>
+<td align="left"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">$arr_settings</td>
+<td class="corpo1" align="left">Array with information for use of APIs.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" width="17%"><strong class="corpo1">Array indices<br /></strong></td>
+<td align="left"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left">profile</td>
+<td class="corpo1" align="left">Name of some API already configured in "Tools> API", as can be seen in Example 1. When informing a profile, the <strong>settings</strong> index should not be informed.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">settings</td>
+<td class="corpo1" align="left">E-mail sending server settings. The information must conform to the API used. Note: When informing the settings, the Profile index is disregarded.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left">message</td>
+<td class="corpo1" align="left">Message that will be sent by email. Subject, body, to, etc.</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Example 1:</strong> <strong>Sending e-mail using a pre-configured Profile in "Tools> API".</strong></p>
+<pre>if({api_type} == 'smtp' ){
+	$var_config = array(
+		'profile' => 'yahoo_example',
+
+		'message' => [
+			'html'          => {email_body},
+			'text'          => '',
+			'to'            => $arr_merge,
+			'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</pre>
+<p>&nbsp;</p>
+<p><strong>Example 2:</strong> <strong>Sending e-mail via SMTP</strong></p>
+<pre>$smtp_server = "smtp.mail.yahoo.com";
+$smtp_port = "465";
+$smtp_user = "scriptcase.export";
+$smtp_password = "scriptcase.export";
+$from_email = "scriptcase.export@yahoo.com";
+$from_name = "Scriptcase Export";
+
+if ( {api_type} == 'smtp' ){
+	$var_config = array(
+
+		'profile' => '',
+
+		'settings' => [
+				'gateway'       => 'smtp',
+				'smtp_server'   => $smtp_server,
+				'smtp_port'     => $smtp_port,
+				'smtp_user'     => $smtp_user,
+				'smtp_password' => $smtp_password,
+				'from_email'    => $from_email,
+				'from_name'     => $from_name
+		],
+
+		'message' => [
+				   'html'          => {email_body},
+				   'text'          => '',
+				   'to'            => $arr_merge,
+				   'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</pre>
+<p>&nbsp;</p>
+<p><strong>Example 3:</strong> <strong>Sending email using Mandrill API</strong></p>
+<pre>if({api_type} == 'mandrill' ){
+	$var_config = array(
+		'settings' => [
+				   'gateway'       => 'mandrill',
+				   'api_key'   	   => {api_key},
+				   'from_email'    => {from_email},
+				   'from_name'     => {from_name}
+		],
+
+		'message' => [
+				   'html'          => {email_body},
+				   'text'          => '',
+				   'to'            => array($arr_merge),
+				   'subject'       => {subject}
+		]
+	);
+}
+
+sc_send_mail_api($var_config);
+</pre>
+<p>&nbsp;</p>
+<p><strong>Example 4:</strong> <strong>Sending email using Amazon SES API</strong></p>
+<pre>if({api_type} == 'ses' ){
+	$var_config = array(
+		'settings' =>  [
+	        'gateway' => 'ses',
+	        'region' => {ses_region},
+	        'api_key' => {api_key},
+	        'api_secret' => {ses_secret},
+	        'from_email'    => {from_email}
+	    ],
+	    'message' => [
+	        'html'          => {email_body},
+	        'text'          => '',
+	        'to'            => array($arr_merge),
+	        'subject'       => {subject}
+	    ]
+	);
+}
+
+sc_send_mail_api($var_config);
+</pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onExecute
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterInsert<br>onAfterUpdate<br>onBeforeDelete<br>onBeforeInsert<br>onBeforeUpdate<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFooter<br>onHeader<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick<br>allMacros<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onFilterInit<br>onFilterSave<br>onFilterValidate
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onAfterDelete<br>onAfterDeleteAll<br>onAfterInsert<br>onAfterInsertAll<br>onAfterUpdate<br>onAfterUpdateAll<br>onBeforeDelete<br>onBeforeDeleteAll<br>onBeforeInsert<br>onBeforeInsertAll<br>onBeforeUpdate<br>onBeforeUpdateAll<br>onClick<br>onInit<br>onLoadAll<br>onNavigate<br>onRecord<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit<br>onLoadAll<br>onRefresh<br>onValidate<br>onValidateFailure<br>onValidateSuccess
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onApplicationInit<br>onExecute<br>onLoad
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onFooter<br>onHeader<br>onInit<br>onRecord
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

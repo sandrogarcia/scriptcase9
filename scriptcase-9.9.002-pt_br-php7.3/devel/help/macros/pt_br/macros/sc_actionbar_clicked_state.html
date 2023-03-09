@@ -1,0 +1,61 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Recupera o ID do estado atual do botão ajax criado na barra de ação.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_actionbar_clicked_state()<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<p>A macro&nbsp;<code><span style="font-family: monospace;">sc_actionbar_clicked_state()</span></code> possibilita que o desenvolvedor recupere o estado atual do bot&atilde;o no momento do clique no bot&atilde;o ajax da barra de a&ccedil;&atilde;o.</p>
+<p>Desta forma &eacute; poss&iacute;vel validar o estado atual do bot&atilde;o e alter&aacute;-lo de acordo com sua regra de neg&oacute;cio.</p>
+<blockquote>
+<p>Esta macro &eacute; exclusiva para utiliza&ccedil;&atilde;o do <strong>evento ajax do bot&atilde;o</strong> da barra de a&ccedil;&atilde;o.</p>
+</blockquote>
+<h2>Exemplos</h2>
+<hr />
+<p><strong>Exemplo:</strong> Identifica&ccedil;&atilde;o do estado atual do bot&atilde;o no evento ajax, para altera&ccedil;&atilde;o do estado ao clicar.</p>
+<pre><span style="color: #7e8c8d;">// Recupera o estado do bot&atilde;o clicado.<br />// No c&oacute;digo abaixo estamos validando se o estado atual do campo &eacute; pendente<br /><br />if (<strong><span style="color: #000000;">sc_actionbar_clicked_state()</span></strong> <span style="color: #000000;"><strong>==</strong> <strong>'pendente'</strong></span>) {
+
+    sc_actionbar_state('ajax_btn', 'enviado');
+
+} else {
+
+    sc_actionbar_state('ajax_btn', 'pendente');
+
+}</span></pre>
+<hr />
+<p><span style="color: #000000;"><strong>Exemplo: </strong>Recuperando o estado do bot&atilde;o ajax criado na barra de a&ccedil;&atilde;o e exibindo o resultado.</span></p>
+<pre><span style="color: #000000;">echo&nbsp;</span><span style="color: #7e8c8d;"><span style="color: #000000;">sc_actionbar_clicked_state();</span></span></pre>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Escopo da Macro</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Aplicação Consulta
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #f7f4f4'>ajaxFieldonClick
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

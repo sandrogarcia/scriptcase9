@@ -1,0 +1,57 @@
+<?php
+/* Classes ancestrais */
+nm_load_class('xmlparser', 'XmlparserIniDefinition');
+
+/* Definicao da classe */
+class nmXmlparserIniDefinitionOneTable extends nmXmlparserIniDefinition
+{
+
+
+    var $erros;
+    var $tableDefinition;
+    var $teste;
+    var $table;
+    var $fields;
+    var $subtypes;
+    var $indexes;
+    var $index;
+    var $fields_in;
+    var $tipo;
+    var $achou_tabela;
+    var $parar_tratamento;
+
+    /* ----- Construtor e Destrutor ------------------------------------ */
+
+    /**
+     * Construtor da classe.
+     *
+     * Seta o elemento raiz do XML.
+     *
+     * @access  public
+     * @param   string  $v_str_group  Grupo de trabalho do ScriptCase.
+     * @global  array   $nm_config    Array com configuracao do ScriptCase.
+     */
+    function __construct($v_str_group, $v_str_file = 'dbmanager')
+    {
+        global $nm_config;
+        if (!@is_dir($nm_config['path_grp'] . $v_str_group . '/def/'))
+        {
+            nm_dir_create($nm_config['path_grp'] . $v_str_group . '/def/');
+        }
+        $this->SetRoot('database');
+        $this->SetDir($nm_config['path_grp'] . $v_str_group . '/def/');
+        $this->SetFile($v_str_file);
+    } // nmXmlparserIniDefinition
+
+    //public
+    function setTableDefinition($v_str_table)
+    {
+        $this->tableDefinition = $v_str_table;
+    }
+    //public
+    function GetTableDefinition()
+    {
+        return $this->tableDefinition;
+    }
+}
+?>

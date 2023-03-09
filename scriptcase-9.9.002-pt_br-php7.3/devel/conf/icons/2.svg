@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<pattern  x="-42" width="24.1" height="24.1" patternUnits="userSpaceOnUse" id="New_Pattern_Swatch_2" viewBox="0 -24.1 24.1 24.1" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 24.1,0 24.1,-24.1 0,-24.1 		"/>
+		<polygon fill="#E0CB81" points="24.1,0 0,0 0,-24.1 24.1,-24.1 		"/>
+	</g>
+</pattern>
+<g>
+	<g>
+		<polyline fill="#F7DCE5" points="14.2,23.4 30.5,23.4 30.5,16.8 23.4,8.6 12.3,21.6 		"/>
+		<polygon fill="#CF817F" points="31.3,24.2 14.2,24.2 14.2,22.7 29.8,22.7 29.8,17.1 23.4,9.8 12.8,22.1 11.7,21.2 23.4,7.5 
+			31.3,16.6 		"/>
+	</g>
+	<g>
+		<polygon fill="#F7DCE5" points="13.8,23.4 8.2,16.9 2.6,23.4 		"/>
+		<path fill="#CF817F" d="M15.4,24.2H1l7.2-8.4L15.4,24.2z M4.2,22.7h7.9l-4-4.6L4.2,22.7z"/>
+	</g>
+	<g>
+		<line fill="#F7DCE5" x1="1.5" y1="23.4" x2="30.5" y2="23.4"/>
+		<rect x="1.5" y="22.7" fill="#CF817F" width="29" height="1.5"/>
+	</g>
+	<g>
+		<g>
+			<defs>
+				<circle id="SVGID_19_" cx="9.1" cy="8.1" r="2.6"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_19_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="-10.2" y="-16.2" fill="none" width="24.1" height="24.1"/>
+				<rect x="-10.2" y="-16.2" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+			<g clip-path="url(#SVGID_2_)">
+				<rect x="-10.2" y="7.9" fill="none" width="24.1" height="24.1"/>
+				<rect x="-10.2" y="7.9" fill="#FEE99B" width="24.1" height="24.1"/>
+			</g>
+		</g>
+		<pattern  id="SVGID_4_" xlink:href="#New_Pattern_Swatch_2" patternTransform="matrix(1 0 0 1 -12.0717 33.5988)">
+		</pattern>
+		<path fill="url(#SVGID_4_)" d="M9.1,11.4c-1.8,0-3.3-1.5-3.3-3.3c0-1.8,1.5-3.3,3.3-3.3s3.3,1.5,3.3,3.3
+			C12.4,10,10.9,11.4,9.1,11.4z M9.1,6.3c-1,0-1.8,0.8-1.8,1.8s0.8,1.8,1.8,1.8s1.8-0.8,1.8-1.8S10.1,6.3,9.1,6.3z"/>
+	</g>
+	<g>
+		<path fill="#8F9BA8" d="M31.3,31.2H0.8V0.7h30.5V31.2z M2.3,29.7h27.5V2.2H2.3V29.7z"/>
+	</g>
+</g>
+</svg>

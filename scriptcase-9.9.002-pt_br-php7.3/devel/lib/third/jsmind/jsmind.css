@@ -1,0 +1,340 @@
+/*
+ * Released under BSD License
+ * Copyright (c) 2014-2015 hizzgdev@163.com
+ * 
+ * Project Home:
+ *   https://github.com/hizzgdev/jsmind/
+ */
+
+/* important section */
+.jsmind-inner{position:relative;overflow:auto;width:100%;height:100%;}/*box-shadow:0 0 2px #000;*/
+.jsmind-inner{
+    moz-user-select:-moz-none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/* z-index:1 */
+canvas{position:absolute;z-index:1;}
+
+/* z-index:2 */
+jmnodes{position:absolute;z-index:2;background-color:rgba(0,0,0,0);}/*background color is necessary*/
+jmnode{position:absolute;cursor:default;max-width:400px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+jmexpander{position:absolute;width:11px;height:11px;display:block;overflow:hidden;line-height:12px;font-size:12px;text-align:center;border-radius:6px;border-width:1px;border-style:solid;cursor:pointer;}
+
+/* default theme */
+jmnode{padding:10px;background-color:#fff;color:#333;border-radius:5px;box-shadow:1px 1px 1px #666;font:16px/1.125 Verdana,Arial,Helvetica,sans-serif;}
+jmnode:hover{box-shadow:2px 2px 8px #000;background-color:#ebebeb;color:#333;}
+jmnode.selected{background-color:#11f;color:#fff;box-shadow:2px 2px 8px #000;}
+jmnode.root{font-size:24px;}
+jmexpander{border-color:gray;}
+jmexpander:hover{border-color:#000;}
+
+@media screen and (max-device-width: 1024px) {
+    jmnode{padding:5px;border-radius:3px;font-size:14px;}
+    jmnode.root{font-size:21px;}
+}
+/* primary theme */
+jmnodes.theme-primary jmnode{background-color:#428bca;color:#fff;border-color:#357ebd;}
+jmnodes.theme-primary jmnode:hover{background-color:#3276b1;border-color:#285e8e;}
+jmnodes.theme-primary jmnode.selected{background-color:#f1c40f;color:#fff;}
+jmnodes.theme-primary jmnode.root{}
+jmnodes.theme-primary jmexpander{}
+jmnodes.theme-primary jmexpander:hover{}
+
+/* warning theme */
+jmnodes.theme-warning jmnode{background-color:#f0ad4e;border-color:#eea236;color:#fff;}
+jmnodes.theme-warning jmnode:hover{background-color:#ed9c28;border-color:#d58512;}
+jmnodes.theme-warning jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-warning jmnode.root{}
+jmnodes.theme-warning jmexpander{}
+jmnodes.theme-warning jmexpander:hover{}
+
+/* danger theme */
+jmnodes.theme-danger jmnode{background-color:#d9534f;border-color:#d43f3a;color:#fff;}
+jmnodes.theme-danger jmnode:hover{background-color:#d2322d;border-color:#ac2925;}
+jmnodes.theme-danger jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-danger jmnode.root{}
+jmnodes.theme-danger jmexpander{}
+jmnodes.theme-danger jmexpander:hover{}
+
+/* success theme */
+jmnodes.theme-success jmnode{background-color:#5cb85c;border-color:#4cae4c;color:#fff;}
+jmnodes.theme-success jmnode:hover{background-color:#47a447;border-color:#398439;}
+jmnodes.theme-success jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-success jmnode.root{}
+jmnodes.theme-success jmexpander{}
+jmnodes.theme-success jmexpander:hover{}
+
+/* info theme */
+jmnodes.theme-info jmnode{background-color:#5dc0de;border-color:#46b8da;;color:#fff;}
+jmnodes.theme-info jmnode:hover{background-color:#39b3d7;border-color:#269abc;}
+jmnodes.theme-info jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-info jmnode.root{}
+jmnodes.theme-info jmexpander{}
+jmnodes.theme-info jmexpander:hover{}
+
+/* greensea theme */
+jmnodes.theme-greensea jmnode{background-color:#1abc9c;color:#fff;}
+jmnodes.theme-greensea jmnode:hover{background-color:#16a085;}
+jmnodes.theme-greensea jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-greensea jmnode.root{}
+jmnodes.theme-greensea jmexpander{}
+jmnodes.theme-greensea jmexpander:hover{}
+
+/* nephrite theme */
+jmnodes.theme-nephrite jmnode{background-color:#2ecc71;color:#fff;}
+jmnodes.theme-nephrite jmnode:hover{background-color:#27ae60;}
+jmnodes.theme-nephrite jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-nephrite jmnode.root{}
+jmnodes.theme-nephrite jmexpander{}
+jmnodes.theme-nephrite jmexpander:hover{}
+
+/* belizehole theme */
+jmnodes.theme-belizehole jmnode{background-color:#3498db;color:#fff;}
+jmnodes.theme-belizehole jmnode:hover{background-color:#2980b9;}
+jmnodes.theme-belizehole jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-belizehole jmnode.root{}
+jmnodes.theme-belizehole jmexpander{}
+jmnodes.theme-belizehole jmexpander:hover{}
+
+/* wisteria theme */
+jmnodes.theme-wisteria jmnode{background-color:#9b59b6;color:#fff;}
+jmnodes.theme-wisteria jmnode:hover{background-color:#8e44ad;}
+jmnodes.theme-wisteria jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-wisteria jmnode.root{}
+jmnodes.theme-wisteria jmexpander{}
+jmnodes.theme-wisteria jmexpander:hover{}
+
+/* asphalt theme */
+jmnodes.theme-asphalt jmnode{background-color:#34495e;color:#fff;}
+jmnodes.theme-asphalt jmnode:hover{background-color:#2c3e50;}
+jmnodes.theme-asphalt jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-asphalt jmnode.root{}
+jmnodes.theme-asphalt jmexpander{}
+jmnodes.theme-asphalt jmexpander:hover{}
+
+/* orange theme */
+jmnodes.theme-orange jmnode{background-color:#f1c40f;color:#fff;}
+jmnodes.theme-orange jmnode:hover{background-color:#f39c12;}
+jmnodes.theme-orange jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-orange jmnode.root{}
+jmnodes.theme-orange jmexpander{}
+jmnodes.theme-orange jmexpander:hover{}
+
+/* pumpkin theme */
+jmnodes.theme-pumpkin jmnode{background-color:#e67e22;color:#fff;}
+jmnodes.theme-pumpkin jmnode:hover{background-color:#d35400;}
+jmnodes.theme-pumpkin jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-pumpkin jmnode.root{}
+jmnodes.theme-pumpkin jmexpander{}
+jmnodes.theme-pumpkin jmexpander:hover{}
+
+/* pomegranate theme */
+jmnodes.theme-pomegranate jmnode{background-color:#e74c3c;color:#fff;}
+jmnodes.theme-pomegranate jmnode:hover{background-color:#c0392b;}
+jmnodes.theme-pomegranate jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-pomegranate jmnode.root{}
+jmnodes.theme-pomegranate jmexpander{}
+jmnodes.theme-pomegranate jmexpander:hover{}
+
+/* clouds theme */
+jmnodes.theme-clouds jmnode{background-color:#ecf0f1;color:#333;}
+jmnodes.theme-clouds jmnode:hover{background-color:#bdc3c7;}
+jmnodes.theme-clouds jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-clouds jmnode.root{}
+jmnodes.theme-clouds jmexpander{}
+jmnodes.theme-clouds jmexpander:hover{}
+
+/* asbestos theme */
+jmnodes.theme-asbestos jmnode{background-color:#95a5a6;color:#fff;}
+jmnodes.theme-asbestos jmnode:hover{background-color:#7f8c8d;}
+jmnodes.theme-asbestos jmnode.selected{background-color:#11f;color:#fff;}
+jmnodes.theme-asbestos jmnode.root{}
+jmnodes.theme-asbestos jmexpander{}
+jmnodes.theme-asbestos jmexpander:hover{}
+
+::selection {
+    background: #C0CCDA; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #C0CCDA; /* Gecko Browsers */
+}
+
+html,
+body,
+#mindmap {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mindmap {
+    width:100%;
+    background:#F9FAFC;
+}
+
+jmnodes.theme-scriptcase jmnode {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #1FB6FF;
+    color:#FFF;
+    box-shadow: none;
+    transition: all .1s;
+    border-radius: 4px;
+    padding: 5px 17px 5px 12px;
+    overflow: visible;
+}
+
+jmnodes.theme-scriptcase jmnode input {
+    padding: 3px 8px;
+    margin: -3px -8px;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+}
+
+jmnodes.theme-scriptcase jmnode:hover {
+    background-color: #1aa2e4;
+}
+
+jmnodes.theme-scriptcase jmnode:hover .node-menu span {
+    opacity: 1;
+}
+
+jmnodes.theme-scriptcase jmnode.selected {
+    background-color: #4694b9;
+}
+
+jmnodes.theme-scriptcase jmnode.root {
+
+}
+
+jmnodes.theme-scriptcase jmexpander {
+    text-indent: -9999px;
+    border-color: #C1CCDA;
+    width: 12px;
+    height: 12px;
+}
+
+jmnodes.theme-scriptcase jmexpander:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+jmnodes.theme-scriptcase jmexpander.plus:after {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cG9seWdvbiBwb2ludHM9IjQ0OCwyMjQgMjg4LDIyNCAyODgsNjQgMjI0LDY0IDIyNCwyMjQgNjQsMjI0IDY0LDI4OCAyMjQsMjg4IDIyNCw0NDggMjg4LDQ0OCAyODgsMjg4IDQ0OCwyODggIi8+PC9zdmc+) no-repeat center center #FFF;
+    background-size: 8px;
+}
+
+jmnodes.theme-scriptcase jmexpander.minus:after {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgd2lkdGg9IjUxMnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cmVjdCBoZWlnaHQ9IjY0IiB3aWR0aD0iMzg0IiB4PSI2NCIgeT0iMjI0Ii8+PC9zdmc+) no-repeat center center #FFF;
+    background-size: 8px;
+}
+
+jmnodes.theme-scriptcase jmexpander:hover {
+
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu {
+
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu span {
+    width: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(0,0,0,0.15);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    opacity: 0;
+    transition: all .1s;
+    cursor: pointer;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu span:before {
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #FFF;
+    content: "";
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu ul {
+    margin: 0;
+    list-style: none;
+    background: white;
+    position: absolute;
+    top: calc(100% + 2px);
+    right: 16px;
+    list-style: none;
+    font-size: 11px;
+    z-index: 10;
+    border-radius: 3px;
+    padding: 5px 0;
+    box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+    transform: translateX(100%);
+    display: none;
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu.active ul {
+    display: block;
+}
+
+
+jmnodes.theme-scriptcase jmnode .node-menu ul:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    box-shadow: 0 0 1px 0 rgba(10, 16, 34, .2);
+    top: -5px;
+    left: 5px;
+    z-index: 9;
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu ul li.divider {
+    height: 1px;
+    margin: 5px 0;
+    background: rgba(0,0,0,0.08);
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu ul a {
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    padding: 5px 12px;
+    color: #322C4F;
+}
+
+jmnodes.theme-scriptcase jmnode .node-menu ul a:hover {
+    background: rgba(0,0,0,0.04)
+}
+
+/* #C0CCDA */
+/* #7E5BEF */
+/* #29EB7F */
+/* #1FB6FF */

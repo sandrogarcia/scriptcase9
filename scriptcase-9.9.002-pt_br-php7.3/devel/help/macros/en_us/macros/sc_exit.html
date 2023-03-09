@@ -1,0 +1,151 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>This macro forces the application to exit. </TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 0px">
+			<table cellpadding=0 cellspacing=0 class="macros_desc_main_table">
+			<tr><td class="macros_tit">sc_exit(Option)<br></td></tr>
+			<tr><td style="border: none;">
+				<table class="macros_desc_table">
+					<tr>
+						<td style="border: none;">
+							<div class="div-macros-desc"><a title="Watch a tutorial" href="https://youtu.be/j-vXgYnL45A" target="_blank" rel="noopener"><img src="https://ci6.googleusercontent.com/proxy/-fXm5485iHiC7R8hH9S3FfnMEql5lx_-flBW7nYiZ4gtxt5n-LAmZXnwgLGWYqWguIgfjSaTyul6g03mevmf7Z_Gyiz0u93b7Blj1gXI29TinGEvqkaopBvarpVos9bodZC3g3O2sVgnMtvX88Qsusy-G1o=s0-d-e1-ft#https://drive.google.com/a/netmake.com.br/uc?id=1IdBRdwp0LuvZDhSRGnYNX92fNrrWzymr&export=download" alt="" width="24" height="24" />Watch a tutorial</a>
+</div>
+<p>This <span class="corpo1">macro can be used in the ScriptCase events and created a button and may return values/processes after the execution.</span></p>
+<table border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Option<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit()</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Returns to the previous application without display anything.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Displays a window with an OK button and returns to the previous application.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(sel)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Doesn&rsquo;t display the window with an OK button and returns to the current application, repeat the application select.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ref)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">It doesn't display the window with an OK button refresh data and returns to the current application.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok,ref)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Same as the sc_exit(ref) function; however, display the OK button</span>.</td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(ok,sel)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Same as the sc_exit(sel) function; however, display the OK button</span>.</td>
+</tr>
+</tbody>
+</table>
+<p><br /><span class="corpo1">This option is only valid for Form and Control Applications.</span><br /><br /></p>
+<table style="width: 526px;" border="0">
+<tbody>
+<tr>
+<td align="left" valign="top" width="15%"><strong class="corpo1">Opton<br /></strong></td>
+<td align="left" valign="top"><strong class="corpo1">Description</strong></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit()</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Doesn't complete transactions in database.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(c)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Commit pending transactions.</span></td>
+</tr>
+<tr>
+<td class="corpo1" align="left" valign="top">sc_exit(r)</td>
+<td class="corpo1" align="left" valign="top"><span class="corpo1">Rollback pending transactions.</span></td>
+</tr>
+</tbody>
+</table>
+						</td>
+					</tr>
+				</table>
+				<div id="id_div_app_cross" style="display: none">
+					<br>
+					<p style="font-weight: bold; margin-left: 10px;">Macro Scope</p>
+					<table cellpadding=0 cellspacing=0 class="macros_desc_scope_table">
+						<tr>
+											<td style='text-align: left; font-weight: bold'>
+				Blank application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				calendar application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				chart application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Grid application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Search application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Form application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Control Form
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Menu application
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				Tree menu
+			</td>
+			<td style='text-align: left; font-weight: bold'>
+				ReportPDF application
+			</td>
+
+						</tr>
+						<tr>
+								
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros<br>onClick<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros<br>onClick<br>onInit
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #efeded'>allMacros
+		</td>
+
+		<td width='120px' style='background-color: #f7f4f4'>allMacros
+		</td>
+
+						</tr>
+					</table>
+				</div>				
+			</td></tr>
+			</table>
+			</body>
+			
+</HTML>

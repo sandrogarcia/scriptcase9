@@ -1,0 +1,18 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre após uma atualização.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre após clicar no botão Salvar do formulário. O formulário executará então os eventos onValidate, onValidateSuccess e onBeforeUpdate, e logo após executar o comando SQL para inserir o registro do banco de dados, ele executará o evento onAfterUpdate.</p>
+<p> </p>
+<hr />
+<p><strong>Exemplo:</strong> Após a atualização de um registro no banco de dados queremos gravar numa tabela de log a operação de atualização.</p>
+<p>sc_exec_sql(" insert into log values ([glo_usuario],'tabela alvo','atualização',{campo_chave}) "); //inserimos o id do usuário que estava armazenado em uma variável de sessão [glo_usuario] e a chave do registro recém incluído {campo_chave}.</p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>

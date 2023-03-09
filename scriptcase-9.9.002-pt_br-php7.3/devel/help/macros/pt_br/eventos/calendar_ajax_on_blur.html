@@ -1,0 +1,19 @@
+<HTML>
+	<HEAD>
+		<meta charset='utf-8'>
+		<TITLE>Este evento ocorre quando o objeto html perde o focus.</TITLE>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel='stylesheet' type='text/css' href="../../macros.css">
+	</HEAD>
+
+			<body style="margin: 10px">
+			<p>Este evento ocorre quando o objeto html perde o foco.</p>
+<hr />
+<p><strong>Exemplo:</strong></p>
+<p>Em um form de pedidos, ao digitar o código do produto<strong>{cpo_produto}</strong> em um campo, desejamos preencher o valor unitário do produto e em outro campo e exibir a descrição do mesmo.</p>
+<p>No evento ajax onblur, criado no campo onde o código do produto será informado<strong>{cpo_produto}, </strong>podemos usar um código semelhante a este:</p>
+<p><code>sc_lookup(prod," select descricao , valor from produtos where codigo = {cpo_produto} ");</code><br /><br /><code>{desc_produto} = {prod[0][1]};</code><br /><code>{val_produto} = {prod[0][2]};</code></p>
+			<div id="id_div_app_cross" style="display: none"></div>
+			</body>
+			
+</HTML>
